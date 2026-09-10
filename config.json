@@ -1,0 +1,66 @@
+{
+  "company_watchlist": "company_watchlist.json",
+  "sources": [
+    {
+      "type": "github_readme",
+      "name": "Simplify Summer 2027",
+      "url": "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/README.md",
+      "enabled": true
+    },
+    {
+      "type": "github_readme",
+      "name": "Simplify Off-Season 2027",
+      "url": "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/README-Off-Season.md",
+      "enabled": true
+    }
+  ],
+  "filters": {
+    "required_role_words": [
+      "intern",
+      "internship",
+      "co-op",
+      "coop"
+    ],
+    "technical_title_words": [
+      "software",
+      "developer",
+      "backend",
+      "platform",
+      "infrastructure",
+      "distributed",
+      "systems",
+      "reliability",
+      "observability",
+      "cloud",
+      "full stack",
+      "full-stack",
+      "machine learning",
+      "ml engineer",
+      "ai intern",
+      "artificial intelligence",
+      "data engineer",
+      "research engineer"
+    ],
+    "exclude_words": [
+      "senior",
+      "staff",
+      "manager",
+      "director",
+      "unpaid",
+      "phd",
+      "doctoral",
+      "mba"
+    ],
+    "exclude_advanced_degree": true,
+    "company_allowlist": [],
+    "company_blocklist": [],
+    "location_words": [],
+    "us_only": true,
+    "minimum_hourly_pay": 30
+  },
+  "notification": {
+    "provider": "telegram",
+    "max_per_run": 20
+  },
+  "state_retention_days": 180
+}

@@ -1,0 +1,1994 @@
+{
+  "generated_at": "2026-09-10",
+  "company_count": 100,
+  "selection_notes": {
+    "goal": "Strong stepping-stone employers for backend, platform, infrastructure, full-stack, systems, and ML systems internships",
+    "excluded_by_design": [
+      "Google",
+      "Meta"
+    ],
+    "compensation_rule": "Exclude confirmed base pay below $30/hour; treat missing pay as unverified",
+    "priority_meaning": {
+      "core": "Best balance of fit, engineering signal, and attainability",
+      "broad": "Useful additional target with transferable engineering work",
+      "selective": "High-value but substantially more competitive"
+    }
+  },
+  "companies": [
+    {
+      "company": "ServiceNow",
+      "source_company_name": "ServiceNow",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "smartrecruiters",
+      "board": "ServiceNow",
+      "careers_url": "https://careers.servicenow.com/jobs/",
+      "polling": "direct_api",
+      "verification": "official careers and SmartRecruiters board",
+      "active_listings_seen": 0,
+      "sample_application_url": null,
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "smartrecruiters",
+        "name": "Smartrecruiters: ServiceNow",
+        "company": "ServiceNow",
+        "enabled": true,
+        "board": "ServiceNow"
+      }
+    },
+    {
+      "company": "Snap",
+      "source_company_name": "Snap",
+      "priority": "selective",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.snap.com/jobs",
+      "polling": "official_page",
+      "active_listings_seen": 1,
+      "sample_application_url": "https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Bellevue-Washington/Research-Intern--User-Modeling-and-Personalization_R0046464-1",
+      "verification": "official careers page",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Datadog",
+      "source_company_name": "Datadog",
+      "priority": "selective",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.datadoghq.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://careers.datadoghq.com/detail/8052118?gh_jid=8052118",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Cloudflare",
+      "source_company_name": "Cloudflare",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://www.cloudflare.com/careers/jobs/",
+      "polling": "official_page",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://boards.greenhouse.io/cloudflare/jobs/8118855",
+      "verification": "official careers page",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "MongoDB",
+      "source_company_name": "MongoDB",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "mongodb",
+      "careers_url": "https://www.mongodb.com/company/careers/see-jobs",
+      "polling": "direct_api",
+      "verification": "official careers and Greenhouse board",
+      "active_listings_seen": 0,
+      "sample_application_url": null,
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: MongoDB",
+        "company": "MongoDB",
+        "enabled": true,
+        "board": "mongodb"
+      }
+    },
+    {
+      "company": "Confluent",
+      "source_company_name": "Confluent",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.goconfluent.com/",
+      "polling": "official_page",
+      "verification": "official careers page",
+      "active_listings_seen": 0,
+      "sample_application_url": null,
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "HubSpot",
+      "source_company_name": "HubSpot",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "hubspotjobs",
+      "careers_url": "https://www.hubspot.com/careers/jobs",
+      "polling": "direct_api",
+      "verification": "official careers page links to Greenhouse alerts",
+      "active_listings_seen": 0,
+      "sample_application_url": null,
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: HubSpot",
+        "company": "HubSpot",
+        "enabled": true,
+        "board": "hubspotjobs"
+      }
+    },
+    {
+      "company": "Twilio",
+      "source_company_name": "Twilio",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "twilio",
+      "careers_url": "https://jobs.twilio.com/",
+      "polling": "direct_api",
+      "verification": "official careers and Greenhouse board",
+      "active_listings_seen": 0,
+      "sample_application_url": null,
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Twilio",
+        "company": "Twilio",
+        "enabled": true,
+        "board": "twilio"
+      }
+    },
+    {
+      "company": "Okta",
+      "source_company_name": "Okta",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://www.okta.com/company/careers/",
+      "polling": "official_page",
+      "verification": "official careers page",
+      "active_listings_seen": 0,
+      "sample_application_url": null,
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Elastic",
+      "source_company_name": "Elastic",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://jobs.elastic.co/",
+      "polling": "official_page",
+      "verification": "official careers page",
+      "active_listings_seen": 0,
+      "sample_application_url": null,
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Snowflake",
+      "source_company_name": "Snowflake",
+      "priority": "selective",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.snowflake.com/",
+      "polling": "official_page",
+      "verification": "official careers page",
+      "active_listings_seen": 0,
+      "sample_application_url": null,
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Dropbox",
+      "source_company_name": "Dropbox",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://jobs.dropbox.com/",
+      "polling": "official_page",
+      "active_listings_seen": 1,
+      "sample_application_url": "https://boards.greenhouse.io/embed/job_app?token=8106224",
+      "verification": "official careers page",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Samsara",
+      "source_company_name": "Samsara",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://www.samsara.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://www.samsara.com/company/careers/roles/8082091?gh_jid=8082091",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Atlassian",
+      "source_company_name": "Atlassian",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "icims",
+      "board": null,
+      "careers_url": "https://campus-globalcareers-atlassian.icims.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://campus-globalcareers-atlassian.icims.com/jobs/26275/software-engineer-intern%2c-2027-canada/job",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Autodesk",
+      "source_company_name": "Autodesk",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "uni",
+      "careers_url": "https://autodesk.wd1.myworkdayjobs.com/uni",
+      "polling": "workday_adapter",
+      "active_listings_seen": 8,
+      "sample_application_url": "https://autodesk.wd1.myworkdayjobs.com/uni/job/Montreal-QC-CAN/Intern-Software-Developer--Stagiaire-en-Dveloppement-Logiciel_26WD100398-1",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Adobe",
+      "source_company_name": "Adobe",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "workday",
+      "board": "external_experienced",
+      "careers_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced",
+      "polling": "workday_adapter",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Software-Engineer_R171666",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Red Hat",
+      "source_company_name": "Red Hat",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "jobs",
+      "careers_url": "https://redhat.wd5.myworkdayjobs.com/jobs",
+      "polling": "workday_adapter",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://redhat.wd5.myworkdayjobs.com/jobs/job/Raleigh/Software-Engineer-Co-op_R-059039",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Coinbase",
+      "source_company_name": "Coinbase",
+      "priority": "selective",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "greenhouse",
+      "board": "coinbase",
+      "careers_url": "https://www.coinbase.com/careers/positions",
+      "polling": "direct_api",
+      "active_listings_seen": 8,
+      "sample_application_url": "https://boards.greenhouse.io/embed/job_app?token=8168315",
+      "verification": "Greenhouse application URLs identify board as coinbase",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Coinbase",
+        "company": "Coinbase",
+        "enabled": true,
+        "board": "coinbase"
+      }
+    },
+    {
+      "company": "Notion",
+      "source_company_name": "Notion",
+      "priority": "selective",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "ashby",
+      "board": "notion",
+      "careers_url": "https://jobs.ashbyhq.com/notion",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.ashbyhq.com/notion/3fba1c39-c5cb-47d7-9ad2-1cec4d7e9d0c/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Notion",
+        "company": "Notion",
+        "enabled": true,
+        "board": "notion"
+      }
+    },
+    {
+      "company": "Immuta",
+      "source_company_name": "Immuta",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "lever",
+      "board": "immuta",
+      "careers_url": "https://jobs.lever.co/immuta",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.lever.co/immuta/bf3c9d23-8da9-4a11-adf6-ecb7bce82ad4/apply",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "lever",
+        "name": "Lever: Immuta",
+        "company": "Immuta",
+        "enabled": true,
+        "site": "immuta"
+      }
+    },
+    {
+      "company": "Verkada",
+      "source_company_name": "Verkada",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "verkada",
+      "careers_url": "https://job-boards.greenhouse.io/verkada",
+      "polling": "direct_api",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://job-boards.greenhouse.io/verkada/jobs/5219131007",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Verkada",
+        "company": "Verkada",
+        "enabled": true,
+        "board": "verkada"
+      }
+    },
+    {
+      "company": "ID.me",
+      "source_company_name": "ID.me",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "idmeuniversityrecruiting",
+      "careers_url": "https://job-boards.greenhouse.io/idmeuniversityrecruiting",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://job-boards.greenhouse.io/idmeuniversityrecruiting/jobs/7980429003",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: ID.me",
+        "company": "ID.me",
+        "enabled": true,
+        "board": "idmeuniversityrecruiting"
+      }
+    },
+    {
+      "company": "Geotab",
+      "source_company_name": "Geotab",
+      "priority": "core",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.geotab.com/",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 13,
+      "sample_application_url": "https://job-boards.greenhouse.io/internshiplist2000/jobs/5380567008",
+      "verification": "live Simplify listing; direct company board not safely inferred",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Super",
+      "source_company_name": "Super",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "super.com",
+      "careers_url": "https://jobs.ashbyhq.com/super.com",
+      "polling": "direct_api",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://jobs.ashbyhq.com/super.com/29751d58-eacc-4b5a-8e9d-e59cb7a595c7/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Super",
+        "company": "Super",
+        "enabled": true,
+        "board": "super.com"
+      }
+    },
+    {
+      "company": "Revel",
+      "source_company_name": "Revel",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "revel",
+      "careers_url": "https://jobs.ashbyhq.com/revel",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.ashbyhq.com/revel/29968ce1-8838-44e8-ac4e-6b1c87ce5314/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Revel",
+        "company": "Revel",
+        "enabled": true,
+        "board": "revel"
+      }
+    },
+    {
+      "company": "Hadrian",
+      "source_company_name": "Hadrian",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "hadrian-automation",
+      "careers_url": "https://jobs.ashbyhq.com/hadrian-automation",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.ashbyhq.com/hadrian-automation/2b0423c6-947d-4226-8d23-90743bd5e63e/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Hadrian",
+        "company": "Hadrian",
+        "enabled": true,
+        "board": "hadrian-automation"
+      }
+    },
+    {
+      "company": "Skydio",
+      "source_company_name": "Skydio",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "ashby",
+      "board": "skydio",
+      "careers_url": "https://jobs.ashbyhq.com/skydio",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.ashbyhq.com/skydio/ae4a6f7d-a240-4fa2-8c8e-04cc906e4ef9/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Skydio",
+        "company": "Skydio",
+        "enabled": true,
+        "board": "skydio"
+      }
+    },
+    {
+      "company": "Zipline",
+      "source_company_name": "Zipline",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://www.zipline.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 16,
+      "sample_application_url": "https://www.zipline.com/open-roles/7986848003?gh_jid=7986848003",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Rocket Lab USA",
+      "source_company_name": "Rocket Lab USA",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "rocketlab",
+      "careers_url": "https://job-boards.greenhouse.io/rocketlab",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://job-boards.greenhouse.io/rocketlab/jobs/7989724003",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Rocket Lab USA",
+        "company": "Rocket Lab USA",
+        "enabled": true,
+        "board": "rocketlab"
+      }
+    },
+    {
+      "company": "K2 Space",
+      "source_company_name": "K2 Space",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "k2spacecorporation",
+      "careers_url": "https://job-boards.greenhouse.io/k2spacecorporation",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5418727008",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: K2 Space",
+        "company": "K2 Space",
+        "enabled": true,
+        "board": "k2spacecorporation"
+      }
+    },
+    {
+      "company": "Northwood Space",
+      "source_company_name": "Northwood Space",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "NorthwoodSpace",
+      "careers_url": "https://jobs.ashbyhq.com/NorthwoodSpace",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.ashbyhq.com/NorthwoodSpace/ce3d4b73-461e-4128-a6f1-f933897e8119/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Northwood Space",
+        "company": "Northwood Space",
+        "enabled": true,
+        "board": "NorthwoodSpace"
+      }
+    },
+    {
+      "company": "Saronic",
+      "source_company_name": "Saronic",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "saronic",
+      "careers_url": "https://jobs.ashbyhq.com/saronic",
+      "polling": "direct_api",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://jobs.ashbyhq.com/saronic/cffe4bc2-5f34-45bf-904d-e9a6c8a8e5ce/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Saronic",
+        "company": "Saronic",
+        "enabled": true,
+        "board": "saronic"
+      }
+    },
+    {
+      "company": "Allen Control Systems",
+      "source_company_name": "Allen Control Systems",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "allen-control-systems",
+      "careers_url": "https://jobs.ashbyhq.com/allen-control-systems",
+      "polling": "direct_api",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://jobs.ashbyhq.com/allen-control-systems/9945f76d-6d03-45f0-b431-fc69d31f5476/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Allen Control Systems",
+        "company": "Allen Control Systems",
+        "enabled": true,
+        "board": "allen-control-systems"
+      }
+    },
+    {
+      "company": "Kodiak Robotics",
+      "source_company_name": "Kodiak Robotics",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "greenhouse",
+      "board": "kodiak",
+      "careers_url": "https://job-boards.greenhouse.io/kodiak",
+      "polling": "direct_api",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://job-boards.greenhouse.io/kodiak/jobs/4396622009",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Kodiak Robotics",
+        "company": "Kodiak Robotics",
+        "enabled": true,
+        "board": "kodiak"
+      }
+    },
+    {
+      "company": "Formlabs",
+      "source_company_name": "Formlabs",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.formlabs.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://careers.formlabs.com/job/8174874/apply?gh_jid=8174874",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Epic Games",
+      "source_company_name": "Epic Games",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://epicgames.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 12,
+      "sample_application_url": "https://epicgames.com/careers/jobs/6183293004?gh_jid=6183293004",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Roblox",
+      "source_company_name": "Roblox",
+      "priority": "selective",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.roblox.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://careers.roblox.com/jobs/8072713?gh_jid=8072713",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "DraftKings",
+      "source_company_name": "DraftKings",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "Campus_Career_Portal",
+      "careers_url": "https://draftkings.wd1.myworkdayjobs.com/Campus_Career_Portal",
+      "polling": "workday_adapter",
+      "active_listings_seen": 5,
+      "sample_application_url": "https://draftkings.wd1.myworkdayjobs.com/Campus_Career_Portal/job/Boston-MA/Software-Engineer-Intern--Summer-2027-_JR14928",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "C3.ai",
+      "source_company_name": "C3.ai",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://c3.ai",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://c3.ai/job-description/8739037002?gh_jid=8739037002",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "WhatNot",
+      "source_company_name": "WhatNot",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://www.whatnot.com/careers/discover",
+      "polling": "official_page",
+      "active_listings_seen": 1,
+      "sample_application_url": "https://jobs.ashbyhq.com/whatnot/928ffdca-b316-40ce-b82b-94b570919bcd/application?embed=true",
+      "verification": "official careers page; former Ashby endpoint retired",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Viam",
+      "source_company_name": "Viam",
+      "priority": "broad",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "viamrobotics",
+      "careers_url": "https://job-boards.greenhouse.io/viamrobotics",
+      "polling": "direct_api",
+      "active_listings_seen": 1,
+      "sample_application_url": "https://job-boards.greenhouse.io/viamrobotics/jobs/6185046004",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Viam",
+        "company": "Viam",
+        "enabled": true,
+        "board": "viamrobotics"
+      }
+    },
+    {
+      "company": "Yotta Labs",
+      "source_company_name": "Yotta Labs",
+      "priority": "broad",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "yotta",
+      "careers_url": "https://jobs.ashbyhq.com/yotta",
+      "polling": "direct_api",
+      "active_listings_seen": 1,
+      "sample_application_url": "https://jobs.ashbyhq.com/yotta/09821a51-fbe6-42a7-a566-0d2b5d40fae3/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Yotta Labs",
+        "company": "Yotta Labs",
+        "enabled": true,
+        "board": "yotta"
+      }
+    },
+    {
+      "company": "Cybernetic Labs",
+      "source_company_name": "Cybernetic Labs",
+      "priority": "broad",
+      "fit_lanes": [
+        "platform/infrastructure",
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "netic",
+      "careers_url": "https://jobs.ashbyhq.com/netic",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.ashbyhq.com/netic/b0ea7aab-8eea-4d31-96f9-278364180ae7/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Cybernetic Labs",
+        "company": "Cybernetic Labs",
+        "enabled": true,
+        "board": "netic"
+      }
+    },
+    {
+      "company": "Dedalus Labs",
+      "source_company_name": "Dedalus Labs",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "dedalus-labs",
+      "careers_url": "https://jobs.ashbyhq.com/dedalus-labs",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.ashbyhq.com/dedalus-labs/6037de96-d9c7-418f-ad23-56bb327225a6/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Dedalus Labs",
+        "company": "Dedalus Labs",
+        "enabled": true,
+        "board": "dedalus-labs"
+      }
+    },
+    {
+      "company": "The Nuclear Company",
+      "source_company_name": "The Nuclear Company",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "thenuclearcompany",
+      "careers_url": "https://job-boards.greenhouse.io/thenuclearcompany",
+      "polling": "direct_api",
+      "active_listings_seen": 9,
+      "sample_application_url": "https://job-boards.greenhouse.io/thenuclearcompany/jobs/5383236008",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: The Nuclear Company",
+        "company": "The Nuclear Company",
+        "enabled": true,
+        "board": "thenuclearcompany"
+      }
+    },
+    {
+      "company": "Persona AI",
+      "source_company_name": "Persona AI",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "ashby",
+      "board": "persona.ai",
+      "careers_url": "https://jobs.ashbyhq.com/persona.ai",
+      "polling": "direct_api",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://jobs.ashbyhq.com/persona.ai/1e8d195c-e28e-423d-a06a-9eeb401ed4fc/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Persona AI",
+        "company": "Persona AI",
+        "enabled": true,
+        "board": "persona.ai"
+      }
+    },
+    {
+      "company": "Rivian and Volkswagen Group Technologies",
+      "source_company_name": "Rivian and Volkswagen Group Technologies",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "ashby",
+      "board": "rivianvw.tech",
+      "careers_url": "https://jobs.ashbyhq.com/rivianvw.tech",
+      "polling": "direct_api",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://jobs.ashbyhq.com/rivianvw.tech/e00c49b7-44c1-4f0c-af3c-2c7a7402185b/application?embed=true",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "ashby",
+        "name": "Ashby: Rivian and Volkswagen Group Technologies",
+        "company": "Rivian and Volkswagen Group Technologies",
+        "enabled": true,
+        "board": "rivianvw.tech"
+      }
+    },
+    {
+      "company": "HP IQ",
+      "source_company_name": "HP IQ",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "greenhouse",
+      "board": "hpiq",
+      "careers_url": "https://job-boards.greenhouse.io/hpiq",
+      "polling": "direct_api",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://job-boards.greenhouse.io/hpiq/jobs/6111955004",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: HP IQ",
+        "company": "HP IQ",
+        "enabled": true,
+        "board": "hpiq"
+      }
+    },
+    {
+      "company": "AeroVironment",
+      "source_company_name": "AeroVironment",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack",
+        "ML systems"
+      ],
+      "ats": "workday",
+      "board": "en-US",
+      "careers_url": "https://avav.wd1.myworkdayjobs.com/en-US",
+      "polling": "workday_adapter",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://avav.wd1.myworkdayjobs.com/en-US/avav/job/Simi-Valley-CA/Summer-2027-Software-Engineering-Intern_8611",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "AMD",
+      "source_company_name": "AMD",
+      "priority": "core",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.amd.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 62,
+      "sample_application_url": "https://careers.amd.com/jobs/91865?icims=1",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Marvell",
+      "source_company_name": "Marvell",
+      "priority": "core",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "workday",
+      "board": "MarvellCareers",
+      "careers_url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers",
+      "polling": "workday_adapter",
+      "active_listings_seen": 27,
+      "sample_application_url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Burlington-VT/Test-Solutions-Engineering-Intern--BS---Summer-2027_2603835",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Micron Technology",
+      "source_company_name": "Micron Technology",
+      "priority": "core",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "workday",
+      "board": "External",
+      "careers_url": "https://micron.wd1.myworkdayjobs.com/External",
+      "polling": "workday_adapter",
+      "active_listings_seen": 24,
+      "sample_application_url": "https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---ID1/Intern---Automation--Operations-Improvement_JR110774",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "NXP Semiconductors",
+      "source_company_name": "NXP Semiconductors",
+      "priority": "core",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "workday",
+      "board": "en-US",
+      "careers_url": "https://nxp.wd3.myworkdayjobs.com/en-US",
+      "polling": "workday_adapter",
+      "active_listings_seen": 18,
+      "sample_application_url": "https://nxp.wd3.myworkdayjobs.com/en-US/careers/job/Austin-Ed-Bluestein-Office/Data-Science---Structured-Problem-Solving-Intern---Summer-2027_R-10065037",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Analog Devices",
+      "source_company_name": "Analog Devices",
+      "priority": "core",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "workday",
+      "board": "External",
+      "careers_url": "https://analogdevices.wd1.myworkdayjobs.com/External",
+      "polling": "workday_adapter",
+      "active_listings_seen": 7,
+      "sample_application_url": "https://analogdevices.wd1.myworkdayjobs.com/External/job/US-MA-Wilmington/AI-ML-Engineer-Intern_R265579",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Cadence Design Systems",
+      "source_company_name": "Cadence Design Systems",
+      "priority": "core",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "workday",
+      "board": "University_Talent",
+      "careers_url": "https://cadence.wd1.myworkdayjobs.com/University_Talent",
+      "polling": "workday_adapter",
+      "active_listings_seen": 11,
+      "sample_application_url": "https://cadence.wd1.myworkdayjobs.com/University_Talent/job/Burlington-MA/Product-Engineering-Internship--Electronics-Hardware-Design--Fall-2026-_R54158-1",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Texas Instruments",
+      "source_company_name": "Texas Instruments",
+      "priority": "broad",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "oracle-hcm",
+      "board": null,
+      "careers_url": "https://edbz.fa.us2.oraclecloud.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 12,
+      "sample_application_url": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25017439",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Qorvo",
+      "source_company_name": "Qorvo",
+      "priority": "broad",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "successfactors",
+      "board": null,
+      "careers_url": "https://careers.qorvo.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 54,
+      "sample_application_url": "https://careers.qorvo.com/job/Richardson-Full-Stack-Web-Developer-Intern-TX-75080/1424716200?ats=successfactors",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Microchip Technology",
+      "source_company_name": "Microchip Technology",
+      "priority": "broad",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://wd5.myworkdaysite.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/AZ---Chandler/Intern---Engineering--Device-Software-and-Test-_R3573-26",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Solidigm",
+      "source_company_name": "Solidigm",
+      "priority": "broad",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "smartrecruiters",
+      "board": "Solidigm",
+      "careers_url": "https://careers.smartrecruiters.com/Solidigm",
+      "polling": "direct_api",
+      "active_listings_seen": 5,
+      "sample_application_url": "https://jobs.smartrecruiters.com/Solidigm/744000147613769",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "smartrecruiters",
+        "name": "Smartrecruiters: Solidigm",
+        "company": "Solidigm",
+        "enabled": true,
+        "board": "Solidigm"
+      }
+    },
+    {
+      "company": "Applied Materials",
+      "source_company_name": "Applied Materials",
+      "priority": "broad",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "workday",
+      "board": "External",
+      "careers_url": "https://amat.wd1.myworkdayjobs.com/External",
+      "polling": "workday_adapter",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://amat.wd1.myworkdayjobs.com/External/job/AlbanyNY/Summer-2027-Global-Technical-Learning-Center-Data-Analyst-Intern--Bachelor-s-Master-s--Albany--NY-_R2627551",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Ambarella",
+      "source_company_name": "Ambarella",
+      "priority": "broad",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "workday",
+      "board": "ambarella",
+      "careers_url": "https://ambarella.wd108.myworkdayjobs.com/ambarella",
+      "polling": "workday_adapter",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://ambarella.wd108.myworkdayjobs.com/ambarella/job/US-Headquarters/Algorithm-Engineer-Intern_JR100359",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Shure",
+      "source_company_name": "Shure",
+      "priority": "broad",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "icims",
+      "board": null,
+      "careers_url": "https://careersus-shure.icims.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 28,
+      "sample_application_url": "https://careersus-shure.icims.com/jobs/4956/job?mobile=true&needsRedirect=false",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Motorola",
+      "source_company_name": "Motorola",
+      "priority": "broad",
+      "fit_lanes": [
+        "systems/software",
+        "developer infrastructure"
+      ],
+      "ats": "workday",
+      "board": "Careers",
+      "careers_url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers",
+      "polling": "workday_adapter",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Chicago-IL/Software-Engineering-Intern---Summer-2027_R68388",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Hewlett Packard",
+      "source_company_name": "Hewlett Packard",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "EXTEU-AC-CareerSite",
+      "careers_url": "https://hp.wd5.myworkdayjobs.com/EXTEU-AC-CareerSite",
+      "polling": "workday_adapter",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://hp.wd5.myworkdayjobs.com/EXTEU-AC-CareerSite/job/Austin-Texas-United-States-of-America/Personal-Systems-Product-Management-Intern_UNI4755",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Garmin",
+      "source_company_name": "Garmin",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://careers.garmin.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 9,
+      "sample_application_url": "https://careers.garmin.com/jobs/19858?icims=1",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "GE Aerospace",
+      "source_company_name": "GE Aerospace",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "ge_externalsite",
+      "careers_url": "https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite",
+      "polling": "workday_adapter",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Evendale/Applied-AI-Engineer-Intern---Summer-2027--May-June-Start-_R5039302-1",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "GE Vernova",
+      "source_company_name": "GE Vernova",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "vernova_externalsite",
+      "careers_url": "https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite",
+      "polling": "workday_adapter",
+      "active_listings_seen": 30,
+      "sample_application_url": "https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Bellevue/GE-Vernova---Energy-Optimization-Software-Engineer-Intern---Summer-2027_R5050015-2",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Sierra Nevada Corporation",
+      "source_company_name": "Sierra Nevada Corporation",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "snc_external_career_site",
+      "careers_url": "https://snc.wd1.myworkdayjobs.com/snc_external_career_site",
+      "polling": "workday_adapter",
+      "active_listings_seen": 7,
+      "sample_application_url": "https://snc.wd1.myworkdayjobs.com/snc_external_career_site/job/Sparks-NV/Software-Engineering-Intern--Summer-2027-_R0030760",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Blue Origin",
+      "source_company_name": "Blue Origin",
+      "priority": "selective",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "blueorigin",
+      "careers_url": "https://blueorigin.wd5.myworkdayjobs.com/blueorigin",
+      "polling": "workday_adapter",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://blueorigin.wd5.myworkdayjobs.com/blueorigin/job/Greater-Seattle-Area/Summer-2027-Software-Developer-Internship---Graduate_R71434",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "General Dynamics Mission Systems",
+      "source_company_name": "General Dynamics Mission Systems",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "icims",
+      "board": null,
+      "careers_url": "https://careers-gdms.icims.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://careers-gdms.icims.com/jobs/74848/job?mobile=true&needsRedirect=false",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "L3Harris Technologies",
+      "source_company_name": "L3Harris Technologies",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "successfactors",
+      "board": null,
+      "careers_url": "https://jobs.l3harris.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 22,
+      "sample_application_url": "https://jobs.l3harris.com/job/Melbourne-Application-Developer-Intern-FL-32919/1425610400?ats=successfactors",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Capital One",
+      "source_company_name": "Capital One",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "workday",
+      "board": "Capital_One",
+      "careers_url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One",
+      "polling": "workday_adapter",
+      "active_listings_seen": 10,
+      "sample_application_url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/New-York-NY/Current-PhD--AI-Engineering-Internship-Program---Summer-2027_R249110-1",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "American Express",
+      "source_company_name": "American Express",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "oracle-hcm",
+      "board": null,
+      "careers_url": "https://egug.fa.us2.oraclecloud.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 58,
+      "sample_application_url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011015",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "BNY",
+      "source_company_name": "BNY",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "oracle-hcm",
+      "board": null,
+      "careers_url": "https://eofe.fa.us2.oraclecloud.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 12,
+      "sample_application_url": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/81251",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Vanguard",
+      "source_company_name": "Vanguard",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "workday",
+      "board": "en-US",
+      "careers_url": "https://vanguard.wd5.myworkdayjobs.com/en-US",
+      "polling": "workday_adapter",
+      "active_listings_seen": 7,
+      "sample_application_url": "https://vanguard.wd5.myworkdayjobs.com/en-US/vanguard_external/job/DallasFt-Worth-TX/College-to-Corporate-IT-Internship---Application-Development---TX-_181846",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Mastercard",
+      "source_company_name": "Mastercard",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "workday",
+      "board": "Campus",
+      "careers_url": "https://mastercard.wd1.myworkdayjobs.com/Campus",
+      "polling": "workday_adapter",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://mastercard.wd1.myworkdayjobs.com/Campus/job/OFallon-Missouri/Product-Management---Technical-Intern--Summer-2027---St-Louis--MO--US_R-284711",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "PIMCO",
+      "source_company_name": "PIMCO",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "workday",
+      "board": "pimco-careers",
+      "careers_url": "https://pimco.wd1.myworkdayjobs.com/pimco-careers",
+      "polling": "workday_adapter",
+      "active_listings_seen": 9,
+      "sample_application_url": "https://pimco.wd1.myworkdayjobs.com/pimco-careers/job/London-GBR/XMLNAME-2027-Summer-Intern---Technology-Analyst--Software-Engineering--EMEA_R106800",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Tradeweb",
+      "source_company_name": "Tradeweb",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "oracle-hcm",
+      "board": null,
+      "careers_url": "https://ecnf.fa.us2.oraclecloud.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 13,
+      "sample_application_url": "https://ecnf.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/301915",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "DTCC",
+      "source_company_name": "DTCC",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "oracle-hcm",
+      "board": null,
+      "careers_url": "https://ebxr.fa.us2.oraclecloud.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://ebxr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/214459",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Freddie Mac",
+      "source_company_name": "Freddie Mac",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "workday",
+      "board": "External",
+      "careers_url": "https://freddiemac.wd5.myworkdayjobs.com/External",
+      "polling": "workday_adapter",
+      "active_listings_seen": 5,
+      "sample_application_url": "https://freddiemac.wd5.myworkdayjobs.com/External/job/McLean-VA/Single-Family-Software-Developer-Intern--Summer-2027_JR17544",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "LPL Financial Holdings",
+      "source_company_name": "LPL Financial Holdings",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "workday",
+      "board": "university",
+      "careers_url": "https://lplfinancial.wd1.myworkdayjobs.com/university",
+      "polling": "workday_adapter",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://lplfinancial.wd1.myworkdayjobs.com/university/job/Fort-MillCharlotte/Summer-Intern-2027--Software-Engineer_R-052921",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Dimensional Fund Advisors",
+      "source_company_name": "Dimensional Fund Advisors",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "workday",
+      "board": "dfa_careers",
+      "careers_url": "https://dimensional.wd5.myworkdayjobs.com/dfa_careers",
+      "polling": "workday_adapter",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://dimensional.wd5.myworkdayjobs.com/dfa_careers/job/Austin/Internship-in-Technology---Software-Engineer_2026-9022",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Northern Trust",
+      "source_company_name": "Northern Trust",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "workday",
+      "board": "northerntrust",
+      "careers_url": "https://ntrs.wd1.myworkdayjobs.com/northerntrust",
+      "polling": "workday_adapter",
+      "active_listings_seen": 2,
+      "sample_application_url": "https://ntrs.wd1.myworkdayjobs.com/northerntrust/job/Chicago-IL/Technology-Intern---Software-Engineering_R160832-1",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Optiver",
+      "source_company_name": "Optiver",
+      "priority": "selective",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://www.optiver.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://www.optiver.com/join-us/jobs/8713435002?gh_jid=8713435002",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Akuna Capital",
+      "source_company_name": "Akuna Capital University",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://www.akunacapital.com",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 7,
+      "sample_application_url": "https://www.akunacapital.com/careers/job/8018847?gh_jid=8018847",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Chicago Trading Company",
+      "source_company_name": "Chicago Trading Company",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "greenhouse",
+      "board": "chicagotradingcampus",
+      "careers_url": "https://job-boards.greenhouse.io/chicagotradingcampus",
+      "polling": "direct_api",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://job-boards.greenhouse.io/chicagotradingcampus/jobs/4716932005",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Chicago Trading Company",
+        "company": "Chicago Trading Company",
+        "enabled": true,
+        "board": "chicagotradingcampus"
+      }
+    },
+    {
+      "company": "DV Trading",
+      "source_company_name": "DV Trading",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "greenhouse",
+      "board": "dvtrading",
+      "careers_url": "https://job-boards.greenhouse.io/dvtrading",
+      "polling": "direct_api",
+      "active_listings_seen": 6,
+      "sample_application_url": "https://job-boards.greenhouse.io/dvtrading/jobs/4732429005",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: DV Trading",
+        "company": "DV Trading",
+        "enabled": true,
+        "board": "dvtrading"
+      }
+    },
+    {
+      "company": "Schonfeld",
+      "source_company_name": "Schonfeld",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "greenhouse",
+      "board": "schonfeld",
+      "careers_url": "https://job-boards.greenhouse.io/schonfeld",
+      "polling": "direct_api",
+      "active_listings_seen": 10,
+      "sample_application_url": "https://job-boards.greenhouse.io/schonfeld/jobs/8180089",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Schonfeld",
+        "company": "Schonfeld",
+        "enabled": true,
+        "board": "schonfeld"
+      }
+    },
+    {
+      "company": "Belvedere Trading",
+      "source_company_name": "Belvedere Trading",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "lever",
+      "board": "belvederetrading",
+      "careers_url": "https://jobs.lever.co/belvederetrading",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://jobs.lever.co/belvederetrading/10746b3d-1760-4573-9b63-b93f5a5e4fc0/apply",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "lever",
+        "name": "Lever: Belvedere Trading",
+        "company": "Belvedere Trading",
+        "enabled": true,
+        "site": "belvederetrading"
+      }
+    },
+    {
+      "company": "Virtu Financial",
+      "source_company_name": "Virtu Financial",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "greenhouse",
+      "board": "virtu",
+      "careers_url": "https://job-boards.greenhouse.io/virtu",
+      "polling": "direct_api",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://job-boards.greenhouse.io/virtu/jobs/8624410002",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Virtu Financial",
+        "company": "Virtu Financial",
+        "enabled": true,
+        "board": "virtu"
+      }
+    },
+    {
+      "company": "Garda Capital Partners",
+      "source_company_name": "Garda Capital Partners",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "greenhouse",
+      "board": "gardacp",
+      "careers_url": "https://job-boards.greenhouse.io/gardacp",
+      "polling": "direct_api",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://job-boards.greenhouse.io/gardacp/jobs/6146213004",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Garda Capital Partners",
+        "company": "Garda Capital Partners",
+        "enabled": true,
+        "board": "gardacp"
+      }
+    },
+    {
+      "company": "Five Rings Capital",
+      "source_company_name": "Five Rings Capital",
+      "priority": "selective",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "greenhouse",
+      "board": "fiveringsllc",
+      "careers_url": "https://job-boards.greenhouse.io/fiveringsllc",
+      "polling": "direct_api",
+      "active_listings_seen": 3,
+      "sample_application_url": "https://job-boards.greenhouse.io/fiveringsllc/jobs/5349707008",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Five Rings Capital",
+        "company": "Five Rings Capital",
+        "enabled": true,
+        "board": "fiveringsllc"
+      }
+    },
+    {
+      "company": "Jump Trading",
+      "source_company_name": "Jump Trading",
+      "priority": "selective",
+      "fit_lanes": [
+        "backend/distributed systems",
+        "data infrastructure"
+      ],
+      "ats": "custom",
+      "board": null,
+      "careers_url": "https://www.jumptrading.com/careers/",
+      "polling": "aggregate_fallback",
+      "active_listings_seen": 7,
+      "sample_application_url": "https://boards.greenhouse.io/embed/job_app?token=7974943",
+      "verification": "live Simplify listing; embedded application URL does not expose board token",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "The Home Depot",
+      "source_company_name": "The Home Depot",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "careerdepot",
+      "careers_url": "https://homedepot.wd5.myworkdayjobs.com/careerdepot",
+      "polling": "workday_adapter",
+      "active_listings_seen": 4,
+      "sample_application_url": "https://homedepot.wd5.myworkdayjobs.com/careerdepot/job/STORE-SUPPORT-CENTER-ATLANTA---9090/XMLNAME-2027-Summer-Internship---Software-Engineering_Req191937",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "The Walt Disney Company",
+      "source_company_name": "The Walt Disney Company",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "disneycareerdc",
+      "careers_url": "https://disney.wd5.myworkdayjobs.com/disneycareerdc",
+      "polling": "workday_adapter",
+      "active_listings_seen": 10,
+      "sample_application_url": "https://disney.wd5.myworkdayjobs.com/disneycareerdc/job/Lake-Buena-Vista-FL-USA/Pricing---Product-Development-Intern--Spring-2027_10158266",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Walmart",
+      "source_company_name": "Walmart",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "WalmartExternal",
+      "careers_url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal",
+      "polling": "workday_adapter",
+      "active_listings_seen": 5,
+      "sample_application_url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal/job/USA-Crossman-Respect-Building-CA-SUNNYVALE-Home-Office/XMLNAME-2026-Intern-Conversion--2027-FT-Data-Scientist-III--Sunnyvale_R-2630125",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Copart",
+      "source_company_name": "Copart",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "copart",
+      "careers_url": "https://copart.wd12.myworkdayjobs.com/copart",
+      "polling": "workday_adapter",
+      "active_listings_seen": 7,
+      "sample_application_url": "https://copart.wd12.myworkdayjobs.com/copart/job/Dallas-TX---Headquarters/Software-Engineering-Intern_JR111173",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "McKesson",
+      "source_company_name": "McKesson",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "External_Careers",
+      "careers_url": "https://mckesson.wd3.myworkdayjobs.com/External_Careers",
+      "polling": "workday_adapter",
+      "active_listings_seen": 5,
+      "sample_application_url": "https://mckesson.wd3.myworkdayjobs.com/External_Careers/job/USA-GA-Atlanta/Software-Engineer-Intern---Summer-2027_JR0153235",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Stryker",
+      "source_company_name": "Stryker",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "StrykerCareers",
+      "careers_url": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers",
+      "polling": "workday_adapter",
+      "active_listings_seen": 9,
+      "sample_application_url": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/San-Jose-California/Summer-2027-Internship---Software-Engineering---California_R572624",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    },
+    {
+      "company": "Cigna Group",
+      "source_company_name": "Cigna Group",
+      "priority": "broad",
+      "fit_lanes": [
+        "backend/full-stack"
+      ],
+      "ats": "workday",
+      "board": "cignacareers",
+      "careers_url": "https://cigna.wd5.myworkdayjobs.com/cignacareers",
+      "polling": "workday_adapter",
+      "active_listings_seen": 7,
+      "sample_application_url": "https://cigna.wd5.myworkdayjobs.com/cignacareers/job/St-Louis-MO/The-Cigna-Group-s-Technology-Development-Program----Software-Engineering-Track-Summer-Internship_26009527",
+      "verification": "live Simplify 2027 application URL",
+      "verified_at": "2026-09-10",
+      "source": null
+    }
+  ]
+}
