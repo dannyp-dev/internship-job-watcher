@@ -45,7 +45,7 @@ New alerts contain the company, role, location, source, pay status, and a tappab
 4. Enable GitHub Actions if GitHub asks.
 5. Run the test and baseline workflows once.
 
-The included schedule performs 60 checks per day, or at most 1,860 scheduled runs in a 31-day month. GitHub can delay scheduled jobs during busy periods, so 14 minutes is a target rather than a real-time guarantee.
+The included schedule performs 60 checks per day, or at most 1,860 scheduled runs in a 31-day month. The workflow uses explicit UTC cron entries corresponding to 10:00 AM through 11:46 PM Eastern during daylight saving time. GitHub can delay scheduled jobs during busy periods, so 14 minutes is a target rather than a real-time guarantee.
 
 The first normal run creates a baseline and records existing roles without flooding your phone. Alerts begin for matching roles found after that baseline.
 

@@ -2,20 +2,15 @@ name: Check for new internships
 
 on:
   schedule:
-    - cron: "0,14,28,42,56 10,17 * * *"
-      timezone: "America/New_York"
-    - cron: "10,24,38,52 11,18 * * *"
-      timezone: "America/New_York"
-    - cron: "6,20,34,48 12,19 * * *"
-      timezone: "America/New_York"
-    - cron: "2,16,30,44,58 13,20 * * *"
-      timezone: "America/New_York"
-    - cron: "12,26,40,54 14,21 * * *"
-      timezone: "America/New_York"
-    - cron: "8,22,36,50 15,22 * * *"
-      timezone: "America/New_York"
-    - cron: "4,18,32,46 16,23 * * *"
-      timezone: "America/New_York"
+    # Explicit UTC times avoid timezone-trigger registration failures.
+    # These correspond to 10:00 AM through 11:46 PM Eastern during EDT.
+    - cron: "0,14,28,42,56 14,21 * * *"
+    - cron: "10,24,38,52 15,22 * * *"
+    - cron: "6,20,34,48 16,23 * * *"
+    - cron: "2,16,30,44,58 0,17 * * *"
+    - cron: "12,26,40,54 1,18 * * *"
+    - cron: "8,22,36,50 2,19 * * *"
+    - cron: "4,18,32,46 3,20 * * *"
   workflow_dispatch:
     inputs:
       test_notification:
