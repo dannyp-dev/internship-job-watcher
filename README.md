@@ -1,6 +1,6 @@
 # Internship Phone Alert Watcher
 
-This personal watcher targets a check every 15 minutes from 10:00 AM through midnight Eastern. GitHub Actions runs it even when your computer is off. The app also enforces the Eastern notification window itself, so a delayed GitHub run cannot alert after midnight.
+This personal watcher targets a check every 15 minutes from 10:00 AM through midnight Eastern. A Cloudflare Cron Trigger provides the dependable schedule and starts the GitHub Actions workflow even when your computer is off. The app also enforces the Eastern notification window itself, so a delayed run cannot alert after midnight.
 
 It currently monitors:
 
@@ -45,7 +45,7 @@ New alerts contain the company, role, location, source, pay status, and a tappab
 4. Enable GitHub Actions if GitHub asks.
 5. Run the test and baseline workflows once.
 
-The included schedule offers 60 possible checks per day, or at most 1,860 scheduled runs in a 31-day month. The workflow uses one UTC cron entry that covers both standard and daylight saving time. Python then enforces exactly 10:00 AM through midnight in `America/New_York`. GitHub can delay or drop scheduled jobs, so 15 minutes is a target rather than a real-time guarantee.
+The Cloudflare scheduler wakes every 15 minutes and dispatches the GitHub workflow only from 10:00 AM through 11:59 PM in `America/New_York`. This produces 56 checks per day, or at most 1,736 workflow runs in a 31-day month. The time check automatically handles standard and daylight saving time.
 
 The first normal run creates a baseline and records existing roles without flooding your phone. Alerts begin for matching roles found after that baseline.
 
