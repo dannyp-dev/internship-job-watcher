@@ -1,10 +1,6 @@
 name: Check for new internships
 
 on:
-  schedule:
-    # Covers both EST and EDT. Python enforces exactly 10:00 AM through midnight
-    # in America/New_York, even when GitHub starts a delayed run after hours.
-    - cron: "7,22,37,52 0-4,14-23 * * *"
   workflow_dispatch:
     inputs:
       test_notification:
