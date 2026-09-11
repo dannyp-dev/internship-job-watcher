@@ -23,6 +23,7 @@ from typing import Any, Iterable
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
+from zoneinfo import ZoneInfo
 
 
 USER_AGENT = "Danny-Internship-Watcher/1.0 (+personal job search)"
@@ -126,6 +127,38 @@ def canonical_url(value: str) -> str:
         return urlunsplit((parts.scheme.casefold(), parts.netloc.casefold(), path, urlencode(query), ""))
     except ValueError:
         return value.strip()
+
+
+def clock_minutes(value: str) -> int:
+    """Convert a 24-hour HH:MM value into minutes after midnight."""
+    match = re.fullmatch(r"(\d{1,2}):(\d{2})", value.strip())
+    if not match:
+        raise ValueError(f"Invalid clock time: {value!r}")
+    hour, minute = (int(part) for part in match.groups())
+    if hour == 24 and minute == 0:
+        return 24 * 60
+    if not 0 <= hour <= 23 or not 0 <= minute <= 59:
+        raise ValueError(f"Invalid clock time: {value!r}")
+    return hour * 60 + minute
+
+
+def is_active_notification_time(
+    config: dict[str, Any], moment: datetime | None = None
+) -> bool:
+    """Return whether alerts are allowed at this instant in the configured zone."""
+    active_hours = config.get("notification", {}).get("active_hours")
+    if not active_hours:
+        return True
+    zone = ZoneInfo(active_hours.get("timezone", "America/New_York"))
+    local_now = (moment or datetime.now(timezone.utc)).astimezone(zone)
+    current = local_now.hour * 60 + local_now.minute
+    start = clock_minutes(active_hours.get("start", "00:00"))
+    end = clock_minutes(active_hours.get("end", "24:00"))
+    if start == end:
+        return True
+    if start < end:
+        return start <= current < end
+    return current >= start or current < end
 
 
 def fetch_bytes(url: str, attempts: int = 3, timeout: int = 30) -> bytes:
@@ -599,10 +632,45 @@ def prune_seen(seen: dict[str, Any], retention_days: int) -> dict[str, Any]:
     return kept
 
 
+def seen_url_index(seen: dict[str, Any]) -> dict[str, str]:
+    """Map canonical application URLs to their existing state keys."""
+    result: dict[str, str] = {}
+    for key, value in seen.items():
+        try:
+            url = canonical_url(str(value["job"]["url"]))
+        except (KeyError, TypeError):
+            continue
+        if url:
+            result[url] = key
+    return result
+
+
+def seen_key_for_job(
+    job: Job, seen: dict[str, Any], urls: dict[str, str] | None = None
+) -> str | None:
+    """Find a prior listing even if mutable title or location text changed."""
+    if job.key in seen:
+        return job.key
+    return (urls or seen_url_index(seen)).get(canonical_url(job.url))
+
+
 def check_jobs(config_path: Path, state_path: Path, dry_run: bool = False) -> int:
     config = load_json(config_path, None)
     if not config:
         raise RuntimeError(f"Config file not found or empty: {config_path}")
+
+    if (
+        os.environ.get("GITHUB_EVENT_NAME") == "schedule"
+        and not is_active_notification_time(config)
+    ):
+        active_hours = config.get("notification", {}).get("active_hours", {})
+        zone = active_hours.get("timezone", "America/New_York")
+        local_now = datetime.now(timezone.utc).astimezone(ZoneInfo(zone))
+        print(
+            "Skipped delayed scheduled check outside the notification window: "
+            f"{local_now:%Y-%m-%d %I:%M %p %Z}"
+        )
+        return 0
 
     gathered: list[Job] = []
     failures: list[str] = []
@@ -632,7 +700,12 @@ def check_jobs(config_path: Path, state_path: Path, dry_run: bool = False) -> in
     state = load_json(state_path, {"version": 1, "initialized_at": None, "seen": {}})
     seen: dict[str, Any] = state.setdefault("seen", {})
     initialized = bool(state.get("initialized_at"))
-    new_jobs = [job for job in matched if job.key not in seen]
+    seen_urls = seen_url_index(seen)
+    existing_keys = {
+        job.key: seen_key_for_job(job, seen, seen_urls)
+        for job in matched
+    }
+    new_jobs = [job for job in matched if existing_keys[job.key] is None]
 
     print(f"Matched {len(matched)} jobs after filtering; {len(new_jobs)} are new")
     for job in new_jobs:
@@ -655,9 +728,10 @@ def check_jobs(config_path: Path, state_path: Path, dry_run: bool = False) -> in
         return 0
 
     for job in matched:
-        if job.key in seen:
-            seen[job.key]["last_seen"] = timestamp
-            seen[job.key]["job"] = asdict(job)
+        existing_key = existing_keys[job.key]
+        if existing_key is not None:
+            seen[existing_key]["last_seen"] = timestamp
+            seen[existing_key]["job"] = asdict(job)
 
     provider = config.get("notification", {}).get("provider", "ntfy")
     max_per_run = int(config.get("notification", {}).get("max_per_run", 20))

@@ -1,6 +1,6 @@
 # Internship Phone Alert Watcher
 
-This personal watcher checks for relevant internships every 15 minutes from about 10:00 AM through midnight Eastern. GitHub Actions runs it even when your computer is off.
+This personal watcher targets a check every 15 minutes from 10:00 AM through midnight Eastern. GitHub Actions runs it even when your computer is off. The app also enforces the Eastern notification window itself, so a delayed GitHub run cannot alert after midnight.
 
 It currently monitors:
 
@@ -45,7 +45,7 @@ New alerts contain the company, role, location, source, pay status, and a tappab
 4. Enable GitHub Actions if GitHub asks.
 5. Run the test and baseline workflows once.
 
-The included schedule performs 56 checks per day, or at most 1,736 scheduled runs in a 31-day month. The workflow uses one explicit UTC cron entry corresponding to 10:07 AM through 11:52 PM Eastern during daylight saving time. GitHub can delay scheduled jobs during busy periods, so 15 minutes is a target rather than a real-time guarantee.
+The included schedule offers 60 possible checks per day, or at most 1,860 scheduled runs in a 31-day month. The workflow uses one UTC cron entry that covers both standard and daylight saving time. Python then enforces exactly 10:00 AM through midnight in `America/New_York`. GitHub can delay or drop scheduled jobs, so 15 minutes is a target rather than a real-time guarantee.
 
 The first normal run creates a baseline and records existing roles without flooding your phone. Alerts begin for matching roles found after that baseline.
 
@@ -88,6 +88,8 @@ Telegram is the default provider. To use ntfy instead, change `notification.prov
 - The workflow requests write access only to update `data/state.json`.
 - One broken source becomes a warning and does not stop the others.
 - Duplicate jobs found in several feeds produce one alert.
+- A listing keeps the same identity when a company makes a small title or location edit.
+- Delayed scheduled runs outside 10:00 AM through midnight Eastern exit without sending alerts.
 - The bot can keep sending alerts after you press Start once. You do not have to keep chatting with it.
 
 ## Test the code

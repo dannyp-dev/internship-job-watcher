@@ -60,7 +60,12 @@
   },
   "notification": {
     "provider": "telegram",
-    "max_per_run": 20
+    "max_per_run": 20,
+    "active_hours": {
+      "timezone": "America/New_York",
+      "start": "10:00",
+      "end": "00:00"
+    }
   },
   "state_retention_days": 180
 }

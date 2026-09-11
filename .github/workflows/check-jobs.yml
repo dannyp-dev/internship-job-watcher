@@ -2,9 +2,9 @@ name: Check for new internships
 
 on:
   schedule:
-    # 10:07 AM through 11:52 PM Eastern during EDT, every 15 minutes.
-    # A single UTC expression is intentionally used for scheduler reliability.
-    - cron: "7,22,37,52 0-3,14-23 * * *"
+    # Covers both EST and EDT. Python enforces exactly 10:00 AM through midnight
+    # in America/New_York, even when GitHub starts a delayed run after hours.
+    - cron: "7,22,37,52 0-4,14-23 * * *"
   workflow_dispatch:
     inputs:
       test_notification:

@@ -2,6 +2,7 @@ import sys
 import tempfile
 import unittest
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
@@ -15,9 +16,11 @@ from job_watcher import (
     fetch_ashby,
     fetch_smartrecruiters,
     is_us_location,
+    is_active_notification_time,
     job_matches,
     load_watchlist_sources,
     parse_github_readme,
+    seen_key_for_job,
 )
 
 
@@ -144,6 +147,56 @@ class JobWatcherTests(unittest.TestCase):
             )
         self.assertEqual(1, len(sources))
         self.assertEqual("acme", sources[0]["board"])
+
+    def test_enforces_eastern_notification_window(self):
+        config = {
+            "notification": {
+                "active_hours": {
+                    "timezone": "America/New_York",
+                    "start": "10:00",
+                    "end": "00:00",
+                }
+            }
+        }
+        self.assertTrue(
+            is_active_notification_time(
+                config, datetime(2026, 9, 11, 14, 0, tzinfo=timezone.utc)
+            )
+        )
+        self.assertTrue(
+            is_active_notification_time(
+                config, datetime(2026, 9, 12, 3, 59, tzinfo=timezone.utc)
+            )
+        )
+        self.assertFalse(
+            is_active_notification_time(
+                config, datetime(2026, 9, 11, 6, 36, tzinfo=timezone.utc)
+            )
+        )
+        self.assertFalse(
+            is_active_notification_time(
+                config, datetime(2026, 9, 12, 4, 0, tzinfo=timezone.utc)
+            )
+        )
+
+    def test_prior_url_prevents_false_new_job_after_metadata_change(self):
+        seen = {
+            "old-key": {
+                "job": {
+                    "url": "https://acme.example/jobs/1?utm_source=old",
+                    "title": "Software Intern",
+                    "location": "Remote",
+                }
+            }
+        }
+        changed = Job(
+            "Acme",
+            "Software Engineering Intern",
+            "New York, NY",
+            "https://acme.example/jobs/1?utm_source=new",
+            "test",
+        )
+        self.assertEqual("old-key", seen_key_for_job(changed, seen))
 
 
 if __name__ == "__main__":
