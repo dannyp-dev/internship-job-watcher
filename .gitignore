@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 .DS_Store
+cloudflare-scheduler/node_modules/
+cloudflare-scheduler/.npm-cache/
+cloudflare-scheduler/.wrangler/
+cloudflare-scheduler/worker-configuration.d.ts
