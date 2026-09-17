@@ -12,6 +12,446 @@
       "name": "Simplify Off-Season 2027",
       "url": "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/README-Off-Season.md",
       "enabled": true
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Databricks",
+      "company": "Databricks",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "databricks"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Airbnb",
+      "company": "Airbnb",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "airbnb"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Figma",
+      "company": "Figma",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "figma"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: DoorDash",
+      "company": "DoorDash",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "doordashusa"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Coinbase",
+      "company": "Coinbase",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "coinbase"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Robinhood",
+      "company": "Robinhood",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "robinhood"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Ramp",
+      "company": "Ramp",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "ramp"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Instacart",
+      "company": "Instacart",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "instacart"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Reddit",
+      "company": "Reddit",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "reddit"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Discord",
+      "company": "Discord",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "discord"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Notion",
+      "company": "Notion",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "notion"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Datadog",
+      "company": "Datadog",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "datadog"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: MongoDB",
+      "company": "MongoDB",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "mongodb"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Cloudflare",
+      "company": "Cloudflare",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "cloudflare"
+    },
+    {
+      "type": "smartrecruiters",
+      "name": "Smartrecruiters: ServiceNow",
+      "company": "ServiceNow",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "ServiceNow"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: CoreWeave",
+      "company": "CoreWeave",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "coreweave"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Wiz",
+      "company": "Wiz",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "wizinc"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: AppLovin",
+      "company": "AppLovin",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "applovin"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Waymo",
+      "company": "Waymo",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "waymo"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Lyft",
+      "company": "Lyft",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "lyft"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Anduril",
+      "company": "Anduril",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "andurilindustries"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Twilio",
+      "company": "Twilio",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "twilio"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: HubSpot",
+      "company": "HubSpot",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "hubspotjobs"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Affirm",
+      "company": "Affirm",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "affirm"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Brex",
+      "company": "Brex",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "brex"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Airtable",
+      "company": "Airtable",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "airtable"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Asana",
+      "company": "Asana",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "asana"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Vercel",
+      "company": "Vercel",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "vercel"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Duolingo",
+      "company": "Duolingo",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "duolingo"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Samsara",
+      "company": "Samsara",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "samsara"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Rubrik",
+      "company": "Rubrik",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "rubrik"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Cockroach Labs",
+      "company": "Cockroach Labs",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "cockroachlabs"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Grafana Labs",
+      "company": "Grafana Labs",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "grafanalabs"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Fastly",
+      "company": "Fastly",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "fastly"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: DigitalOcean",
+      "company": "DigitalOcean",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "digitalocean98"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Box",
+      "company": "Box",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "boxinc"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Skydio",
+      "company": "Skydio",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "skydio"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Coupang",
+      "company": "Coupang",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "coupang"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Fivetran",
+      "company": "Fivetran",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "fivetran"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: New Relic",
+      "company": "New Relic",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "newrelic"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Pure Storage",
+      "company": "Pure Storage",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "purestorage"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: SoFi",
+      "company": "SoFi",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "sofi"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Chime",
+      "company": "Chime",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "chime"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Mercury",
+      "company": "Mercury",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "mercury"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Gusto",
+      "company": "Gusto",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "gusto"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Carta",
+      "company": "Carta",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "carta"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Toast",
+      "company": "Toast",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "toast"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Flexport",
+      "company": "Flexport",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "flexport"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Deel",
+      "company": "Deel",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "deel"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Riot Games",
+      "company": "Riot Games",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "riotgames"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Sony Interactive Entertainment",
+      "company": "Sony Interactive Entertainment",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "sonyinteractiveentertainmentglobal"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Roku",
+      "company": "Roku",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "roku"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Verkada",
+      "company": "Verkada",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "verkada"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Motive",
+      "company": "Motive",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "gomotive"
+    },
+    {
+      "type": "smartrecruiters",
+      "name": "Smartrecruiters: Visa",
+      "company": "Visa",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "Visa"
     }
   ],
   "filters": {
