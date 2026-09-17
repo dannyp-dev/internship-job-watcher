@@ -654,7 +654,12 @@ def seen_key_for_job(
     return (urls or seen_url_index(seen)).get(canonical_url(job.url))
 
 
-def check_jobs(config_path: Path, state_path: Path, dry_run: bool = False) -> int:
+def check_jobs(
+    config_path: Path,
+    state_path: Path,
+    dry_run: bool = False,
+    baseline_current: bool = False,
+) -> int:
     config = load_json(config_path, None)
     if not config:
         raise RuntimeError(f"Config file not found or empty: {config_path}")
@@ -712,6 +717,32 @@ def check_jobs(config_path: Path, state_path: Path, dry_run: bool = False) -> in
         print(f"NEW | {job.company} | {job.title} | {job.location} | {job.url}")
 
     timestamp = now_iso()
+    if baseline_current:
+        for job in matched:
+            existing_key = existing_keys[job.key]
+            if existing_key is not None:
+                seen[existing_key]["last_seen"] = timestamp
+                seen[existing_key]["job"] = asdict(job)
+            else:
+                seen[job.key] = {
+                    "first_seen": timestamp,
+                    "last_seen": timestamp,
+                    "baselined_at": timestamp,
+                    "job": asdict(job),
+                }
+        state["initialized_at"] = state.get("initialized_at") or timestamp
+        state["last_checked_at"] = timestamp
+        state["last_source_failures"] = failures
+        retention_days = int(config.get("state_retention_days", 180))
+        state["seen"] = prune_seen(seen, retention_days)
+        if not dry_run:
+            save_json(state_path, state)
+        print(
+            f"Baseline refreshed. Recorded {len(new_jobs)} current listings "
+            "without sending alerts."
+        )
+        return 0
+
     if not initialized:
         for job in matched:
             seen[job.key] = {
@@ -814,6 +845,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--config", type=Path, default=Path("config.json"))
     parser.add_argument("--state", type=Path, default=Path("data/state.json"))
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--baseline-current",
+        action="store_true",
+        help="Record every current match without sending notifications",
+    )
     parser.add_argument("--test-notification", action="store_true")
     parser.add_argument(
         "--telegram-chat-id",
@@ -833,7 +869,12 @@ def main() -> int:
             return telegram_chat_id()
         if args.test_notification:
             return test_notification(args.config)
-        return check_jobs(args.config, args.state, args.dry_run)
+        return check_jobs(
+            args.config,
+            args.state,
+            args.dry_run,
+            baseline_current=args.baseline_current,
+        )
     except KeyboardInterrupt:
         return 130
     except Exception as exc:
