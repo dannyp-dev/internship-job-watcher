@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from job_watcher import (
     Job,
     canonical_url,
+    check_jobs,
     confirmed_hourly_low,
     deduplicate,
     fetch_ashby,
@@ -197,6 +198,48 @@ class JobWatcherTests(unittest.TestCase):
             "test",
         )
         self.assertEqual("old-key", seen_key_for_job(changed, seen))
+
+    @patch("job_watcher.fetch_source")
+    def test_baseline_current_records_without_notifying(self, mock_fetch_source):
+        mock_fetch_source.return_value = [
+            Job(
+                "Acme",
+                "Software Engineer Intern",
+                "New York, NY",
+                "https://acme.example/jobs/1",
+                "test",
+            )
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config_path = root / "config.json"
+            state_path = root / "state.json"
+            config_path.write_text(
+                json.dumps(
+                    {
+                        "sources": [{"type": "fixture", "enabled": True}],
+                        "filters": {
+                            "required_role_words": ["intern"],
+                            "technical_title_words": ["software"],
+                            "us_only": True,
+                        },
+                        "notification": {"provider": "telegram"},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            result = check_jobs(
+                config_path,
+                state_path,
+                baseline_current=True,
+            )
+            state = json.loads(state_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(0, result)
+        self.assertEqual(1, len(state["seen"]))
+        record = next(iter(state["seen"].values()))
+        self.assertIn("baselined_at", record)
+        self.assertNotIn("notified_at", record)
 
 
 if __name__ == "__main__":
