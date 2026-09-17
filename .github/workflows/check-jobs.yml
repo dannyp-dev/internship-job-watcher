@@ -12,6 +12,11 @@ on:
         required: false
         default: false
         type: boolean
+      baseline_current:
+        description: "Record all current matches without sending alerts"
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: internship-watcher
@@ -46,7 +51,7 @@ jobs:
         run: python job_watcher.py --test-notification
 
       - name: Check job sources
-        if: ${{ inputs.test_notification != true }}
+        if: ${{ inputs.test_notification != true && inputs.baseline_current != true }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
@@ -54,6 +59,10 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python job_watcher.py
+
+      - name: Baseline newly added sources
+        if: ${{ inputs.baseline_current == true }}
+        run: python job_watcher.py --baseline-current
 
       - name: Save notification history
         if: ${{ always() && inputs.test_notification != true }}
