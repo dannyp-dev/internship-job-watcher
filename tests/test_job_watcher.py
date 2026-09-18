@@ -15,6 +15,7 @@ from job_watcher import (
     confirmed_hourly_low,
     deduplicate,
     fetch_ashby,
+    fetch_amazon_jobs,
     fetch_smartrecruiters,
     is_us_location,
     is_active_notification_time,
@@ -75,6 +76,16 @@ class JobWatcherTests(unittest.TestCase):
         actual = canonical_url("https://Example.com/jobs/7/?utm_source=x&gh_src=y&keep=1#top")
         self.assertEqual("https://example.com/jobs/7?keep=1", actual)
 
+    def test_canonical_url_uses_amazon_job_id_not_changing_slug(self):
+        first = canonical_url(
+            "https://amazon.jobs/en/jobs/10529525/software-development-engineer-intern-robotics-2027"
+        )
+        second = canonical_url(
+            "https://www.amazon.jobs/en/jobs/10529525/software-development-engineer-intern-co-op-robotics-2027"
+        )
+        self.assertEqual("https://www.amazon.jobs/en/jobs/10529525", first)
+        self.assertEqual(first, second)
+
     def test_deduplicates_same_application_url(self):
         one = Job("Acme", "Software Intern", "Remote", "https://a.test/1?utm_source=x", "A")
         two = Job("Acme", "Software Intern", "Remote", "https://a.test/1?ref=y", "B")
@@ -131,6 +142,46 @@ class JobWatcherTests(unittest.TestCase):
         jobs = fetch_smartrecruiters({"board": "Acme", "company": "Acme"})
         self.assertEqual("https://jobs.smartrecruiters.com/Acme/123-software-engineer-intern", jobs[0].url)
         self.assertEqual("Engineering", jobs[0].team)
+
+    @patch("job_watcher.fetch_json")
+    def test_maps_and_paginates_amazon_jobs(self, mock_fetch_json):
+        mock_fetch_json.side_effect = [
+            {
+                "hits": 2,
+                "jobs": [{
+                    "title": "Software Development Engineer Internship - Summer 2027 (USA)",
+                    "posted_date": "September 17, 2026",
+                    "job_path": "/en/jobs/10552937/software-development-engineer-internship",
+                    "location": "US, WA, Seattle",
+                    "locations": [json.dumps({
+                        "normalizedLocation": "Seattle, Washington, USA"
+                    })],
+                    "job_category": "Software Development",
+                }],
+            },
+            {
+                "hits": 2,
+                "jobs": [{
+                    "title": "Software Development Engineer Intern",
+                    "posted_date": "September 16, 2026",
+                    "job_path": "/en/jobs/2/software-development-engineer-intern",
+                    "normalized_location": "Austin, Texas, USA",
+                }],
+            },
+        ]
+        jobs = fetch_amazon_jobs({
+            "company": "Amazon",
+            "name": "Amazon Jobs",
+            "query": "intern",
+            "posted_after": "2026-09-17",
+        })
+        self.assertEqual(1, len(jobs))
+        self.assertEqual(
+            "https://www.amazon.jobs/en/jobs/10552937",
+            jobs[0].url,
+        )
+        self.assertIn("Seattle, Washington, USA", jobs[0].location)
+        self.assertIn("offset=1", mock_fetch_json.call_args_list[1].args[0])
 
     def test_loads_direct_sources_from_watchlist(self):
         with tempfile.TemporaryDirectory() as directory:
