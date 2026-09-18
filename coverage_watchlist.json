@@ -1,0 +1,46 @@
+{
+  "tiers": {
+    "1": [
+      "Meta", "Google", "Netflix", "Databricks", "Stripe", "NVIDIA",
+      "Airbnb", "Apple", "Roblox", "Microsoft", "Snowflake", "Amazon",
+      "ByteDance / TikTok", "Uber", "Figma", "DoorDash", "LinkedIn",
+      "Snap", "Palantir", "Coinbase", "Pinterest", "Rippling",
+      "Robinhood", "Plaid", "Ramp"
+    ],
+    "2": [
+      "Block", "Instacart", "GitHub", "Reddit", "Discord", "Notion",
+      "Dropbox", "Datadog", "MongoDB", "Cloudflare", "ServiceNow",
+      "Salesforce", "Atlassian", "Adobe", "CrowdStrike",
+      "Palo Alto Networks", "CoreWeave", "Wiz", "Spotify", "Canva",
+      "Bloomberg", "AppLovin", "Broadcom", "AMD", "Waymo"
+    ],
+    "3": [
+      "Lyft", "Tesla", "SpaceX", "Anduril", "X", "Confluent", "Elastic",
+      "Twilio", "HubSpot", "Shopify", "Workday", "Intuit", "Affirm",
+      "Brex", "Airtable", "Asana", "Vercel", "GitLab", "Duolingo",
+      "Samsara", "ServiceTitan", "Rubrik", "Okta", "Zscaler",
+      "SentinelOne"
+    ],
+    "4": [
+      "Splunk", "HashiCorp", "Cockroach Labs", "Grafana Labs", "Fastly",
+      "DigitalOcean", "Box", "Zoom", "DocuSign", "Slack", "Oracle",
+      "Qualcomm", "Arm", "Skydio", "Coupang", "Patreon", "Qualtrics",
+      "Postman", "dbt Labs", "Fivetran", "Miro", "New Relic",
+      "Pure Storage", "Nutanix", "Akamai"
+    ],
+    "5": [
+      "Visa", "Mastercard", "PayPal", "Capital One", "JPMorgan Chase",
+      "Goldman Sachs", "American Express", "SoFi", "Chime", "Mercury",
+      "Gusto", "Carta", "Toast", "Flexport", "Deel", "Remitly", "Wise",
+      "Adyen", "BILL", "Walmart Global Tech", "eBay", "Etsy", "StubHub",
+      "Expedia Group", "Booking.com"
+    ],
+    "6": [
+      "Zillow", "Epic Games", "Valve", "Riot Games", "Electronic Arts",
+      "Sony Interactive Entertainment", "Activision Blizzard", "Unity",
+      "Roku", "Twitch", "Disney Streaming", "Zoox", "Aurora Innovation",
+      "Rivian", "Verkada", "Motive", "Autodesk", "Cisco", "Red Hat",
+      "SAP", "Intel", "Cadence", "Synopsys", "MathWorks", "Micron"
+    ]
+  }
+}
