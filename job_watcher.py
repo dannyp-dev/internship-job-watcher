@@ -117,6 +117,7 @@ def normalize(value: str) -> str:
 def canonical_url(value: str) -> str:
     try:
         parts = urlsplit(value)
+        host = parts.netloc.casefold()
         query = [
             (key, val)
             for key, val in parse_qsl(parts.query, keep_blank_values=True)
@@ -124,7 +125,12 @@ def canonical_url(value: str) -> str:
             and not key.casefold().startswith("utm_")
         ]
         path = parts.path.rstrip("/") or "/"
-        return urlunsplit((parts.scheme.casefold(), parts.netloc.casefold(), path, urlencode(query), ""))
+        amazon_job = re.fullmatch(r"/en/jobs/(\d+)(?:/[^/]*)?", path)
+        if host in {"amazon.jobs", "www.amazon.jobs"} and amazon_job:
+            host = "www.amazon.jobs"
+            path = f"/en/jobs/{amazon_job.group(1)}"
+            query = []
+        return urlunsplit((parts.scheme.casefold(), host, path, urlencode(query), ""))
     except ValueError:
         return value.strip()
 
@@ -366,6 +372,79 @@ def fetch_smartrecruiters(source: dict[str, Any]) -> list[Job]:
     return [job for job in jobs if job.title and job.url]
 
 
+def amazon_locations(item: dict[str, Any]) -> str:
+    """Return every location attached to an Amazon job search result."""
+    locations: list[str] = []
+    for raw_location in item.get("locations", []):
+        try:
+            location_data = json.loads(raw_location) if isinstance(raw_location, str) else raw_location
+        except (TypeError, json.JSONDecodeError):
+            location_data = {}
+        if isinstance(location_data, dict):
+            location = (
+                location_data.get("normalizedLocation")
+                or location_data.get("locationNonStemming")
+                or location_data.get("location")
+            )
+            if location:
+                locations.append(clean_text(str(location)))
+    fallback = item.get("normalized_location") or item.get("location") or ""
+    if fallback:
+        locations.append(clean_text(str(fallback)))
+    return " | ".join(dict.fromkeys(locations))
+
+
+def fetch_amazon_jobs(source: dict[str, Any]) -> list[Job]:
+    """Fetch Amazon's official careers search directly, independent of Simplify."""
+    company = source.get("company", "Amazon")
+    query = source.get("query", "intern")
+    limit = 100
+    offset = 0
+    posted_after = source.get("posted_after")
+    posted_after_date = (
+        datetime.strptime(posted_after, "%Y-%m-%d").date() if posted_after else None
+    )
+    jobs: list[Job] = []
+    while True:
+        params = urlencode(
+            {
+                "offset": offset,
+                "result_limit": limit,
+                "sort": "recent",
+                "base_query": query,
+            }
+        )
+        data = fetch_json(f"https://www.amazon.jobs/en/search.json?{params}")
+        items = data.get("jobs", [])
+        for item in items:
+            posted_date = clean_text(str(item.get("posted_date", "")))
+            if posted_after_date and posted_date:
+                try:
+                    if datetime.strptime(posted_date, "%B %d, %Y").date() < posted_after_date:
+                        continue
+                except ValueError:
+                    pass
+            path = str(item.get("job_path", ""))
+            url = f"https://www.amazon.jobs{path}" if path.startswith("/") else path
+            jobs.append(
+                Job(
+                    company=company,
+                    title=clean_text(item.get("title", "")),
+                    location=amazon_locations(item),
+                    url=canonical_url(url),
+                    source=source.get("name", "Amazon Jobs"),
+                    team=clean_text(
+                        item.get("job_category") or item.get("job_family") or ""
+                    ),
+                )
+            )
+        offset += len(items)
+        total = int(data.get("hits", offset))
+        if not items or offset >= total:
+            break
+    return [job for job in jobs if job.title and job.url]
+
+
 def fetch_source(source: dict[str, Any]) -> list[Job]:
     source_type = source.get("type")
     if source_type == "github_readme":
@@ -378,6 +457,8 @@ def fetch_source(source: dict[str, Any]) -> list[Job]:
         return fetch_ashby(source)
     if source_type == "smartrecruiters":
         return fetch_smartrecruiters(source)
+    if source_type == "amazon_jobs":
+        return fetch_amazon_jobs(source)
     raise ValueError(f"Unknown source type: {source_type}")
 
 
