@@ -5,13 +5,35 @@
       "type": "github_readme",
       "name": "Simplify Summer 2027",
       "url": "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/README.md",
-      "enabled": true
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 100
     },
     {
       "type": "github_readme",
       "name": "Simplify Off-Season 2027",
       "url": "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/README-Off-Season.md",
-      "enabled": true
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 100
+    },
+    {
+      "type": "github_markdown",
+      "name": "SpeedyApply US SWE 2027",
+      "url": "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/README.md",
+      "layout": "company_column",
+      "max_age_days": 3,
+      "enabled": true,
+      "critical": true
+    },
+    {
+      "type": "github_markdown",
+      "name": "Independent FAANG API Tracker",
+      "url": "https://raw.githubusercontent.com/Emjumaev/FAANG-2027-Internships-Tracker/main/README.md",
+      "layout": "sectioned",
+      "posted_after": "2026-09-17",
+      "enabled": true,
+      "critical": true
     },
     {
       "type": "amazon_jobs",
@@ -19,6 +41,52 @@
       "company": "Amazon",
       "query": "intern",
       "posted_after": "2026-09-17",
+      "enabled": true,
+      "managed_group": "preferred_companies"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Stripe",
+      "company": "Stripe",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "stripe"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: NVIDIA",
+      "company": "NVIDIA",
+      "host": "nvidia.wd5.myworkdayjobs.com",
+      "tenant": "nvidia",
+      "site": "NVIDIAExternalCareerSite",
+      "applied_facets": {
+        "jobFamilyGroup": [
+          "0c40f6bd1d8f10ae43ffda1e8d447e94"
+        ]
+      },
+      "enabled": true,
+      "managed_group": "preferred_companies"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Roblox",
+      "company": "Roblox",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "roblox"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: Netflix",
+      "company": "Netflix",
+      "host": "netflix.wd108.myworkdayjobs.com",
+      "tenant": "netflix",
+      "site": "Netflix",
+      "applied_facets": {
+        "workerSubType": [
+          "eb16747cb8a401e8acd39d0d3626f08e"
+        ]
+      },
       "enabled": true,
       "managed_group": "preferred_companies"
     },
@@ -55,12 +123,29 @@
       "board": "doordashusa"
     },
     {
+      "type": "lever",
+      "name": "Lever: Palantir",
+      "company": "Palantir",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "posted_after": "2026-09-17",
+      "site": "palantir"
+    },
+    {
       "type": "greenhouse",
       "name": "Greenhouse: Coinbase",
       "company": "Coinbase",
       "enabled": true,
       "managed_group": "preferred_companies",
       "board": "coinbase"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Pinterest",
+      "company": "Pinterest",
+      "enabled": true,
+      "managed_group": "preferred_companies",
+      "board": "pinterest"
     },
     {
       "type": "greenhouse",
@@ -463,6 +548,27 @@
       "board": "Visa"
     }
   ],
+  "coverage": {
+    "watchlist": "coverage_watchlist.json",
+    "required_aggregate_sources": [
+      "Simplify Summer 2027",
+      "Simplify Off-Season 2027",
+      "SpeedyApply US SWE 2027",
+      "Independent FAANG API Tracker"
+    ],
+    "priority_companies": [
+      "Meta", "Google", "Netflix", "Databricks", "Stripe", "NVIDIA",
+      "Airbnb", "Apple", "Roblox", "Microsoft", "Snowflake", "Amazon",
+      "ByteDance / TikTok", "Uber", "Figma", "DoorDash", "LinkedIn",
+      "Snap", "Palantir", "Coinbase", "Pinterest", "Rippling",
+      "Robinhood", "Plaid", "Ramp"
+    ],
+    "critical_companies": [
+      "Netflix", "Databricks", "Stripe", "NVIDIA", "Airbnb", "Roblox",
+      "Amazon", "Figma", "DoorDash", "Palantir", "Coinbase",
+      "Pinterest", "Robinhood", "Ramp"
+    ]
+  },
   "filters": {
     "required_role_words": [
       "intern",
