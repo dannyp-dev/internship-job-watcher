@@ -14,6 +14,15 @@
       "enabled": true
     },
     {
+      "type": "amazon_jobs",
+      "name": "Amazon Jobs",
+      "company": "Amazon",
+      "query": "intern",
+      "posted_after": "2026-09-17",
+      "enabled": true,
+      "managed_group": "preferred_companies"
+    },
+    {
       "type": "greenhouse",
       "name": "Greenhouse: Databricks",
       "company": "Databricks",
