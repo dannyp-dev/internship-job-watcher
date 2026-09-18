@@ -125,7 +125,7 @@ def canonical_url(value: str) -> str:
             and not key.casefold().startswith("utm_")
         ]
         path = parts.path.rstrip("/") or "/"
-        amazon_job = re.fullmatch(r"/en/jobs/(\d+)(?:/[^/]*)?", path)
+        amazon_job = re.fullmatch(r"/(?:en/)?jobs/(\d+)(?:/[^/]*)?", path)
         if host in {"amazon.jobs", "www.amazon.jobs"} and amazon_job:
             host = "www.amazon.jobs"
             path = f"/en/jobs/{amazon_job.group(1)}"
@@ -185,6 +185,29 @@ def fetch_json(url: str) -> Any:
     return json.loads(fetch_bytes(url).decode("utf-8"))
 
 
+def fetch_json_post(url: str, payload: dict[str, Any], attempts: int = 3) -> Any:
+    body = json.dumps(payload).encode("utf-8")
+    request = Request(
+        url,
+        data=body,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+    )
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            with urlopen(request, timeout=30) as response:
+                return json.load(response)
+        except (HTTPError, URLError, TimeoutError) as exc:
+            last_error = exc
+            if attempt + 1 < attempts:
+                time.sleep(2**attempt)
+    raise RuntimeError(f"Could not fetch {url}: {last_error}")
+
+
 def choose_application_link(links: Iterable[str]) -> str:
     candidates = [link for link in links if link.startswith("http")]
     for link in candidates:
@@ -227,6 +250,81 @@ def fetch_github_readme(source: dict[str, Any]) -> list[Job]:
     return parse_github_readme(text, source.get("name", "GitHub list"))
 
 
+def markdown_cell_text(value: str) -> str:
+    value = re.sub(r"<[^>]+>", "", value)
+    value = re.sub(r"!\[[^]]*\]\([^)]+\)", "", value)
+    value = re.sub(r"\[([^]]+)\]\([^)]+\)", r"\1", value)
+    return clean_text(value.replace("**", "").replace("`", ""))
+
+
+def markdown_links(value: str) -> list[str]:
+    html_links = re.findall(r'href=["\'](https?://[^"\']+)', value, re.IGNORECASE)
+    markdown_urls = re.findall(r"\[[^]]*\]\((https?://[^)]+)\)", value)
+    return html_links + markdown_urls
+
+
+def parse_github_markdown(text: str, source: dict[str, Any]) -> list[Job]:
+    """Parse independent Markdown internship lists in either supported layout."""
+    mode = source.get("layout", "company_column")
+    source_name = source.get("name", "GitHub Markdown list")
+    current_company = ""
+    jobs: list[Job] = []
+    max_age_days = source.get("max_age_days")
+    posted_after = source.get("posted_after")
+    posted_after_date = (
+        datetime.strptime(posted_after, "%Y-%m-%d").date() if posted_after else None
+    )
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if mode == "sectioned" and line.startswith("## "):
+            current_company = markdown_cell_text(line[3:])
+            continue
+        if not line.startswith("|") or "---" in line:
+            continue
+        cells = [cell.strip() for cell in line.strip("|").split("|")]
+        if mode == "company_column":
+            if len(cells) != 6 or normalize(cells[0]) == "company":
+                continue
+            company = markdown_cell_text(cells[0])
+            if company in {"↳", ""}:
+                company = current_company
+            else:
+                current_company = company
+            title = markdown_cell_text(cells[1])
+            location = markdown_cell_text(cells[2])
+            compensation = markdown_cell_text(cells[3])
+            links = markdown_links(cells[4])
+            age_match = re.search(r"(\d+)d", cells[5])
+            if max_age_days is not None and age_match:
+                if int(age_match.group(1)) > int(max_age_days):
+                    continue
+        else:
+            if len(cells) != 5 or normalize(cells[0]) == "role" or not current_company:
+                continue
+            company = current_company
+            title = markdown_cell_text(cells[0]).replace("🆕", "").strip()
+            location = markdown_cell_text(cells[2])
+            compensation = ""
+            links = markdown_links(cells[0])
+            if posted_after_date:
+                try:
+                    if datetime.strptime(cells[3], "%Y-%m-%d").date() < posted_after_date:
+                        continue
+                except ValueError:
+                    continue
+        url = choose_application_link(links)
+        if company and title and url:
+            jobs.append(
+                Job(company, title, location, url, source_name, compensation=compensation)
+            )
+    return jobs
+
+
+def fetch_github_markdown(source: dict[str, Any]) -> list[Job]:
+    text = fetch_bytes(source["url"]).decode("utf-8", errors="replace")
+    return parse_github_markdown(text, source)
+
+
 def fetch_greenhouse(source: dict[str, Any]) -> list[Job]:
     board = source["board"]
     data = fetch_json(
@@ -253,8 +351,18 @@ def fetch_lever(source: dict[str, Any]) -> list[Job]:
     site = source["site"]
     data = fetch_json(f"https://api.lever.co/v0/postings/{site}?mode=json")
     company = source.get("company", site)
+    posted_after = source.get("posted_after")
+    posted_after_date = (
+        datetime.strptime(posted_after, "%Y-%m-%d").date() if posted_after else None
+    )
     jobs = []
     for item in data:
+        if posted_after_date and item.get("createdAt"):
+            created_date = datetime.fromtimestamp(
+                int(item["createdAt"]) / 1000, timezone.utc
+            ).date()
+            if created_date < posted_after_date:
+                continue
         categories = item.get("categories", {})
         jobs.append(
             Job(
@@ -445,10 +553,59 @@ def fetch_amazon_jobs(source: dict[str, Any]) -> list[Job]:
     return [job for job in jobs if job.title and job.url]
 
 
+def fetch_workday(source: dict[str, Any]) -> list[Job]:
+    """Fetch a company's official Workday career site through its public API."""
+    host = source["host"]
+    tenant = source["tenant"]
+    site = source["site"]
+    company = source.get("company", tenant)
+    endpoint = f"https://{host}/wday/cxs/{tenant}/{site}/jobs"
+    limit = 20
+    offset = 0
+    total: int | None = None
+    jobs: list[Job] = []
+    while True:
+        data = fetch_json_post(
+            endpoint,
+            {
+                "appliedFacets": source.get("applied_facets", {}),
+                "limit": limit,
+                "offset": offset,
+                "searchText": source.get("query", ""),
+            },
+        )
+        items = data.get("jobPostings", [])
+        for item in items:
+            path = str(item.get("externalPath", ""))
+            url = f"https://{host}/{site}{path}" if path.startswith("/") else path
+            location = clean_text(item.get("locationsText", ""))
+            if re.fullmatch(r"\d+ Locations?", location, re.IGNORECASE):
+                path_location = path.partition("/job/")[2].partition("/")[0]
+                if path_location:
+                    location = path_location.replace("-", ", ")
+            jobs.append(
+                Job(
+                    company=company,
+                    title=clean_text(item.get("title", "")),
+                    location=location,
+                    url=canonical_url(url),
+                    source=source.get("name", f"Workday: {company}"),
+                )
+            )
+        offset += len(items)
+        if total is None:
+            total = int(data.get("total", offset))
+        if not items or offset >= total:
+            break
+    return [job for job in jobs if job.title and job.url]
+
+
 def fetch_source(source: dict[str, Any]) -> list[Job]:
     source_type = source.get("type")
     if source_type == "github_readme":
         return fetch_github_readme(source)
+    if source_type == "github_markdown":
+        return fetch_github_markdown(source)
     if source_type == "greenhouse":
         return fetch_greenhouse(source)
     if source_type == "lever":
@@ -459,6 +616,8 @@ def fetch_source(source: dict[str, Any]) -> list[Job]:
         return fetch_smartrecruiters(source)
     if source_type == "amazon_jobs":
         return fetch_amazon_jobs(source)
+    if source_type == "workday":
+        return fetch_workday(source)
     raise ValueError(f"Unknown source type: {source_type}")
 
 
@@ -576,6 +735,52 @@ def load_watchlist_sources(config: dict[str, Any], config_path: Path) -> list[di
         identity = str(source.get("board") or source.get("site") or source.get("url", ""))
         unique[(str(source.get("type", "")), identity)] = source
     return list(unique.values())
+
+
+def source_is_critical(source: dict[str, Any], config: dict[str, Any]) -> bool:
+    if source.get("critical"):
+        return True
+    critical_companies = {
+        normalize(company)
+        for company in config.get("coverage", {}).get("critical_companies", [])
+    }
+    return normalize(source.get("company", "")) in critical_companies
+
+
+def validate_coverage_config(
+    config: dict[str, Any], config_path: Path, sources: list[dict[str, Any]]
+) -> None:
+    coverage = config.get("coverage", {})
+    enabled_names = {source.get("name") for source in sources}
+    required = set(coverage.get("required_aggregate_sources", []))
+    missing = sorted(required - enabled_names)
+    if missing:
+        raise RuntimeError(f"Required coverage sources are missing: {', '.join(missing)}")
+
+    watchlist_name = coverage.get("watchlist")
+    if not watchlist_name:
+        return
+    watchlist_path = Path(watchlist_name)
+    if not watchlist_path.is_absolute():
+        watchlist_path = config_path.resolve().parent / watchlist_path
+    watchlist = load_json(watchlist_path, {})
+    tiers = watchlist.get("tiers", {})
+    companies = [company for tier in tiers.values() for company in tier]
+    if len(companies) != 150 or len({normalize(company) for company in companies}) != 150:
+        raise RuntimeError("Coverage watchlist must contain 150 unique companies")
+
+    aggregate_types = {"github_readme", "github_markdown"}
+    direct_companies = {
+        normalize(source.get("company", ""))
+        for source in sources
+        if source.get("type") not in aggregate_types and source.get("company")
+    }
+    tier_one = tiers.get("1", [])
+    direct_tier_one = sum(normalize(company) in direct_companies for company in tier_one)
+    print(
+        "COVERAGE | 150 target companies have four aggregate safety nets; "
+        f"{direct_tier_one}/{len(tier_one)} Tier 1 companies also have direct feeds"
+    )
 
 
 def save_json(path: Path, data: Any) -> None:
@@ -760,11 +965,13 @@ def check_jobs(
 
     gathered: list[Job] = []
     failures: list[str] = []
+    critical_failures: list[str] = []
     sources = [
         source
         for source in load_watchlist_sources(config, config_path)
         if source.get("enabled", True)
     ]
+    validate_coverage_config(config, config_path, sources)
     max_workers = min(10, max(1, len(sources)))
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
         futures = {pool.submit(fetch_source, source): source for source in sources}
@@ -772,10 +979,18 @@ def check_jobs(
             source = futures[future]
             try:
                 source_jobs = future.result()
+                minimum_jobs = int(source.get("minimum_jobs", 0))
+                if len(source_jobs) < minimum_jobs:
+                    raise RuntimeError(
+                        f"returned {len(source_jobs)} jobs, below required {minimum_jobs}"
+                    )
                 gathered.extend(source_jobs)
                 print(f"Fetched {len(source_jobs)} jobs from {source.get('name', source.get('type'))}")
             except Exception as exc:  # A single board should not break every other source.
-                failures.append(f"{source.get('name', source.get('type'))}: {exc}")
+                failure = f"{source.get('name', source.get('type'))}: {exc}"
+                failures.append(failure)
+                if source_is_critical(source, config):
+                    critical_failures.append(failure)
 
     if not gathered:
         detail = "; ".join(failures) if failures else "No enabled sources"
@@ -798,6 +1013,12 @@ def check_jobs(
         print(f"NEW | {job.company} | {job.title} | {job.location} | {job.url}")
 
     timestamp = now_iso()
+    previous_critical_failures = set(state.get("critical_source_failures", []))
+    current_critical_failures = set(critical_failures)
+    newly_failed = sorted(current_critical_failures - previous_critical_failures)
+    recovered = sorted(previous_critical_failures - current_critical_failures)
+    health_changed = bool(newly_failed or recovered)
+    state["critical_source_failures"] = sorted(current_critical_failures)
     if baseline_current:
         for job in matched:
             existing_key = existing_keys[job.key]
@@ -850,6 +1071,28 @@ def check_jobs(
     successfully_handled: set[str] = set()
     notification_errors: list[str] = []
 
+    if not dry_run and health_changed and provider_is_configured(provider):
+        if newly_failed:
+            try:
+                send_notification(
+                    provider,
+                    "Internship tracker source needs attention",
+                    "\n".join(newly_failed),
+                    "https://github.com/dannyp-dev/internship-job-watcher/actions",
+                )
+            except Exception as exc:
+                notification_errors.append(f"source health alert: {exc}")
+        if recovered:
+            try:
+                send_notification(
+                    provider,
+                    "Internship tracker source recovered",
+                    "\n".join(recovered),
+                    "https://github.com/dannyp-dev/internship-job-watcher/actions",
+                )
+            except Exception as exc:
+                notification_errors.append(f"source recovery alert: {exc}")
+
     if dry_run:
         print("Dry run enabled. Notifications and state changes were skipped.")
     elif new_jobs and not provider_is_configured(provider):
@@ -896,14 +1139,20 @@ def check_jobs(
             state["last_source_failures"] = failures
             state["last_notification_errors"] = notification_errors
             save_json(state_path, state)
-        elif not new_jobs:
+        elif not new_jobs and not health_changed:
             print("No new matches. Saved history did not need to change.")
+
+        if health_changed and not successfully_handled:
+            state["last_checked_at"] = timestamp
+            state["last_source_failures"] = failures
+            state["last_notification_errors"] = notification_errors
+            save_json(state_path, state)
 
     for failure in failures:
         print(f"SOURCE WARNING | {failure}", file=sys.stderr)
     for error in notification_errors:
         print(f"NOTIFICATION WARNING | {error}", file=sys.stderr)
-    return 1 if notification_errors else 0
+    return 1 if notification_errors or critical_failures else 0
 
 
 def test_notification(config_path: Path) -> int:
