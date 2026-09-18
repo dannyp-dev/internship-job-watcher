@@ -17,11 +17,13 @@ from job_watcher import (
     fetch_ashby,
     fetch_amazon_jobs,
     fetch_smartrecruiters,
+    fetch_workday,
     is_us_location,
     is_active_notification_time,
     job_matches,
     load_watchlist_sources,
     parse_github_readme,
+    parse_github_markdown,
     seen_key_for_job,
 )
 
@@ -50,6 +52,36 @@ class JobWatcherTests(unittest.TestCase):
         jobs = parse_github_readme(fixture, "fixture")
         self.assertEqual(1, len(jobs))
         self.assertEqual("https://acme.example/jobs/3", jobs[0].url)
+
+    def test_parses_speedyapply_markdown_and_age_limit(self):
+        fixture = """
+        | Company | Position | Location | Salary | Posting | Age |
+        |---|---|---|---|---|---|
+        | <a href="https://acme.example"><strong>Acme</strong></a> | Software Engineer Intern | Austin, TX | $50/hr | <a href="https://acme.example/jobs/1">Apply</a> | 1d |
+        | OldCo | Software Intern | NYC | $40/hr | <a href="https://old.example/jobs/2">Apply</a> | 9d |
+        """
+        jobs = parse_github_markdown(
+            fixture,
+            {"name": "Speedy", "layout": "company_column", "max_age_days": 3},
+        )
+        self.assertEqual(1, len(jobs))
+        self.assertEqual("Acme", jobs[0].company)
+        self.assertEqual("$50/hr", jobs[0].compensation)
+
+    def test_parses_sectioned_faang_markdown(self):
+        fixture = """
+        ## Google
+        | Role | Category | Location | Posted | First seen |
+        |---|---|---|---|---|
+        | [Software Engineering Intern](https://google.example/jobs/1) 🆕 | Software | Austin, Texas, USA | 2026-09-17 | 2026-09-17 |
+        """
+        jobs = parse_github_markdown(
+            fixture,
+            {"name": "FAANG", "layout": "sectioned", "posted_after": "2026-09-17"},
+        )
+        self.assertEqual(1, len(jobs))
+        self.assertEqual("Google", jobs[0].company)
+        self.assertEqual("Software Engineering Intern", jobs[0].title)
 
     def test_filters_for_technical_us_internships(self):
         filters = {
@@ -182,6 +214,28 @@ class JobWatcherTests(unittest.TestCase):
         )
         self.assertIn("Seattle, Washington, USA", jobs[0].location)
         self.assertIn("offset=1", mock_fetch_json.call_args_list[1].args[0])
+
+    @patch("job_watcher.fetch_json_post")
+    def test_maps_workday_jobs(self, mock_fetch_json_post):
+        mock_fetch_json_post.return_value = {
+            "total": 1,
+            "jobPostings": [{
+                "title": "Software Engineering Intern",
+                "locationsText": "US, CA, Santa Clara",
+                "externalPath": "/job/Santa-Clara/Software-Intern_JR1",
+            }],
+        }
+        jobs = fetch_workday({
+            "host": "acme.wd5.myworkdayjobs.com",
+            "tenant": "acme",
+            "site": "External",
+            "company": "Acme",
+        })
+        self.assertEqual(1, len(jobs))
+        self.assertEqual(
+            "https://acme.wd5.myworkdayjobs.com/External/job/Santa-Clara/Software-Intern_JR1",
+            jobs[0].url,
+        )
 
     def test_loads_direct_sources_from_watchlist(self):
         with tempfile.TemporaryDirectory() as directory:
