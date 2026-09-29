@@ -700,6 +700,72 @@
       "enabled": true,
       "managed_group": "expanded_companies",
       "board": "chainguard"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: Adobe",
+      "company": "Adobe",
+      "host": "adobe.wd5.myworkdayjobs.com",
+      "tenant": "adobe",
+      "site": "external_experienced",
+      "query": "intern",
+      "enabled": true,
+      "managed_group": "expanded_companies"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: Autodesk",
+      "company": "Autodesk",
+      "host": "autodesk.wd1.myworkdayjobs.com",
+      "tenant": "autodesk",
+      "site": "uni",
+      "query": "intern",
+      "enabled": true,
+      "managed_group": "expanded_companies"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: Capital One",
+      "company": "Capital One",
+      "host": "capitalone.wd12.myworkdayjobs.com",
+      "tenant": "capitalone",
+      "site": "Capital_One",
+      "query": "intern",
+      "enabled": true,
+      "managed_group": "expanded_companies"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: Mastercard",
+      "company": "Mastercard",
+      "host": "mastercard.wd1.myworkdayjobs.com",
+      "tenant": "mastercard",
+      "site": "Campus",
+      "query": "intern",
+      "enabled": true,
+      "managed_group": "expanded_companies"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: Red Hat",
+      "company": "Red Hat",
+      "host": "redhat.wd5.myworkdayjobs.com",
+      "tenant": "redhat",
+      "site": "jobs",
+      "query": "intern",
+      "enabled": true,
+      "managed_group": "expanded_companies"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: Cadence",
+      "company": "Cadence",
+      "host": "cadence.wd1.myworkdayjobs.com",
+      "tenant": "cadence",
+      "site": "University_Talent",
+      "query": "intern",
+      "enabled": true,
+      "managed_group": "expanded_companies"
     }
   ],
   "coverage": {

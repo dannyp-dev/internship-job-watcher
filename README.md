@@ -7,7 +7,7 @@ It currently monitors:
 - Simplify's Summer 2027 list
 - Simplify's Off-Season 2027 list
 - Two additional public internship trackers as cross-checks
-- 108 configured direct company feeds, including Amazon, Cloudflare, and newly validated Greenhouse and Ashby boards
+- 114 configured direct company feeds, including Amazon, Cloudflare, newly validated Greenhouse and Ashby boards, and six validated Workday boards
 
 `coverage_watchlist.json` names 250 target companies. It is a planning roster, not 250 direct monitors. Companies without a direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the original researched 100-company registry and its direct feeds.
 

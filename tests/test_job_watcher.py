@@ -22,6 +22,7 @@ from job_watcher import (
     is_active_notification_time,
     job_matches,
     load_watchlist_sources,
+    validate_coverage_config,
     parse_github_readme,
     parse_github_markdown,
     seen_key_for_job,
@@ -114,6 +115,7 @@ class JobWatcherTests(unittest.TestCase):
         self.assertTrue(matches("Cloudflare", "Full Stack Engineering Intern"))
         self.assertTrue(matches("Cloudflare", "Cloud Platform Engineering Intern"))
         self.assertTrue(matches("Cloudflare", "Software Engineering Intern, Distributed Systems"))
+        self.assertTrue(matches("Cloudflare", "HTML Software Intern"))
         self.assertFalse(matches("RTX", "Software Engineering Intern"))
         self.assertFalse(matches("Raytheon", "Backend Software Engineering Intern"))
         for title in (
@@ -129,6 +131,19 @@ class JobWatcherTests(unittest.TestCase):
         ):
             with self.subTest(title=title):
                 self.assertFalse(matches("Cloudflare", title))
+
+    def test_250_company_roster_and_required_direct_feeds(self):
+        root = Path(__file__).resolve().parents[1]
+        config_path = root / "config.json"
+        config = json.loads(config_path.read_text(encoding="utf-8"))
+        sources = load_watchlist_sources(config, config_path)
+        roster = json.loads((root / "coverage_watchlist.json").read_text(encoding="utf-8"))
+        names = [name for tier in roster["tiers"].values() for name in tier]
+        self.assertEqual(250, len(names))
+        self.assertEqual(250, len({name.casefold() for name in names}))
+        self.assertNotIn("RTX", names)
+        self.assertIn("Cloudflare", names)
+        validate_coverage_config(config, config_path, sources)
 
     def test_canonical_url_removes_tracking_and_fragment(self):
         actual = canonical_url("https://Example.com/jobs/7/?utm_source=x&gh_src=y&keep=1#top")
