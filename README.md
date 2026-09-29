@@ -51,6 +51,8 @@ The first normal run creates a baseline and records existing roles without flood
 
 New direct feeds also establish their own first-run baseline. Current listings on those feeds are recorded without a backlog of alerts. Subsequent additions are eligible for notifications. A direct feed is polled every scheduled check during the active window, but an official career site can change its API or block automated requests; critical feed failures produce a health alert. The 250-company roster remains a target list, not a claim that every company has a working direct feed.
 
+Microsoft's careers search rate-limits broad pagination. Its direct check uses a small set of targeted software-internship searches on each run, while the aggregate trackers remain a fallback for results beyond those search pages. This feed is best-effort, not exhaustive.
+
 The workflow retries transient state-history push failures up to four times. This reduces the chance that a successfully delivered Telegram alert is treated as new again on the next check.
 
 ## Review or tune the watchlist

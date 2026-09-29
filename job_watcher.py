@@ -684,30 +684,29 @@ def fetch_apple_careers(source: dict[str, Any]) -> list[Job]:
 
 
 def fetch_microsoft_careers(source: dict[str, Any]) -> list[Job]:
-    """Search Microsoft's public Eightfold careers endpoint."""
+    """Search relevant Microsoft internships with a small request budget.
+
+    Microsoft's public search rate-limits broad pagination on GitHub runners.
+    Aggregate feeds remain a backstop for roles outside the top search results.
+    """
     jobs: dict[str, Job] = {}
     endpoint = "https://apply.careers.microsoft.com/api/pcsx/search"
-    for query in source.get("queries", ["intern"]):
-        for start in range(0, 400, 10):
-            url = endpoint + "?" + urlencode({
-                "domain": "microsoft.com", "query": query, "num": 10, "start": start,
-            })
-            payload = fetch_json(url).get("data", {})
-            positions = payload.get("positions", [])
-            for item in positions:
-                job_id = str(item.get("id", ""))
-                if not job_id:
-                    continue
-                jobs[job_id] = Job(
-                    company=source.get("company", "Microsoft"),
-                    title=clean_text(item.get("name", "")),
-                    location="; ".join(str(loc) for loc in item.get("locations", [])),
-                    url=f"https://apply.careers.microsoft.com/careers/job/{job_id}",
-                    source=source.get("name", "Microsoft Careers"),
-                )
-            if not positions or start + len(positions) >= int(payload.get("count", 0)):
-                break
-            time.sleep(0.5)
+    for query in source.get("queries", ["software engineering intern", "software engineer intern"]):
+        url = endpoint + "?" + urlencode({
+            "domain": "microsoft.com", "query": query, "num": 10, "start": 0,
+        })
+        positions = fetch_json(url).get("data", {}).get("positions", [])
+        for item in positions:
+            job_id = str(item.get("id", ""))
+            if not job_id:
+                continue
+            jobs[job_id] = Job(
+                company=source.get("company", "Microsoft"),
+                title=clean_text(item.get("name", "")),
+                location="; ".join(str(loc) for loc in item.get("locations", [])),
+                url=f"https://apply.careers.microsoft.com/careers/job/{job_id}",
+                source=source.get("name", "Microsoft Careers"),
+            )
     return list(jobs.values())
 
 

@@ -67,6 +67,7 @@
       "type": "microsoft_careers",
       "name": "Microsoft Careers",
       "company": "Microsoft",
+      "queries": ["software engineering intern", "software engineer intern"],
       "enabled": true,
       "critical": true,
       "minimum_jobs": 1,
