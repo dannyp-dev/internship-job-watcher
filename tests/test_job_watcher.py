@@ -26,6 +26,7 @@ from job_watcher import (
     parse_github_readme,
     parse_github_markdown,
     seen_key_for_job,
+    strip_legacy_compensation,
 )
 
 
@@ -180,6 +181,12 @@ class JobWatcherTests(unittest.TestCase):
         filters = json.loads((Path(__file__).resolve().parents[1] / "config.json").read_text())["filters"]
         self.assertNotIn("minimum_hourly_pay", filters)
         self.assertNotIn("unpaid", filters["exclude_words"])
+
+    def test_removes_legacy_pay_from_saved_history(self):
+        seen = {"one": {"job": {"title": "Software Intern", "compensation": "$25/hr"}}}
+        self.assertTrue(strip_legacy_compensation(seen))
+        self.assertEqual({"title": "Software Intern"}, seen["one"]["job"])
+        self.assertFalse(strip_legacy_compensation(seen))
 
     @patch("job_watcher.fetch_json")
     def test_maps_ashby_jobs(self, mock_fetch_json):

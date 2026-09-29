@@ -908,6 +908,19 @@ def seen_url_index(seen: dict[str, Any]) -> dict[str, str]:
     return result
 
 
+def strip_legacy_compensation(seen: dict[str, Any]) -> bool:
+    """Discard salary fields left in history by older watcher versions."""
+    changed = False
+    for entry in seen.values():
+        if not isinstance(entry, dict):
+            continue
+        job = entry.get("job")
+        if isinstance(job, dict) and "compensation" in job:
+            del job["compensation"]
+            changed = True
+    return changed
+
+
 def seen_key_for_job(
     job: Job, seen: dict[str, Any], urls: dict[str, str] | None = None
 ) -> str | None:
@@ -977,6 +990,7 @@ def check_jobs(
     matched.sort(key=lambda job: (normalize(job.company), normalize(job.title), job.url))
     state = load_json(state_path, {"version": 1, "initialized_at": None, "seen": {}})
     seen: dict[str, Any] = state.setdefault("seen", {})
+    legacy_pay_removed = strip_legacy_compensation(seen)
     initialized = bool(state.get("initialized_at"))
     seen_urls = seen_url_index(seen)
     existing_keys = {
@@ -1117,7 +1131,11 @@ def check_jobs(
             state["last_notification_errors"] = notification_errors
             save_json(state_path, state)
         elif not new_jobs and not health_changed:
-            print("No new matches. Saved history did not need to change.")
+            if legacy_pay_removed:
+                save_json(state_path, state)
+                print("No new matches. Removed legacy pay fields from saved history.")
+            else:
+                print("No new matches. Saved history did not need to change.")
 
         if health_changed and not successfully_handled:
             state["last_checked_at"] = timestamp
