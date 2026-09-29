@@ -24,6 +24,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: read
 
 jobs:
   check:
@@ -40,6 +41,26 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Skip redundant fallback check
+        id: fallback
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" != "schedule" ]; then
+            echo "run_check=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          cutoff=$(date -u -d '10 minutes ago' '+%Y-%m-%dT%H:%M:%SZ')
+          recent=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/check-jobs.yml/runs?event=workflow_dispatch&per_page=10" \
+            --jq ".workflow_runs[] | select(.created_at >= \"$cutoff\") | .id" 2>/dev/null || true)
+          if [ -n "$recent" ]; then
+            echo "A primary check started within the last 10 minutes; skipping fallback."
+            echo "run_check=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "No recent primary check; running fallback."
+            echo "run_check=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Send a test phone notification
         if: ${{ inputs.test_notification == true }}
         env:
@@ -51,7 +72,7 @@ jobs:
         run: python job_watcher.py --test-notification
 
       - name: Check job sources
-        if: ${{ inputs.test_notification != true && inputs.baseline_current != true }}
+        if: ${{ steps.fallback.outputs.run_check == 'true' && inputs.test_notification != true && inputs.baseline_current != true }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}

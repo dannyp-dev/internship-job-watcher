@@ -979,7 +979,8 @@ def notify_ntfy(title: str, message: str, click_url: str) -> None:
     }
     if click_url:
         payload["click"] = click_url
-        payload["actions"] = [{"action": "view", "label": "Apply", "url": click_url}]
+        label = "View tracker runs" if title.startswith("Internship tracker source") else "Apply"
+        payload["actions"] = [{"action": "view", "label": label, "url": click_url}]
     token = os.environ.get("NTFY_TOKEN", "").strip()
     headers = {"Authorization": f"Bearer {token}"} if token else {}
     post_json(server, payload, headers)
@@ -998,8 +999,12 @@ def notify_telegram(title: str, message: str, click_url: str) -> None:
         "disable_web_page_preview": "true",
     }
     if click_url:
+        label = (
+            "View tracker runs" if title.startswith("Internship tracker source")
+            else "Open application"
+        )
         fields["reply_markup"] = json.dumps(
-            {"inline_keyboard": [[{"text": "Open application", "url": click_url}]]}
+            {"inline_keyboard": [[{"text": label, "url": click_url}]]}
         )
     payload = urlencode(fields).encode("utf-8")
     request = Request(
@@ -1141,7 +1146,7 @@ def check_jobs(
     gathered: list[Job] = []
     fetched_by_source: dict[str, list[Job]] = {}
     failures: list[str] = []
-    critical_failures: list[str] = []
+    critical_failures: dict[str, str] = {}
     sources = [
         source
         for source in load_watchlist_sources(config, config_path)
@@ -1167,7 +1172,7 @@ def check_jobs(
                 failure = f"{source.get('name', source.get('type'))}: {exc}"
                 failures.append(failure)
                 if source_is_critical(source, config):
-                    critical_failures.append(failure)
+                    critical_failures[source.get("name", source.get("type", ""))] = failure
 
     if not gathered:
         detail = "; ".join(failures) if failures else "No enabled sources"
@@ -1226,12 +1231,33 @@ def check_jobs(
             }
     if fresh_baseline_sources:
         print("Baselined newly added direct sources: " + ", ".join(sorted(fresh_baseline_sources)))
-    previous_critical_failures = set(state.get("critical_source_failures", []))
-    current_critical_failures = set(critical_failures)
+    source_names = {source.get("name", source.get("type", "")) for source in sources}
+    previous_critical_failures = {
+        name for entry in state.get("critical_source_failures", [])
+        for name in source_names
+        if entry == name or entry.startswith(name + ": ")
+    }
+    previous_streaks = state.get("critical_source_failure_streaks", {})
+    current_streaks = {
+        name: int(previous_streaks.get(name, 0)) + 1
+        for name, failure in critical_failures.items()
+        if "HTTP Error 429" in failure
+    }
+    current_critical_failures = {
+        name for name, failure in critical_failures.items()
+        if "HTTP Error 429" not in failure
+        or current_streaks.get(name, 0) >= 3
+        or name in previous_critical_failures
+    }
     newly_failed = sorted(current_critical_failures - previous_critical_failures)
-    recovered = sorted(previous_critical_failures - current_critical_failures)
+    recovered = sorted(previous_critical_failures - set(critical_failures))
     health_changed = bool(newly_failed or recovered)
     state["critical_source_failures"] = sorted(current_critical_failures)
+    state["critical_source_failure_streaks"] = current_streaks
+    health_state_changed = (
+        health_changed or current_streaks != previous_streaks
+        or set(state.get("critical_source_failures", [])) != previous_critical_failures
+    )
     if baseline_current:
         for job in matched:
             existing_key = existing_keys[job.key]
@@ -1290,7 +1316,7 @@ def check_jobs(
                 send_notification(
                     provider,
                     "Internship tracker source needs attention",
-                    "\n".join(newly_failed),
+                    "\n".join(critical_failures[name] for name in newly_failed),
                     "https://github.com/dannyp-dev/internship-job-watcher/actions",
                 )
             except Exception as exc:
@@ -1300,7 +1326,7 @@ def check_jobs(
                 send_notification(
                     provider,
                     "Internship tracker source recovered",
-                    "\n".join(recovered),
+                    "\n".join(f"{name} is responding again." for name in recovered),
                     "https://github.com/dannyp-dev/internship-job-watcher/actions",
                 )
             except Exception as exc:
@@ -1353,7 +1379,7 @@ def check_jobs(
             state["last_notification_errors"] = notification_errors
             save_json(state_path, state)
         elif not new_jobs and not health_changed:
-            if legacy_pay_removed or fresh_baseline_sources:
+            if legacy_pay_removed or fresh_baseline_sources or health_state_changed:
                 save_json(state_path, state)
                 print("No new matches. Saved baseline or history maintenance.")
             else:
@@ -1369,7 +1395,7 @@ def check_jobs(
         print(f"SOURCE WARNING | {failure}", file=sys.stderr)
     for error in notification_errors:
         print(f"NOTIFICATION WARNING | {error}", file=sys.stderr)
-    return 1 if notification_errors or critical_failures else 0
+    return 1 if notification_errors or current_critical_failures else 0
 
 
 def test_notification(config_path: Path) -> int:

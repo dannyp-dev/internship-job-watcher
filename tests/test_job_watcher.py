@@ -38,6 +38,49 @@ class JobWatcherTests(unittest.TestCase):
     @patch("job_watcher.send_notification")
     @patch("job_watcher.provider_is_configured", return_value=True)
     @patch("job_watcher.fetch_source")
+    def test_transient_rate_limit_needs_three_failures_before_alert(
+        self, mock_fetch, _configured, mock_send
+    ):
+        fallback = Job("Acme", "Marketing Intern", "New York, NY",
+                       "https://example.com/marketing", "Fallback")
+        failing = True
+
+        def fetch(source):
+            if source["name"] == "Microsoft Careers" and failing:
+                raise RuntimeError("HTTP Error 429: Too Many Requests")
+            return [fallback]
+
+        mock_fetch.side_effect = fetch
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config_path = root / "config.json"
+            state_path = root / "state.json"
+            config_path.write_text(json.dumps({
+                "sources": [
+                    {"type": "fixture", "name": "Fallback", "url": "https://example.com/a"},
+                    {"type": "fixture", "name": "Microsoft Careers",
+                     "url": "https://example.com/b", "critical": True},
+                ],
+                "filters": {"required_role_words": ["intern"],
+                            "technical_title_words": ["software"], "us_only": True},
+                "notification": {"provider": "telegram"},
+            }), encoding="utf-8")
+            state_path.write_text(json.dumps({"version": 1,
+                "initialized_at": "2026-01-01T00:00:00Z", "seen": {}}), encoding="utf-8")
+
+            self.assertEqual(0, check_jobs(config_path, state_path))
+            self.assertEqual(0, check_jobs(config_path, state_path))
+            self.assertEqual(0, mock_send.call_count)
+            self.assertEqual(1, check_jobs(config_path, state_path))
+            self.assertEqual(1, mock_send.call_count)
+            failing = False
+            self.assertEqual(0, check_jobs(config_path, state_path))
+            self.assertEqual(2, mock_send.call_count)
+            self.assertIn("responding again", mock_send.call_args.args[2])
+
+    @patch("job_watcher.send_notification")
+    @patch("job_watcher.provider_is_configured", return_value=True)
+    @patch("job_watcher.fetch_source")
     def test_new_direct_source_baselines_then_alerts(self, mock_fetch, _configured, mock_send):
         old = Job("Acme", "Software Engineer Intern", "New York, NY",
                   "https://acme.example/jobs/1", "Acme Careers")
