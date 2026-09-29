@@ -7,7 +7,7 @@ It currently monitors:
 - Simplify's Summer 2027 list
 - Simplify's Off-Season 2027 list
 - Two additional public internship trackers as cross-checks
-- 120 configured direct company feeds, including Amazon, Cloudflare, Meta, Google, Apple, Microsoft, Snowflake, Snap, validated Greenhouse and Ashby boards, and Workday boards
+- 121 configured direct company feeds, including Amazon, Cloudflare, Meta, Google, Apple, Microsoft, Snowflake, Snap, Plaid, validated Greenhouse and Ashby boards, and Workday boards
 
 `coverage_watchlist.json` names 250 target companies. It is a planning roster, not 250 direct monitors. Companies without a direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the original researched 100-company registry and its direct feeds.
 
@@ -52,6 +52,8 @@ The first normal run creates a baseline and records existing roles without flood
 New direct feeds also establish their own first-run baseline. Current listings on those feeds are recorded without a backlog of alerts. Subsequent additions are eligible for notifications. A direct feed is polled every scheduled check during the active window, but an official career site can change its API or block automated requests; critical feed failures produce a health alert. The 250-company roster remains a target list, not a claim that every company has a working direct feed.
 
 Microsoft's careers search rate-limits broad pagination. Its direct check uses a small set of targeted software-internship searches on each run, while the aggregate trackers remain a fallback for results beyond those search pages. This feed is best-effort, not exhaustive.
+
+Of the 25 companies in Tier 1, 21 now have configured direct feeds. ByteDance/TikTok, Uber, LinkedIn, and Rippling currently rely on the aggregate trackers. Their official sites do not currently provide a verified, reliable feed in this project, so coverage for those four is not guaranteed. A configured direct feed can also change or fail; the critical ones are checked for health on each run.
 
 The workflow retries transient state-history push failures up to four times. This reduces the chance that a successfully delivered Telegram alert is treated as new again on the next check.
 

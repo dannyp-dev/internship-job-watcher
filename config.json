@@ -98,6 +98,16 @@
       "baseline_on_first_check": true
     },
     {
+      "type": "ashby",
+      "name": "Ashby: Plaid",
+      "company": "Plaid",
+      "board": "plaid",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "baseline_on_first_check": true
+    },
+    {
       "type": "amazon_jobs",
       "name": "Amazon Jobs",
       "company": "Amazon",
@@ -889,7 +899,8 @@
       "Apple",
       "Microsoft",
       "Snowflake",
-      "Snap"
+      "Snap",
+      "Plaid"
     ]
   },
   "filters": {
