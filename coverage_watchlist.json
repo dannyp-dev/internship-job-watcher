@@ -41,6 +41,34 @@
       "Roku", "Twitch", "Disney Streaming", "Zoox", "Aurora Innovation",
       "Rivian", "Verkada", "Motive", "Autodesk", "Cisco", "Red Hat",
       "SAP", "Intel", "Cadence", "Synopsys", "MathWorks", "Micron"
+    ],
+    "7": [
+      "OpenAI", "Anthropic", "Cohere", "Perplexity", "Hugging Face",
+      "Scale AI", "Glean", "Sentry", "Linear", "Retool",
+      "Supabase", "Neon", "PlanetScale", "Temporal", "Render",
+      "Railway", "Fly.io", "Pulumi", "Tailscale", "LaunchDarkly",
+      "PagerDuty", "CircleCI", "Buildkite", "Sourcegraph", "Honeycomb"
+    ],
+    "8": [
+      "Addepar", "Alloy", "Current", "Dave", "EarnIn", "Ethos",
+      "Figure", "Greenlight", "Lemonade", "Marqeta", "Modern Treasury",
+      "Navan", "Nubank", "Oscar Health", "Paxos", "Persona",
+      "Rho", "Sardine", "Stash", "Tala", "Upstart", "Varo",
+      "Wealthfront", "Webflow", "Whatnot"
+    ],
+    "9": [
+      "Amplitude", "Mixpanel", "Twilio Segment", "Contentful", "Algolia",
+      "Benchling", "Braze", "Calendly", "Checkr", "ClassDojo",
+      "ClickUp", "Doximity", "Grammarly", "Headspace", "Hinge",
+      "Iterable", "Klaviyo", "Loom", "monday.com", "OpenTable",
+      "Quora", "Thumbtack", "Tripadvisor", "Udemy", "Yelp"
+    ],
+    "10": [
+      "1Password", "Arctic Wolf", "Cato Networks", "Chainguard",
+      "Cisco Meraki", "Cloudinary", "DataStax", "Deepgram", "Dynatrace",
+      "F5", "Fortinet", "Harness", "Kong", "Lacework", "Netskope",
+      "OneTrust", "Ping Identity", "Redis", "Snyk", "Sonar",
+      "Tanium", "Trend Micro", "Veeam", "Wasabi Technologies", "Zilliz"
     ]
   }
 }

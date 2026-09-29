@@ -626,6 +626,16 @@ def contains_any(haystack: str, needles: Iterable[str]) -> bool:
     return any(normalize(needle) in normalized for needle in needles if needle.strip())
 
 
+def contains_phrase(haystack: str, phrases: Iterable[str]) -> bool:
+    """Match complete normalized words, not fragments such as ML in HTML."""
+    normalized = f" {normalize(haystack)} "
+    return any(
+        f" {normalize(phrase)} " in normalized
+        for phrase in phrases
+        if normalize(phrase)
+    )
+
+
 def confirmed_hourly_low(compensation: str) -> float | None:
     normalized = compensation.casefold()
     if not any(marker in normalized for marker in ("hour", "/hr", "hourly")):
@@ -654,6 +664,10 @@ def job_matches(job: Job, filters: dict[str, Any]) -> bool:
         return False
     if filters.get("technical_title_words") and not contains_any(
         title, filters["technical_title_words"]
+    ):
+        return False
+    if filters.get("exclude_title_phrases") and contains_phrase(
+        title, filters["exclude_title_phrases"]
     ):
         return False
     if filters.get("exclude_words") and contains_any(all_text, filters["exclude_words"]):
@@ -766,8 +780,8 @@ def validate_coverage_config(
     watchlist = load_json(watchlist_path, {})
     tiers = watchlist.get("tiers", {})
     companies = [company for tier in tiers.values() for company in tier]
-    if len(companies) != 150 or len({normalize(company) for company in companies}) != 150:
-        raise RuntimeError("Coverage watchlist must contain 150 unique companies")
+    if len(companies) != 250 or len({normalize(company) for company in companies}) != 250:
+        raise RuntimeError("Coverage watchlist must contain 250 unique companies")
 
     aggregate_types = {"github_readme", "github_markdown"}
     direct_companies = {
@@ -775,11 +789,17 @@ def validate_coverage_config(
         for source in sources
         if source.get("type") not in aggregate_types and source.get("company")
     }
-    tier_one = tiers.get("1", [])
-    direct_tier_one = sum(normalize(company) in direct_companies for company in tier_one)
+    required_direct = coverage.get("required_direct_companies", [])
+    missing_direct = [
+        company for company in required_direct
+        if normalize(company) not in direct_companies
+    ]
+    if missing_direct:
+        raise RuntimeError(f"Required direct feeds are missing: {', '.join(missing_direct)}")
     print(
-        "COVERAGE | 150 target companies have four aggregate safety nets; "
-        f"{direct_tier_one}/{len(tier_one)} Tier 1 companies also have direct feeds"
+        f"COVERAGE | {len(companies)} target companies listed; "
+        f"{len(direct_companies)} companies have configured direct feeds; "
+        "aggregate boards are supplemental and do not guarantee company coverage"
     )
 
 

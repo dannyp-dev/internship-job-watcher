@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 
-const path = new URL("./preferred_direct_candidates.json", import.meta.url);
+const candidateFile = process.argv.find((argument) => argument.startsWith("--candidate-file="))?.split("=", 2)[1] ?? "preferred_direct_candidates.json";
+const path = new URL(`./${candidateFile}`, import.meta.url);
 const candidates = JSON.parse(await fs.readFile(path, "utf8"));
 
 function endpoint(candidate) {
@@ -59,16 +60,15 @@ for (const result of results) {
 if (process.argv.includes("--merge")) {
   const configUrl = new URL("../config.json", import.meta.url);
   const config = JSON.parse(await fs.readFile(configUrl, "utf8"));
-  const retained = (config.sources ?? []).filter(
-    (source) => source.managed_group !== "preferred_companies",
-  );
-  const sources = results.filter((result) => result.valid).map((result) => {
+  const retained = config.sources ?? [];
+  const existing = new Set(retained.map((source) => `${source.type}:${source.board ?? source.site ?? ""}`));
+  const sources = results.filter((result) => result.valid && result.jobs > 0 && !existing.has(`${result.type}:${result.id}`)).map((result) => {
     const source = {
       type: result.type,
       name: `${result.type[0].toUpperCase()}${result.type.slice(1)}: ${result.company}`,
       company: result.company,
       enabled: true,
-      managed_group: "preferred_companies",
+      managed_group: "expanded_companies",
     };
     if (result.type === "lever") {
       source.site = result.id;

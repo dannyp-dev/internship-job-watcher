@@ -104,6 +104,32 @@ class JobWatcherTests(unittest.TestCase):
         self.assertFalse(job_matches(graduate_title, filters))
         self.assertTrue(job_matches(undergraduate, filters))
 
+    def test_resume_targeted_filters_exclude_unwanted_specialties_and_rtx(self):
+        filters = json.loads((Path(__file__).resolve().parents[1] / "config.json").read_text())["filters"]
+
+        def matches(company, title):
+            return job_matches(Job(company, title, "Austin, TX", "https://example.com/job", "test"), filters)
+
+        self.assertTrue(matches("Cloudflare", "Backend Software Engineering Intern"))
+        self.assertTrue(matches("Cloudflare", "Full Stack Engineering Intern"))
+        self.assertTrue(matches("Cloudflare", "Cloud Platform Engineering Intern"))
+        self.assertTrue(matches("Cloudflare", "Software Engineering Intern, Distributed Systems"))
+        self.assertFalse(matches("RTX", "Software Engineering Intern"))
+        self.assertFalse(matches("Raytheon", "Backend Software Engineering Intern"))
+        for title in (
+            "Machine Learning Software Engineering Intern",
+            "ML Platform Software Intern",
+            "Research Software Engineering Intern",
+            "Data Engineering Intern",
+            "Frontend Software Engineering Intern",
+            "Design Engineering Intern",
+            "Embedded Software Engineering Intern",
+            "Firmware Software Intern",
+            "Hardware Systems Engineering Intern",
+        ):
+            with self.subTest(title=title):
+                self.assertFalse(matches("Cloudflare", title))
+
     def test_canonical_url_removes_tracking_and_fragment(self):
         actual = canonical_url("https://Example.com/jobs/7/?utm_source=x&gh_src=y&keep=1#top")
         self.assertEqual("https://example.com/jobs/7?keep=1", actual)

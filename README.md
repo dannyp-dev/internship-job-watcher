@@ -6,12 +6,12 @@ It currently monitors:
 
 - Simplify's Summer 2027 list
 - Simplify's Off-Season 2027 list
-- A curated 100-company target list
-- 35 validated direct company feeds across Greenhouse, Lever, Ashby, and SmartRecruiters
+- Two additional public internship trackers as cross-checks
+- 108 configured direct company feeds, including Amazon, Cloudflare, and newly validated Greenhouse and Ashby boards
 
-The other 65 companies remain covered through Simplify. Their Workday, custom, iCIMS, Oracle, and SuccessFactors boards are recorded in `company_watchlist.json` for future adapters.
+`coverage_watchlist.json` names 250 target companies. It is a planning roster, not 250 direct monitors. Companies without a direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the original researched 100-company registry and its direct feeds.
 
-The filters focus on United States undergraduate internships related to backend, full-stack, platform, infrastructure, distributed systems, cloud, reliability,34 ML systems, data engineering, and research engineering. Confirmed hourly pay below $30 is excluded. When pay is not published in a feed, the Telegram alert says `Pay: unverified`.
+The filters favor United States undergraduate internships in backend, full-stack, platform, distributed systems, cloud, and site reliability. Titles focused on ML, research, data engineering, frontend-only, design, mobile, embedded, firmware, or hardware are excluded. RTX and its Raytheon, Collins Aerospace, and Pratt & Whitney brands are blocked. Confirmed hourly pay below $30 is excluded. When pay is not published in a feed, the Telegram alert says `Pay: unverified`.
 
 This app only monitors and notifies. It never applies to a job or contacts anyone.
 
@@ -53,8 +53,9 @@ The workflow retries transient state-history push failures up to four times. Thi
 
 ## Review or tune the watchlist
 
-- `WATCHLIST.md` is the readable 100-company list, with core, broad, and selective priority labels.
-- `company_watchlist.json` is the machine-readable registry used by the watcher.
+- `coverage_watchlist.json` is the 250-company target roster. It does not itself add a feed.
+- `WATCHLIST.md` and `company_watchlist.json` contain the original 100-company research, including 35 older direct sources.
+- `config.json` contains the current direct source configuration; it is combined with enabled sources in `company_watchlist.json` at runtime.
 - `config.json` controls fit, location, compensation, and notifications.
 
 To monitor only a subset, add company names to `company_allowlist`. To suppress companies, use `company_blocklist`.

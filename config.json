@@ -217,7 +217,9 @@
       "company": "Cloudflare",
       "enabled": true,
       "managed_group": "preferred_companies",
-      "board": "cloudflare"
+      "board": "cloudflare",
+      "critical": true,
+      "minimum_jobs": 1
     },
     {
       "type": "smartrecruiters",
@@ -546,6 +548,158 @@
       "enabled": true,
       "managed_group": "preferred_companies",
       "board": "Visa"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Anthropic",
+      "company": "Anthropic",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "anthropic"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Scale AI",
+      "company": "Scale AI",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "scaleai"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Linear",
+      "company": "Linear",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "linear"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Supabase",
+      "company": "Supabase",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "supabase"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Neon",
+      "company": "Neon",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "neon"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: PlanetScale",
+      "company": "PlanetScale",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "planetscale"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Railway",
+      "company": "Railway",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "railway"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Tailscale",
+      "company": "Tailscale",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "tailscale"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: LaunchDarkly",
+      "company": "LaunchDarkly",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "launchdarkly"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: PagerDuty",
+      "company": "PagerDuty",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "pagerduty"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: CircleCI",
+      "company": "CircleCI",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "circleci"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Buildkite",
+      "company": "Buildkite",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "buildkite"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Honeycomb",
+      "company": "Honeycomb",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "honeycomb"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Modern Treasury",
+      "company": "Modern Treasury",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "moderntreasury"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Webflow",
+      "company": "Webflow",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "webflow"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Braze",
+      "company": "Braze",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "braze"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Checkr",
+      "company": "Checkr",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "checkr"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Klaviyo",
+      "company": "Klaviyo",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "klaviyo"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Chainguard",
+      "company": "Chainguard",
+      "enabled": true,
+      "managed_group": "expanded_companies",
+      "board": "chainguard"
     }
   ],
   "coverage": {
@@ -557,16 +711,51 @@
       "Independent FAANG API Tracker"
     ],
     "priority_companies": [
-      "Meta", "Google", "Netflix", "Databricks", "Stripe", "NVIDIA",
-      "Airbnb", "Apple", "Roblox", "Microsoft", "Snowflake", "Amazon",
-      "ByteDance / TikTok", "Uber", "Figma", "DoorDash", "LinkedIn",
-      "Snap", "Palantir", "Coinbase", "Pinterest", "Rippling",
-      "Robinhood", "Plaid", "Ramp"
+      "Meta",
+      "Google",
+      "Netflix",
+      "Databricks",
+      "Stripe",
+      "NVIDIA",
+      "Airbnb",
+      "Apple",
+      "Roblox",
+      "Microsoft",
+      "Snowflake",
+      "Amazon",
+      "ByteDance / TikTok",
+      "Uber",
+      "Figma",
+      "DoorDash",
+      "LinkedIn",
+      "Snap",
+      "Palantir",
+      "Coinbase",
+      "Pinterest",
+      "Rippling",
+      "Robinhood",
+      "Plaid",
+      "Ramp"
     ],
     "critical_companies": [
-      "Netflix", "Databricks", "Stripe", "NVIDIA", "Airbnb", "Roblox",
-      "Amazon", "Figma", "DoorDash", "Palantir", "Coinbase",
-      "Pinterest", "Robinhood", "Ramp"
+      "Netflix",
+      "Databricks",
+      "Stripe",
+      "NVIDIA",
+      "Airbnb",
+      "Roblox",
+      "Amazon",
+      "Figma",
+      "DoorDash",
+      "Palantir",
+      "Coinbase",
+      "Pinterest",
+      "Robinhood",
+      "Ramp"
+    ],
+    "required_direct_companies": [
+      "Amazon",
+      "Cloudflare"
     ]
   },
   "filters": {
@@ -583,18 +772,65 @@
       "platform",
       "infrastructure",
       "distributed",
-      "systems",
       "reliability",
       "observability",
       "cloud",
       "full stack",
       "full-stack",
+      "site reliability",
+      "devops",
+      "api engineer"
+    ],
+    "exclude_title_phrases": [
       "machine learning",
+      "ml",
       "ml engineer",
-      "ai intern",
+      "llm",
+      "genai",
+      "generative ai",
+      "deep learning",
+      "computer vision",
+      "nlp",
       "artificial intelligence",
+      "ai engineer",
+      "ai research",
+      "research",
       "data engineer",
-      "research engineer"
+      "data science",
+      "data scientist",
+      "analytics engineer",
+      "developer relations",
+      "developer advocate",
+      "solutions engineer",
+      "sales engineer",
+      "support engineer",
+      "customer engineer",
+      "field engineer",
+      "frontend",
+      "front end",
+      "front-end",
+      "ui engineer",
+      "ux engineer",
+      "design engineer",
+      "product designer",
+      "web designer",
+      "mobile engineer",
+      "ios engineer",
+      "android engineer",
+      "embedded",
+      "firmware",
+      "kernel",
+      "compiler",
+      "graphics",
+      "gameplay",
+      "hardware",
+      "electrical",
+      "fpga",
+      "asic",
+      "silicon",
+      "robotics",
+      "perception",
+      "autonomy"
     ],
     "exclude_words": [
       "senior",
@@ -608,7 +844,12 @@
     ],
     "exclude_advanced_degree": true,
     "company_allowlist": [],
-    "company_blocklist": [],
+    "company_blocklist": [
+      "RTX",
+      "Raytheon",
+      "Collins Aerospace",
+      "Pratt & Whitney"
+    ],
     "location_words": [],
     "us_only": true,
     "minimum_hourly_pay": 30
