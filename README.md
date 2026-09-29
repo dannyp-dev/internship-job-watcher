@@ -11,7 +11,7 @@ It currently monitors:
 
 `coverage_watchlist.json` names 250 target companies. It is a planning roster, not 250 direct monitors. Companies without a direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the original researched 100-company registry and its direct feeds.
 
-The filters favor United States undergraduate internships in backend, full-stack, platform, distributed systems, cloud, and site reliability. Titles focused on ML, research, data engineering, frontend-only, design, mobile, embedded, firmware, or hardware are excluded. RTX and its Raytheon, Collins Aerospace, and Pratt & Whitney brands are blocked. Confirmed hourly pay below $30 is excluded. When pay is not published in a feed, the Telegram alert says `Pay: unverified`.
+The filters favor United States undergraduate internships in backend, full-stack, platform, distributed systems, cloud, and site reliability. Titles focused on ML, research, data engineering, frontend-only, design, mobile, embedded, firmware, or hardware are excluded. RTX and its Raytheon, Collins Aerospace, and Pratt & Whitney brands are blocked. The watcher does not filter, record, or report pay.
 
 This app only monitors and notifies. It never applies to a job or contacts anyone.
 
@@ -35,7 +35,7 @@ python job_watcher.py --telegram-chat-id
 
 7. Open **Actions > Check for new internships > Run workflow**. First run it with the test option enabled to confirm the Telegram alert. Then run it once with the test option off to establish the baseline.
 
-New alerts contain the company, role, location, source, pay status, and a tappable **Open application** button.
+New alerts contain the company, role, location, source, and a tappable **Open application** button.
 
 ## Put it on GitHub
 
@@ -56,7 +56,7 @@ The workflow retries transient state-history push failures up to four times. Thi
 - `coverage_watchlist.json` is the 250-company target roster. It does not itself add a feed.
 - `WATCHLIST.md` and `company_watchlist.json` contain the original 100-company research, including 35 older direct sources.
 - `config.json` contains the current direct source configuration; it is combined with enabled sources in `company_watchlist.json` at runtime.
-- `config.json` controls fit, location, compensation, and notifications.
+- `config.json` controls fit, location, and notifications.
 
 To monitor only a subset, add company names to `company_allowlist`. To suppress companies, use `company_blocklist`.
 
@@ -66,7 +66,7 @@ To narrow location, add values such as:
 "location_words": ["Remote", "Florida", "FL", "New York", "Seattle"]
 ```
 
-Listings labeled PhD, doctoral, or MBA are excluded. Missing compensation is not treated as unpaid because many legitimate postings omit compensation from their public feed.
+Listings labeled PhD, doctoral, or MBA are excluded.
 
 ## Run locally
 

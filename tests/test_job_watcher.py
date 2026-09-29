@@ -12,7 +12,6 @@ from job_watcher import (
     Job,
     canonical_url,
     check_jobs,
-    confirmed_hourly_low,
     deduplicate,
     fetch_ashby,
     fetch_amazon_jobs,
@@ -22,6 +21,7 @@ from job_watcher import (
     is_active_notification_time,
     job_matches,
     load_watchlist_sources,
+    notification_text,
     validate_coverage_config,
     parse_github_readme,
     parse_github_markdown,
@@ -67,7 +67,7 @@ class JobWatcherTests(unittest.TestCase):
         )
         self.assertEqual(1, len(jobs))
         self.assertEqual("Acme", jobs[0].company)
-        self.assertEqual("$50/hr", jobs[0].compensation)
+        self.assertFalse(hasattr(jobs[0], "compensation"))
 
     def test_parses_sectioned_faang_markdown(self):
         fixture = """
@@ -172,17 +172,14 @@ class JobWatcherTests(unittest.TestCase):
         self.assertTrue(is_us_location("NYC"))
         self.assertFalse(is_us_location("Toronto, Canada"))
 
-    def test_excludes_confirmed_hourly_pay_below_floor(self):
-        filters = {
-            "required_role_words": ["intern"],
-            "technical_title_words": ["software"],
-            "minimum_hourly_pay": 30,
-        }
-        low = Job("Acme", "Software Intern", "Remote", "https://a.test/1", "test", compensation="$24 - $28 per hour")
-        unknown = Job("Acme", "Software Intern", "Remote", "https://a.test/2", "test")
-        self.assertEqual(24.0, confirmed_hourly_low(low.compensation))
-        self.assertFalse(job_matches(low, filters))
-        self.assertTrue(job_matches(unknown, filters))
+    def test_notification_has_no_pay_field(self):
+        job = Job("Acme", "Software Intern", "Remote", "https://a.test/1", "test")
+        _, body = notification_text(job)
+        self.assertIn("Software Intern", body)
+        self.assertNotIn("Pay:", body)
+        filters = json.loads((Path(__file__).resolve().parents[1] / "config.json").read_text())["filters"]
+        self.assertNotIn("minimum_hourly_pay", filters)
+        self.assertNotIn("unpaid", filters["exclude_words"])
 
     @patch("job_watcher.fetch_json")
     def test_maps_ashby_jobs(self, mock_fetch_json):
@@ -197,9 +194,12 @@ class JobWatcherTests(unittest.TestCase):
             }]
         }
         jobs = fetch_ashby({"board": "acme", "company": "Acme"})
+        mock_fetch_json.assert_called_once_with(
+            "https://api.ashbyhq.com/posting-api/job-board/acme"
+        )
         self.assertEqual(1, len(jobs))
         self.assertIn("Remote - United States", jobs[0].location)
-        self.assertEqual("$45 per hour", jobs[0].compensation)
+        self.assertFalse(hasattr(jobs[0], "compensation"))
 
     @patch("job_watcher.fetch_json")
     def test_maps_smartrecruiters_jobs(self, mock_fetch_json):

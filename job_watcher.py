@@ -55,7 +55,6 @@ class Job:
     url: str
     source: str
     team: str = ""
-    compensation: str = ""
 
     @property
     def key(self) -> str:
@@ -292,7 +291,6 @@ def parse_github_markdown(text: str, source: dict[str, Any]) -> list[Job]:
                 current_company = company
             title = markdown_cell_text(cells[1])
             location = markdown_cell_text(cells[2])
-            compensation = markdown_cell_text(cells[3])
             links = markdown_links(cells[4])
             age_match = re.search(r"(\d+)d", cells[5])
             if max_age_days is not None and age_match:
@@ -304,7 +302,6 @@ def parse_github_markdown(text: str, source: dict[str, Any]) -> list[Job]:
             company = current_company
             title = markdown_cell_text(cells[0]).replace("🆕", "").strip()
             location = markdown_cell_text(cells[2])
-            compensation = ""
             links = markdown_links(cells[0])
             if posted_after_date:
                 try:
@@ -314,9 +311,7 @@ def parse_github_markdown(text: str, source: dict[str, Any]) -> list[Job]:
                     continue
         url = choose_application_link(links)
         if company and title and url:
-            jobs.append(
-                Job(company, title, location, url, source_name, compensation=compensation)
-            )
+            jobs.append(Job(company, title, location, url, source_name))
     return jobs
 
 
@@ -377,31 +372,9 @@ def fetch_lever(source: dict[str, Any]) -> list[Job]:
     return [job for job in jobs if job.title and job.url]
 
 
-def format_ashby_compensation(value: Any) -> str:
-    if not isinstance(value, dict):
-        return clean_text(str(value or ""))
-    salary = value.get("scrapeableCompensationSalarySummary")
-    if salary:
-        return clean_text(str(salary))
-    tier = value.get("compensationTierSummary")
-    if tier:
-        return clean_text(str(tier))
-    summaries = []
-    for component in value.get("summaryComponents", []):
-        if isinstance(component, dict):
-            summary = component.get("summary") or component.get("value")
-            if summary:
-                summaries.append(clean_text(str(summary)))
-        elif component:
-            summaries.append(clean_text(str(component)))
-    return "; ".join(summaries)
-
-
 def fetch_ashby(source: dict[str, Any]) -> list[Job]:
     board = source["board"]
-    data = fetch_json(
-        f"https://api.ashbyhq.com/posting-api/job-board/{board}?includeCompensation=true"
-    )
+    data = fetch_json(f"https://api.ashbyhq.com/posting-api/job-board/{board}")
     company = source.get("company", board)
     jobs = []
     for item in data.get("jobs", []):
@@ -422,7 +395,6 @@ def fetch_ashby(source: dict[str, Any]) -> list[Job]:
                 url=canonical_url(item.get("jobUrl") or item.get("applyUrl", "")),
                 source=source.get("name", f"Ashby: {company}"),
                 team=clean_text(team),
-                compensation=format_ashby_compensation(item.get("compensation")),
             )
         )
     return [job for job in jobs if job.title and job.url]
@@ -636,14 +608,6 @@ def contains_phrase(haystack: str, phrases: Iterable[str]) -> bool:
     )
 
 
-def confirmed_hourly_low(compensation: str) -> float | None:
-    normalized = compensation.casefold()
-    if not any(marker in normalized for marker in ("hour", "/hr", "hourly")):
-        return None
-    amounts = re.findall(r"\$\s*([0-9]+(?:\.[0-9]+)?)", compensation)
-    return min((float(amount) for amount in amounts), default=None)
-
-
 def is_us_location(location: str) -> bool:
     normalized = normalize(location)
     if any(
@@ -690,11 +654,6 @@ def job_matches(job: Job, filters: dict[str, Any]) -> bool:
         return False
     if filters.get("us_only", False) and not is_us_location(job.location):
         return False
-    minimum_hourly_pay = filters.get("minimum_hourly_pay")
-    confirmed_low = confirmed_hourly_low(job.compensation)
-    if minimum_hourly_pay is not None and confirmed_low is not None:
-        if confirmed_low < float(minimum_hourly_pay):
-            return False
     return True
 
 
@@ -714,7 +673,6 @@ def deduplicate(jobs: Iterable[Job]) -> list[Job]:
                 url=existing.url,
                 source=" + ".join(sources),
                 team=existing.team or job.team,
-                compensation=existing.compensation or job.compensation,
             )
             continue
         result[job.key] = job
@@ -893,7 +851,6 @@ def send_notification(provider: str, title: str, message: str, click_url: str = 
 def notification_text(job: Job) -> tuple[str, str]:
     title = f"New internship: {job.company}"
     lines = [job.title, job.location or "Location not listed", f"Source: {job.source}"]
-    lines.append(f"Pay: {job.compensation or 'unverified'}")
     return title, "\n".join(lines)
 
 

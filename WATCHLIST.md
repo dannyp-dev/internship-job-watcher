@@ -6,7 +6,6 @@ Generated and endpoint-checked on September 10, 2026.
 - 33 use Workday and are currently covered through Simplify while a direct adapter is pending.
 - 32 use custom or unsupported boards and are currently covered through Simplify.
 - Google and Meta were intentionally left out. The list emphasizes strong stepping-stone employers for backend, full-stack, platform, infrastructure, systems, and ML-systems internships.
-- Confirmed pay below $30/hour should be excluded. Missing pay stays marked as unverified rather than guessed.
 
 | # | Company | Priority | Best-fit lanes | ATS | Monitoring |
 |---:|---|---|---|---|---|

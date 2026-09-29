@@ -903,7 +903,6 @@
       "staff",
       "manager",
       "director",
-      "unpaid",
       "phd",
       "doctoral",
       "mba"
@@ -917,8 +916,7 @@
       "Pratt & Whitney"
     ],
     "location_words": [],
-    "us_only": true,
-    "minimum_hourly_pay": 30
+    "us_only": true
   },
   "notification": {
     "provider": "telegram",

@@ -7,7 +7,6 @@
       "Google",
       "Meta"
     ],
-    "compensation_rule": "Exclude confirmed base pay below $30/hour; treat missing pay as unverified",
     "priority_meaning": {
       "core": "Best balance of fit, engineering signal, and attainability",
       "broad": "Useful additional target with transferable engineering work",
