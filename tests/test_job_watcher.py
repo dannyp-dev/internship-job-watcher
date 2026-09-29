@@ -15,6 +15,10 @@ from job_watcher import (
     deduplicate,
     fetch_ashby,
     fetch_amazon_jobs,
+    fetch_apple_careers,
+    fetch_google_careers,
+    fetch_microsoft_careers,
+    fetch_phenom,
     fetch_smartrecruiters,
     fetch_workday,
     is_us_location,
@@ -31,6 +35,80 @@ from job_watcher import (
 
 
 class JobWatcherTests(unittest.TestCase):
+    @patch("job_watcher.send_notification")
+    @patch("job_watcher.provider_is_configured", return_value=True)
+    @patch("job_watcher.fetch_source")
+    def test_new_direct_source_baselines_then_alerts(self, mock_fetch, _configured, mock_send):
+        old = Job("Acme", "Software Engineer Intern", "New York, NY",
+                  "https://acme.example/jobs/1", "Acme Careers")
+        new = Job("Acme", "Backend Engineer Intern", "New York, NY",
+                  "https://acme.example/jobs/2", "Acme Careers")
+        mock_fetch.return_value = [old]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config_path = root / "config.json"
+            state_path = root / "state.json"
+            config_path.write_text(json.dumps({
+                "sources": [{"type": "fixture", "name": "Acme Careers",
+                             "baseline_on_first_check": True}],
+                "filters": {"required_role_words": ["intern"],
+                            "technical_title_words": ["software", "backend"],
+                            "us_only": True},
+                "notification": {"provider": "telegram"},
+            }), encoding="utf-8")
+            state_path.write_text(json.dumps({"version": 1,
+                "initialized_at": "2026-01-01T00:00:00Z", "seen": {}}), encoding="utf-8")
+            self.assertEqual(0, check_jobs(config_path, state_path))
+            self.assertEqual(0, mock_send.call_count)
+            saved = json.loads(state_path.read_text(encoding="utf-8"))
+            self.assertIn("Acme Careers", saved["source_baselines"])
+            self.assertEqual(1, len(saved["seen"]))
+            mock_fetch.return_value = [old, new]
+            self.assertEqual(0, check_jobs(config_path, state_path))
+            self.assertEqual(1, mock_send.call_count)
+
+    @patch("job_watcher.fetch_bytes")
+    def test_google_careers_embedded_results(self, mock_fetch):
+        row = ["123", "Software Engineering Intern, BS", None, None, None,
+               None, None, None, None, [["New York, NY, USA"]]]
+        payload = json.dumps([[row], None, 1])
+        mock_fetch.return_value = (
+            "AF_initDataCallback({key: 'ds:1', data:" + payload +
+            ", sideChannel: {}});"
+        ).encode()
+        jobs = fetch_google_careers({"name": "Google Careers", "company": "Google"})
+        self.assertEqual(1, len(jobs))
+        self.assertEqual("https://www.google.com/about/careers/applications/jobs/results/123", jobs[0].url)
+
+    @patch("job_watcher.fetch_json_post")
+    def test_apple_careers_results(self, mock_fetch):
+        mock_fetch.return_value = {"res": {"totalRecords": 1, "searchResults": [
+            {"positionId": "123", "postingTitle": "Software Engineering Intern",
+             "transformedPostingTitle": "software-engineering-intern",
+             "locations": [{"name": "Cupertino, CA"}]}
+        ]}}
+        jobs = fetch_apple_careers({"name": "Apple Careers"})
+        self.assertEqual("Cupertino, CA", jobs[0].location)
+
+    @patch("job_watcher.fetch_json")
+    def test_microsoft_careers_results(self, mock_fetch):
+        mock_fetch.return_value = {"data": {"count": 1, "positions": [
+            {"id": "123", "name": "Software Engineer Intern", "locations": ["Redmond, WA"]}
+        ]}}
+        jobs = fetch_microsoft_careers({"name": "Microsoft Careers", "queries": ["intern"]})
+        self.assertEqual(1, len(jobs))
+
+    @patch("job_watcher.fetch_json_post")
+    def test_phenom_results(self, mock_fetch):
+        mock_fetch.return_value = {"refineSearch": {"totalHits": 1, "data": {"jobs": [
+            {"jobId": "123", "title": "Software Engineer Intern",
+             "cityStateCountry": "Bellevue, WA, USA"}
+        ]}}}
+        jobs = fetch_phenom({"name": "Snowflake Careers", "company": "Snowflake",
+                             "host": "careers.snowflake.com",
+                             "job_url": "https://careers.snowflake.com/us/en/job/{id}"})
+        self.assertEqual("https://careers.snowflake.com/us/en/job/123", jobs[0].url)
+
     def test_parses_github_table_and_inherits_company(self):
         fixture = """
         <table><tbody>

@@ -572,6 +572,182 @@ def fetch_workday(source: dict[str, Any]) -> list[Job]:
     return [job for job in jobs if job.title and job.url]
 
 
+def fetch_google_careers(source: dict[str, Any]) -> list[Job]:
+    """Read Google's public, server-rendered internship search results."""
+    endpoint = "https://www.google.com/about/careers/applications/jobs/results"
+    jobs: list[Job] = []
+    for page in range(1, 21):
+        url = endpoint + "?" + urlencode({
+            "q": source.get("query", "intern"),
+            "employment_type": "INTERN",
+            "page": page,
+        })
+        page_html = fetch_bytes(url).decode("utf-8", errors="replace")
+        match = re.search(
+            r"AF_initDataCallback\(\{key: 'ds:1'.*?data:(\[.*?\]), sideChannel",
+            page_html,
+            re.DOTALL,
+        )
+        if not match:
+            raise RuntimeError("Google careers results payload was not found")
+        payload = json.loads(match.group(1))
+        results = payload[0] or []
+        for item in results:
+            if len(item) < 10 or not item[0]:
+                continue
+            locations = [str(loc[0]) for loc in (item[9] or []) if loc and loc[0]]
+            jobs.append(Job(
+                company=source.get("company", "Google"),
+                title=clean_text(item[1] or ""),
+                location="; ".join(locations),
+                url=f"{endpoint}/{item[0]}",
+                source=source.get("name", "Google Careers"),
+            ))
+        total = payload[2] if len(payload) > 2 and isinstance(payload[2], int) else 0
+        if not results or len(jobs) >= total:
+            break
+    return jobs
+
+
+def fetch_meta_careers(source: dict[str, Any]) -> list[Job]:
+    """Search Meta's unauthenticated careers page and public search response."""
+    page_url = "https://www.metacareers.com/jobsearch/"
+    page_request = Request(page_url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Sec-Fetch-Dest": "document", "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none", "Sec-Fetch-User": "?1",
+    })
+    with urlopen(page_request, timeout=30) as response:
+        page_html = response.read().decode("utf-8", errors="replace")
+    token_match = re.search(r'"LSD",\[\],\{"token":"([^"]+)"', page_html)
+    if not token_match:
+        raise RuntimeError("Meta careers search token was not found")
+    token = token_match.group(1)
+    body = urlencode({
+        "lsd": token,
+        "fb_api_caller_class": "RelayModern",
+        "fb_api_req_friendly_name": "CareersJobSearchResultsDataQuery",
+        "doc_id": source["doc_id"],
+        "variables": json.dumps({"search_input": {"q": source.get("query", "intern")}}),
+    }).encode("utf-8")
+    request = Request("https://www.metacareers.com/graphql", data=body, headers={
+        "User-Agent": USER_AGENT,
+        "Content-Type": "application/x-www-form-urlencoded",
+        "x-fb-lsd": token,
+        "Origin": "https://www.metacareers.com",
+        "Referer": page_url,
+        "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+    })
+    with urlopen(request, timeout=30) as response:
+        payload = json.load(response)
+    results = ((payload.get("data") or {}).get("job_search_with_featured_jobs") or {}).get("all_jobs")
+    if results is None:
+        raise RuntimeError("Meta careers search results missing; its query may have changed")
+    return [Job(
+        company=source.get("company", "Meta"),
+        title=clean_text(item.get("title", "")),
+        location="; ".join(str(loc) for loc in item.get("locations", [])),
+        url=f"https://www.metacareers.com/jobs/{item['id']}",
+        source=source.get("name", "Meta Careers"),
+    ) for item in results if item.get("id")]
+
+
+def fetch_apple_careers(source: dict[str, Any]) -> list[Job]:
+    """Search Apple's public careers endpoint for internships."""
+    jobs: list[Job] = []
+    for page in range(1, 31):
+        payload = fetch_json_post("https://jobs.apple.com/api/v1/search", {
+            "query": source.get("query", "internship"),
+            "filters": {}, "page": page, "locale": "en-us", "sort": "",
+            "format": {"longDate": "MMMM D, YYYY", "mediumDate": "MMM D, YYYY"},
+        }).get("res", {})
+        results = payload.get("searchResults", [])
+        if page == 1 and not results:
+            raise RuntimeError("Apple careers search returned no results")
+        for item in results:
+            job_id = item.get("positionId") or item.get("id")
+            if not job_id:
+                continue
+            locations = [loc.get("name", "") for loc in item.get("locations", [])]
+            jobs.append(Job(
+                company=source.get("company", "Apple"),
+                title=clean_text(item.get("postingTitle", "")),
+                location="; ".join(filter(None, locations)),
+                url=f"https://jobs.apple.com/en-us/details/{job_id}/{item.get('transformedPostingTitle', '')}",
+                source=source.get("name", "Apple Careers"),
+            ))
+        if not results or len(jobs) >= int(payload.get("totalRecords", 0)):
+            break
+    return jobs
+
+
+def fetch_microsoft_careers(source: dict[str, Any]) -> list[Job]:
+    """Search Microsoft's public Eightfold careers endpoint."""
+    jobs: dict[str, Job] = {}
+    endpoint = "https://apply.careers.microsoft.com/api/pcsx/search"
+    for query in source.get("queries", ["intern"]):
+        for start in range(0, 400, 10):
+            url = endpoint + "?" + urlencode({
+                "domain": "microsoft.com", "query": query, "num": 10, "start": start,
+            })
+            payload = fetch_json(url).get("data", {})
+            positions = payload.get("positions", [])
+            for item in positions:
+                job_id = str(item.get("id", ""))
+                if not job_id:
+                    continue
+                jobs[job_id] = Job(
+                    company=source.get("company", "Microsoft"),
+                    title=clean_text(item.get("name", "")),
+                    location="; ".join(str(loc) for loc in item.get("locations", [])),
+                    url=f"https://apply.careers.microsoft.com/careers/job/{job_id}",
+                    source=source.get("name", "Microsoft Careers"),
+                )
+            if not positions or start + len(positions) >= int(payload.get("count", 0)):
+                break
+            time.sleep(0.5)
+    return list(jobs.values())
+
+
+def fetch_phenom(source: dict[str, Any]) -> list[Job]:
+    """Read a public Phenom-powered company careers search."""
+    endpoint = f"https://{source['host']}/widgets"
+    body = {
+        "lang": "en_us", "deviceType": "desktop", "country": "us",
+        "pageName": "search-results", "ddoKey": "refineSearch", "sortBy": "",
+        "subsearch": "", "from": 0, "jobs": True, "counts": True,
+        "all_fields": ["category", "country", "state", "city", "type"],
+        "size": 100, "clearAll": False, "jdsource": "facets",
+        "isSliderEnable": False, "pageId": "page16", "siteType": "external",
+        "keywords": source.get("query", "intern"), "global": True,
+        "selected_fields": {}, "locationData": {},
+    }
+    jobs: list[Job] = []
+    for offset in range(0, 1000, 100):
+        body["from"] = offset
+        payload = fetch_json_post(endpoint, body).get("refineSearch", {})
+        results = (payload.get("data") or {}).get("jobs", [])
+        for item in results:
+            job_id = item.get("jobId")
+            if not job_id:
+                continue
+            location = item.get("cityStateCountry") or ", ".join(
+                str(item.get(k, "")) for k in ("city", "state", "country") if item.get(k)
+            )
+            jobs.append(Job(
+                company=source["company"],
+                title=clean_text(item.get("title", "")),
+                location=clean_text(location),
+                url=source["job_url"].format(id=job_id),
+                source=source.get("name", f"Phenom: {source['company']}"),
+            ))
+        if not results or len(jobs) >= int(payload.get("totalHits", 0)):
+            break
+    return jobs
+
+
 def fetch_source(source: dict[str, Any]) -> list[Job]:
     source_type = source.get("type")
     if source_type == "github_readme":
@@ -590,6 +766,16 @@ def fetch_source(source: dict[str, Any]) -> list[Job]:
         return fetch_amazon_jobs(source)
     if source_type == "workday":
         return fetch_workday(source)
+    if source_type == "google_careers":
+        return fetch_google_careers(source)
+    if source_type == "meta_careers":
+        return fetch_meta_careers(source)
+    if source_type == "apple_careers":
+        return fetch_apple_careers(source)
+    if source_type == "microsoft_careers":
+        return fetch_microsoft_careers(source)
+    if source_type == "phenom":
+        return fetch_phenom(source)
     raise ValueError(f"Unknown source type: {source_type}")
 
 
@@ -954,6 +1140,7 @@ def check_jobs(
         return 0
 
     gathered: list[Job] = []
+    fetched_by_source: dict[str, list[Job]] = {}
     failures: list[str] = []
     critical_failures: list[str] = []
     sources = [
@@ -975,6 +1162,7 @@ def check_jobs(
                         f"returned {len(source_jobs)} jobs, below required {minimum_jobs}"
                     )
                 gathered.extend(source_jobs)
+                fetched_by_source[source.get("name", source.get("type", ""))] = source_jobs
                 print(f"Fetched {len(source_jobs)} jobs from {source.get('name', source.get('type'))}")
             except Exception as exc:  # A single board should not break every other source.
                 failure = f"{source.get('name', source.get('type'))}: {exc}"
@@ -990,6 +1178,25 @@ def check_jobs(
     matched.sort(key=lambda job: (normalize(job.company), normalize(job.title), job.url))
     state = load_json(state_path, {"version": 1, "initialized_at": None, "seen": {}})
     seen: dict[str, Any] = state.setdefault("seen", {})
+    source_baselines: dict[str, str] = state.setdefault("source_baselines", {})
+    fresh_baseline_sources = {
+        source["name"] for source in sources
+        if source.get("baseline_on_first_check")
+        and source["name"] in fetched_by_source
+        and source["name"] not in source_baselines
+    }
+    baseline_urls = {
+        canonical_url(job.url)
+        for name in fresh_baseline_sources
+        for job in fetched_by_source[name]
+    }
+    other_urls = {
+        canonical_url(job.url)
+        for name, jobs in fetched_by_source.items()
+        if name not in fresh_baseline_sources
+        for job in jobs
+    }
+    baseline_only_urls = baseline_urls - other_urls
     legacy_pay_removed = strip_legacy_compensation(seen)
     initialized = bool(state.get("initialized_at"))
     seen_urls = seen_url_index(seen)
@@ -997,13 +1204,29 @@ def check_jobs(
         job.key: seen_key_for_job(job, seen, seen_urls)
         for job in matched
     }
-    new_jobs = [job for job in matched if existing_keys[job.key] is None]
+    new_jobs = [
+        job for job in matched
+        if existing_keys[job.key] is None
+        and canonical_url(job.url) not in baseline_only_urls
+    ]
 
     print(f"Matched {len(matched)} jobs after filtering; {len(new_jobs)} are new")
     for job in new_jobs:
         print(f"NEW | {job.company} | {job.title} | {job.location} | {job.url}")
 
     timestamp = now_iso()
+    for source_name in fresh_baseline_sources:
+        source_baselines[source_name] = timestamp
+    for job in matched:
+        if existing_keys[job.key] is None and canonical_url(job.url) in baseline_only_urls:
+            seen[job.key] = {
+                "first_seen": timestamp,
+                "last_seen": timestamp,
+                "baselined_at": timestamp,
+                "job": asdict(job),
+            }
+    if fresh_baseline_sources:
+        print("Baselined newly added direct sources: " + ", ".join(sorted(fresh_baseline_sources)))
     previous_critical_failures = set(state.get("critical_source_failures", []))
     current_critical_failures = set(critical_failures)
     newly_failed = sorted(current_critical_failures - previous_critical_failures)
@@ -1131,9 +1354,9 @@ def check_jobs(
             state["last_notification_errors"] = notification_errors
             save_json(state_path, state)
         elif not new_jobs and not health_changed:
-            if legacy_pay_removed:
+            if legacy_pay_removed or fresh_baseline_sources:
                 save_json(state_path, state)
-                print("No new matches. Removed legacy pay fields from saved history.")
+                print("No new matches. Saved baseline or history maintenance.")
             else:
                 print("No new matches. Saved history did not need to change.")
 
