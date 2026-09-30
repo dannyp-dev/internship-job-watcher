@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-10",
-  "company_count": 100,
+  "company_count": 99,
   "selection_notes": {
     "goal": "Strong stepping-stone employers for backend, platform, infrastructure, full-stack, systems, and ML systems internships",
     "excluded_by_design": [
@@ -1411,23 +1411,6 @@
       "polling": "aggregate_fallback",
       "active_listings_seen": 4,
       "sample_application_url": "https://careers-gdms.icims.com/jobs/74848/job?mobile=true&needsRedirect=false",
-      "verification": "live Simplify 2027 application URL",
-      "verified_at": "2026-09-10",
-      "source": null
-    },
-    {
-      "company": "L3Harris Technologies",
-      "source_company_name": "L3Harris Technologies",
-      "priority": "broad",
-      "fit_lanes": [
-        "backend/full-stack"
-      ],
-      "ats": "successfactors",
-      "board": null,
-      "careers_url": "https://jobs.l3harris.com",
-      "polling": "aggregate_fallback",
-      "active_listings_seen": 22,
-      "sample_application_url": "https://jobs.l3harris.com/job/Melbourne-Application-Developer-Intern-FL-32919/1425610400?ats=successfactors",
       "verification": "live Simplify 2027 application URL",
       "verified_at": "2026-09-10",
       "source": null

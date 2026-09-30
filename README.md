@@ -9,9 +9,9 @@ It currently monitors:
 - Two additional public internship trackers as cross-checks
 - 121 configured direct company feeds, including Amazon, Cloudflare, Meta, Google, Apple, Microsoft, Snowflake, Snap, Plaid, validated Greenhouse and Ashby boards, and Workday boards
 
-`coverage_watchlist.json` names 250 target companies. It is a planning roster, not 250 direct monitors. Companies without a direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the original researched 100-company registry and its direct feeds.
+`coverage_watchlist.json` names 250 target companies. It is a planning roster, not 250 direct monitors. Companies without a direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the researched 99-company registry and its direct feeds.
 
-The filters favor United States undergraduate internships in backend, full-stack, platform, distributed systems, cloud, and site reliability. Titles focused on ML, research, data engineering, frontend-only, design, mobile, embedded, firmware, or hardware are excluded. RTX and its Raytheon, Collins Aerospace, and Pratt & Whitney brands are blocked. The watcher does not filter, record, or report pay.
+The filters favor United States undergraduate internships in backend, full-stack, platform, distributed systems, cloud, and site reliability. Titles focused on ML, research, data engineering, frontend-only, design, mobile, embedded, firmware, or hardware are excluded. RTX and its Raytheon, Collins Aerospace, and Pratt & Whitney brands, plus L3Harris, are blocked. The watcher does not filter, record, or report pay.
 
 This app only monitors and notifies. It never applies to a job or contacts anyone.
 
@@ -60,7 +60,7 @@ The workflow retries transient state-history push failures up to four times. Thi
 ## Review or tune the watchlist
 
 - `coverage_watchlist.json` is the 250-company target roster. It does not itself add a feed.
-- `WATCHLIST.md` and `company_watchlist.json` contain the original 100-company research, including 35 older direct sources.
+- `WATCHLIST.md` and `company_watchlist.json` contain the 99-company research list, including 35 older direct sources.
 - `config.json` contains the current direct source configuration; it is combined with enabled sources in `company_watchlist.json` at runtime.
 - `config.json` controls fit, location, and notifications.
 

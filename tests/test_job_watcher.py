@@ -254,6 +254,8 @@ class JobWatcherTests(unittest.TestCase):
         self.assertTrue(matches("Cloudflare", "HTML Software Intern"))
         self.assertFalse(matches("RTX", "Software Engineering Intern"))
         self.assertFalse(matches("Raytheon", "Backend Software Engineering Intern"))
+        self.assertFalse(matches("L3Harris Technologies", "Software Engineering Intern"))
+        self.assertFalse(matches("L3 Harris", "Backend Software Engineering Intern"))
         for title in (
             "Machine Learning Software Engineering Intern",
             "ML Platform Software Intern",

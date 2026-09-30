@@ -1,10 +1,10 @@
-# 100-company internship watchlist
+# 99-company internship watchlist
 
 Generated and endpoint-checked on September 10, 2026.
 
 - 35 companies have validated direct public ATS feeds.
 - 33 use Workday and are currently covered through Simplify while a direct adapter is pending.
-- 32 use custom or unsupported boards and are currently covered through Simplify.
+- 31 use custom or unsupported boards and are currently covered through Simplify.
 - Google and Meta were intentionally left out. The list emphasizes strong stepping-stone employers for backend, full-stack, platform, infrastructure, systems, and ML-systems internships.
 
 | # | Company | Priority | Best-fit lanes | ATS | Monitoring |
@@ -79,7 +79,6 @@ Generated and endpoint-checked on September 10, 2026.
 | 68 | [Sierra Nevada Corporation](https://snc.wd1.myworkdayjobs.com/snc_external_career_site) | broad | backend/full-stack | workday | Simplify; Workday adapter pending |
 | 69 | [Blue Origin](https://blueorigin.wd5.myworkdayjobs.com/blueorigin) | selective | backend/full-stack | workday | Simplify; Workday adapter pending |
 | 70 | [General Dynamics Mission Systems](https://careers-gdms.icims.com) | broad | backend/full-stack | icims | Simplify fallback |
-| 71 | [L3Harris Technologies](https://jobs.l3harris.com) | broad | backend/full-stack | successfactors | Simplify fallback |
 | 72 | [Capital One](https://capitalone.wd12.myworkdayjobs.com/Capital_One) | core | backend/distributed systems, data infrastructure | workday | Simplify; Workday adapter pending |
 | 73 | [American Express](https://egug.fa.us2.oraclecloud.com) | core | backend/distributed systems, data infrastructure | oracle-hcm | Simplify fallback |
 | 74 | [BNY](https://eofe.fa.us2.oraclecloud.com) | broad | backend/distributed systems, data infrastructure | oracle-hcm | Simplify fallback |
