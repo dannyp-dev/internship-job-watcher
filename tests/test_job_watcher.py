@@ -18,6 +18,7 @@ from job_watcher import (
     fetch_apple_careers,
     fetch_google_careers,
     fetch_microsoft_careers,
+    fetch_meta_careers,
     fetch_phenom,
     fetch_smartrecruiters,
     fetch_workday,
@@ -35,6 +36,19 @@ from job_watcher import (
 
 
 class JobWatcherTests(unittest.TestCase):
+    @patch("job_watcher.time.sleep")
+    @patch("job_watcher._fetch_meta_careers_once")
+    def test_meta_retries_missing_results_with_fresh_page(self, mock_once, mock_sleep):
+        job = Job("Meta", "Software Engineer Intern", "Menlo Park, CA",
+                  "https://www.metacareers.com/jobs/123", "Meta Careers")
+        mock_once.side_effect = [
+            RuntimeError("Meta careers search results missing"),
+            [job],
+        ]
+        self.assertEqual([job], fetch_meta_careers({"name": "Meta Careers"}))
+        self.assertEqual(2, mock_once.call_count)
+        mock_sleep.assert_called_once()
+
     @patch("job_watcher.send_notification")
     @patch("job_watcher.provider_is_configured", return_value=True)
     @patch("job_watcher.fetch_source")

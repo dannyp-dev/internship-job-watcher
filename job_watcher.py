@@ -610,6 +610,21 @@ def fetch_google_careers(source: dict[str, Any]) -> list[Job]:
 
 
 def fetch_meta_careers(source: dict[str, Any]) -> list[Job]:
+    """Retry brief Meta search glitches with a fresh page token each time."""
+    for attempt in range(3):
+        try:
+            return _fetch_meta_careers_once(source)
+        except HTTPError as exc:
+            if exc.code == 429 or attempt == 2:
+                raise
+        except (URLError, TimeoutError, RuntimeError):
+            if attempt == 2:
+                raise
+        time.sleep(attempt + 1)
+    raise RuntimeError("Meta careers search failed after retries")
+
+
+def _fetch_meta_careers_once(source: dict[str, Any]) -> list[Job]:
     """Search Meta's unauthenticated careers page and public search response."""
     page_url = "https://www.metacareers.com/jobsearch/"
     page_request = Request(page_url, headers={
@@ -644,7 +659,8 @@ def fetch_meta_careers(source: dict[str, Any]) -> list[Job]:
         payload = json.load(response)
     results = ((payload.get("data") or {}).get("job_search_with_featured_jobs") or {}).get("all_jobs")
     if results is None:
-        raise RuntimeError("Meta careers search results missing; its query may have changed")
+        detail = json.dumps(payload.get("errors") or payload.get("error") or {}, ensure_ascii=False)
+        raise RuntimeError(f"Meta careers search results missing: {detail[:240]}")
     return [Job(
         company=source.get("company", "Meta"),
         title=clean_text(item.get("title", "")),
@@ -1238,14 +1254,19 @@ def check_jobs(
         if entry == name or entry.startswith(name + ": ")
     }
     previous_streaks = state.get("critical_source_failure_streaks", {})
+    def is_deferred_failure(name: str, failure: str) -> bool:
+        return "HTTP Error 429" in failure or (
+            name == "Meta Careers" and "Meta careers search results missing" in failure
+        )
+
     current_streaks = {
         name: int(previous_streaks.get(name, 0)) + 1
         for name, failure in critical_failures.items()
-        if "HTTP Error 429" in failure
+        if is_deferred_failure(name, failure)
     }
     current_critical_failures = {
         name for name, failure in critical_failures.items()
-        if "HTTP Error 429" not in failure
+        if not is_deferred_failure(name, failure)
         or current_streaks.get(name, 0) >= 3
         or name in previous_critical_failures
     }

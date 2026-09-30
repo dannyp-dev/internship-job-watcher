@@ -55,7 +55,7 @@ Microsoft's careers search rate-limits broad pagination. Its direct check uses a
 
 Of the 25 companies in Tier 1, 21 now have configured direct feeds. ByteDance/TikTok, Uber, LinkedIn, and Rippling currently rely on the aggregate trackers. Their official sites do not currently provide a verified, reliable feed in this project, so coverage for those four is not guaranteed. A configured direct feed can also change or fail; the critical ones are checked for health on each run.
 
-The workflow retries transient state-history push failures up to four times. This reduces the chance that a successfully delivered Telegram alert is treated as new again on the next check. A GitHub fallback run skips its check if Cloudflare already started one in the previous 10 minutes. A single Microsoft rate-limit response is recorded but does not trigger a phone alert; three consecutive rate-limited checks do.
+The workflow retries transient state-history push failures up to four times. This reduces the chance that a successfully delivered Telegram alert is treated as new again on the next check. A GitHub fallback run skips its check if Cloudflare already started one in the previous 10 minutes. A single Microsoft rate-limit response is recorded but does not trigger a phone alert; three consecutive rate-limited checks do. Meta careers searches also retry with a fresh page token when the public endpoint briefly omits results, and only repeated missing-result checks trigger a source alert.
 
 ## Review or tune the watchlist
 
