@@ -42,6 +42,18 @@ TRACKING_QUERY_KEYS = {
     "utm_source",
     "utm_term",
 }
+US_STATE_NAMES = {
+    "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+    "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
+    "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
+    "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+    "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
+    "New Hampshire", "New Jersey", "New Mexico", "New York",
+    "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
+    "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+    "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+    "West Virginia", "Wisconsin", "Wyoming", "District of Columbia",
+}
 US_STATE_CODES = {
     "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI",
     "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI",
@@ -949,7 +961,12 @@ def is_us_location(location: str) -> bool:
     ):
         return True
     upper = location.upper()
-    return any(re.search(rf"(?:,|\s)\s*{code}(?:\b|\s|$)", upper) for code in US_STATE_CODES)
+    if any(re.search(rf"(?:,|\s)\s*{code}(?:\b|\s|$)", upper) for code in US_STATE_CODES):
+        return True
+    return any(
+        re.search(rf",\s*{re.escape(name)}\b", location, re.IGNORECASE)
+        for name in US_STATE_NAMES
+    )
 
 
 def job_matches(job: Job, filters: dict[str, Any]) -> bool:
