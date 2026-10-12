@@ -8,6 +8,7 @@ It currently monitors:
 - Simplify's Off-Season 2027 list
 - Two additional public internship trackers as cross-checks
 - 121 configured direct company feeds, including Amazon, Cloudflare, Meta, Google, Apple, Microsoft, Snowflake, Snap, Plaid, validated Greenhouse and Ashby boards, and Workday boards
+- LinkedIn job-alert emails, once the Gmail secrets below are configured
 
 `coverage_watchlist.json` names 250 target companies. It is a planning roster, not 250 direct monitors. Companies without a direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the researched 99-company registry and its direct feeds.
 
@@ -36,6 +37,19 @@ python job_watcher.py --telegram-chat-id
 7. Open **Actions > Check for new internships > Run workflow**. First run it with the test option enabled to confirm the Telegram alert. Then run it once with the test option off to establish the baseline.
 
 New alerts contain the company, role, location, source, and a tappable **Open application** button.
+
+## Add LinkedIn email alerts without a domain
+
+LinkedIn does not provide this watcher with a general job-search API. This optional source reads job-alert emails sent to your Gmail inbox. It never logs into or scrapes LinkedIn, and it does not mark emails as read or delete them. LinkedIn offers daily or weekly email alerts, so checking the inbox every 15 minutes cannot discover a listing before LinkedIn emails it.
+
+1. In LinkedIn, create email job alerts for searches you care about and choose **Daily**. Existing digest emails will also be read on the first check.
+2. In your Google Account, turn on 2-Step Verification, then create an app password named `Internship watcher` at [Google App Passwords](https://myaccount.google.com/apppasswords). This is a separate password, not your normal Google password. Google may not offer it for some accounts.
+3. In the private GitHub repository, add these **Actions secrets** under **Settings > Secrets and variables > Actions**:
+
+   - `LINKEDIN_GMAIL_ADDRESS`: your Gmail address
+   - `LINKEDIN_GMAIL_APP_PASSWORD`: the 16-character app password
+
+Do not paste the app password into chat, source code, or `config.json`. An app password grants broad mailbox access, so revoke it in your Google Account if you stop using this source. The source stays inactive until both secrets exist. Its first successful check records existing email listings without a notification flood; later matching listings go to the same Telegram bot. Only cards with a recognizable company, role, and US location are used. A real digest email should be checked against the parser after connection because LinkedIn can change its email layout.
 
 ## Put it on GitHub
 

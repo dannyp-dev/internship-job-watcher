@@ -2,6 +2,8 @@ import sys
 import tempfile
 import unittest
 import json
+import os
+from email.message import EmailMessage
 from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
@@ -17,6 +19,7 @@ from job_watcher import (
     fetch_amazon_jobs,
     fetch_apple_careers,
     fetch_google_careers,
+    fetch_linkedin_gmail,
     fetch_microsoft_careers,
     fetch_meta_careers,
     fetch_phenom,
@@ -30,12 +33,80 @@ from job_watcher import (
     validate_coverage_config,
     parse_github_readme,
     parse_github_markdown,
+    parse_linkedin_alert_email,
+    parse_linkedin_alert_html,
     seen_key_for_job,
     strip_legacy_compensation,
 )
 
 
 class JobWatcherTests(unittest.TestCase):
+    def test_linkedin_alert_cards_are_canonicalized_and_filtered(self):
+        body = '''
+        <a href="https://www.linkedin.com/jobs/view/4468406079/?trk=digest&amp;trackingId=abc">
+          <div>Software Engineering Internship - Summer 2027</div>
+          <div>Qualcomm</div><div>Irvine, CA</div>
+        </a>
+        <a href="https://www.linkedin.com/jobs/view/4477254540/?trk=digest">
+          <div>AI Engineering Intern</div>
+          <div>Time Seventeen</div><div>San Francisco, CA</div>
+        </a>
+        '''
+        jobs = parse_linkedin_alert_html(body)
+        self.assertEqual(2, len(jobs))
+        self.assertEqual("https://www.linkedin.com/jobs/view/4468406079", jobs[0].url)
+        self.assertEqual("Qualcomm", jobs[0].company)
+        filters = json.loads((Path(__file__).resolve().parents[1] / "config.json").read_text())["filters"]
+        self.assertTrue(job_matches(jobs[0], filters))
+        self.assertFalse(job_matches(jobs[1], filters))
+        self.assertEqual(
+            jobs[0].url,
+            canonical_url("https://www.linkedin.com/comm/jobs/view/4468406079/?refId=x"),
+        )
+
+    def test_linkedin_email_requires_linkedin_sender(self):
+        message = EmailMessage()
+        message["From"] = "Jobs <alerts@not-linkedin.com>"
+        message["Subject"] = "Job alert"
+        message.set_content("Job alert")
+        message.add_alternative(
+            '<a href="https://www.linkedin.com/jobs/view/123/"><div>Software Intern</div>'
+            '<div>Acme</div><div>Austin, TX</div></a>',
+            subtype="html",
+        )
+        self.assertEqual([], parse_linkedin_alert_email(message.as_bytes(), "LinkedIn Email Alerts"))
+        message.replace_header("From", "LinkedIn <jobalerts-noreply@linkedin.com>")
+        jobs = parse_linkedin_alert_email(message.as_bytes(), "LinkedIn Email Alerts")
+        self.assertEqual(1, len(jobs))
+        self.assertEqual("Acme", jobs[0].company)
+
+    @patch("job_watcher.imaplib.IMAP4_SSL")
+    def test_linkedin_gmail_reads_alert_without_marking_it_seen(self, mock_imap):
+        message = EmailMessage()
+        message["From"] = "LinkedIn <jobalerts-noreply@linkedin.com>"
+        message.set_content("Job alert")
+        message.add_alternative(
+            '<a href="https://www.linkedin.com/jobs/view/123/?trk=email">'
+            '<div>Backend Software Intern</div><div>Acme</div><div>Austin, TX</div></a>',
+            subtype="html",
+        )
+        mailbox = mock_imap.return_value
+        mailbox.select.return_value = ("OK", [b"1"])
+        mailbox.uid.side_effect = [
+            ("OK", [b"42"]),
+            ("OK", [(b"42 (BODY[] {100}", message.as_bytes()), b")"]),
+        ]
+        with patch.dict(os.environ, {
+            "LINKEDIN_GMAIL_ADDRESS": "test@example.com",
+            "LINKEDIN_GMAIL_APP_PASSWORD": "abcd efgh ijkl mnop",
+        }):
+            jobs = fetch_linkedin_gmail({"name": "LinkedIn Email Alerts"})
+        self.assertEqual(1, len(jobs))
+        mailbox.login.assert_called_once_with("test@example.com", "abcdefghijklmnop")
+        mailbox.select.assert_called_once_with("INBOX", readonly=True)
+        self.assertEqual("(BODY.PEEK[])", mailbox.uid.call_args_list[1].args[2])
+        mailbox.logout.assert_called_once()
+
     @patch("job_watcher.time.sleep")
     @patch("job_watcher._fetch_meta_careers_once")
     def test_meta_retries_missing_results_with_fresh_page(self, mock_once, mock_sleep):

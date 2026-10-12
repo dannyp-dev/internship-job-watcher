@@ -36,6 +36,15 @@
       "critical": true
     },
     {
+      "type": "linkedin_gmail",
+      "name": "LinkedIn Email Alerts",
+      "lookback_days": 7,
+      "max_emails": 80,
+      "baseline_on_first_check": true,
+      "critical": true,
+      "enabled": true
+    },
+    {
       "type": "meta_careers",
       "name": "Meta Careers",
       "company": "Meta",

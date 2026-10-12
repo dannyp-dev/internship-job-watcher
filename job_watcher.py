@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import html
+import imaplib
 import json
 import os
 import re
@@ -17,6 +18,9 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta, timezone
+from email import policy
+from email.parser import BytesParser
+from email.utils import parseaddr
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Iterable
@@ -100,6 +104,127 @@ class TableParser(HTMLParser):
             self._row = None
 
 
+class LinkedInAlertParser(HTMLParser):
+    """Collect job-card links and nearby text from an alert email, not LinkedIn."""
+
+    BLOCK_TAGS = {"br", "div", "p", "td", "tr", "li", "h1", "h2", "h3"}
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.events: list[tuple[str, str, str]] = []
+        self._job_url = ""
+        self._job_text: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag == "a" and not self._job_url:
+            href = dict(attrs).get("href") or ""
+            url = canonical_url(html.unescape(href))
+            if re.fullmatch(r"https://www\.linkedin\.com/jobs/view/\d+", url):
+                self._job_url = url
+                self._job_text = []
+                return
+        if tag in self.BLOCK_TAGS:
+            self._append("\n")
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "a" and self._job_url:
+            self.events.append(("job", self._job_url, "".join(self._job_text)))
+            self._job_url = ""
+            self._job_text = []
+        elif tag in self.BLOCK_TAGS:
+            self._append("\n")
+
+    def handle_data(self, data: str) -> None:
+        self._append(data)
+
+    def _append(self, value: str) -> None:
+        if self._job_url:
+            self._job_text.append(value)
+        else:
+            self.events.append(("text", "", value))
+
+
+def _alert_lines(value: str) -> list[str]:
+    return [clean_text(part) for part in value.split("\n") if clean_text(part)]
+
+
+def parse_linkedin_alert_html(body: str, source_name: str = "LinkedIn Email Alerts") -> list[Job]:
+    """Extract only cards with a usable role, company, and US location."""
+    parser = LinkedInAlertParser()
+    parser.feed(body)
+    jobs: dict[str, Job] = {}
+    for index, (kind, url, card_text) in enumerate(parser.events):
+        if kind != "job":
+            continue
+        adjacent: list[str] = []
+        for next_kind, _, next_text in parser.events[index + 1:]:
+            if next_kind == "job" or len("".join(adjacent)) > 400:
+                break
+            adjacent.append(next_text)
+        lines = _alert_lines(card_text + "\n" + "".join(adjacent))
+        title_index = next(
+            (i for i, line in enumerate(lines)
+             if re.search(r"\b(?:intern(?:ship)?|co-?op)\b", line, re.I)
+             and not re.search(r"\b(?:jobs? alert|view jobs?|more jobs?)\b", line, re.I)),
+            None,
+        )
+        if title_index is None:
+            continue
+        title = lines[title_index]
+        details = lines[title_index + 1:title_index + 7]
+        location = next((line for line in details if is_us_location(line)), "")
+        company = next(
+            (line for line in details if line != location
+             and len(line) < 90
+             and not re.search(r"\b(?:apply|view job|ago|applicants?|salary)\b", line, re.I)),
+            "",
+        )
+        if not company or not location:
+            continue
+        jobs[url] = Job(company, title, location, url, source_name)
+    return list(jobs.values())
+
+
+def parse_linkedin_alert_email(raw_message: bytes, source_name: str) -> list[Job]:
+    message = BytesParser(policy=policy.default).parsebytes(raw_message)
+    sender = parseaddr(str(message.get("From", "")))[1].casefold()
+    domain = sender.rpartition("@")[2]
+    if domain != "linkedin.com" and not domain.endswith(".linkedin.com"):
+        return []
+    body = message.get_body(preferencelist=("html",))
+    if body is None:
+        return []
+    return parse_linkedin_alert_html(body.get_content(), source_name)
+
+
+def fetch_linkedin_gmail(source: dict[str, Any]) -> list[Job]:
+    """Read recent LinkedIn alert emails via Gmail IMAP without changing them."""
+    address = os.environ["LINKEDIN_GMAIL_ADDRESS"]
+    password = os.environ["LINKEDIN_GMAIL_APP_PASSWORD"].replace(" ", "")
+    since = (datetime.now(timezone.utc) - timedelta(days=int(source.get("lookback_days", 7)))).strftime("%d-%b-%Y")
+    mailbox = imaplib.IMAP4_SSL("imap.gmail.com", 993, timeout=20)
+    try:
+        mailbox.login(address, password)
+        status, _ = mailbox.select("INBOX", readonly=True)
+        if status != "OK":
+            raise RuntimeError("Could not open Gmail inbox")
+        status, rows = mailbox.uid("SEARCH", None, "SINCE", since, "FROM", '"linkedin.com"')
+        if status != "OK":
+            raise RuntimeError("Could not search LinkedIn emails in Gmail")
+        uids = (rows[0] or b"").split()[-int(source.get("max_emails", 80)):]
+        jobs: list[Job] = []
+        for uid in uids:
+            status, parts = mailbox.uid("FETCH", uid, "(BODY.PEEK[])")
+            if status != "OK":
+                continue
+            raw = next((part[1] for part in parts if isinstance(part, tuple)), None)
+            if raw:
+                jobs.extend(parse_linkedin_alert_email(raw, source.get("name", "LinkedIn Email Alerts")))
+        return deduplicate(jobs)
+    finally:
+        mailbox.logout()
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
@@ -128,6 +253,11 @@ def canonical_url(value: str) -> str:
         if host in {"amazon.jobs", "www.amazon.jobs"} and amazon_job:
             host = "www.amazon.jobs"
             path = f"/en/jobs/{amazon_job.group(1)}"
+            query = []
+        linkedin_job = re.search(r"/(?:comm/)?jobs/view/(\d+)(?:/|$)", path)
+        if host in {"linkedin.com", "www.linkedin.com"} and linkedin_job:
+            host = "www.linkedin.com"
+            path = f"/jobs/view/{linkedin_job.group(1)}"
             query = []
         return urlunsplit((parts.scheme.casefold(), host, path, urlencode(query), ""))
     except ValueError:
@@ -765,6 +895,8 @@ def fetch_phenom(source: dict[str, Any]) -> list[Job]:
 
 def fetch_source(source: dict[str, Any]) -> list[Job]:
     source_type = source.get("type")
+    if source_type == "linkedin_gmail":
+        return fetch_linkedin_gmail(source)
     if source_type == "github_readme":
         return fetch_github_readme(source)
     if source_type == "github_markdown":
@@ -1167,7 +1299,17 @@ def check_jobs(
         source
         for source in load_watchlist_sources(config, config_path)
         if source.get("enabled", True)
+        and (
+            source.get("type") != "linkedin_gmail"
+            or (
+                os.environ.get("LINKEDIN_GMAIL_ADDRESS", "").strip()
+                and os.environ.get("LINKEDIN_GMAIL_APP_PASSWORD", "").strip()
+            )
+        )
     ]
+    if any(source.get("type") == "linkedin_gmail" for source in config.get("sources", [])):
+        if not any(source.get("type") == "linkedin_gmail" for source in sources):
+            print("LinkedIn email alerts are inactive until both Gmail secrets are configured.")
     validate_coverage_config(config, config_path, sources)
     max_workers = min(10, max(1, len(sources)))
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
