@@ -341,17 +341,22 @@ class JobWatcherTests(unittest.TestCase):
             with self.subTest(title=title):
                 self.assertFalse(matches("Cloudflare", title))
 
-    def test_250_company_roster_and_required_direct_feeds(self):
+    def test_expanded_company_roster_and_required_direct_feeds(self):
         root = Path(__file__).resolve().parents[1]
         config_path = root / "config.json"
         config = json.loads(config_path.read_text(encoding="utf-8"))
         sources = load_watchlist_sources(config, config_path)
         roster = json.loads((root / "coverage_watchlist.json").read_text(encoding="utf-8"))
         names = [name for tier in roster["tiers"].values() for name in tier]
-        self.assertEqual(250, len(names))
-        self.assertEqual(250, len({name.casefold() for name in names}))
+        self.assertGreaterEqual(len(names), 276)
+        self.assertEqual(len(names), len({name.casefold() for name in names}))
         self.assertNotIn("RTX", names)
         self.assertIn("Cloudflare", names)
+        for company in (
+            "Bloomberg", "Jane Street", "Optiver", "Goldman Sachs",
+            "JPMorgan Chase", "IMC", "DRW", "Virtu Financial", "Flow Traders",
+        ):
+            self.assertIn(company, names)
         validate_coverage_config(config, config_path, sources)
 
     def test_canonical_url_removes_tracking_and_fragment(self):
