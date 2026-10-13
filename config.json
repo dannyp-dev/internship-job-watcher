@@ -76,7 +76,10 @@
       "type": "microsoft_careers",
       "name": "Microsoft Careers",
       "company": "Microsoft",
-      "queries": ["software engineering intern", "software engineer intern"],
+      "queries": [
+        "software engineering intern",
+        "software engineer intern"
+      ],
       "enabled": true,
       "critical": true,
       "minimum_jobs": 1,
@@ -847,6 +850,46 @@
       "query": "intern",
       "enabled": true,
       "managed_group": "expanded_companies"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: IMC",
+      "company": "IMC",
+      "board": "imc",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "baseline_on_first_check": true
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: DRW",
+      "company": "DRW",
+      "board": "drweng",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "baseline_on_first_check": true
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Virtu Financial",
+      "company": "Virtu Financial",
+      "board": "virtu",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "baseline_on_first_check": true
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Flow Traders",
+      "company": "Flow Traders",
+      "board": "flowtraders",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "baseline_on_first_check": true
     }
   ],
   "coverage": {
@@ -909,7 +952,11 @@
       "Microsoft",
       "Snowflake",
       "Snap",
-      "Plaid"
+      "Plaid",
+      "IMC",
+      "DRW",
+      "Virtu Financial",
+      "Flow Traders"
     ]
   },
   "filters": {
