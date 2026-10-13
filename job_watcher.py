@@ -1088,8 +1088,8 @@ def validate_coverage_config(
     watchlist = load_json(watchlist_path, {})
     tiers = watchlist.get("tiers", {})
     companies = [company for tier in tiers.values() for company in tier]
-    if len(companies) != 250 or len({normalize(company) for company in companies}) != 250:
-        raise RuntimeError("Coverage watchlist must contain 250 unique companies")
+    if len(companies) < 250 or len({normalize(company) for company in companies}) != len(companies):
+        raise RuntimeError("Coverage watchlist must contain at least 250 unique companies")
 
     aggregate_types = {"github_readme", "github_markdown"}
     direct_companies = {
