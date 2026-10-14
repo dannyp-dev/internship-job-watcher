@@ -79,8 +79,6 @@ jobs:
           NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          LINKEDIN_GMAIL_ADDRESS: ${{ secrets.LINKEDIN_GMAIL_ADDRESS }}
-          LINKEDIN_GMAIL_APP_PASSWORD: ${{ secrets.LINKEDIN_GMAIL_APP_PASSWORD }}
         run: python job_watcher.py
 
       - name: Baseline newly added sources
