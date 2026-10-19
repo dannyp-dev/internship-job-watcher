@@ -187,7 +187,13 @@
       "CircleCI",
       "Buildkite",
       "Sourcegraph",
-      "Honeycomb"
+      "Honeycomb",
+      "Cognition",
+      "Decagon",
+      "Sierra",
+      "Modal",
+      "Baseten",
+      "Cursor"
     ],
     "8": [
       "Addepar",
