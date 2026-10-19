@@ -7,9 +7,11 @@ It currently monitors:
 - Simplify's Summer 2027 list
 - Simplify's Off-Season 2027 list
 - Two additional public internship trackers as cross-checks
-- 125 configured direct company feeds, including Amazon, Cloudflare, Meta, Google, Apple, Microsoft, Snowflake, Snap, Plaid, IMC, DRW, Virtu Financial, Flow Traders, validated Greenhouse and Ashby boards, and Workday boards
+- 134 configured direct company feeds, including Amazon, Cloudflare, Meta, Google, Apple, Microsoft, Snowflake, Snap, Plaid, IMC, DRW, Virtu Financial, Flow Traders, validated Greenhouse and Ashby boards, and Workday boards
 
-`coverage_watchlist.json` names 276 target companies, including a finance and quant tier. It is a planning roster, not 276 direct monitors. Bloomberg, Goldman Sachs, and JPMorgan Chase were already on the roster; Jane Street, Optiver, and other quant and banking firms are now included. Companies without a verified direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. IMC, DRW, Virtu Financial, and Flow Traders have direct Greenhouse feeds. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the researched 99-company registry and its direct feeds.
+`coverage_watchlist.json` names 282 target companies, including a finance and quant tier. It is a planning roster, not 282 direct monitors. Bloomberg, Goldman Sachs, and JPMorgan Chase were already on the roster; Jane Street, Optiver, and other quant and banking firms are now included. Companies without a verified direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. IMC, DRW, Virtu Financial, and Flow Traders have direct Greenhouse feeds. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the researched 99-company registry and its direct feeds.
+
+Scale AI and Anthropic are monitored directly. The AI product and infrastructure group also includes Glean, Cohere, Perplexity, Cognition, Decagon, Sierra, Modal, Baseten, Cursor, and OpenAI, with feed-failure alerts and checks for unexpectedly empty feeds. Verified on October 19, 2026. Ashby locations include structured country and region data so city-only labels are not discarded. Decagon's verified software role titled `Engineering Intern` is accepted through a company-specific title rule; specialty and location exclusions still apply. Internship words must match complete words, preventing `Internal Tooling` or `Cooperative AI` from being mistaken for internships.
 
 The filters favor United States undergraduate internships in backend, full-stack, platform, distributed systems, cloud, and site reliability. Titles focused on ML, research, data engineering, frontend-only, design, mobile, embedded, firmware, or hardware are excluded. RTX and its Raytheon, Collins Aerospace, and Pratt & Whitney brands, plus L3Harris, are blocked. The watcher does not filter, record, or report pay.
 
@@ -53,7 +55,7 @@ The Cloudflare scheduler wakes every 15 minutes and dispatches the GitHub workfl
 
 The first normal run creates a baseline and records existing roles without flooding your phone. Alerts begin for matching roles found after that baseline.
 
-New direct feeds also establish their own first-run baseline. Current listings on those feeds are recorded without a backlog of alerts. Subsequent additions are eligible for notifications. A direct feed is polled every scheduled check during the active window, but an official career site can change its API or block automated requests; critical feed failures produce a health alert. The 276-company roster remains a target list, not a claim that every company has a working direct feed.
+New direct feeds also establish their own first-run baseline. Current listings on those feeds are recorded without a backlog of alerts. Subsequent additions are eligible for notifications. A direct feed is polled every scheduled check during the active window, but an official career site can change its API or block automated requests; critical feed failures produce a health alert. The 282-company roster remains a target list, not a claim that every company has a working direct feed.
 
 Microsoft's careers search rate-limits broad pagination. Its direct check uses a small set of targeted software-internship searches on each run, while the aggregate trackers remain a fallback for results beyond those search pages. This feed is best-effort, not exhaustive.
 
@@ -63,7 +65,7 @@ The workflow retries transient state-history push failures up to four times. Thi
 
 ## Review or tune the watchlist
 
-- `coverage_watchlist.json` is the 276-company target roster. It does not itself add a feed.
+- `coverage_watchlist.json` is the 282-company target roster. It does not itself add a feed.
 - `WATCHLIST.md` and `company_watchlist.json` contain the 99-company research list, including 35 older direct sources.
 - `config.json` contains the current direct source configuration; it is combined with enabled sources in `company_watchlist.json` at runtime.
 - `config.json` controls fit, location, and notifications.
