@@ -514,6 +514,18 @@ def fetch_lever(source: dict[str, Any]) -> list[Job]:
     return [job for job in jobs if job.title and job.url]
 
 
+def ashby_location(item: dict[str, Any]) -> str:
+    """Keep structured region/country data when the display label is only a city."""
+    label = clean_text(item.get("location", ""))
+    postal = (item.get("address") or {}).get("postalAddress") or {}
+    parts = [label] if label else []
+    for field in ("addressRegion", "addressCountry"):
+        value = clean_text(postal.get(field, ""))
+        if value and normalize(value) not in normalize(", ".join(parts)):
+            parts.append(value)
+    return ", ".join(parts)
+
+
 def fetch_ashby(source: dict[str, Any]) -> list[Job]:
     board = source["board"]
     data = fetch_json(f"https://api.ashbyhq.com/posting-api/job-board/{board}")
@@ -521,12 +533,12 @@ def fetch_ashby(source: dict[str, Any]) -> list[Job]:
     jobs = []
     for item in data.get("jobs", []):
         secondary = [
-            location.get("location", "")
+            ashby_location(location)
             for location in item.get("secondaryLocations", [])
             if isinstance(location, dict)
         ]
         location = " | ".join(
-            part for part in [item.get("location", ""), *secondary] if part
+            part for part in [ashby_location(item), *secondary] if part
         )
         team = item.get("team") or item.get("department") or ""
         jobs.append(
@@ -972,12 +984,18 @@ def is_us_location(location: str) -> bool:
 def job_matches(job: Job, filters: dict[str, Any]) -> bool:
     title = job.title
     all_text = " | ".join((job.company, job.title, job.location, job.team))
-    if filters.get("required_role_words") and not contains_any(
+    if filters.get("required_role_words") and not contains_phrase(
         title, filters["required_role_words"]
     ):
         return False
-    if filters.get("technical_title_words") and not contains_any(
-        title, filters["technical_title_words"]
+    company_title_phrases = next(
+        (phrases for company, phrases in filters.get("technical_title_overrides", {}).items()
+         if normalize(company) == normalize(job.company)),
+        [],
+    )
+    if filters.get("technical_title_words") and not (
+        contains_any(title, filters["technical_title_words"])
+        or contains_phrase(title, company_title_phrases)
     ):
         return False
     if filters.get("exclude_title_phrases") and contains_phrase(
