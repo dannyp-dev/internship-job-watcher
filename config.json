@@ -630,7 +630,9 @@
       "company": "Anthropic",
       "enabled": true,
       "managed_group": "expanded_companies",
-      "board": "anthropic"
+      "board": "anthropic",
+      "critical": true,
+      "minimum_jobs": 1
     },
     {
       "type": "greenhouse",
@@ -638,7 +640,9 @@
       "company": "Scale AI",
       "enabled": true,
       "managed_group": "expanded_companies",
-      "board": "scaleai"
+      "board": "scaleai",
+      "critical": true,
+      "minimum_jobs": 1
     },
     {
       "type": "ashby",
@@ -881,6 +885,106 @@
       "critical": true,
       "minimum_jobs": 1,
       "baseline_on_first_check": true
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Glean",
+      "company": "Glean",
+      "board": "gleanwork",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Cohere",
+      "company": "Cohere",
+      "board": "cohere",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Perplexity",
+      "company": "Perplexity",
+      "board": "Perplexity",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Cognition",
+      "company": "Cognition",
+      "board": "cognition",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Decagon",
+      "company": "Decagon",
+      "board": "decagon",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Sierra",
+      "company": "Sierra",
+      "board": "sierra",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Modal",
+      "company": "Modal",
+      "board": "modal",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Baseten",
+      "company": "Baseten",
+      "board": "baseten",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: Cursor",
+      "company": "Cursor",
+      "board": "cursor",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "type": "ashby",
+      "name": "Ashby: OpenAI",
+      "company": "OpenAI",
+      "board": "openai",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 1,
+      "managed_group": "ai_product_and_infrastructure"
     }
   ],
   "coverage": {
@@ -947,7 +1051,19 @@
       "IMC",
       "DRW",
       "Virtu Financial",
-      "Flow Traders"
+      "Flow Traders",
+      "Scale AI",
+      "Anthropic",
+      "Glean",
+      "Cohere",
+      "Perplexity",
+      "Cognition",
+      "Decagon",
+      "Sierra",
+      "Modal",
+      "Baseten",
+      "Cursor",
+      "OpenAI"
     ]
   },
   "filters": {
@@ -1044,7 +1160,12 @@
       "L3 Harris"
     ],
     "location_words": [],
-    "us_only": true
+    "us_only": true,
+    "technical_title_overrides": {
+      "Decagon": [
+        "engineering intern"
+      ]
+    }
   },
   "notification": {
     "provider": "telegram",
