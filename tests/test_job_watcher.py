@@ -402,6 +402,58 @@ class JobWatcherTests(unittest.TestCase):
         self.assertFalse(strip_legacy_compensation(seen))
 
     @patch("job_watcher.fetch_json")
+    def test_ashby_city_only_labels_keep_country_for_filtering(self, mock_fetch_json):
+        mock_fetch_json.return_value = {"jobs": [
+            {
+                "title": "Software Engineer Intern",
+                "location": "San Francisco",
+                "address": {"postalAddress": {
+                    "addressRegion": "CA", "addressCountry": "United States"
+                }},
+                "secondaryLocations": [{
+                    "location": "New York",
+                    "address": {"postalAddress": {
+                        "addressRegion": "NY", "addressCountry": "United States"
+                    }},
+                }],
+                "jobUrl": "https://jobs.ashbyhq.com/acme/us",
+            },
+            {
+                "title": "Software Engineer Intern",
+                "location": "London",
+                "address": {"postalAddress": {"addressCountry": "United Kingdom"}},
+                "jobUrl": "https://jobs.ashbyhq.com/acme/uk",
+            },
+        ]}
+        jobs = fetch_ashby({"board": "acme", "company": "Acme"})
+        filters = json.loads((Path(__file__).resolve().parents[1] / "config.json").read_text())["filters"]
+        self.assertIn("San Francisco, CA, United States", jobs[0].location)
+        self.assertIn("New York, NY, United States", jobs[0].location)
+        self.assertTrue(job_matches(jobs[0], filters))
+        self.assertFalse(job_matches(jobs[1], filters))
+
+    def test_intern_filter_does_not_match_internal_or_cooperative(self):
+        filters = json.loads((Path(__file__).resolve().parents[1] / "config.json").read_text())["filters"]
+        for title in ("Software Engineer - Billing & Internal Tooling",
+                      "Software Engineer, Cooperative AI",
+                      "Emerging Clouds & International Coverage Lead"):
+            self.assertFalse(job_matches(Job("Acme", title, "San Francisco, CA", "https://a.test/job", "test"), filters))
+        for title in ("Software Engineer Intern", "Software Engineering Internship",
+                      "Software Engineer Co-op", "Software Engineer Coop"):
+            self.assertTrue(job_matches(Job("Acme", title, "San Francisco, CA", "https://a.test/job", "test"), filters))
+
+    def test_decagon_software_title_exception_preserves_exclusions(self):
+        filters = json.loads((Path(__file__).resolve().parents[1] / "config.json").read_text())["filters"]
+        def matches(company, title, location="San Francisco, CA"):
+            return job_matches(Job(company, title, location, "https://example.com/job", "test"), filters)
+        self.assertTrue(matches("Decagon", "Engineering Intern (Summer 2027)"))
+        self.assertFalse(matches("Acme", "Engineering Intern (Summer 2027)"))
+        self.assertFalse(matches("Decagon", "Hardware Engineering Intern"))
+        self.assertFalse(matches("Decagon", "Machine Learning Engineering Intern"))
+        self.assertFalse(matches("Decagon", "Research Engineering Intern"))
+        self.assertFalse(matches("Decagon", "Engineering Intern (Summer 2027)", "London, UK"))
+
+    @patch("job_watcher.fetch_json")
     def test_maps_ashby_jobs(self, mock_fetch_json):
         mock_fetch_json.return_value = {
             "jobs": [{
