@@ -1,6 +1,6 @@
 # Direct company coverage
 
-Updated October 22, 2026. There are 194 unique companies with configured direct feeds, including the newly connected Twitch board. The previous 182 feeds and the 11 newly added feeds responded without a transport or schema error in this audit; 190 returned listings. Deel, Visa, and Webflow returned zero listings, so their coverage remains unconfirmed and should not be treated as reliable until their current boards are verified.
+Updated October 22, 2026. There are 194 unique companies with configured direct feeds, including Twitch. In the earlier audit, 193 existing company connections were checked: 190 returned listings and Deel, Visa, and Webflow returned zero. The public Twitch Greenhouse feed returned 58 listings during verification. Its current live posting status is recorded below.
 
 The expansion added 48 companies, including 32 with no currently matching internship. They remain monitored for future postings. Mercury's obsolete Ashby connection was replaced with Greenhouse. The planning roster contains 311 names, of which 168 have configured direct feeds. Being on that roster is not proof of direct coverage.
 
