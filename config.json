@@ -1693,6 +1693,14 @@
       "minimum_jobs": 0,
       "managed_group": "future_company_coverage",
       "verified_on": "2026-10-21"
+    },
+    {
+      "type": "greenhouse",
+      "name": "Greenhouse: Twitch",
+      "company": "Twitch",
+      "board": "twitch",
+      "enabled": true,
+      "critical": true
     }
   ],
   "coverage": {
@@ -1831,7 +1839,8 @@
       "Clear Street",
       "Justworks",
       "Oscar Health",
-      "Trumid"
+      "Trumid",
+      "Twitch"
     ]
   },
   "filters": {
