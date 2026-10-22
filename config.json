@@ -529,12 +529,15 @@
       "board": "chime"
     },
     {
-      "type": "ashby",
-      "name": "Ashby: Mercury",
       "company": "Mercury",
+      "type": "greenhouse",
+      "name": "Greenhouse: Mercury",
+      "board": "mercury",
       "enabled": true,
-      "managed_group": "preferred_companies",
-      "board": "mercury"
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
     },
     {
       "type": "greenhouse",
@@ -985,6 +988,587 @@
       "critical": true,
       "minimum_jobs": 1,
       "managed_group": "ai_product_and_infrastructure"
+    },
+    {
+      "company": "Jane Street",
+      "type": "greenhouse",
+      "board": "janestreet",
+      "name": "Greenhouse: Jane Street",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Jump Trading",
+      "type": "greenhouse",
+      "board": "jumptrading",
+      "name": "Greenhouse: Jump Trading",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://www.jumptrading.com/hr/job?gh_jid=8002989",
+        "https://www.jumptrading.com/hr/job?gh_jid=8003019"
+      ]
+    },
+    {
+      "company": "Tower Research Capital",
+      "type": "greenhouse",
+      "board": "towerresearchcapital",
+      "name": "Greenhouse: Tower Research Capital",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://www.tower-research.com/open-positions?gh_jid=8044334"
+      ]
+    },
+    {
+      "company": "Akuna Capital",
+      "type": "greenhouse",
+      "board": "akunacapital",
+      "name": "Greenhouse: Akuna Capital",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://www.akunacapital.com/careers/job/8018856?gh_jid=8018856",
+        "https://www.akunacapital.com/careers/job/8018886?gh_jid=8018886",
+        "https://www.akunacapital.com/careers/job/8018847?gh_jid=8018847",
+        "https://www.akunacapital.com/careers/job/8018893?gh_jid=8018893"
+      ]
+    },
+    {
+      "company": "Point72",
+      "type": "greenhouse",
+      "board": "point72",
+      "name": "Greenhouse: Point72",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://boards.greenhouse.io/point72/jobs/8885733002?gh_jid=8885733002",
+        "https://boards.greenhouse.io/point72/jobs/7609197002?gh_jid=7609197002",
+        "https://boards.greenhouse.io/point72/jobs/7297666002?gh_jid=7297666002"
+      ]
+    },
+    {
+      "company": "Dropbox",
+      "type": "greenhouse",
+      "board": "dropbox",
+      "name": "Greenhouse: Dropbox",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Elastic",
+      "type": "greenhouse",
+      "board": "elastic",
+      "name": "Greenhouse: Elastic",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "GitLab",
+      "type": "greenhouse",
+      "board": "gitlab",
+      "name": "Greenhouse: GitLab",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Okta",
+      "type": "greenhouse",
+      "board": "okta",
+      "name": "Greenhouse: Okta",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Zscaler",
+      "type": "greenhouse",
+      "board": "zscaler",
+      "name": "Greenhouse: Zscaler",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "1Password",
+      "type": "ashby",
+      "name": "Ashby: 1Password",
+      "board": "1password",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "PostHog",
+      "type": "ashby",
+      "name": "Ashby: PostHog",
+      "board": "posthog",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "ElevenLabs",
+      "type": "ashby",
+      "name": "Ashby: ElevenLabs",
+      "board": "elevenlabs",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Replit",
+      "type": "ashby",
+      "name": "Ashby: Replit",
+      "board": "replit",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://jobs.ashbyhq.com/replit/7c3c9d29-cec2-4367-8564-eadaed165aea"
+      ]
+    },
+    {
+      "company": "Lovable",
+      "type": "ashby",
+      "name": "Ashby: Lovable",
+      "board": "lovable",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Vanta",
+      "type": "ashby",
+      "name": "Ashby: Vanta",
+      "board": "vanta",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Watershed",
+      "type": "ashby",
+      "name": "Ashby: Watershed",
+      "board": "watershed",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Crusoe",
+      "type": "ashby",
+      "name": "Ashby: Crusoe",
+      "board": "crusoe",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://jobs.ashbyhq.com/crusoe/07a8a6a9-975e-471c-ac31-b5aaa97f9af5"
+      ]
+    },
+    {
+      "company": "Harvey",
+      "type": "ashby",
+      "name": "Ashby: Harvey",
+      "board": "harvey",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://jobs.ashbyhq.com/harvey/06d64648-b84b-48ae-94a2-d9c06dfdcb5d",
+        "https://jobs.ashbyhq.com/harvey/3a34578d-d42e-45bb-ac5c-0c3357e8cbb7"
+      ]
+    },
+    {
+      "company": "Clay",
+      "type": "ashby",
+      "name": "Ashby: Clay",
+      "board": "claylabs",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://jobs.ashbyhq.com/claylabs/5b7eced2-36bd-4265-a2a8-da0f786e47aa"
+      ]
+    },
+    {
+      "company": "Abridge",
+      "type": "ashby",
+      "name": "Ashby: Abridge",
+      "board": "abridge",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Suno",
+      "type": "ashby",
+      "name": "Ashby: Suno",
+      "board": "suno",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Synthesia",
+      "type": "ashby",
+      "name": "Ashby: Synthesia",
+      "board": "synthesia",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Abnormal AI",
+      "type": "greenhouse",
+      "name": "Greenhouse: Abnormal AI",
+      "board": "abnormalsecurity",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Together AI",
+      "type": "greenhouse",
+      "name": "Greenhouse: Together AI",
+      "board": "togetherai",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Mixpanel",
+      "type": "greenhouse",
+      "name": "Greenhouse: Mixpanel",
+      "board": "mixpanel",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Algolia",
+      "type": "greenhouse",
+      "name": "Greenhouse: Algolia",
+      "board": "algolia",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Doximity",
+      "type": "greenhouse",
+      "name": "Greenhouse: Doximity",
+      "board": "doximity",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Benchling",
+      "type": "ashby",
+      "name": "Ashby: Benchling",
+      "board": "benchling",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Amplitude",
+      "type": "ashby",
+      "name": "Ashby: Amplitude",
+      "board": "amplitude",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Redis",
+      "type": "ashby",
+      "name": "Ashby: Redis",
+      "board": "redis",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Snyk",
+      "type": "ashby",
+      "name": "Ashby: Snyk",
+      "board": "snyk",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Kong",
+      "type": "ashby",
+      "name": "Ashby: Kong",
+      "board": "kong",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Quora",
+      "type": "ashby",
+      "name": "Ashby: Quora",
+      "board": "quora",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Old Mission Capital",
+      "type": "ashby",
+      "name": "Ashby: Old Mission Capital",
+      "board": "old-mission-capital",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Hudson River Trading",
+      "type": "greenhouse",
+      "name": "Greenhouse: Hudson River Trading",
+      "board": "wehrtyou",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://www.hudsonrivertrading.com/careers/job?gh_jid=8052083"
+      ]
+    },
+    {
+      "company": "Optiver",
+      "type": "greenhouse",
+      "name": "Greenhouse: Optiver",
+      "board": "optiverus",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://www.optiver.com/join-us/jobs/8401052002?gh_jid=8401052002",
+        "https://www.optiver.com/join-us/jobs/8604760002?gh_jid=8604760002"
+      ]
+    },
+    {
+      "company": "Sentry",
+      "type": "ashby",
+      "name": "Ashby: Sentry",
+      "board": "sentry",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Temporal",
+      "type": "ashby",
+      "name": "Ashby: Temporal",
+      "board": "temporal",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Render",
+      "type": "ashby",
+      "name": "Ashby: Render",
+      "board": "render",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Miro",
+      "type": "ashby",
+      "name": "Ashby: Miro",
+      "board": "miro",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Patreon",
+      "type": "ashby",
+      "name": "Ashby: Patreon",
+      "board": "patreon",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://jobs.ashbyhq.com/patreon/cefe07ab-ba4f-48cc-86b9-a88b1859a95c",
+        "https://jobs.ashbyhq.com/patreon/71f644bc-0873-4d62-a599-bd64405d6587"
+      ]
+    },
+    {
+      "company": "Hebbia",
+      "type": "ashby",
+      "name": "Ashby: Hebbia",
+      "board": "hebbia-ai",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Runway",
+      "type": "ashby",
+      "name": "Ashby: Runway",
+      "board": "runway-ml",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Sourcegraph",
+      "type": "greenhouse",
+      "name": "Greenhouse: Sourcegraph",
+      "board": "sourcegraph91",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "type": "jibe",
+      "name": "Jibe: H&R Block",
+      "company": "H&R Block",
+      "host": "careers.hrblock.com",
+      "queries": [
+        "intern",
+        "co-op"
+      ],
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "type": "jobsyn",
+      "name": "Siemens Digital Industries Software",
+      "company": "Siemens",
+      "host": "jobs.sw.siemens.com",
+      "queries": [
+        "intern",
+        "co-op"
+      ],
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "type": "workday",
+      "name": "Workday: Zillow",
+      "company": "Zillow",
+      "host": "zillow.wd5.myworkdayjobs.com",
+      "tenant": "zillow",
+      "site": "Zillow_Group_External",
+      "query": "intern",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
     }
   ],
   "coverage": {
@@ -1063,7 +1647,56 @@
       "Modal",
       "Baseten",
       "Cursor",
-      "OpenAI"
+      "OpenAI",
+      "Jane Street",
+      "Jump Trading",
+      "Tower Research Capital",
+      "Akuna Capital",
+      "Point72",
+      "Dropbox",
+      "Elastic",
+      "GitLab",
+      "Okta",
+      "Zscaler",
+      "1Password",
+      "PostHog",
+      "ElevenLabs",
+      "Replit",
+      "Lovable",
+      "Vanta",
+      "Watershed",
+      "Crusoe",
+      "Harvey",
+      "Clay",
+      "Abridge",
+      "Suno",
+      "Synthesia",
+      "Abnormal AI",
+      "Together AI",
+      "Mixpanel",
+      "Algolia",
+      "Doximity",
+      "Benchling",
+      "Amplitude",
+      "Redis",
+      "Snyk",
+      "Kong",
+      "Quora",
+      "Old Mission Capital",
+      "Hudson River Trading",
+      "Optiver",
+      "Sentry",
+      "Temporal",
+      "Render",
+      "Miro",
+      "Patreon",
+      "Hebbia",
+      "Runway",
+      "Sourcegraph",
+      "H&R Block",
+      "Siemens",
+      "Zillow",
+      "Mercury"
     ]
   },
   "filters": {
@@ -1138,7 +1771,8 @@
       "silicon",
       "robotics",
       "perception",
-      "autonomy"
+      "autonomy",
+      "electronics"
     ],
     "exclude_words": [
       "senior",
