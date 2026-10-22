@@ -1700,7 +1700,8 @@
       "company": "Twitch",
       "board": "twitch",
       "enabled": true,
-      "critical": true
+      "critical": true,
+      "minimum_jobs": 1
     }
   ],
   "coverage": {
