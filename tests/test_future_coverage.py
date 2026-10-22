@@ -128,5 +128,41 @@ class FutureCoverageTests(unittest.TestCase):
             self.assertIn("notified_at", saved["seen"][new.key])
 
 
+    def test_twitch_missed_posting_is_new_and_notification_eligible(self):
+        twitch = Job(
+            "Twitch",
+            "Undergrad Software Engineering Intern (Grad Year: Spring 2028)",
+            "San Francisco, CA",
+            "https://job-boards.greenhouse.io/twitch/jobs/8886748002",
+            "Greenhouse: Twitch",
+            team="Early Careers",
+            employment_type="Internship",
+        )
+        self.assertTrue(job_matches(twitch, self.filters))
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config = root / "config.json"
+            state = root / "state.json"
+            config.write_text(json.dumps({
+                "sources": [{"type": "greenhouse", "name": "Greenhouse: Twitch",
+                             "company": "Twitch", "board": "twitch", "enabled": True}],
+                "coverage": {"required_direct_companies": ["Twitch"]},
+                "filters": self.filters,
+                "notification": {"provider": "telegram"},
+            }))
+            state.write_text(json.dumps({
+                "initialized_at": "2026-09-10T20:01:13+00:00",
+                "seen": {},
+            }))
+            with patch("job_watcher.fetch_source", return_value=[twitch]), \\
+                 patch("job_watcher.provider_is_configured", return_value=True), \\
+                 patch("job_watcher.send_notification") as send:
+                self.assertEqual(0, check_jobs(config, state))
+            self.assertEqual(1, send.call_count)
+            self.assertEqual(twitch.url, send.call_args.args[3])
+            saved = json.loads(state.read_text())
+            self.assertIn(twitch.key, saved["seen"])
+            self.assertIn("notified_at", saved["seen"][twitch.key])
+
 if __name__ == "__main__":
     unittest.main()
