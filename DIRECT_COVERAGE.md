@@ -254,4 +254,6 @@ AMD, Activision Blizzard, Addepar, Adyen, Akamai, Alloy, American Express, Arcti
 
 ## Remaining gaps
 
+The cloud check at 11:01 PM Eastern on October 21 recorded a Microsoft HTTP 429 rate limit, even though Microsoft responded during the separate full audit. The cloud run otherwise recorded no notification delivery errors and recorded alerts for Old Mission Capital and three Siemens roles. A successful audit is a point-in-time check, not a guarantee that a feed never fails.
+
 The aggregate-only roster above is not directly monitored. In particular, Bloomberg, Goldman Sachs, JPMorgan Chase, Citadel, and Citadel Securities still lack verified direct connections. Do not assume the aggregate boards provide complete or immediate coverage. Deel, Visa, and Webflow have configured but empty feeds. HubSpot was rechecked successfully and is not a known failed feed in this audit. Mercury now returns listings from its replacement Greenhouse feed.
