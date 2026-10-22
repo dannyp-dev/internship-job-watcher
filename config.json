@@ -998,7 +998,10 @@
       "critical": true,
       "minimum_jobs": 0,
       "managed_group": "future_company_coverage",
-      "verified_on": "2026-10-21"
+      "verified_on": "2026-10-21",
+      "initial_baseline_urls": [
+        "https://www.janestreet.com/join-jane-street/apply/8599644002?gh_jid=8599644002"
+      ]
     },
     {
       "company": "Jump Trading",
