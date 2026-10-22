@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-10",
-  "company_count": 99,
+  "company_count": 100,
   "selection_notes": {
     "goal": "Strong stepping-stone employers for backend, platform, infrastructure, full-stack, systems, and ML systems internships",
     "excluded_by_design": [
@@ -1971,6 +1971,31 @@
       "verification": "live Simplify 2027 application URL",
       "verified_at": "2026-09-10",
       "source": null
+    },
+    {
+      "company": "Twitch",
+      "source_company_name": "Twitch",
+      "priority": "core",
+      "fit_lanes": [
+        "backend/full-stack",
+        "platform/infrastructure"
+      ],
+      "ats": "greenhouse",
+      "board": "twitch",
+      "careers_url": "https://www.twitch.tv/jobs/",
+      "polling": "greenhouse_public_api",
+      "verification": "official Greenhouse board; live listings reviewed October 22, 2026",
+      "active_listings_seen": 58,
+      "sample_application_url": "https://job-boards.greenhouse.io/twitch/jobs/8886748002",
+      "verified_at": "2026-10-22",
+      "source": {
+        "type": "greenhouse",
+        "name": "Greenhouse: Twitch",
+        "company": "Twitch",
+        "enabled": true,
+        "critical": true,
+        "board": "twitch"
+      }
     }
   ]
 }
