@@ -1,8 +1,8 @@
 # Direct company coverage
 
-Verified October 21, 2026. There are 182 configured direct company feeds. All 182 responded without a transport or schema error in this audit; 179 returned listings. Deel, Visa, and Webflow returned zero listings, so their coverage remains unconfirmed and should not be treated as reliable until their current boards are verified.
+Verified October 21, 2026. There are 193 configured direct company feeds. The previous 182 feeds and the 11 newly added feeds responded without a transport or schema error in this audit; 190 returned listings. Deel, Visa, and Webflow returned zero listings, so their coverage remains unconfirmed and should not be treated as reliable until their current boards are verified.
 
-The expansion added 48 companies, including 32 with no currently matching internship. They remain monitored for future postings. Mercury's obsolete Ashby connection was replaced with Greenhouse. The planning roster contains 301 names, of which 156 have configured direct feeds. Being on that roster is not proof of direct coverage.
+The expansion added 48 companies, including 32 with no currently matching internship. They remain monitored for future postings. Mercury's obsolete Ashby connection was replaced with Greenhouse. The planning roster contains 311 names, of which 167 have configured direct feeds. Being on that roster is not proof of direct coverage.
 
 Checks target every 15 minutes from 10 AM to midnight Eastern, not immediate push delivery. H&R Block covers its corporate Jibe portal. Siemens covers Digital Industries Software US postings, not all Siemens divisions. Other feeds may also cover only the named employer portal, not every subsidiary. Matching counts reflect the current software internship filters, not all internships at the employer.
 
@@ -24,9 +24,9 @@ Apple.
 
 Google.
 
-### greenhouse (101)
+### greenhouse (112)
 
-Abnormal AI, Affirm, Airbnb, Airtable, Akuna Capital, Algolia, Anduril, Anthropic, AppLovin, Asana, Box, Braze, Brex, Buildkite, Carta, Chainguard, Checkr, Chicago Trading Company, Chime, CircleCI, Cloudflare, Cockroach Labs, Coinbase, CoreWeave, Coupang, Databricks, Datadog, DigitalOcean, Discord, DoorDash, Doximity, Dropbox, DRW, Duolingo, DV Trading, Elastic, Fastly, Figma, Five Rings Capital, Fivetran, Flexport, Flow Traders, Garda Capital Partners, GitLab, Glean, Grafana Labs, Gusto, Honeycomb, HP IQ, HubSpot, Hudson River Trading, ID.me, IMC, Instacart, Jane Street, Jump Trading, K2 Space, Klaviyo, Kodiak Robotics, LaunchDarkly, Lyft, Mercury, Mixpanel, MongoDB, Motive, New Relic, Okta, Optiver, PagerDuty, Pinterest, PlanetScale, Point72, Pure Storage, Reddit, Riot Games, Robinhood, Roblox, Rocket Lab USA, Roku, Rubrik, Samsara, Scale AI, Schonfeld, SoFi, Sony Interactive Entertainment, Sourcegraph, Stripe, Tailscale, The Nuclear Company, Toast, Together AI, Tower Research Capital, Twilio, Vercel, Verkada, Viam, Virtu Financial, Waymo, Webflow (empty, unconfirmed), Wiz, Zscaler.
+Abnormal AI, Affirm, Airbnb, Airtable, Akuna Capital, Algolia, Anduril, Anthropic, AppLovin, Asana, Box, Braze, Brex, Buildkite, Carta, Chainguard, Checkr, Chicago Trading Company, Chime, CircleCI, Clear Street, Cloudflare, Cockroach Labs, Coinbase, CoreWeave, Coupang, Databricks, Datadog, DigitalOcean, Discord, DoorDash, Doximity, Dropbox, DRW, Duolingo, DV Trading, Elastic, Fastly, Figma, Five Rings Capital, Fivetran, Flexport, Flow Traders, Garda Capital Partners, Gemini, GitLab, Glean, GoDaddy, Grafana Labs, Gusto, Honeycomb, HP IQ, HubSpot, Hudson River Trading, ID.me, IMC, Instacart, Intercom, IXL Learning, Jane Street, Jump Trading, Justworks, K2 Space, Klaviyo, Kodiak Robotics, LaunchDarkly, Lyft, Mercury, Mixpanel, MongoDB, Motive, New Relic, Nextdoor, Okta, Optiver, Oscar Health, PagerDuty, Pinterest, PlanetScale, Point72, Pure Storage, Reddit, Riot Games, Robinhood, Roblox, Rocket Lab USA, Roku, Rubrik, Samsara, Scale AI, Schonfeld, SeatGeek, SoFi, Sony Interactive Entertainment, Sourcegraph, Squarespace, Stripe, Tailscale, The Nuclear Company, Toast, Together AI, Tower Research Capital, Trumid, Twilio, Vercel, Verkada, Viam, Virtu Financial, Waymo, Webflow (empty; unconfirmed), Wiz, Zscaler.
 
 ### jibe (1)
 
@@ -98,6 +98,7 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Chime | greenhouse | 73 | 0 | Responding with listings |
 | CircleCI | greenhouse | 15 | 0 | Responding with listings |
 | Clay | ashby | 60 | 1 | Responding with listings |
+| Clear Street | greenhouse | 47 | 0 | Responding with listings |
 | Cloudflare | greenhouse | 443 | 1 | Responding with listings |
 | Cockroach Labs | greenhouse | 15 | 0 | Responding with listings |
 | Cognition | ashby | 105 | 0 | Responding with listings |
@@ -130,8 +131,10 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Flexport | greenhouse | 195 | 0 | Responding with listings |
 | Flow Traders | greenhouse | 45 | 0 | Responding with listings |
 | Garda Capital Partners | greenhouse | 14 | 1 | Responding with listings |
+| Gemini | greenhouse | 30 | 1 | Responding with listings |
 | GitLab | greenhouse | 231 | 0 | Responding with listings |
 | Glean | greenhouse | 120 | 1 | Responding with listings |
+| GoDaddy | greenhouse | 37 | 0 | Responding with listings |
 | Google | google_careers | 89 | 0 | Responding with listings |
 | Grafana Labs | greenhouse | 145 | 0 | Responding with listings |
 | Gusto | greenhouse | 99 | 0 | Responding with listings |
@@ -147,8 +150,11 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | IMC | greenhouse | 172 | 1 | Responding with listings |
 | Immuta | lever | 14 | 2 | Responding with listings |
 | Instacart | greenhouse | 124 | 0 | Responding with listings |
+| Intercom | greenhouse | 106 | 0 | Responding with listings |
+| IXL Learning | greenhouse | 120 | 1 | Responding with listings |
 | Jane Street | greenhouse | 221 | 1 | Responding with listings |
 | Jump Trading | greenhouse | 95 | 2 | Responding with listings |
+| Justworks | greenhouse | 96 | 0 | Responding with listings |
 | K2 Space | greenhouse | 251 | 2 | Responding with listings |
 | Klaviyo | greenhouse | 163 | 0 | Responding with listings |
 | Kodiak Robotics | greenhouse | 67 | 0 | Responding with listings |
@@ -170,6 +176,7 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Neon | ashby | 4 | 0 | Responding with listings |
 | Netflix | workday | 3 | 0 | Responding with listings |
 | New Relic | greenhouse | 56 | 0 | Responding with listings |
+| Nextdoor | greenhouse | 23 | 0 | Responding with listings |
 | Northwood Space | ashby | 63 | 0 | Responding with listings |
 | Notion | ashby | 137 | 3 | Responding with listings |
 | NVIDIA | workday | 187 | 3 | Responding with listings |
@@ -177,6 +184,7 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Old Mission Capital | ashby | 39 | 1 | Responding with listings |
 | OpenAI | ashby | 815 | 0 | Responding with listings |
 | Optiver | greenhouse | 165 | 2 | Responding with listings |
+| Oscar Health | greenhouse | 245 | 0 | Responding with listings |
 | PagerDuty | greenhouse | 54 | 0 | Responding with listings |
 | Palantir | lever | 20 | 1 | Responding with listings |
 | Patreon | ashby | 18 | 2 | Responding with listings |
@@ -209,6 +217,7 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Saronic | ashby | 236 | 1 | Responding with listings |
 | Scale AI | greenhouse | 174 | 1 | Responding with listings |
 | Schonfeld | greenhouse | 69 | 1 | Responding with listings |
+| SeatGeek | greenhouse | 38 | 1 | Responding with listings |
 | Sentry | ashby | 43 | 0 | Responding with listings |
 | ServiceNow | smartrecruiters | 711 | 0 | Responding with listings |
 | Siemens | jobsyn | 25 | 3 | Responding with listings |
@@ -221,6 +230,7 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Solidigm | smartrecruiters | 69 | 0 | Responding with listings |
 | Sony Interactive Entertainment | greenhouse | 193 | 0 | Responding with listings |
 | Sourcegraph | greenhouse | 8 | 0 | Responding with listings |
+| Squarespace | greenhouse | 28 | 0 | Responding with listings |
 | Stripe | greenhouse | 728 | 2 | Responding with listings |
 | Suno | ashby | 68 | 0 | Responding with listings |
 | Supabase | ashby | 58 | 0 | Responding with listings |
@@ -232,6 +242,7 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Toast | greenhouse | 319 | 0 | Responding with listings |
 | Together AI | greenhouse | 79 | 0 | Responding with listings |
 | Tower Research Capital | greenhouse | 100 | 1 | Responding with listings |
+| Trumid | greenhouse | 6 | 0 | Responding with listings |
 | Twilio | greenhouse | 131 | 0 | Responding with listings |
 | Vanta | ashby | 84 | 0 | Responding with listings |
 | Vercel | greenhouse | 95 | 2 | Responding with listings |
@@ -247,10 +258,17 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Zillow | workday | 53 | 1 | Responding with listings |
 | Zscaler | greenhouse | 360 | 0 | Responding with listings |
 
+
 ## Planning roster without a configured direct feed
 
 AMD, Activision Blizzard, Addepar, Adyen, Akamai, Alloy, American Express, Arctic Wolf, Arm, Atlassian, Aurora Innovation, BILL, BNY, Bank of America, Barclays, BlackRock, Block, Bloomberg, Booking.com, Bridgewater Associates, Broadcom, ByteDance / TikTok, Calendly, Canva, Cato Networks, Cisco, Cisco Meraki, Citadel, Citadel Securities, Citi, ClassDojo, ClickUp, Cloudinary, Confluent, Contentful, CrowdStrike, Current, D. E. Shaw, DataStax, Dave, Deepgram, Disney Streaming, DocuSign, Dynatrace, EarnIn, Electronic Arts, Epic Games, Ethos, Etsy, Expedia Group, F5, Figure, Fly.io, Fortinet, GitHub, Goldman Sachs, Grammarly, Greenlight, Harness, HashiCorp, Headspace, Hinge, Hugging Face, Intel, Intuit, Iterable, JPMorgan Chase, Lacework, Lemonade, LinkedIn, Loom, Marqeta, MathWorks, Micron, Millennium Management, Morgan Stanley, Navan, Netskope, Nubank, Nutanix, OneTrust, OpenTable, Oracle, Oscar Health, PIMCO, Palo Alto Networks, Paxos, PayPal, Persona, Ping Identity, Postman, Pulumi, Qualcomm, Qualtrics, Remitly, Retool, Rho, Rippling, Rivian, SAP, Salesforce, Sardine, SentinelOne, ServiceTitan, Shopify, Slack, Sonar, SpaceX, Splunk, Spotify, Stash, StubHub, Susquehanna International Group, Synopsys, Tala, Tanium, Tesla, Thumbtack, Trend Micro, Tripadvisor, Twilio Segment, Twitch, Two Sigma, Uber, Udemy, Unity, Upstart, Valve, Varo, Veeam, Walmart Global Tech, Wasabi Technologies, Wealthfront, Whatnot, Wise, Wolverine Trading, Workday, X, Yelp, Zilliz, Zoom, Zoox, dbt Labs, eBay, monday.com.
 
+
+## Additional forward-looking coverage
+
+Added October 21: [GoDaddy](https://job-boards.greenhouse.io/godaddy), [Squarespace](https://job-boards.greenhouse.io/squarespace), [Intercom](https://job-boards.greenhouse.io/intercom), [Nextdoor](https://job-boards.greenhouse.io/nextdoor), [SeatGeek](https://job-boards.greenhouse.io/seatgeek), [IXL Learning](https://job-boards.greenhouse.io/ixllearning), [Gemini](https://job-boards.greenhouse.io/gemini), [Clear Street](https://job-boards.greenhouse.io/clearstreet), [Justworks](https://job-boards.greenhouse.io/justworks), [Oscar Health](https://job-boards.greenhouse.io/oscar), [Trumid](https://job-boards.greenhouse.io/trumid). Each connection returned current listings during verification. GoDaddy's Greenhouse feed returned 37 jobs; no currently matching internship was found, but it remains enabled for future postings. Five Rings Capital was already directly covered and was not counted again.
+
+Company discovery prioritizes established software internship employers and promising software/platform teams in major US employment hubs, including New York, the Bay Area, Seattle, Boston, Austin, Chicago, and strong Florida or US-remote opportunities. This is a selection preference, not a new location or salary filter. Compensation and internship locations vary by role; no employer-wide pay guarantee is inferred. The tracker continues to favor undergraduate software/backend/full-stack/cloud roles and exclude ML/research, hardware, embedded, and frontend/design-only specialties. New company feeds are enabled even without a matching internship currently open.
 
 ## Remaining gaps
 
