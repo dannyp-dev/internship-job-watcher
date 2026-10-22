@@ -38,6 +38,17 @@ class FutureCoverageTests(unittest.TestCase):
                          "https://careers.hrblock.com/jobs/76987")
 
     @patch("job_watcher.fetch_json")
+    def test_jane_street_internship_type_does_not_require_intern_in_title(self, fetch):
+        fetch.return_value = {"jobs": [
+            {"title": "Software Engineer", "absolute_url": "https://a.test/intern", "location": {"name": "New York, NY"}, "metadata": [{"name": "Employment Type", "value": "Summer Internship"}]},
+            {"title": "Software Engineer", "absolute_url": "https://a.test/fulltime", "location": {"name": "New York, NY"}, "metadata": [{"name": "Employment Type", "value": "Full-Time: Experienced"}]},
+        ]}
+        jobs = fetch_greenhouse({"board": "janestreet", "company": "Jane Street"})
+        self.assertTrue(job_matches(jobs[0], self.filters))
+        self.assertFalse(job_matches(jobs[1], self.filters))
+        self.assertEqual("Software Engineer", jobs[0].title)
+
+    @patch("job_watcher.fetch_json")
     def test_jibe_paginates_through_a_short_last_page(self, fetch):
         def record(number):
             return {"data": {"slug": str(number), "title": "Software Engineering Intern", "city": "Kansas City", "state": "Missouri", "country": "United States"}}
