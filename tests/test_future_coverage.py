@@ -154,8 +154,8 @@ class FutureCoverageTests(unittest.TestCase):
                 "initialized_at": "2026-09-10T20:01:13+00:00",
                 "seen": {},
             }))
-            with patch("job_watcher.fetch_source", return_value=[twitch]), \\
-                 patch("job_watcher.provider_is_configured", return_value=True), \\
+            with patch("job_watcher.fetch_source", return_value=[twitch]), \
+                 patch("job_watcher.provider_is_configured", return_value=True), \
                  patch("job_watcher.send_notification") as send:
                 self.assertEqual(0, check_jobs(config, state))
             self.assertEqual(1, send.call_count)
