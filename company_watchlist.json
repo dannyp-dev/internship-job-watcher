@@ -1994,7 +1994,8 @@
         "company": "Twitch",
         "enabled": true,
         "critical": true,
-        "board": "twitch"
+        "board": "twitch",
+        "minimum_jobs": 1
       }
     }
   ]
