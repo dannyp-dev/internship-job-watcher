@@ -261,6 +261,10 @@ def canonical_url(value: str) -> str:
             and not key.casefold().startswith("utm_")
         ]
         path = parts.path.rstrip("/") or "/"
+        if host.endswith(".myworkdayjobs.com"):
+            path = re.sub(r"^/[a-z]{2}-[a-z]{2}(?=/)", "", path, flags=re.IGNORECASE)
+        if host == "careers.hrblock.com" and re.fullmatch(r"/jobs/\d+", path):
+            query = [(key, val) for key, val in query if key.casefold() != "icims"]
         amazon_job = re.fullmatch(r"/(?:en/)?jobs/(\d+)(?:/[^/]*)?", path)
         if host in {"amazon.jobs", "www.amazon.jobs"} and amazon_job:
             host = "www.amazon.jobs"
@@ -308,8 +312,13 @@ def is_active_notification_time(
     return current >= start or current < end
 
 
-def fetch_bytes(url: str, attempts: int = 3, timeout: int = 30) -> bytes:
-    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
+def fetch_bytes(
+    url: str, attempts: int = 3, timeout: int = 30,
+    headers: dict[str, str] | None = None,
+) -> bytes:
+    request_headers = {"User-Agent": USER_AGENT, "Accept": "*/*"}
+    request_headers.update(headers or {})
+    request = Request(url, headers=request_headers)
     last_error: Exception | None = None
     for attempt in range(attempts):
         try:
@@ -322,8 +331,9 @@ def fetch_bytes(url: str, attempts: int = 3, timeout: int = 30) -> bytes:
     raise RuntimeError(f"Could not fetch {url}: {last_error}")
 
 
-def fetch_json(url: str) -> Any:
-    return json.loads(fetch_bytes(url).decode("utf-8"))
+def fetch_json(url: str, headers: dict[str, str] | None = None) -> Any:
+    body = fetch_bytes(url, headers=headers) if headers else fetch_bytes(url)
+    return json.loads(body.decode("utf-8"))
 
 
 def fetch_json_post(url: str, payload: dict[str, Any], attempts: int = 3) -> Any:
@@ -467,15 +477,20 @@ def fetch_greenhouse(source: dict[str, Any]) -> list[Job]:
     data = fetch_json(
         f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true"
     )
+    if not isinstance(data, dict) or not isinstance(data.get("jobs"), list):
+        raise RuntimeError("Greenhouse response is missing its jobs list")
     company = source.get("company", board)
     jobs = []
     for item in data.get("jobs", []):
         departments = ", ".join(d.get("name", "") for d in item.get("departments", []))
+        locations = [item.get("location", {}).get("name", "")]
+        locations.extend(office.get("location", "") for office in item.get("offices", []))
+        location = " | ".join(dict.fromkeys(clean_text(value) for value in locations if value))
         jobs.append(
             Job(
                 company=company,
                 title=clean_text(item.get("title", "")),
-                location=clean_text(item.get("location", {}).get("name", "")),
+                location=location,
                 url=canonical_url(item.get("absolute_url", "")),
                 source=source.get("name", f"Greenhouse: {company}"),
                 team=clean_text(departments),
@@ -529,6 +544,8 @@ def ashby_location(item: dict[str, Any]) -> str:
 def fetch_ashby(source: dict[str, Any]) -> list[Job]:
     board = source["board"]
     data = fetch_json(f"https://api.ashbyhq.com/posting-api/job-board/{board}")
+    if not isinstance(data, dict) or not isinstance(data.get("jobs"), list):
+        raise RuntimeError("Ashby response is missing its jobs list")
     company = source.get("company", board)
     jobs = []
     for item in data.get("jobs", []):
@@ -700,6 +717,8 @@ def fetch_workday(source: dict[str, Any]) -> list[Job]:
                 "searchText": source.get("query", ""),
             },
         )
+        if not isinstance(data, dict) or not isinstance(data.get("jobPostings"), list) or "total" not in data:
+            raise RuntimeError("Workday response is missing jobPostings or total")
         items = data.get("jobPostings", [])
         for item in items:
             path = str(item.get("externalPath", ""))
@@ -917,6 +936,86 @@ def fetch_phenom(source: dict[str, Any]) -> list[Job]:
     return jobs
 
 
+def fetch_jibe(source: dict[str, Any]) -> list[Job]:
+    """Read the public iCIMS/Jibe job search, including healthy empty results."""
+    jobs: dict[str, Job] = {}
+    for query in source.get("queries", [source.get("query", "intern")]):
+        fetched_count = 0
+        page_fingerprints: set[tuple[str, ...]] = set()
+        for page in range(1, 101):
+            url = f"https://{source['host']}/api/jobs?" + urlencode({
+                "keywords": query, "page": page,
+            })
+            data = fetch_json(url)
+            if not isinstance(data.get("jobs"), list) or "totalCount" not in data:
+                raise RuntimeError("Jibe search response is missing jobs or totalCount")
+            items = data["jobs"]
+            fingerprint = tuple(str(item.get("data", {}).get("slug", "")) for item in items)
+            if items and fingerprint in page_fingerprints:
+                raise RuntimeError("Jibe search repeated a page instead of advancing")
+            page_fingerprints.add(fingerprint)
+            for item in items:
+                record = item.get("data", {})
+                identifier = str(record.get("slug") or record.get("req_id") or "")
+                title = clean_text(record.get("title", ""))
+                if not identifier or not title:
+                    raise RuntimeError("Jibe job is missing its identifier or title")
+                location = ", ".join(str(record.get(k, "")) for k in
+                                     ("city", "state", "country") if record.get(k))
+                job_url = f"https://{source['host']}/jobs/{identifier}"
+                jobs[job_url] = Job(
+                    company=source["company"], title=title,
+                    location=clean_text(location), url=job_url, source=source["name"],
+                )
+            fetched_count += len(items)
+            total = int(data["totalCount"])
+            if fetched_count >= total:
+                break
+            if not items:
+                raise RuntimeError("Jibe pagination stopped before all jobs were fetched")
+        else:
+            raise RuntimeError("Jibe pagination exceeded its safety limit")
+    return list(jobs.values())
+
+
+def fetch_jobsyn(source: dict[str, Any]) -> list[Job]:
+    """Read the public search used by Siemens Digital Industries Software."""
+    jobs: dict[str, Job] = {}
+    for query in source.get("queries", [source.get("query", "intern")]):
+        page_fingerprints: set[tuple[str, ...]] = set()
+        for page in range(1, 101):
+            url = "https://prod-search-api.jobsyn.org/api/v1/google-talent/search?" + urlencode({
+                "q": query, "country": source.get("country", "usa"), "page": page,
+            })
+            data = fetch_json(url, headers={"X-Origin": source["host"]})
+            if not isinstance(data.get("jobs"), list) or not isinstance(data.get("pagination"), dict):
+                raise RuntimeError("JobSyn search response is missing jobs or pagination")
+            items = [*data.get("featured_jobs", []), *data["jobs"]]
+            fingerprint = tuple(str(item.get("job", {}).get("name", "")) for item in data["jobs"])
+            if data["jobs"] and fingerprint in page_fingerprints:
+                raise RuntimeError("JobSyn search repeated a page instead of advancing")
+            page_fingerprints.add(fingerprint)
+            for item in items:
+                record = item.get("job", {})
+                title = clean_text(record.get("title", ""))
+                identifiers = record.get("customAttributes", {}).get("reqid", {}).get("stringValues", [])
+                if not title or not identifiers:
+                    raise RuntimeError("JobSyn job is missing its title or requisition ID")
+                job_url = f"https://jobs.siemens.com/en_US/externaljobs/JobDetail/{identifiers[0]}"
+                jobs[job_url] = Job(
+                    company=source["company"], title=title,
+                    location=clean_text(" | ".join(record.get("addresses", []))),
+                    url=job_url, source=source["name"],
+                )
+            if not data["pagination"].get("has_more_pages", False):
+                break
+            if not items:
+                raise RuntimeError("JobSyn pagination stopped before all jobs were fetched")
+        else:
+            raise RuntimeError("JobSyn pagination exceeded its safety limit")
+    return list(jobs.values())
+
+
 def fetch_source(source: dict[str, Any]) -> list[Job]:
     source_type = source.get("type")
     if source_type == "linkedin_gmail":
@@ -947,6 +1046,10 @@ def fetch_source(source: dict[str, Any]) -> list[Job]:
         return fetch_microsoft_careers(source)
     if source_type == "phenom":
         return fetch_phenom(source)
+    if source_type == "jibe":
+        return fetch_jibe(source)
+    if source_type == "jobsyn":
+        return fetch_jobsyn(source)
     raise ValueError(f"Unknown source type: {source_type}")
 
 
@@ -972,7 +1075,7 @@ def is_us_location(location: str) -> bool:
         for term in ("united states", "usa", "u s ", "remote", "nyc", "new york city")
     ):
         return True
-    upper = location.upper()
+    upper = re.sub(r"[-_/]", " ", location.upper())
     if any(re.search(rf"(?:,|\s)\s*{code}(?:\b|\s|$)", upper) for code in US_STATE_CODES):
         return True
     return any(
@@ -1002,7 +1105,7 @@ def job_matches(job: Job, filters: dict[str, Any]) -> bool:
         title, filters["exclude_title_phrases"]
     ):
         return False
-    if filters.get("exclude_words") and contains_any(all_text, filters["exclude_words"]):
+    if filters.get("exclude_words") and contains_phrase(all_text, filters["exclude_words"]):
         return False
     if filters.get("exclude_advanced_degree", False):
         advanced_degree_pattern = r"\b(?:graduate|phd|ph d|doctoral|masters?|mba)\b"
@@ -1394,6 +1497,11 @@ def check_jobs(
         for job in jobs
     }
     baseline_only_urls = baseline_urls - other_urls
+    baseline_only_urls.update(
+        canonical_url(url)
+        for source in sources
+        for url in source.get("initial_baseline_urls", [])
+    )
     legacy_pay_removed = strip_legacy_compensation(seen)
     initialized = bool(state.get("initialized_at"))
     seen_urls = seen_url_index(seen)
@@ -1414,8 +1522,10 @@ def check_jobs(
     timestamp = now_iso()
     for source_name in fresh_baseline_sources:
         source_baselines[source_name] = timestamp
+    baseline_added = False
     for job in matched:
         if existing_keys[job.key] is None and canonical_url(job.url) in baseline_only_urls:
+            baseline_added = True
             seen[job.key] = {
                 "first_seen": timestamp,
                 "last_seen": timestamp,
@@ -1577,7 +1687,7 @@ def check_jobs(
             state["last_notification_errors"] = notification_errors
             save_json(state_path, state)
         elif not new_jobs and not health_changed:
-            if legacy_pay_removed or fresh_baseline_sources or health_state_changed:
+            if legacy_pay_removed or baseline_added or fresh_baseline_sources or health_state_changed:
                 save_json(state_path, state)
                 print("No new matches. Saved baseline or history maintenance.")
             else:
