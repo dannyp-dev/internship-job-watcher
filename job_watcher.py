@@ -71,6 +71,7 @@ class Job:
     url: str
     source: str
     team: str = ""
+    employment_type: str = ""
 
     @property
     def key(self) -> str:
@@ -483,6 +484,15 @@ def fetch_greenhouse(source: dict[str, Any]) -> list[Job]:
     jobs = []
     for item in data.get("jobs", []):
         departments = ", ".join(d.get("name", "") for d in item.get("departments", []))
+        employment_values = [
+            field.get("value") for field in (item.get("metadata") or [])
+            if normalize(field.get("name", "")) in {
+                "employment type", "job type", "position type", "type of employment"
+            }
+        ]
+        employment_type = " | ".join(
+            clean_text(value) for value in employment_values if isinstance(value, str)
+        )
         locations = [item.get("location", {}).get("name", "")]
         locations.extend(office.get("location", "") for office in item.get("offices", []))
         location = " | ".join(dict.fromkeys(clean_text(value) for value in locations if value))
@@ -494,6 +504,7 @@ def fetch_greenhouse(source: dict[str, Any]) -> list[Job]:
                 url=canonical_url(item.get("absolute_url", "")),
                 source=source.get("name", f"Greenhouse: {company}"),
                 team=clean_text(departments),
+                employment_type=employment_type,
             )
         )
     return [job for job in jobs if job.title and job.url]
@@ -566,6 +577,7 @@ def fetch_ashby(source: dict[str, Any]) -> list[Job]:
                 url=canonical_url(item.get("jobUrl") or item.get("applyUrl", "")),
                 source=source.get("name", f"Ashby: {company}"),
                 team=clean_text(team),
+                employment_type=clean_text(item.get("employmentType") or ""),
             )
         )
     return [job for job in jobs if job.title and job.url]
@@ -1086,9 +1098,10 @@ def is_us_location(location: str) -> bool:
 
 def job_matches(job: Job, filters: dict[str, Any]) -> bool:
     title = job.title
-    all_text = " | ".join((job.company, job.title, job.location, job.team))
+    role_text = " | ".join((title, job.employment_type))
+    all_text = " | ".join((job.company, job.title, job.location, job.team, job.employment_type))
     if filters.get("required_role_words") and not contains_phrase(
-        title, filters["required_role_words"]
+        role_text, filters["required_role_words"]
     ):
         return False
     company_title_phrases = next(
@@ -1109,7 +1122,7 @@ def job_matches(job: Job, filters: dict[str, Any]) -> bool:
         return False
     if filters.get("exclude_advanced_degree", False):
         advanced_degree_pattern = r"\b(?:graduate|phd|ph d|doctoral|masters?|mba)\b"
-        if "🎓" in all_text or re.search(advanced_degree_pattern, normalize(title)):
+        if "🎓" in all_text or re.search(advanced_degree_pattern, normalize(role_text)):
             return False
     if filters.get("company_allowlist") and not contains_any(
         job.company, filters["company_allowlist"]
@@ -1144,6 +1157,7 @@ def deduplicate(jobs: Iterable[Job]) -> list[Job]:
                 url=existing.url,
                 source=" + ".join(sources),
                 team=existing.team or job.team,
+                employment_type=existing.employment_type or job.employment_type,
             )
             continue
         result[job.key] = job
