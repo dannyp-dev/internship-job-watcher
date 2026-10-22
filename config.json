@@ -1572,6 +1572,127 @@
       "minimum_jobs": 0,
       "managed_group": "future_company_coverage",
       "verified_on": "2026-10-21"
+    },
+    {
+      "company": "GoDaddy",
+      "type": "greenhouse",
+      "name": "Greenhouse: GoDaddy",
+      "board": "godaddy",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Squarespace",
+      "type": "greenhouse",
+      "name": "Greenhouse: Squarespace",
+      "board": "squarespace",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Intercom",
+      "type": "greenhouse",
+      "name": "Greenhouse: Intercom",
+      "board": "intercom",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Nextdoor",
+      "type": "greenhouse",
+      "name": "Greenhouse: Nextdoor",
+      "board": "nextdoor",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "SeatGeek",
+      "type": "greenhouse",
+      "name": "Greenhouse: SeatGeek",
+      "board": "seatgeek",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "IXL Learning",
+      "type": "greenhouse",
+      "name": "Greenhouse: IXL Learning",
+      "board": "ixllearning",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Gemini",
+      "type": "greenhouse",
+      "name": "Greenhouse: Gemini",
+      "board": "gemini",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Clear Street",
+      "type": "greenhouse",
+      "name": "Greenhouse: Clear Street",
+      "board": "clearstreet",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Justworks",
+      "type": "greenhouse",
+      "name": "Greenhouse: Justworks",
+      "board": "justworks",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Oscar Health",
+      "type": "greenhouse",
+      "name": "Greenhouse: Oscar Health",
+      "board": "oscar",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
+    },
+    {
+      "company": "Trumid",
+      "type": "greenhouse",
+      "name": "Greenhouse: Trumid",
+      "board": "trumid",
+      "enabled": true,
+      "critical": true,
+      "minimum_jobs": 0,
+      "managed_group": "future_company_coverage",
+      "verified_on": "2026-10-21"
     }
   ],
   "coverage": {
@@ -1699,7 +1820,18 @@
       "H&R Block",
       "Siemens",
       "Zillow",
-      "Mercury"
+      "Mercury",
+      "GoDaddy",
+      "Squarespace",
+      "Intercom",
+      "Nextdoor",
+      "SeatGeek",
+      "IXL Learning",
+      "Gemini",
+      "Clear Street",
+      "Justworks",
+      "Oscar Health",
+      "Trumid"
     ]
   },
   "filters": {
