@@ -128,6 +128,60 @@ class FutureCoverageTests(unittest.TestCase):
             self.assertIn("notified_at", saved["seen"][new.key])
 
 
+    @patch("job_watcher.send_notification")
+    @patch("job_watcher.provider_is_configured", return_value=True)
+    @patch("job_watcher.fetch_source")
+    def test_partial_source_outage_keeps_successful_alerts_and_health_state(self, fetch, configured, send):
+        job = Job("Acme", "Software Engineer Intern", "New York, NY",
+                  "https://example.test/intern", "Healthy")
+        def fetch_one(source):
+            if source["name"] == "Unavailable":
+                raise RuntimeError("HTTP Error 504: Gateway Timeout")
+            return [job]
+        fetch.side_effect = fetch_one
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config, state = root / "config.json", root / "state.json"
+            config.write_text(json.dumps({
+                "sources": [{"type": "fixture", "name": "Healthy"},
+                            {"type": "fixture", "name": "Unavailable", "critical": True}],
+                "filters": self.filters, "notification": {"provider": "telegram"},
+            }))
+            state.write_text(json.dumps({"initialized_at": "2026-01-01T00:00:00Z", "seen": {}}))
+            self.assertEqual(0, check_jobs(config, state))
+            saved = json.loads(state.read_text())
+            self.assertEqual(["Unavailable"], saved["critical_source_failures"])
+            self.assertIn("notified_at", saved["seen"][job.key])
+            self.assertEqual([], saved["last_notification_errors"])
+            self.assertEqual(2, send.call_count)
+
+    @patch("job_watcher.send_notification", side_effect=RuntimeError("Telegram unavailable"))
+    @patch("job_watcher.provider_is_configured", return_value=True)
+    @patch("job_watcher.fetch_source")
+    def test_failed_job_delivery_still_fails_check(self, fetch, configured, send):
+        job = Job("Acme", "Software Engineer Intern", "New York, NY",
+                  "https://example.test/pending", "Healthy")
+        fetch.return_value = [job]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config, state = root / "config.json", root / "state.json"
+            config.write_text(json.dumps({
+                "sources": [{"type": "fixture", "name": "Healthy"}],
+                "filters": self.filters, "notification": {"provider": "telegram"},
+            }))
+            state.write_text(json.dumps({"initialized_at": "2026-01-01T00:00:00Z", "seen": {}}))
+            self.assertEqual(1, check_jobs(config, state))
+            self.assertNotIn(job.key, json.loads(state.read_text())["seen"])
+
+    @patch("job_watcher.fetch_source", side_effect=RuntimeError("Source unreachable"))
+    def test_total_source_outage_still_stops_check(self, fetch):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config, state = root / "config.json", root / "state.json"
+            config.write_text(json.dumps({"sources": [{"type": "fixture", "name": "Only source"}]}))
+            with self.assertRaisesRegex(RuntimeError, "No jobs were fetched"):
+                check_jobs(config, state)
+
     def test_ashby_embed_application_links_canonicalize_to_job(self):
         base = "https://jobs.ashbyhq.com/1password/67bfbd8b-aba9-42b1-a8a8-833367888fba"
         embedded = base + "/application?embed=true"
@@ -171,3 +225,4 @@ class FutureCoverageTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
