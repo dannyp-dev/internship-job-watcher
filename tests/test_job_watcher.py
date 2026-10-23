@@ -156,7 +156,11 @@ class JobWatcherTests(unittest.TestCase):
             self.assertEqual(0, check_jobs(config_path, state_path))
             self.assertEqual(0, check_jobs(config_path, state_path))
             self.assertEqual(0, mock_send.call_count)
-            self.assertEqual(1, check_jobs(config_path, state_path))
+            self.assertEqual(0, check_jobs(config_path, state_path))
+            self.assertEqual(1, mock_send.call_count)
+            saved = json.loads(state_path.read_text())
+            self.assertEqual(["Microsoft Careers"], saved["critical_source_failures"])
+            self.assertEqual(0, check_jobs(config_path, state_path))
             self.assertEqual(1, mock_send.call_count)
             failing = False
             self.assertEqual(0, check_jobs(config_path, state_path))
@@ -662,3 +666,5 @@ class JobWatcherTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
