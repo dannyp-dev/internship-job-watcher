@@ -264,6 +264,14 @@ def canonical_url(value: str) -> str:
         path = parts.path.rstrip("/") or "/"
         if host.endswith(".myworkdayjobs.com"):
             path = re.sub(r"^/[a-z]{2}-[a-z]{2}(?=/)", "", path, flags=re.IGNORECASE)
+        if host.endswith(".ashbyhq.com"):
+            path = re.sub(
+                r"^(/[^/]+/[0-9a-f-]{36})/application$",
+                r"\1",
+                path,
+                flags=re.IGNORECASE,
+            )
+            query = [(key, val) for key, val in query if key.casefold() != "embed"]
         if host == "careers.hrblock.com" and re.fullmatch(r"/jobs/\d+", path):
             query = [(key, val) for key, val in query if key.casefold() != "icims"]
         amazon_job = re.fullmatch(r"/(?:en/)?jobs/(\d+)(?:/[^/]*)?", path)
