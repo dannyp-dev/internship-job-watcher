@@ -1725,7 +1725,18 @@ def check_jobs(
         print(f"SOURCE WARNING | {failure}", file=sys.stderr)
     for error in notification_errors:
         print(f"NOTIFICATION WARNING | {error}", file=sys.stderr)
-    return 1 if notification_errors or current_critical_failures else 0
+    if failures:
+        print(
+            f"CHECK STATUS | degraded: {len(failures)} source(s) unavailable; "
+            "other sources were checked and notification history was preserved."
+        )
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            print(
+                "::warning title=Partial source outage::"
+                f"{len(failures)} source(s) unavailable. See SOURCE WARNING lines "
+                "and tracker source health alerts for details."
+            )
+    return 1 if notification_errors else 0
 
 
 def test_notification(config_path: Path) -> int:
@@ -1787,3 +1798,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
