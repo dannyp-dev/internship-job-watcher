@@ -25,7 +25,7 @@ class FutureCoverageTests(unittest.TestCase):
         ]:
             with self.subTest(company=company):
                 self.assertTrue(job_matches(Job(company, title, location, "https://example.test/job", "test"), self.filters))
-        for title in ["MBA Software Engineering Intern", "Senior Software Intern", "Electronics Reliability Product Engineering Internship"]:
+        for title in ["MBA Software Engineering Intern", "Senior Software Intern", "Electronics Reliability Product Engineering Internship", "Reliability Test Engineer Intern", "AI & Data Automation Developer Co-op", "GNC Software Engineer Intern", "Software Engineering Intern - Vehicle Controls", "Manufacturing Test Software Intern"]:
             self.assertFalse(job_matches(Job("Acme", title, "Seattle-WA-2nd Ave", "https://a.test/job", "test"), self.filters))
         self.assertFalse(is_us_location("London, United Kingdom"))
 
@@ -127,6 +127,11 @@ class FutureCoverageTests(unittest.TestCase):
             self.assertIn("baselined_at", saved["seen"][old.key])
             self.assertIn("notified_at", saved["seen"][new.key])
 
+
+    def test_ashby_embed_application_links_canonicalize_to_job(self):
+        base = "https://jobs.ashbyhq.com/1password/67bfbd8b-aba9-42b1-a8a8-833367888fba"
+        embedded = base + "/application?embed=true"
+        self.assertEqual(canonical_url(base), canonical_url(embedded))
 
     def test_twitch_missed_posting_is_new_and_notification_eligible(self):
         twitch = Job(
