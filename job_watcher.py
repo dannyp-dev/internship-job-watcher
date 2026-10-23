@@ -1728,7 +1728,7 @@ def check_jobs(
     if failures:
         print(
             f"CHECK STATUS | degraded: {len(failures)} source(s) unavailable; "
-            "other sources were checked and notification history was preserved."
+            "available sources were processed."
         )
         if os.environ.get("GITHUB_ACTIONS") == "true":
             print(
