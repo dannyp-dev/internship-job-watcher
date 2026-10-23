@@ -1927,7 +1927,10 @@
       "vehicle control",
       "flight control",
       "avionics",
-      "manufacturing test"
+      "manufacturing test",
+      "vehicle controls",
+      "flight controls",
+      "reliability testing"
     ],
     "exclude_words": [
       "senior",
