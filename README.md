@@ -41,7 +41,11 @@ python job_watcher.py --telegram-chat-id
 
 7. Open **Actions > Check for new internships > Run workflow**. First run it with the test option enabled to confirm the Telegram alert. Then run it once with the test option off to establish the baseline.
 
-New alerts contain the company, role, location, source, and a tappable **Open application** button.
+New alerts contain the company, role, location, source, the application URL, and a tappable **Open application** button.
+
+Every matching job gets an individual alert. If more than `notification.max_per_run` jobs are waiting, the remainder stay in `data/state.json` for later checks, even if a feed stops returning them. Overflow is never marked notified through a shortened digest. Telegram responses must confirm acceptance and include a message ID before a job is recorded as notified. The stored receipt confirms API acceptance, not that the notification was read.
+
+Every completed normal check refreshes its timestamp, status, source failures, delivery errors, and pending count. Amazon public and applicant URLs share the same numeric job identity. To resurface a reported listing once, `notification.replay_requests` can name an ID and job URL; completion is recorded separately without erasing the original notification history.
 
 ## LinkedIn alerts
 
