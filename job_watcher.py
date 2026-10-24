@@ -275,7 +275,13 @@ def canonical_url(value: str) -> str:
         if host == "careers.hrblock.com" and re.fullmatch(r"/jobs/\d+", path):
             query = [(key, val) for key, val in query if key.casefold() != "icims"]
         amazon_job = re.fullmatch(r"/(?:en/)?jobs/(\d+)(?:/[^/]*)?", path)
-        if host in {"amazon.jobs", "www.amazon.jobs"} and amazon_job:
+        if host == "account.amazon.jobs":
+            amazon_job = re.fullmatch(
+                r"/[a-z]{2}-[a-z]{2}/applicant/jobs/(\d+)/apply",
+                path,
+                flags=re.IGNORECASE,
+            )
+        if host in {"amazon.jobs", "www.amazon.jobs", "account.amazon.jobs"} and amazon_job:
             host = "www.amazon.jobs"
             path = f"/en/jobs/{amazon_job.group(1)}"
             query = []
@@ -1294,7 +1300,7 @@ def notify_ntfy(title: str, message: str, click_url: str) -> None:
     post_json(server, payload, headers)
 
 
-def notify_telegram(title: str, message: str, click_url: str) -> None:
+def notify_telegram(title: str, message: str, click_url: str) -> dict[str, Any]:
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
     if not token or not chat_id:
@@ -1324,6 +1330,18 @@ def notify_telegram(title: str, message: str, click_url: str) -> None:
     with urlopen(request, timeout=30) as response:
         if response.status >= 300:
             raise RuntimeError(f"Telegram returned HTTP {response.status}")
+        confirmation = json.load(response)
+    result = confirmation.get("result") if isinstance(confirmation, dict) else None
+    if (
+        not isinstance(confirmation, dict) or confirmation.get("ok") is not True
+        or not isinstance(result, dict)
+        or type(result.get("message_id")) is not int
+    ):
+        raise RuntimeError("Telegram did not confirm an accepted message")
+    receipt = {"provider": "telegram", "message_id": result["message_id"]}
+    if type(result.get("date")) is int:
+        receipt["accepted_at"] = datetime.fromtimestamp(result["date"], timezone.utc).isoformat(timespec="seconds")
+    return receipt
 
 
 def provider_is_configured(provider: str) -> bool:
@@ -1337,18 +1355,19 @@ def provider_is_configured(provider: str) -> bool:
     return False
 
 
-def send_notification(provider: str, title: str, message: str, click_url: str = "") -> None:
+def send_notification(provider: str, title: str, message: str, click_url: str = "") -> dict[str, Any] | None:
     if provider == "ntfy":
         notify_ntfy(title, message, click_url)
     elif provider == "telegram":
-        notify_telegram(title, message, click_url)
+        return notify_telegram(title, message, click_url)
     else:
         raise ValueError(f"Unknown notification provider: {provider}")
 
 
 def notification_text(job: Job) -> tuple[str, str]:
     title = f"New internship: {job.company}"
-    lines = [job.title, job.location or "Location not listed", f"Source: {job.source}"]
+    lines = [job.title, job.location or "Location not listed", f"Source: {job.source}",
+             f"Application: {canonical_url(job.url)}"]
     return title, "\n".join(lines)
 
 
@@ -1497,8 +1516,16 @@ def check_jobs(
         raise RuntimeError(f"No jobs were fetched. {detail}")
 
     matched = deduplicate(job for job in gathered if job_matches(job, config.get("filters", {})))
-    matched.sort(key=lambda job: (normalize(job.company), normalize(job.title), job.url))
     state = load_json(state_path, {"version": 1, "initialized_at": None, "seen": {}})
+    pending_notifications = state.get("pending_notifications", {})
+    queued_jobs = [
+        Job(**entry["job"]) for entry in pending_notifications.values()
+        if isinstance(entry, dict) and isinstance(entry.get("job"), dict)
+    ]
+    matched = deduplicate(matched + [
+        job for job in queued_jobs if job_matches(job, config.get("filters", {}))
+    ])
+    matched.sort(key=lambda job: (normalize(job.company), normalize(job.title), job.url))
     seen: dict[str, Any] = state.setdefault("seen", {})
     source_baselines: dict[str, str] = state.setdefault("source_baselines", {})
     fresh_baseline_sources = {
@@ -1637,7 +1664,37 @@ def check_jobs(
 
     provider = config.get("notification", {}).get("provider", "ntfy")
     max_per_run = int(config.get("notification", {}).get("max_per_run", 20))
+    if max_per_run < 1:
+        raise RuntimeError("notification.max_per_run must be at least 1")
+    completed_replays = state.setdefault("completed_replay_requests", {})
+    matched_by_url = {canonical_url(job.url): job for job in matched}
+    replay_ids_by_url: dict[str, list[str]] = {}
+    replay_jobs: list[Job] = []
+    replay_ids: set[str] = set()
+    missing_replays = 0
+    for request in config.get("notification", {}).get("replay_requests", []):
+        if not isinstance(request, dict) or not request.get("id") or not request.get("url"):
+            raise RuntimeError("Notification replay requests require an id and URL")
+        request_id = str(request["id"])
+        if request_id in replay_ids:
+            raise RuntimeError(f"Duplicate notification replay request: {request_id}")
+        replay_ids.add(request_id)
+        if request_id in completed_replays:
+            continue
+        url = canonical_url(str(request["url"]))
+        if url not in matched_by_url:
+            missing_replays += 1
+            print(f"REPLAY PENDING | {request_id}: matching listing was not fetched")
+            continue
+        if url not in replay_ids_by_url:
+            replay_jobs.append(matched_by_url[url])
+            replay_ids_by_url[url] = []
+        replay_ids_by_url[url].append(request_id)
+    delivery_jobs = replay_jobs + [
+        job for job in new_jobs if canonical_url(job.url) not in replay_ids_by_url
+    ]
     successfully_handled: set[str] = set()
+    receipts: dict[str, dict[str, Any]] = {}
     notification_errors: list[str] = []
 
     if not dry_run and health_changed and provider_is_configured(provider):
@@ -1664,62 +1721,59 @@ def check_jobs(
 
     if dry_run:
         print("Dry run enabled. Notifications and state changes were skipped.")
-    elif new_jobs and not provider_is_configured(provider):
+    elif delivery_jobs and not provider_is_configured(provider):
         notification_errors.append(f"{provider} is not configured, so new jobs remain pending")
     else:
-        for job in new_jobs[:max_per_run]:
+        for job in delivery_jobs[:max_per_run]:
             title, message = notification_text(job)
+            if canonical_url(job.url) in replay_ids_by_url:
+                title = f"Internship reminder: {job.company}"
             try:
-                send_notification(provider, title, message, job.url)
+                receipt = send_notification(provider, title, message, job.url)
+                if isinstance(receipt, dict):
+                    receipts[job.key] = receipt
                 successfully_handled.add(job.key)
+                print(f"NOTIFIED | {provider} | {job.url} | receipt={json.dumps(receipts.get(job.key))}")
             except Exception as exc:
                 notification_errors.append(f"{job.company} / {job.title}: {exc}")
 
-        overflow = new_jobs[max_per_run:]
-        if overflow:
-            digest_lines = [f"{job.company}: {job.title}" for job in overflow[:25]]
-            digest = "\n".join(digest_lines)
-            if len(overflow) > 25:
-                digest += f"\nPlus {len(overflow) - 25} more."
-            try:
-                send_notification(
-                    provider,
-                    f"{len(overflow)} more new internship matches",
-                    digest,
-                    "",
-                )
-                successfully_handled.update(job.key for job in overflow)
-            except Exception as exc:
-                notification_errors.append(f"overflow digest: {exc}")
-
-        for job in new_jobs:
+        for job in delivery_jobs:
             if job.key in successfully_handled:
-                seen[job.key] = {
-                    "first_seen": timestamp,
-                    "last_seen": timestamp,
-                    "notified_at": timestamp,
-                    "job": asdict(job),
-                }
+                key = existing_keys[job.key] or job.key
+                entry = seen.setdefault(key, {})
+                entry.setdefault("first_seen", timestamp)
+                entry.setdefault("notified_at", timestamp)
+                entry.update(last_seen=timestamp, last_notified_at=timestamp,
+                             last_notification_provider=provider, job=asdict(job))
+                if job.key in receipts:
+                    entry["notification_receipt"] = receipts[job.key]
+                else:
+                    entry.pop("notification_receipt", None)
+                for request_id in replay_ids_by_url.get(canonical_url(job.url), []):
+                    completed_replays[request_id] = {
+                        "notified_at": timestamp, "url": canonical_url(job.url),
+                        "notification_receipt": receipts.get(job.key),
+                    }
 
-        if successfully_handled:
-            retention_days = int(config.get("state_retention_days", 180))
-            state["seen"] = prune_seen(seen, retention_days)
-            state["last_checked_at"] = timestamp
-            state["last_source_failures"] = failures
-            state["last_notification_errors"] = notification_errors
-            save_json(state_path, state)
-        elif not new_jobs and not health_changed:
-            if legacy_pay_removed or baseline_added or fresh_baseline_sources or health_state_changed:
-                save_json(state_path, state)
-                print("No new matches. Saved baseline or history maintenance.")
-            else:
-                print("No new matches. Saved history did not need to change.")
-
-        if health_changed and not successfully_handled:
-            state["last_checked_at"] = timestamp
-            state["last_source_failures"] = failures
-            state["last_notification_errors"] = notification_errors
-            save_json(state_path, state)
+    if not dry_run:
+        pending = len(delivery_jobs) - len(successfully_handled) + missing_replays
+        state["pending_notifications"] = {
+            canonical_url(job.url): {
+                "queued_at": pending_notifications.get(canonical_url(job.url), {}).get("queued_at", timestamp),
+                "job": asdict(job),
+            }
+            for job in delivery_jobs if job.key not in successfully_handled
+        }
+        state["seen"] = prune_seen(seen, int(config.get("state_retention_days", 180)))
+        state.update(
+            last_checked_at=timestamp, last_source_failures=failures,
+            last_notification_errors=notification_errors,
+            last_check_status="notification_error" if notification_errors else ("degraded" if failures else "ok"),
+            last_fetched_job_count=len(gathered), last_matched_job_count=len(matched),
+            last_pending_notification_count=pending,
+        )
+        save_json(state_path, state)
+        print(f"CHECK RESULT | notified={len(successfully_handled)} pending={pending} source_failures={len(failures)}")
 
     for failure in failures:
         print(f"SOURCE WARNING | {failure}", file=sys.stderr)
@@ -1798,4 +1852,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
