@@ -7,7 +7,7 @@ It currently monitors:
 - Simplify's Summer 2027 list
 - Simplify's Off-Season 2027 list
 - Two additional public internship trackers as cross-checks
-- 194 companies with configured direct feeds, including Amazon, Cloudflare, Meta, Google, Apple, Microsoft, Snowflake, Snap, Plaid, IMC, DRW, Virtu Financial, Flow Traders, validated Greenhouse and Ashby boards, and Workday boards
+- 193 companies with enabled direct feeds, including Amazon, Cloudflare, Meta, Google, Apple, Snowflake, Snap, Plaid, IMC, DRW, Virtu Financial, Flow Traders, validated Greenhouse and Ashby boards, and Workday boards
 
 `coverage_watchlist.json` names 311 target companies, including a finance and quant tier. It is a planning roster, not 311 direct monitors. Bloomberg, Goldman Sachs, and JPMorgan Chase were already on the roster; Jane Street, Optiver, and other quant and banking firms are now included. Companies without a verified direct feed can appear through the four aggregate lists, but those lists do not guarantee complete or immediate coverage. IMC, DRW, Virtu Financial, and Flow Traders have direct Greenhouse feeds. A direct source should only be added when its live endpoint has been checked. `company_watchlist.json` retains the researched 100-company registry and its direct feeds.
 
@@ -65,13 +65,13 @@ The first normal run creates a baseline and records existing roles without flood
 
 Only sources explicitly marked `baseline_on_first_check` are silently baselined on their first successful check. Other newly connected boards can alert on already-open matches, which avoids suppressing a posting that was missed before the connection existed. Twitch used this path: the newly discovered Spring 2028 posting was recorded as notified, with no baseline marker. A direct feed is checked on each scheduled run during the active window, but an official career site can change its API or block automated requests; critical feed failures produce a health alert. The 311-company roster remains a target list, not a claim that every company has a working direct feed.
 
-Microsoft's careers search rate-limits broad pagination. Its direct check uses a small set of targeted software-internship searches on each run, while the aggregate trackers remain a fallback for results beyond those search pages. This feed is best-effort, not exhaustive.
+Microsoft's direct careers feed was disabled on October 26, 2026 at the user's request. Repeated HTTP 429 rate limits continued after reducing searches, causing recurring source-failure and recovery alerts. It is also excluded from required direct-feed validation. Microsoft remains on the target roster and can appear through the four aggregate trackers, but complete or immediate Microsoft coverage is not guaranteed.
 
-Of the 25 companies in Tier 1, 21 now have configured direct feeds. ByteDance/TikTok, Uber, LinkedIn, and Rippling currently rely on the aggregate trackers. Their official sites do not currently provide a verified, reliable feed in this project, so coverage for those four is not guaranteed. A configured direct feed can also change or fail; the critical ones are checked for health on each run.
+Of the 25 companies in Tier 1, 20 now have enabled direct feeds. Microsoft, ByteDance/TikTok, Uber, LinkedIn, and Rippling currently rely on the aggregate trackers. These five currently lack an enabled, reliable direct feed in this project, so their coverage is not guaranteed. A configured direct feed can also change or fail; the critical ones are checked for health on each run.
 
 A completed check with some unavailable sources is reported as degraded with GitHub warning annotations and source-health notifications. Those partial outages do not fail the entire Actions run or generate repeated run-failed emails. Startup/configuration errors, no jobs fetched from any source, notification-delivery errors, and failed history saves still fail the workflow.
 
-The workflow retries transient state-history push failures up to four times. This reduces the chance that a successfully delivered Telegram alert is treated as new again on the next check. A GitHub fallback run skips its check if Cloudflare already started one in the previous 10 minutes. A single Microsoft rate-limit response is recorded but does not trigger a phone alert; three consecutive rate-limited checks do. Meta careers searches also retry with a fresh page token when the public endpoint briefly omits results, and only repeated missing-result checks trigger a source alert.
+The workflow retries transient state-history push failures up to four times. This reduces the chance that a successfully delivered Telegram alert is treated as new again on the next check. A GitHub fallback run skips its check if Cloudflare already started one in the previous 10 minutes. The disabled Microsoft feed is not polled and does not produce source-failure or recovery alerts. Meta careers searches also retry with a fresh page token when the public endpoint briefly omits results, and only repeated missing-result checks trigger a source alert.
 
 ## Review or tune the watchlist
 
