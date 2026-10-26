@@ -1,8 +1,8 @@
 # Direct company coverage
 
-Updated October 22, 2026. There are 194 unique companies with configured direct feeds, including Twitch. In the earlier audit, 193 existing company connections were checked: 190 returned listings and Deel, Visa, and Webflow returned zero. The public Twitch Greenhouse feed returned 58 listings during verification. Its current live posting status is recorded below.
+Updated October 26, 2026. There are 193 unique companies with enabled direct feeds, including Twitch. Microsoft was disconnected after recurring HTTP 429 rate limits continued despite targeted searches; it now relies on aggregate trackers. In the earlier audit, 193 existing company connections were checked: 190 returned listings and Deel, Visa, and Webflow returned zero. The public Twitch Greenhouse feed returned 58 listings during verification. Its current live posting status is recorded below.
 
-The expansion added 48 companies, including 32 with no currently matching internship. They remain monitored for future postings. Mercury's obsolete Ashby connection was replaced with Greenhouse. The planning roster contains 311 names, of which 168 have configured direct feeds. Being on that roster is not proof of direct coverage.
+The expansion added 48 companies, including 32 with no currently matching internship. They remain monitored for future postings. Mercury's obsolete Ashby connection was replaced with Greenhouse. The planning roster contains 311 names, of which 167 have enabled direct feeds. Being on that roster is not proof of direct coverage.
 
 Checks target every 15 minutes from 10 AM to midnight Eastern, not immediate push delivery. H&R Block covers its corporate Jibe portal. Siemens covers Digital Industries Software US postings, not all Siemens divisions. Other feeds may also cover only the named employer portal, not every subsidiary. Matching counts reflect the current software internship filters, not all internships at the employer.
 
@@ -44,10 +44,6 @@ Belvedere Trading, Immuta, Palantir.
 
 Meta.
 
-### microsoft_careers (1)
-
-Microsoft.
-
 ### phenom (1)
 
 Snowflake.
@@ -61,6 +57,8 @@ ServiceNow, Solidigm, Visa (empty, unconfirmed).
 Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Snap, Zillow.
 
 ## Per-company audit
+
+Listing and match counts below are from the October 22 audit. Microsoft's disabled status was updated October 26.
 
 | Company | Platform | Listings fetched | Matching internships | Status |
 | --- | --- | ---: | ---: | --- |
@@ -166,7 +164,7 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Mastercard | workday | 36 | 1 | Responding with listings |
 | Mercury | greenhouse | 73 | 0 | Responding with listings |
 | Meta | meta_careers | 543 | 3 | Responding with listings |
-| Microsoft | microsoft_careers | 18 | 3 | Responding with listings |
+| Microsoft | microsoft_careers (disabled) | 18 | 3 | Disabled October 26 after recurring HTTP 429 failures; aggregate-only coverage |
 | Miro | ashby | 22 | 0 | Responding with listings |
 | Mixpanel | greenhouse | 45 | 0 | Responding with listings |
 | Modal | ashby | 43 | 0 | Responding with listings |
@@ -259,8 +257,8 @@ Adobe, Autodesk, Cadence, Capital One, Mastercard, Netflix, NVIDIA, Red Hat, Sna
 | Zscaler | greenhouse | 360 | 0 | Responding with listings |
 
 
-## Planning roster without a configured direct feed
+## Planning roster without an enabled direct feed
 
-ByteDance / TikTok, Uber, LinkedIn, Rippling, Block, GitHub, Salesforce, Atlassian, CrowdStrike, Palo Alto Networks, Spotify, Canva, Bloomberg, Broadcom, AMD, Tesla, SpaceX, X, Confluent, Shopify, Workday, Intuit, ServiceTitan, SentinelOne, Splunk, HashiCorp, Zoom, DocuSign, Slack, Oracle, Qualcomm, Arm, Qualtrics, Postman, dbt Labs, Nutanix, Akamai, PayPal, JPMorgan Chase, Goldman Sachs, American Express, Remitly, Wise, Adyen, BILL, Walmart Global Tech, eBay, Etsy, StubHub, Expedia Group, Booking.com, Epic Games, Valve, Electronic Arts, Activision Blizzard, Unity, Disney Streaming, Zoox, Aurora Innovation, Rivian, Cisco, SAP, Intel, Synopsys, MathWorks, Micron, Hugging Face, Retool, Fly.io, Pulumi, Addepar, Alloy, Current, Dave, EarnIn, Ethos, Figure, Greenlight, Lemonade, Marqeta, Navan, Nubank, Paxos, Persona, Rho, Sardine, Stash, Tala, Upstart, Varo, Wealthfront, Whatnot, Twilio Segment, Contentful, Calendly, ClassDojo, ClickUp, Grammarly, Headspace, Hinge, Iterable, Loom, monday.com, OpenTable, Thumbtack, Tripadvisor, Udemy, Yelp, Arctic Wolf, Cato Networks, Cisco Meraki, Cloudinary, DataStax, Deepgram, Dynatrace, F5, Fortinet, Harness, Lacework, Netskope, OneTrust, Ping Identity, Sonar, Tanium, Trend Micro, Veeam, Wasabi Technologies, Zilliz, Citadel, Citadel Securities, Two Sigma, D. E. Shaw, Susquehanna International Group, Millennium Management, Bridgewater Associates, Wolverine Trading, Morgan Stanley, Bank of America, Barclays, BlackRock, Citi, BNY, PIMCO
+Microsoft, ByteDance / TikTok, Uber, LinkedIn, Rippling, Block, GitHub, Salesforce, Atlassian, CrowdStrike, Palo Alto Networks, Spotify, Canva, Bloomberg, Broadcom, AMD, Tesla, SpaceX, X, Confluent, Shopify, Workday, Intuit, ServiceTitan, SentinelOne, Splunk, HashiCorp, Zoom, DocuSign, Slack, Oracle, Qualcomm, Arm, Qualtrics, Postman, dbt Labs, Nutanix, Akamai, PayPal, JPMorgan Chase, Goldman Sachs, American Express, Remitly, Wise, Adyen, BILL, Walmart Global Tech, eBay, Etsy, StubHub, Expedia Group, Booking.com, Epic Games, Valve, Electronic Arts, Activision Blizzard, Unity, Disney Streaming, Zoox, Aurora Innovation, Rivian, Cisco, SAP, Intel, Synopsys, MathWorks, Micron, Hugging Face, Retool, Fly.io, Pulumi, Addepar, Alloy, Current, Dave, EarnIn, Ethos, Figure, Greenlight, Lemonade, Marqeta, Navan, Nubank, Paxos, Persona, Rho, Sardine, Stash, Tala, Upstart, Varo, Wealthfront, Whatnot, Twilio Segment, Contentful, Calendly, ClassDojo, ClickUp, Grammarly, Headspace, Hinge, Iterable, Loom, monday.com, OpenTable, Thumbtack, Tripadvisor, Udemy, Yelp, Arctic Wolf, Cato Networks, Cisco Meraki, Cloudinary, DataStax, Deepgram, Dynatrace, F5, Fortinet, Harness, Lacework, Netskope, OneTrust, Ping Identity, Sonar, Tanium, Trend Micro, Veeam, Wasabi Technologies, Zilliz, Citadel, Citadel Securities, Two Sigma, D. E. Shaw, Susquehanna International Group, Millennium Management, Bridgewater Associates, Wolverine Trading, Morgan Stanley, Bank of America, Barclays, BlackRock, Citi, BNY, PIMCO
 
 The aggregate-only roster above is not directly monitored. In particular, Bloomberg, Goldman Sachs, JPMorgan Chase, Citadel, and Citadel Securities still lack verified direct connections. Do not assume the aggregate boards provide complete or immediate coverage. Deel, Visa, and Webflow have configured but empty feeds. HubSpot was rechecked successfully and is not a known failed feed in this audit. Mercury now returns listings from its replacement Greenhouse feed.
