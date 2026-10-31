@@ -14,8 +14,8 @@
   "critical_source_failures": [],
   "initialized_at": "2026-09-10T20:01:13+00:00",
   "last_check_status": "ok",
-  "last_checked_at": "2026-10-31T17:00:51+00:00",
-  "last_fetched_job_count": 32118,
+  "last_checked_at": "2026-10-31T17:15:41+00:00",
+  "last_fetched_job_count": 32117,
   "last_matched_job_count": 525,
   "last_notification_errors": [],
   "last_pending_notification_count": 0,
@@ -58,7 +58,7 @@
         "title": "Software Development Co-op",
         "url": "https://novatechengineering.applytojob.com/apply/prjzDfwzEE/Software-Development-CoOp-Located-Onsite-In-Willmar-MN"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "003fba884612087855acbb92": {
       "first_seen": "2026-10-12T18:01:47+00:00",
@@ -172,7 +172,7 @@
         "title": "Software Intern - WaveLogic",
         "url": "https://ciena.wd5.myworkdayjobs.com/Careers/job/Atlanta/WaveLogic-Software-Intern-Spring-2027_R031692"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T16:15:50+00:00"
     },
     "016f2adaaeb40f3e9acc9d28": {
@@ -211,7 +211,7 @@
         "title": "Software Engineer Intern - SI Data Infrastructure",
         "url": "https://www.tesla.com/careers/search/job/282292"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T14:00:59+00:00"
     },
     "01dc3af8ce023df46dc507cc": {
@@ -240,7 +240,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T23:15:45+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T23:15:47+00:00",
         "message_id": 941,
@@ -423,7 +423,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T01:45:44+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T01:45:47+00:00",
         "message_id": 950,
@@ -454,7 +454,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/amca/jobs/4425120009"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-30T14:01:47+00:00"
     },
     "048ba7c62e9ebbdc8c5008fc": {
@@ -483,7 +483,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T21:30:57+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T21:30:58+00:00",
         "message_id": 978,
@@ -502,7 +502,7 @@
         "title": "Software Engineer Intern",
         "url": "https://boards.greenhouse.io/cloudflare/jobs/8199958"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T02:16:16+00:00"
     },
     "04c99bf35ca998a787f6a741": {
@@ -529,7 +529,7 @@
         "title": "Quantitative Developer Intern",
         "url": "https://boards.greenhouse.io/point72/jobs/7609197002?gh_jid=7609197002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "04cb39e19ae9ac2578e2a434": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -556,7 +556,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T14:01:01+00:00",
         "message_id": 951,
@@ -577,7 +577,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T23:15:45+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T23:15:46+00:00",
         "message_id": 938,
@@ -647,7 +647,7 @@
         "title": "Robot Software Engineer Intern",
         "url": "https://jobs.lever.co/SimbeRobotics/d91f42b9-50b8-4b5f-8daf-00281d7dd61c/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T22:46:10+00:00"
     },
     "054edca7f7eade9b2f7bf6d2": {
@@ -707,7 +707,7 @@
         "title": "AI Platform Engineering Intern",
         "url": "https://amfam.wd1.myworkdayjobs.com/Careers/job/WI-Madison/Product-Data-Engineering-Intern--Hybrid-_R39462"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T22:46:10+00:00"
     },
     "06783cb32ee1af724ceeb3b2": {
@@ -898,7 +898,7 @@
         "title": "AI Business Process Developer Intern",
         "url": "https://hntb.wd5.myworkdayjobs.com/hntb_university_careers/job/Austin-TX/Intern---AI-Business-Process-Developer--Summer-2027-_R-31865"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-03T01:46:17+00:00"
     },
     "0893a037c146b8f7f8dec15b": {
@@ -912,7 +912,7 @@
         "title": "Software Engineering Intern, AML Platform (Summer 2027)",
         "url": "https://job-boards.greenhouse.io/hpiq/jobs/6114781004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "08d0b275fe13f537f5a996ac": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -925,7 +925,7 @@
         "title": "Software Engineer Intern - Aviation Web Development",
         "url": "https://careers.garmin.com/jobs/20080?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "08dca842626dc43bdaeceb58": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -1003,7 +1003,7 @@
         "title": "Software Engineer Intern",
         "url": "https://careers.garmin.com/jobs/20165?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "09c1e458773541d72d42275c": {
@@ -1029,7 +1029,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/courierhealth/jobs/5258913007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-06T23:44:27+00:00"
     },
     "09ffc62c4c8f4725976e36c9": {
@@ -1092,7 +1092,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/enova/jobs/8239619"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T23:16:26+00:00"
     },
     "0ab5f001bd413e4516f2f25b": {
@@ -1108,7 +1108,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T23:15:41+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T23:15:42+00:00",
         "message_id": 983,
@@ -1139,7 +1139,7 @@
         "title": "Vehicle Software Engineer Intern - Diagnostic User Interface",
         "url": "https://www.tesla.com/careers/search/job/281921"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "0bdc05d681b3a0fbc8911b13": {
       "first_seen": "2026-09-15T23:15:36+00:00",
@@ -1152,7 +1152,7 @@
         "title": "Flight Software Engineer Intern",
         "url": "https://boards.greenhouse.io/andurilindustries/jobs/5239083007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "0c395c411e6e25b46a46d319": {
@@ -1181,7 +1181,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T22:45:42+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T22:45:43+00:00",
         "message_id": 980,
@@ -1238,7 +1238,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/pacificfusion/jobs/4398373009"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "0d17ff580af476b5a2c0ea56": {
       "first_seen": "2026-09-15T17:38:23+00:00",
@@ -1251,7 +1251,7 @@
         "title": "Operations Technical Training Platforms Co-op",
         "url": "https://entegris.wd1.myworkdayjobs.com/entegriscareers/job/Colorado-Springs-CO/Operations-Technical-Training-Platforms-Co-Op_REQ-14416"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "0d1fef97e3ec3420b3a9e3cc": {
@@ -1326,7 +1326,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/singlestore/jobs/8205514"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "0d9dc62a2eb5940b8377f589": {
@@ -1377,7 +1377,7 @@
         "title": "Software Engineer Intern",
         "url": "https://www.coinbase.com/careers/positions/8168315?gh_jid=8168315"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "0e49aa7b78246473ed38ab99": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -1402,7 +1402,7 @@
         "title": "Ground Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/muonspace/jobs/5266679007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-15T22:45:50+00:00"
     },
     "0e61063cadb2d388c7a81891": {
@@ -1480,7 +1480,7 @@
         "title": "Campus Software Engineer (Intern)",
         "url": "https://www.jumptrading.com/hr/job?gh_jid=8002989"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "0f2a625329586af82a2b8cfc": {
       "first_seen": "2026-09-22T01:45:53+00:00",
@@ -1493,7 +1493,7 @@
         "title": "Software Engineer Co-op Intern - Product Development Portal",
         "url": "https://careers.rivian.com/jobs/33745?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T01:45:53+00:00"
     },
     "0f3e5728995a506f7816dddc": {
@@ -1594,7 +1594,7 @@
         "title": "Android Developer Intern, 2027",
         "url": "https://jobs.ashbyhq.com/allen-control-systems/1cd2b432-9a01-4ae0-8eb2-6ebd9c278b94"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-30T20:45:22+00:00"
     },
     "10a160b2225d974c97ea4ef3": {
@@ -1608,7 +1608,7 @@
         "title": "Full Stack Software Engineer Intern",
         "url": "https://ats.rippling.com/rippling/jobs/f64b6158-9534-4bab-9457-45556166b262"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T23:15:54+00:00"
     },
     "10b10d4dab98dcfccb2456e2": {
@@ -1622,7 +1622,7 @@
         "title": "Software Developer Intern",
         "url": "https://job-boards.greenhouse.io/dvtrading/jobs/4733138005"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T23:20:58+00:00"
     },
     "10e2f8c3609778e43331e7ff": {
@@ -1636,7 +1636,7 @@
         "title": "Software Engineer Intern",
         "url": "https://icf.wd5.myworkdayjobs.com/icfexternal_career_site/job/Reston-VA/XMLNAME-2027-Summer-Intern--Software-Engineer--Reston--VA-_R2603522"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T23:15:57+00:00"
     },
     "10ea2a417438aca0de946a82": {
@@ -1712,7 +1712,7 @@
         "title": "Software Engineer Intern",
         "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Summer-2027-Intern---Software-Engineer--Security-Government-_JR364911-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-20T14:02:06+00:00"
     },
     "11602b16e51224f635702c07": {
@@ -1738,7 +1738,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://ats.rippling.com/tive-careers/jobs/c88ab3d3-a8e7-4639-b95b-d6c9b5290dd0"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "11bc8e0c89d8dde2f5003b29": {
@@ -1752,7 +1752,7 @@
         "title": "Software Engineer Intern",
         "url": "https://explore.jobs.netflix.net/careers/job/790318904468"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-13T22:46:34+00:00"
     },
     "11be84e36d85f31d4a26dcf6": {
@@ -1792,7 +1792,7 @@
         "title": "Software Engineer Intern - Dealer",
         "url": "https://jobs.ashbyhq.com/Talos-Trading/91fd5274-3b6b-43cf-b366-9f6dc2ae5977"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "120694dec1d8d9e56b710778": {
       "first_seen": "2026-09-25T23:14:35+00:00",
@@ -1830,7 +1830,7 @@
         "title": "Distributed Systems Software Engineer Intern - Energy Engineering",
         "url": "https://www.tesla.com/careers/search/job/285508"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T23:16:17+00:00"
     },
     "125aecb1e7dcf04106613ac1": {
@@ -1958,7 +1958,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://caci.wd1.myworkdayjobs.com/external/job/437-DENVER-CO/Cleared-Software-Engineer-Intern---Summer-2027_331999"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "134799180f783cd5422595db": {
@@ -2011,7 +2011,7 @@
         "title": "Software Integration Engineer Intern - Service Tooling",
         "url": "https://www.tesla.com/careers/search/job/286127"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-08T22:46:37+00:00"
     },
     "136abb2458e358ea3f78d803": {
@@ -2027,7 +2027,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T01:45:44+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T01:45:45+00:00",
         "message_id": 944,
@@ -2072,7 +2072,7 @@
         "title": "Software Engineer Intern - Data Analytics",
         "url": "https://jobs.uhsinc.com/jobs/367247?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "13c084df5e15e475ec026a3c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -2174,7 +2174,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.smartrecruiters.com/WellmarkInc/744000149684819"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "1481c598219b34e5f7a4ebcf": {
@@ -2212,7 +2212,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://apply.workable.com/enfos-inc/j/CA15908E0A/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "14a86d170e79774f715be795": {
       "first_seen": "2026-10-26T23:16:10+00:00",
@@ -2227,7 +2227,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T23:16:10+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T23:16:12+00:00",
         "message_id": 920,
@@ -2272,7 +2272,7 @@
         "title": "IT Software Engineer Intern",
         "url": "https://nelnet.wd1.myworkdayjobs.com/MyNelnet/job/Lincoln-NE/Intern---IT-Software-Engineer-NET--Summer-2027-_R23198"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T23:16:17+00:00"
     },
     "14c543375c8bdd3cbcd82e6a": {
@@ -2466,7 +2466,7 @@
         "title": "Full Stack Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/revel/29968ce1-8838-44e8-ac4e-6b1c87ce5314"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:35:21+00:00"
     },
     "171d1e588e2899cde9efd0b9": {
@@ -2495,7 +2495,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-24T02:16:04+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-24T02:16:04+00:00",
         "message_id": 906,
@@ -2581,7 +2581,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T22:45:42+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T22:45:43+00:00",
         "message_id": 981,
@@ -2666,7 +2666,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/purestorage/jobs/8249749"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-06T23:16:41+00:00"
     },
     "18a8918a72994ba809a68dac": {
@@ -2701,7 +2701,7 @@
         "title": "Software Engineer Intern - C++ - Linux",
         "url": "https://kla.wd1.myworkdayjobs.com/UR/job/Milpitas-CA/Software-Engineer-Intern--C----Linux----Summer-2027_2641878"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T22:46:10+00:00"
     },
     "18e177dcf28127696b078865": {
@@ -2715,7 +2715,7 @@
         "title": "Software Application Development Engineer Intern",
         "url": "https://workday.wd5.myworkdayjobs.com/Workday_Early_Career/job/USA-CA-Pleasanton/Software-Application-Development-Engineer-Intern_JR-0110811"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-10T01:46:30+00:00"
     },
     "1964cd34c565f11d7179ebe1": {
@@ -2730,7 +2730,7 @@
         "title": "Platform Engineer Intern, Summer 2027",
         "url": "https://www.akunacapital.com/careers/job/8018856?gh_jid=8018856"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "19823f5403e2e444ba086c73": {
       "first_seen": "2026-09-10T23:27:37+00:00",
@@ -2806,7 +2806,7 @@
         "title": "Software Engineering Intern, Device Experiences (Summer 2027)",
         "url": "https://job-boards.greenhouse.io/hpiq/jobs/6114912004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "19fa8fc19b756c23ae4af39d": {
       "first_seen": "2026-09-15T17:38:23+00:00",
@@ -2997,7 +2997,7 @@
         "title": "Software Engineering Intern",
         "url": "https://careers.garmin.com/jobs/20255?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T01:46:03+00:00"
     },
     "1b95a1fc3309a476cb87d00b": {
@@ -3011,7 +3011,7 @@
         "title": "[Summer 2027] Software Engineer Intern",
         "url": "https://careers.roblox.com/jobs/8072713?gh_jid=8072713"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "1b9a877ca29c435e49c4ca7b": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -3036,7 +3036,7 @@
         "title": "Software Engineer Intern - Finance Programs",
         "url": "https://www.tesla.com/careers/search/job/282303"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "1bde07bd29811ceb6e2dba8c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -3087,7 +3087,7 @@
         "title": "Software Development Intern",
         "url": "https://caci.wd1.myworkdayjobs.com/external/job/Oklahoma-City-OK-US/Software-Development-Intern---Summer-2027_333085"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-05T15:16:20+00:00"
     },
     "1c509f43fa17311509b2ae60": {
@@ -3101,7 +3101,7 @@
         "title": "Quality & Reliability Engineering Intern",
         "url": "https://www.metacareers.com/jobs/1624891432439039"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-15T17:15:45+00:00"
     },
     "1c981c028279955fac86c3c5": {
@@ -3131,7 +3131,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T22:45:46+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T22:45:47+00:00",
         "message_id": 963,
@@ -3163,7 +3163,7 @@
         "title": "Sales AI & Analytics Developer Intern",
         "url": "https://jobs.newellbrands.com/job/Huntersville-2027-Newell-Brands-Intern-Sales-AI-&-Analytics-Developer-Intern-Nort/1431281200?ats=successfactors"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-21T22:46:26+00:00"
     },
     "1d5b73f72a30e802734dbec9": {
@@ -3177,7 +3177,7 @@
         "title": "Software Engineer Intern",
         "url": "https://radiancetech.wd12.myworkdayjobs.com/Radiance_External/job/Dayton-Office/Software-Engineer-Intern-Spring-Summer-2027_HR102443"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T23:09:54+00:00"
     },
     "1d69d7949c6bc265a2b8ee20": {
@@ -3264,7 +3264,7 @@
         "title": "Infrastructure Engineer Intern",
         "url": "https://jobs.ashbyhq.com/dedalus-labs/fab1accf-2b21-453b-869f-a08759fa605c"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:35:21+00:00"
     },
     "1de121a9a105aa241efd4b49": {
@@ -3291,7 +3291,7 @@
         "title": "Software Engineering Intern - Winter '27",
         "url": "https://job-boards.greenhouse.io/vercel/jobs/6181755004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:01:27+00:00"
     },
     "1e5f6b42dc65e9ca45729709": {
@@ -3305,7 +3305,7 @@
         "title": "Strategic Student Program: Software Development Intern (SIM STS, Spring 2027)",
         "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/520085"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:01:27+00:00"
     },
     "1e77ce0a10a6ac92be9ca95d": {
@@ -3347,7 +3347,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T16:46:00+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T16:46:01+00:00",
         "message_id": 977,
@@ -3379,7 +3379,7 @@
         "title": "Software Development Intern",
         "url": "https://jobs.jobvite.com/tylertech/job/oAVOAfwD?nl=1&nl=1&fr=false"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-18T21:16:14+00:00"
     },
     "1ed61b9487a6ab758f744d1a": {
@@ -3432,7 +3432,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:41+00:00",
         "message_id": 1002,
@@ -3453,7 +3453,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:43+00:00",
         "message_id": 1005,
@@ -3509,7 +3509,7 @@
         "title": "Software Engineer, Internship - Query Engines",
         "url": "https://jobs.lever.co/palantir/da774f81-c98c-4dcf-9b9c-949fd7d90a13"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-20T00:01:25+00:00"
     },
     "205ee44961a9f2ccc0d69e40": {
@@ -3562,7 +3562,7 @@
         "title": "Software Engineer Intern, Backend (Summer 2027 - SF)",
         "url": "https://app.careerpuck.com/job-board/lyft/job/8767726002?gh_jid=8767726002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "20da8b49894a80f10112c47c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -3601,7 +3601,7 @@
         "title": "Cloud Software Developer Intern",
         "url": "https://ttc.wd1.myworkdayjobs.com/Toro_External_Careers/job/Frederick-CO/Cloud-Software-Development-Intern---The-Toro-Company_JR17498"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T22:46:22+00:00"
     },
     "211b15fdcfffa68a233534ac": {
@@ -3718,7 +3718,7 @@
         "title": "IT Developer Intern",
         "url": "https://basspro.wd1.myworkdayjobs.com/careers/job/Springfield-MO-Bass-Pro-Shops-Base-Camp/IT-Developer-Intern-Summer-2027_R267441-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T15:15:40+00:00"
     },
     "22864834078660875e84004f": {
@@ -3746,7 +3746,7 @@
         "title": "Software Engineer Intern - Security",
         "url": "https://ciena.wd5.myworkdayjobs.com/Careers/job/Atlanta/Software-Engineer--Security----Intern--Winter-2027-_R031926"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-20T14:46:24+00:00"
     },
     "22c37983b1160f08238c3e9e": {
@@ -3773,7 +3773,7 @@
         "title": "Flight Software Intern",
         "url": "https://job-boards.greenhouse.io/vardaspace/jobs/8010159003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T14:01:42+00:00"
     },
     "232a1bbc005edb8d1739eb98": {
@@ -3787,7 +3787,7 @@
         "title": "Software Development Intern",
         "url": "https://job-boards.greenhouse.io/nisc/jobs/8092699"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "233c412a40972a4751b24752": {
       "first_seen": "2026-10-08T23:16:34+00:00",
@@ -3800,7 +3800,7 @@
         "title": "Autonomous Driving Software Engineer Intern",
         "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Sunnyvale-California-United-States-of-America/XMLNAME-2027-Summer-Intern---Autonomous-Driving-Software-Engineer--Bachelor-s---Master-s-_JR-202622064"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-08T23:16:34+00:00"
     },
     "23939f0fe65a08433bc11533": {
@@ -3827,7 +3827,7 @@
         "title": "Software Developer Intern",
         "url": "https://jobs.keysight.com/jobs/54638?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T23:14:35+00:00"
     },
     "23c8adb7b45a6bee60f88f00": {
@@ -3902,7 +3902,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ea.com/en_US/careers/JobDetail/Software-Engineer-Intern/216251"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-05T23:16:16+00:00"
     },
     "24623c44964f1ca294e4b6a4": {
@@ -3918,7 +3918,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T18:46:08+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T18:46:08+00:00",
         "message_id": 910,
@@ -3974,7 +3974,7 @@
         "title": "Software Engineer Intern",
         "url": "https://boards.greenhouse.io/point72/jobs/8885733002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T14:45:55+00:00"
     },
     "24e81a681d1f167958414b53": {
@@ -4015,7 +4015,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T23:15:45+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T23:15:46+00:00",
         "message_id": 939,
@@ -4036,7 +4036,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T15:16:09+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T15:16:10+00:00",
         "message_id": 931,
@@ -4057,7 +4057,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T22:45:46+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T22:45:46+00:00",
         "message_id": 961,
@@ -4090,7 +4090,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8263774"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-08T14:01:47+00:00"
     },
     "25bccbe44fc2d625126cd00b": {
@@ -4106,7 +4106,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T23:15:41+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T23:15:42+00:00",
         "message_id": 982,
@@ -4199,7 +4199,7 @@
         "title": "Commercial Operations Software Engineer Intern",
         "url": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/Flower-Mound-Texas/Commercial-Operations-Software-Engineering-Intern---Flower-Mound--TX_R572941"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "26c9273f399f8686483803f4": {
       "first_seen": "2026-10-16T15:15:54+00:00",
@@ -4212,7 +4212,7 @@
         "title": "Platform Engineering Intern, Summer 2027 – St. Louis, MO, US",
         "url": "https://mastercard.wd1.myworkdayjobs.com/Campus/job/OFallon-Missouri/Platform-Engineering-Intern--Summer-2027---St-Louis--MO--US_R-284880"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T15:15:54+00:00"
     },
     "26d498bbbd97103f41bb857d": {
@@ -4253,7 +4253,7 @@
         "title": "Innovation & Technology Internship - Software Engineering: Data & Intelligence",
         "url": "https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship--Software-Engineering--Data---Intelligence-Summer-2027-Undergrad_R1081114"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T23:14:07+00:00"
     },
     "278b4bd99fd3e1bacc70f8c0": {
@@ -4293,7 +4293,7 @@
         "title": "Software Engineer Intern - Waterloo University",
         "url": "https://job-boards.greenhouse.io/brave/jobs/8161945"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "27c4eb2ba856381c787ab2cb": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -4318,7 +4318,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/amperesand/jobs/4409254009"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-17T14:00:38+00:00"
     },
     "27cf5ae2672c0f34afd09bca": {
@@ -4358,7 +4358,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T23:15:46+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T23:15:47+00:00",
         "message_id": 966,
@@ -4389,7 +4389,7 @@
         "title": "Software Engineer Intern",
         "url": "https://amat.wd1.myworkdayjobs.com/External/job/Santa-ClaraCA/XMLNAME-2027-Summer-Intern--Software-Engineer--Bachelors-Degree--Santa-Clara-_R2630672"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-21T01:46:33+00:00"
     },
     "283e86326e7132a0c4d4e320": {
@@ -4403,7 +4403,7 @@
         "title": "Software Engineer Intern",
         "url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010928"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T01:45:38+00:00"
     },
     "2847eb848fe4cd59c5f588bc": {
@@ -4480,7 +4480,7 @@
         "title": "Software Development Intern",
         "url": "https://job-boards.greenhouse.io/testnisc/jobs/8174096"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "28e37b25820f197feb750040": {
       "first_seen": "2026-09-10T23:27:37+00:00",
@@ -4518,7 +4518,7 @@
         "title": "Software Development Intern - Summer 2027",
         "url": "https://jobs.jobvite.com/tylertech/job/oMAPAfwv?nl=1&nl=1&fr=false"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-21T23:15:46+00:00"
     },
     "2964ebf8d71181b48034b47e": {
@@ -4534,7 +4534,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:42+00:00",
         "message_id": 1004,
@@ -4577,7 +4577,7 @@
         "title": "Software Engineer Intern",
         "url": "https://apply.careers.microsoft.com/careers/job/1970393556983223"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T23:20:58+00:00"
     },
     "2a30d9c092956e5a4638ade7": {
@@ -4783,7 +4783,7 @@
         "title": "Software Engineer Intern",
         "url": "https://dowjones.wd1.myworkdayjobs.com/Dow_Jones_Career/job/NYC---1211-Ave-of-the-Americas/Summer-2027-Internship-Program---Software-Engineering-Intern_Job_Req_55891"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T23:16:40+00:00"
     },
     "2d63dd95dcf0bfef48f75e10": {
@@ -4797,7 +4797,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.keysight.com/jobs/54329?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-17T22:45:36+00:00"
     },
     "2d65cb2a15e3da254e637dd3": {
@@ -4849,7 +4849,7 @@
         "title": "Software Development Intern",
         "url": "https://simventions.jibeapply.com/jobs/1631?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T22:45:41+00:00"
     },
     "2dcfb3bba256fcd442f46bc9": {
@@ -4913,7 +4913,7 @@
         "title": "Enterprise Software Engineer Intern",
         "url": "https://impulsespace.pinpointhq.com/en/postings/66981a77-8e79-4050-9818-4ed4209c5579?ats=pinpointhq"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T23:15:42+00:00"
     },
     "2ea4a178cdaf0a8ef9814e83": {
@@ -4940,7 +4940,7 @@
         "title": "AI Software Engineer Intern",
         "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External-Rockwell-Automation-Early-Careers/job/Mayfield-Heights-Ohio-United-States/Intern--AI-Software-Engineering--June-August-2027-_R26-6980"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T23:14:35+00:00"
     },
     "2ec60f1dcc3fbe3b04b4d082": {
@@ -5020,7 +5020,7 @@
         "title": "Software Engineer Intern",
         "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4501273"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "2f34990a74243c8a214c66e7": {
@@ -5072,7 +5072,7 @@
         "title": "Business Intelligence Developer Intern",
         "url": "https://aoins.wd5.myworkdayjobs.com/AutoOwners/job/Lansing-MI/Business-Intelligence-Developer-Internship---Summer-2027_R_14772"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T22:46:10+00:00"
     },
     "2f64c9ec2afd3f0037d5fa41": {
@@ -5086,7 +5086,7 @@
         "title": "Software Engineer - Internship",
         "url": "https://seatgeek.com/jobs/8227553?gh_jid=8227553"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:31:20+00:00"
     },
     "2f8e43e87efb88227ca06cde": {
@@ -5113,7 +5113,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ulalaunch.com/job/Centennial-Software-Engineering-Internship-Summer-2027-CO-80112/1427398300?ats=successfactors"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "2fe69bcab0b3d0744d4cdcb1": {
       "first_seen": "2026-10-26T23:16:10+00:00",
@@ -5128,7 +5128,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T23:16:10+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T23:16:13+00:00",
         "message_id": 921,
@@ -5147,7 +5147,7 @@
         "title": "Software Engineer Intern",
         "url": "https://avav.wd1.myworkdayjobs.com/avav/job/Melbourne-FL/Summer-2027-Software-Engineering-Intern_8550"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T22:45:36+00:00"
     },
     "3002883d41f4a0840f757b28": {
@@ -5186,7 +5186,7 @@
         "title": "Mobile Application Software Engineer Intern - Energy Engineering",
         "url": "https://www.tesla.com/careers/search/job/284776"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-26T01:45:39+00:00"
     },
     "305e7b38cb0fdb4c94b321da": {
@@ -5228,7 +5228,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T14:45:51+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T14:45:51+00:00",
         "message_id": 958,
@@ -5297,7 +5297,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.keysight.com/jobs/54668?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T14:01:20+00:00"
     },
     "31651b8dbf04d58d5452d053": {
@@ -5311,7 +5311,7 @@
         "title": "Middleware Software Intern",
         "url": "https://job-boards.greenhouse.io/figureai/jobs/4605724006"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T02:16:35+00:00"
     },
     "31676f673b9c90b04bd60daa": {
@@ -5386,7 +5386,7 @@
         "title": "Software Engineer Intern - AI Agents",
         "url": "https://job-boards.greenhouse.io/botauto/jobs/5429357008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-19T03:45:38+00:00"
     },
     "323e3494757afa4458165fe4": {
@@ -5412,7 +5412,7 @@
         "title": "Summer 2027 Software Engineering Intern",
         "url": "https://job-boards.greenhouse.io/thenuclearcompany/jobs/5383236008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "32bee27d985ea7eb1b5ce2ee": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -5450,7 +5450,7 @@
         "title": "Software Developer Intern",
         "url": "https://ffive.wd5.myworkdayjobs.com/f5jobs/job/San-Jose/Software-Development-Engineer-Intern--San-Jose--CA-_RP1039076"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T01:46:39+00:00"
     },
     "3336167518a434e8ab735a98": {
@@ -5464,7 +5464,7 @@
         "title": "Software Engineer Intern Co-op - Design Automation",
         "url": "https://careers.rivian.com/jobs/33748?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T01:45:53+00:00"
     },
     "334eeda6f6a00decee6ea80a": {
@@ -5478,7 +5478,7 @@
         "title": "Software Engineering Intern - C++ - Unix",
         "url": "https://kla.wd1.myworkdayjobs.com/search/job/Milpitas-CA/Software-Engineering-Intern--C----Unix-_2641325-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-23T14:00:43+00:00"
     },
     "33534dc7ad68ccbc51e8b9d4": {
@@ -5494,7 +5494,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T14:01:04+00:00",
         "message_id": 956,
@@ -5566,7 +5566,7 @@
         "title": "Full-Stack Software Engineer (Product) - Intern - 2026-2027",
         "url": "https://jobs.ashbyhq.com/netic/f291394a-f3c5-4f46-9b87-77aea3d487ef"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:35:21+00:00"
     },
     "3422f93beb854cea5410a2e5": {
@@ -5614,7 +5614,7 @@
         "title": "Software Engineer Intern - Command & Control",
         "url": "https://jobs.lever.co/hermeus/5b08e2df-c9db-4831-aece-67d89e744796/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "34917fc636414cd56e988cae": {
       "baselined_at": "2026-09-17T22:59:00+00:00",
@@ -5640,7 +5640,7 @@
         "title": "Internship - Software Engineering - People Products - Winter/Spring 2027",
         "url": "https://www.tesla.com/careers/search/job/284003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-18T14:00:40+00:00"
     },
     "34d3024215665214f52c7cd3": {
@@ -5667,7 +5667,7 @@
         "title": "Software Engineering Intern (2027)",
         "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6865687002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "351614ac19d3f2a205eb795d": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -5755,7 +5755,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/patreon/71f644bc-0873-4d62-a599-bd64405d6587"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T23:16:23+00:00"
     },
     "35c6a15df9d37a9668041db4": {
@@ -5869,7 +5869,7 @@
         "title": "Software Engineer Intern",
         "url": "https://www.amazon.jobs/en/jobs/10587999"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T21:31:34+00:00"
     },
     "36b0ac3b3c5e263a952c6c44": {
@@ -5883,7 +5883,7 @@
         "title": "Software Engineer Intern",
         "url": "https://careers.garmin.com/jobs/20131?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-10T23:27:37+00:00"
     },
     "36f6d66350325386f1e772e1": {
@@ -5911,7 +5911,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T23:15:41+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T23:15:42+00:00",
         "message_id": 984,
@@ -5930,7 +5930,7 @@
         "title": "Software Engineer Intern",
         "url": "https://hcgn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/49286"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T17:43:32+00:00"
     },
     "3740a71fed9523ba78535226": {
@@ -6009,7 +6009,7 @@
         "title": "Software Engineer Intern",
         "url": "https://careers.garmin.com/jobs/20055?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T14:01:23+00:00"
     },
     "380e285936687e2963cdf84f": {
@@ -6124,7 +6124,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/gcmgrosvenor/jobs/8015792003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-09T23:16:30+00:00"
     },
     "39d508763b34e4c04b74f719": {
@@ -6138,7 +6138,7 @@
         "title": "Software Engineer Intern",
         "url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992560?gh_jid=7992560"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "39f4af7959b726627d4cd673": {
       "first_seen": "2026-09-16T22:45:36+00:00",
@@ -6189,7 +6189,7 @@
         "title": "Application Developer Co-op",
         "url": "https://greenheckgroup.wd5.myworkdayjobs.com/external/job/Schofield-WI/Application-Developer-Co-op_JR104721"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T14:45:51+00:00"
     },
     "3a802045073e6c9cdc9c1698": {
@@ -6215,7 +6215,7 @@
         "title": "Vehicle Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/inversionspace/jobs/4745083005"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T23:16:23+00:00"
     },
     "3a920bfcb222959c6b3d30b0": {
@@ -6254,7 +6254,7 @@
         "title": "Winter 2027 Reliability Engineer Co-op",
         "url": "https://boards.greenhouse.io/andurilindustries/jobs/5257693007?gh_jid=5257693007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-06T00:31:19+00:00"
     },
     "3ac6ccb493bc1df16791e3fe": {
@@ -6281,7 +6281,7 @@
         "title": "Software Developer Intern",
         "url": "https://jobs.jobvite.com/tylertech/job/ouQXAfwB?nl=1&nl=1&fr=false"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T22:46:22+00:00"
     },
     "3add7952fab613cf7c3d43c6": {
@@ -6309,7 +6309,7 @@
         "title": "Software Engineer Intern",
         "url": "https://www.amazon.jobs/en/jobs/10559746"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T22:31:19+00:00"
     },
     "3afb2aedce0a08e9d0eea97a": {
@@ -6325,7 +6325,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T22:46:04+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T22:46:04+00:00",
         "message_id": 914,
@@ -6394,7 +6394,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/158088"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-17T23:15:46+00:00"
     },
     "3b8f163c08f321f2d44cfa0a": {
@@ -6437,7 +6437,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T14:00:55+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T14:00:58+00:00",
         "message_id": 994,
@@ -6595,7 +6595,7 @@
         "title": "Software Engineer Intern - Fleet Platform",
         "url": "https://jobs.ashbyhq.com/bedrock-robotics/8927dd7e-a48d-49a2-92eb-09ec059432f4"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T14:45:38+00:00"
     },
     "3db4fa02b1cb27108ddc7396": {
@@ -6609,7 +6609,7 @@
         "title": "Flight Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/muonspace/jobs/5247725007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-30T22:46:23+00:00"
     },
     "3e12415523926185548f7c43": {
@@ -6648,7 +6648,7 @@
         "title": "Commercial UI Software Engineer Intern",
         "url": "https://www.tesla.com/careers/search/job/285202"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T01:46:20+00:00"
     },
     "3e38c1a086fb37174d7aaf97": {
@@ -6689,7 +6689,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T01:45:44+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T01:45:46+00:00",
         "message_id": 946,
@@ -6721,7 +6721,7 @@
         "title": "Software Engineer Co-op - Engineering",
         "url": "https://jj.wd5.myworkdayjobs.com/JJ/job/Danvers-Massachusetts-United-States-of-America/Software-Engineering-Co-Op_R-098277"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T23:09:54+00:00"
     },
     "3f1f09e2e141b4b96e5ab654": {
@@ -6748,7 +6748,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/genesis-molecular-ai/44e3cbdc-949c-426e-a80a-b41c73ad6a99"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T23:09:54+00:00"
     },
     "3f470c3b45826809a431f352": {
@@ -6801,7 +6801,7 @@
         "title": "Software Engineer Intern",
         "url": "https://salesforce.wd12.myworkdayjobs.com/Futureforce_Internships/job/California---San-Francisco/Summer-2027-Intern---Software-Engineer--Security-Government-_JR364911"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T22:46:22+00:00"
     },
     "3fee2a1b3666c2cc23d83ef7": {
@@ -6827,7 +6827,7 @@
         "title": "Software Development Engineer Intern - Summer",
         "url": "https://www.amazon.jobs/en/jobs/10552937"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-18T00:07:26+00:00"
     },
     "4006090ef198e56518753631": {
@@ -6841,7 +6841,7 @@
         "title": "Software Engineer Intern - Vehicle UI Development",
         "url": "https://www.tesla.com/careers/search/job/282242"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "401c68f1afa01e0b7c3efb72": {
       "first_seen": "2026-10-23T14:46:16+00:00",
@@ -6896,7 +6896,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:40+00:00",
         "message_id": 1000,
@@ -6966,7 +6966,7 @@
         "title": "Security Software Engineering Intern 2027",
         "url": "https://job-boards.greenhouse.io/verkada/jobs/5213881007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "415a8e9957fefb1d608d415e": {
       "first_seen": "2026-09-16T15:15:40+00:00",
@@ -6992,7 +6992,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://job-boards.greenhouse.io/tanium/jobs/8181017"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T06:36:20+00:00"
     },
     "41747d063df55146d3f61b93": {
@@ -7006,7 +7006,7 @@
         "title": "Software Development Intern",
         "url": "https://ryan.wd1.myworkdayjobs.com/RyanCareers/job/Plano/Summer-2027-Intern--Software-Development_R0020822-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T23:15:42+00:00"
     },
     "417da2c505915bf10aca5494": {
@@ -7020,7 +7020,7 @@
         "title": "Software Engineer Intern - Recommendation Performance Efficiency",
         "url": "https://lifeattiktok.com/search/7673636206961641781"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T02:15:54+00:00"
     },
     "41cd4f3e1e181f4101a2d214": {
@@ -7097,7 +7097,7 @@
         "title": "Software Developer Intern",
         "url": "https://jobs.lever.co/viget/b18cc87d-fca2-485a-a0f2-ad6197db63f2/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-08T23:16:34+00:00"
     },
     "4368b687c3aae6c443803ddf": {
@@ -7111,7 +7111,7 @@
         "title": "Business Intelligence and Infrastructure Analyst Intern",
         "url": "https://hp.wd5.myworkdayjobs.com/externalcareersite/job/Vancouver-Washington-United-States-of-America/Business-Intelligence-and-Infrastructure-Analysts--Intern_UNI4669-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "4369b177be1f31d6d3f89f93": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -7200,7 +7200,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://job-boards.greenhouse.io/klaviyocampus/jobs/7989364003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-12T18:15:58+00:00"
     },
     "4472e1f61e1de35d8afbdf75": {
@@ -7227,7 +7227,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ea.com/en_US/careers/JobDetail/Software-Engineer-Intern/216250"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T23:16:23+00:00"
     },
     "44c26baddb1ba562c52eb066": {
@@ -7241,7 +7241,7 @@
         "title": "Software Engineer Intern",
         "url": "https://www.mongodb.com/careers/job?gh_jid=8209134"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T14:01:07+00:00"
     },
     "44d3f0303e118e4fcd3933ab": {
@@ -7295,7 +7295,7 @@
         "title": "Developer Intern, Data Security - Winter 2027",
         "url": "https://jobs.ashbyhq.com/1password/8af1359a-c8a2-492b-b567-ae8ae184a8a1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T15:31:27+00:00"
     },
     "44f0247afd3002492a216096": {
@@ -7383,7 +7383,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.keysight.com/jobs/54395?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T23:09:54+00:00"
     },
     "45c0b8366ca17cff7d7f0697": {
@@ -7399,7 +7399,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T01:45:41+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T01:45:41+00:00",
         "message_id": 988,
@@ -7418,7 +7418,7 @@
         "title": "Software Engineer Intern",
         "url": "https://careers.itw.com/global/en/job/JR10122"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-19T01:15:41+00:00"
     },
     "462b853a181e01c7432efb1e": {
@@ -7562,7 +7562,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T14:46:10+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T14:46:11+00:00",
         "message_id": 928,
@@ -7581,7 +7581,7 @@
         "title": "Software Engineer Intern - Data Transformations",
         "url": "https://www.tesla.com/careers/search/job/284925"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T23:16:26+00:00"
     },
     "4839fcaf0ff77c230df112bc": {
@@ -7760,7 +7760,7 @@
         "title": "Software Engineer Intern",
         "url": "https://textron.taleo.net/careersection/textron/jobdetail.ftl?job=343299"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "49c2ddf43afb9a1ab7147924": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -7863,7 +7863,7 @@
         "title": "Information Technology Development and Infrastructure Intern",
         "url": "https://trustage.wd1.myworkdayjobs.com/TruStage/job/Wisconsin---Remote/Enterprise-Information---Technology-Internship--Hybrid-_R-012155"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-21T14:01:32+00:00"
     },
     "4bf124fddc2282379c6f0ebe": {
@@ -7929,7 +7929,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/claylabs/5b7eced2-36bd-4265-a2a8-da0f786e47aa"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "4c5a907765b1d0cbb51cf986": {
       "first_seen": "2026-09-11T23:20:58+00:00",
@@ -7982,7 +7982,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T22:45:40+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T22:45:41+00:00",
         "message_id": 997,
@@ -8015,7 +8015,7 @@
         "title": "Software Engineering Intern - Applications, Infotainment & Mobile (January - August 2027)",
         "url": "https://jobs.ashbyhq.com/rivianvw.tech/c5c0f2e3-ae78-4ca6-94f8-b6940d3cdb69"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "4cdbb37e14f39ae7b58237b5": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -8077,7 +8077,7 @@
         "title": "AI Software Engineer Intern",
         "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/Mayfield-Heights-Ohio-United-States/Intern--AI-Software-Engineering--June-August-2027-_R26-6980-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T23:14:35+00:00"
     },
     "4d47d952077479ca67236cde": {
@@ -8129,7 +8129,7 @@
         "title": "IT Document Automation Developer Intern",
         "url": "https://aoins.wd5.myworkdayjobs.com/AutoOwners/job/Lansing-MI/IT-Document-Automation-Developer-Internship---Summer-2027_R_14471"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "4dbe922ed8cdfb568cabb61c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -8142,7 +8142,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://redhat.wd5.myworkdayjobs.com/jobs/job/Raleigh/Software-Engineer-Co-op_R-059039"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "4dcabd141bd48b73350ebf09": {
       "first_seen": "2026-09-29T23:16:26+00:00",
@@ -8168,7 +8168,7 @@
         "title": "Software Engineering Intern",
         "url": "https://jobs.ashbyhq.com/vital-lyfe/c39b72aa-9ad5-43e7-a3fd-8ef2e152ee4b"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-23T01:45:37+00:00"
     },
     "4ddc4f8a2202fefc65bce7c3": {
@@ -8182,7 +8182,7 @@
         "title": "Software Engineer Co-op Intern - Enterprise Applications",
         "url": "https://careers.rivian.com/jobs/33803?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T01:45:53+00:00"
     },
     "4e0213c4a6edccc9aee85b4a": {
@@ -8222,7 +8222,7 @@
         "title": "Software Engineer Intern",
         "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4476288"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "4e379a6f63d1c57a61788648": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -8300,7 +8300,7 @@
         "title": "AI-Native Development Platform Engineer Intern",
         "url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers2/job/Santa-Clara-CA/AI-Native-Development-Platform-Engineer-Intern--MS---Summer-2027_2603848"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T22:46:18+00:00"
     },
     "4f6c20aa6bd0857adfda1828": {
@@ -8374,7 +8374,7 @@
         "title": "Software Development Engineer Intern",
         "url": "https://zillow.wd5.myworkdayjobs.com/Zillow_Group_External/job/Seattle-WA-2nd-Ave/Software-Development-Engineer---Intern_P751630"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-21T23:16:21+00:00"
     },
     "500871759b37a6e15aad28b4": {
@@ -8401,7 +8401,7 @@
         "title": "2027 Summer Intern, BS/MS, Software Engineering, Maneuvering Tech",
         "url": "https://careers.withwaymo.com/jobs?gh_jid=8203200"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-21T19:31:37+00:00"
     },
     "50622eaa6f30d8812383ed7e": {
@@ -8427,7 +8427,7 @@
         "title": "Software Engineer Intern",
         "url": "https://chrobinson.wd5.myworkdayjobs.com/CHRobinson/job/Eden-Prairie-MN-United-States-of-America/Software-Engineering-Internship-2027_R49323"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "508b9744eeef3ef2c39fed49": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -8464,7 +8464,7 @@
         "title": "Manufacturing Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/skydio/ffc665c1-2aa6-4c2f-b04b-93a6fb7b5feb"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T17:16:31+00:00"
     },
     "50c05ce9e28c7c64367e7024": {
@@ -8478,7 +8478,7 @@
         "title": "R&D Software Engineer Intern",
         "url": "https://jobs.keysight.com/jobs/55110?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-20T23:16:29+00:00"
     },
     "50d8046643cfdad6c201b68f": {
@@ -8545,7 +8545,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site/job/United-States-of-America-Rochester-New-York/Software-Engineer-Co-Op_JREQ203587"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-10T23:27:37+00:00"
     },
     "5137cd8cf1cfd0ad6d274e9a": {
@@ -8559,7 +8559,7 @@
         "title": "Software Developer Intern",
         "url": "https://uline.wd1.myworkdayjobs.com/Uline_Careers/job/Pleasant-Prairie-WI/Software-Development-Internship---Summer-2027_R268537"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T14:02:11+00:00"
     },
     "513a4ef1b8a010cd3bf44dce": {
@@ -8573,7 +8573,7 @@
         "title": "Software Engineer Intern",
         "url": "https://mckesson.wd3.myworkdayjobs.com/External_Careers/job/USA-TX-Irving/Software-Engineering-Intern---Summer-2027_JR0155382"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T22:46:41+00:00"
     },
     "516c835a8c970bae6ccd2c93": {
@@ -8632,7 +8632,7 @@
         "title": "Software Engineer Intern (Summer 2027)",
         "url": "https://job-boards.greenhouse.io/affirm/jobs/8011590003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T22:01:21+00:00"
     },
     "520ae326caf0a96ff2449239": {
@@ -8737,7 +8737,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:44+00:00",
         "message_id": 1008,
@@ -8831,7 +8831,7 @@
         "title": "Software Engineer Co-op - Agents",
         "url": "https://jobs.ashbyhq.com/solink/8493613d-ea47-4182-ac0b-f5f24d11f49e"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T23:16:17+00:00"
     },
     "546a8dc6b9ce5db087b03730": {
@@ -8919,7 +8919,7 @@
         "title": "Software Engineering Intern, Connectivity (Summer 2027)",
         "url": "https://job-boards.greenhouse.io/hpiq/jobs/6176783004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "5580cbfad8d5eec43b069f09": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -9019,7 +9019,7 @@
         "title": "Software Development Engineer Intern",
         "url": "https://fa-exvu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/260795"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-17T23:15:46+00:00"
     },
     "55fc5d8beb8703f0437a3e55": {
@@ -9035,7 +9035,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T15:15:50+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T15:15:51+00:00",
         "message_id": 960,
@@ -9157,7 +9157,7 @@
         "title": "Software Engineer Intern - Torque Path & Chassis Controls - Vehicle Software",
         "url": "https://www.tesla.com/careers/search/job/282255"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "57f9f8416db00eb4e5ba8e94": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -9208,7 +9208,7 @@
         "title": "Software Engineer Intern",
         "url": "https://boards.greenhouse.io/figma/jobs/6143238004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "58deb1310a722342683ffc9f": {
@@ -9222,7 +9222,7 @@
         "title": "Software Engineer Intern - Platform & Applications",
         "url": "https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers/job/AZ---Scottsdale/Innovation-Technology-Internship-Software-Engineering--Platform---Applications-Summer-2027-Undergrad_R1081193"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T23:14:07+00:00"
     },
     "58f86de65393fd87e92d1f66": {
@@ -9261,7 +9261,7 @@
         "title": "Software Engineering Co-op",
         "url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Chicago-IL/Software-Engineering---2026-Spring-Co-Op_R67662"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-21T23:16:21+00:00"
     },
     "59456d5d1eb48e9a1c7a739a": {
@@ -9340,7 +9340,7 @@
         "title": "Engineering Intern (Summer 2027)",
         "url": "https://jobs.ashbyhq.com/decagon/16529089-a048-4bc3-8456-3f197135e00b"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:35:21+00:00"
     },
     "5a226c11f2b93406225c40f0": {
@@ -9354,7 +9354,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ea.com/en_US/careers/JobDetail/Software-Engineer-Intern/216262"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T23:16:23+00:00"
     },
     "5a27c164243df76d2b671b02": {
@@ -9432,7 +9432,7 @@
         "title": "Full Stack Software Engineer Intern - Full Stack",
         "url": "https://jobs.ashbyhq.com/tessera-labs/892bb150-8c98-47f4-a8b6-93633ecb2ea7"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-15T14:00:53+00:00"
     },
     "5ac8618bd37192e0bdf68a11": {
@@ -9509,7 +9509,7 @@
         "title": "Software Developer Intern - Software Development",
         "url": "https://guidestone.wd1.myworkdayjobs.com/guidestone/job/Dallas-TX/Summer-Intern---Software-Developer_R2129"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T15:46:13+00:00"
     },
     "5b1d0b083d8c885e405c3f95": {
@@ -9625,7 +9625,7 @@
         "title": "Software Development Intern - Summer 2027",
         "url": "https://jobs.jobvite.com/tylertech/job/oqQJAfwj?nl=1&nl=1&fr=false"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "5c53658fe35214c104131802": {
@@ -9663,7 +9663,7 @@
         "title": "Software Engineer Intern",
         "url": "https://axiomspace.wd5.myworkdayjobs.com/External_Career_Site/job/Houston/Software-Engineering-Intern--Summer-2027-_JR100767"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T01:45:47+00:00"
     },
     "5cb937d279485c7c38c0b2a4": {
@@ -9703,7 +9703,7 @@
         "title": "Software Intern",
         "url": "https://ciena.wd5.myworkdayjobs.com/Careers/job/Atlanta/WaveLogic-Software-Intern--Summer-2027-_R031695"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T23:09:54+00:00"
     },
     "5d45b4807a2285f83ce5e088": {
@@ -9718,7 +9718,7 @@
         "title": "Quantitative Software Developer Intern",
         "url": "https://boards.greenhouse.io/point72/jobs/7297666002?gh_jid=7297666002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "5d60cf9cd35356678752d103": {
       "first_seen": "2026-09-23T22:45:41+00:00",
@@ -9731,7 +9731,7 @@
         "title": "Software Development Intern",
         "url": "https://gdit.wd5.myworkdayjobs.com/gdit_earlytalent/job/USA-LA-Bossier-City/GDIT-Summer-Internship-Program---Summer-2027-Software-Development-Internship_RQ228931-2"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-23T22:45:41+00:00"
     },
     "5da07b745d01e7e03d5ed492": {
@@ -9771,7 +9771,7 @@
         "title": "Developer Intern - Machine Identity",
         "url": "https://jobs.ashbyhq.com/1password/6a6869a7-98d2-43e3-b9b5-b68fa4daeb9f"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:46:08+00:00"
     },
     "5dcbbb74d7a10d02ae5a634e": {
@@ -9823,7 +9823,7 @@
         "title": "Exploratory Software Engineer Intern",
         "url": "https://lowes.wd5.myworkdayjobs.com/LWS_External_CS/job/Lowes-Charlotte-Technology-Hub-3505/Exploratory-Software-Engineering---Undergrad-Internship---Summer-2027_JR-02623542"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "5e451518fc7ac58b3b6fdb2c": {
@@ -9901,7 +9901,7 @@
         "title": "Consulting Software Engineer Intern",
         "url": "https://jobs.smartrecruiters.com/CapTechConsulting/744000155019115"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-12T14:46:34+00:00"
     },
     "5fb69ac9f0a882487e780db9": {
@@ -9940,7 +9940,7 @@
         "title": "Software Development Intern - Summer 2027",
         "url": "https://mckesson.wd3.myworkdayjobs.com/External_Careers/job/USA-TX-Irving/Software-Development-Intern---Summer-2027_JR0152635"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "6017e56e1e31e992600b0b0f": {
       "first_seen": "2026-10-15T14:00:53+00:00",
@@ -9992,7 +9992,7 @@
         "title": "Ground Software Systems Intern",
         "url": "https://jobs.ashbyhq.com/reflect-orbital/c394615d-26c6-4435-ad84-3ca3269c2952"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T23:09:54+00:00"
     },
     "60afed6b32fec9287e353c03": {
@@ -10006,7 +10006,7 @@
         "title": "Backend Developer Intern",
         "url": "https://job-boards.greenhouse.io/eulerity/jobs/4709040006"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "60f9d2e73bbc6319d06db023": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -10069,7 +10069,7 @@
         "title": "Software Engineering Intern, Nsight Systems - 2026",
         "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Remote/Software-Engineering-Intern--Nsight-Systems---2026_JR2007248"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-05T14:01:23+00:00"
     },
     "620f101a192c857f65041b0b": {
@@ -10158,7 +10158,7 @@
         "title": "Flight Software Engineer Intern - Summer 2027",
         "url": "https://impulsespace.pinpointhq.com/en/postings/d4fdab1d-254b-44a4-96bf-875ebd5b8cd7?ats=pinpointhq"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-10T23:27:37+00:00"
     },
     "63063a8eb14272a20d33c8c6": {
@@ -10249,7 +10249,7 @@
         "title": "Software Engineering Intern",
         "url": "https://www.metacareers.com/jobs/1952991802037374"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-06T17:02:08+00:00"
     },
     "63c4a05e36e2e19c20ae7a3b": {
@@ -10263,7 +10263,7 @@
         "title": "Software Engineering Intern, Security Intern (Summer 2027)",
         "url": "https://job-boards.greenhouse.io/hpiq/jobs/6116398004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "63e34f93dae13ea841e3538d": {
       "first_seen": "2026-09-21T23:15:46+00:00",
@@ -10316,7 +10316,7 @@
         "title": "AI Software Engineering Co-op - 6 months - 8 months",
         "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/Mayfield-Heights-Ohio-United-States/Co-op--AI-Software-Engineering--6-8-months-_R26-6982-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T23:14:35+00:00"
     },
     "64f2cdaecb530c935c60ac1a": {
@@ -10330,7 +10330,7 @@
         "title": "AI Engineering Associate Software Engineer Intern",
         "url": "https://jobs.smartrecruiters.com/ServiceNow/744000155345889"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-13T22:46:34+00:00"
     },
     "6509125637360458683201bb": {
@@ -10406,7 +10406,7 @@
         "title": "EA & Cloud Intern",
         "url": "https://alliance.wd3.myworkdayjobs.com/nissanjobs/job/Franklin-Tennessee---United-States-of-America/EA---Cloud-Intern---Summer-2027---Franklin--TN_R00214214"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-09T23:16:30+00:00"
     },
     "6572df0ff338be7b5f17f5dc": {
@@ -10446,7 +10446,7 @@
         "title": "Software Development Engineer Intern",
         "url": "https://jobs.ashbyhq.com/qumulo/43855947-3a85-4d1c-8b8e-e0c0ddcaf183"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-23T23:15:43+00:00"
     },
     "659ec914b2a72fc4fd03c022": {
@@ -10548,7 +10548,7 @@
         "title": "Software Engineer Intern - ADG System R&D",
         "url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26008230"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "66e80187ed70f41310452d36": {
@@ -10562,7 +10562,7 @@
         "title": "Software Engineer Intern, Agent (Summer 2027)",
         "url": "https://jobs.ashbyhq.com/sierra/34b31b67-268c-4270-b48f-72e59064c96e"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:35:21+00:00"
     },
     "6700de00287618a26b3a6f74": {
@@ -10578,7 +10578,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T22:46:00+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T22:46:02+00:00",
         "message_id": 936,
@@ -10625,7 +10625,7 @@
         "title": "Software Engineer Intern (Summer 2027)",
         "url": "https://jobs.ashbyhq.com/notion/3fba1c39-c5cb-47d7-9ad2-1cec4d7e9d0c"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "67e46e11592bb9c1ecc1826c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -10753,7 +10753,7 @@
         "title": "Performance and Reliability Engineering Intern - Summer 2027",
         "url": "https://aes.wd1.myworkdayjobs.com/AES_US/job/US-Dayton-OH/T-D-Performance-and-Reliability-Engineering-Intern--Summer-2027-_R1064841"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T23:20:58+00:00"
     },
     "68f494aa5c686d59233e299b": {
@@ -10856,7 +10856,7 @@
         "title": "Software Engineering Internship - Summer 2027",
         "url": "https://job-boards.greenhouse.io/chicagotradingcampus/jobs/4716932005"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "6ac6b91456bf52960e7bc1ee": {
       "first_seen": "2026-10-19T22:46:22+00:00",
@@ -10869,7 +10869,7 @@
         "title": "Software Engineer Intern",
         "url": "https://cognex.wd1.myworkdayjobs.com/External_Career_Site/job/Wauwatosa-Wisconsin/Software-Engineering-Intern_R0012549"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T22:46:22+00:00"
     },
     "6ad816cb1cae8cc92e091667": {
@@ -10921,7 +10921,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.smartrecruiters.com/LinkedIn3/744000156616169"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-21T01:46:33+00:00"
     },
     "6b54378ca06381572957d981": {
@@ -10935,7 +10935,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://jobs.ashbyhq.com/megazone/e2889469-cf20-4227-bf24-2a6e885f8dca"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-12T00:15:56+00:00"
     },
     "6b73b8716b23a9d0149cfbfc": {
@@ -11011,7 +11011,7 @@
         "title": "Software Engineer Intern",
         "url": "https://lowes.wd5.myworkdayjobs.com/LWS_External_CS/job/Lowes-Charlotte-Technology-Hub-3505/Software-Engineer---Undergrad-Internship---Summer-2027_JR-02623576"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "6c6e5c74a708b98ec6a81b7e": {
@@ -11049,7 +11049,7 @@
         "title": "Enterprise Platform Technical Marketing Engineer Intern - Summer 2027",
         "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Enterprise-Platform-Technical-Marketing-Engineer-Intern---Summer-2027_JR2025907"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-13T20:16:38+00:00"
     },
     "6cd1090cd497e737593e38bd": {
@@ -11137,7 +11137,7 @@
         "title": "Software Analytics Co-op",
         "url": "https://kiongroup.wd3.myworkdayjobs.com/kiongroup/job/Grand-Rapids-MI-United-States/Software-Analytics-Co-op_JR-0096723-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:46:08+00:00"
     },
     "6d77efbe6f5ce1137d351b9c": {
@@ -11165,7 +11165,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T14:01:03+00:00",
         "message_id": 954,
@@ -11184,7 +11184,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/workshop/jobs/5237900007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "6da21e18fb3d460b6482c77c": {
@@ -11198,7 +11198,7 @@
         "title": "AI Software Engineering Co-op - 6 months - 8 months",
         "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External-Rockwell-Automation-Early-Careers/job/Mayfield-Heights-Ohio-United-States/Co-op--AI-Software-Engineering--6-8-months-_R26-6982"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T22:45:44+00:00"
     },
     "6de9d81bac0e969771ee9181": {
@@ -11261,7 +11261,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://jobs.ashbyhq.com/agzen/4cff4edd-3e9a-4ea1-8138-80c7241a2d3a"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T23:15:42+00:00"
     },
     "6e3eac30f7e4f0bbf374ff04": {
@@ -11275,7 +11275,7 @@
         "title": "Digital Signal Processing Software Engineering Intern - Digital Signal Processing",
         "url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Plantation-FL/DSP--Digital-Signal-Processing--Software-Engineering-Intern---Summer-2027_R68734"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T23:20:58+00:00"
     },
     "6e76bdd8ec4accd8d26acfac": {
@@ -11354,7 +11354,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://job-boards.eu.greenhouse.io/imc/jobs/4823924101"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "6f2c31fa9a909990e58a0932": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -11379,7 +11379,7 @@
         "title": "Software Engineering Internship (C++ or Python) – Summer 2027",
         "url": "https://www.hudsonrivertrading.com/careers/job?gh_jid=8052083"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "6f533bd94d6815a5281a3dc1": {
       "baselined_at": "2026-10-12T18:08:02+00:00",
@@ -11406,7 +11406,7 @@
         "title": "Developer Intern - Developer Interfaces",
         "url": "https://jobs.ashbyhq.com/1password/00f861d4-2b4a-4159-b6dc-8aed0cde6e39"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T17:46:14+00:00"
     },
     "70228e51e05cc6706a94720f": {
@@ -11420,7 +11420,7 @@
         "title": "Software Engineer Intern",
         "url": "https://caci.wd1.myworkdayjobs.com/external/job/Omaha-NE-US/Software-Engineer-Intern---Summer-2027_332776"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T17:46:31+00:00"
     },
     "702dc035f391ae75e4c4a707": {
@@ -11436,7 +11436,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T14:45:59+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T14:45:59+00:00",
         "message_id": 972,
@@ -11468,7 +11468,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.incommpayments.com/jobs/22268?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T22:46:17+00:00"
     },
     "70af40beb3a996929e5645b0": {
@@ -11482,7 +11482,7 @@
         "title": "Software Engineer Co-op Intern - Enterprise Applications",
         "url": "https://careers.rivian.com/jobs/33804?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T01:45:53+00:00"
     },
     "70cde9aadc80be9a8d8782ae": {
@@ -11496,7 +11496,7 @@
         "title": "R&D Software Engineering Intern",
         "url": "https://jobs.keysight.com/jobs/54388?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-03T14:01:17+00:00"
     },
     "70cfc3382309d13589b5ccba": {
@@ -11524,7 +11524,7 @@
         "title": "Internship: Software Engineer, Test",
         "url": "https://jobs.ashbyhq.com/revel/f080b27d-92c7-4e1f-a85f-b4a7c166d738"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:35:21+00:00"
     },
     "70ed993803365a083056fcd0": {
@@ -11626,7 +11626,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/replit/7c3c9d29-cec2-4367-8564-eadaed165aea"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "717733d4cca4a6fded547105": {
       "first_seen": "2026-09-12T00:15:56+00:00",
@@ -11639,7 +11639,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/ibotta/3130669e-16aa-4f63-834d-b83571c8d269"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-12T00:15:56+00:00"
     },
     "7187fefbfe9df9ff33ebf4dd": {
@@ -11653,7 +11653,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/amplify/855d22a3-f15e-49f6-854c-29e505653efa"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T22:46:22+00:00"
     },
     "718954b8d762db839d924006": {
@@ -11667,7 +11667,7 @@
         "title": "Software Engineer Intern - Automotive OEM",
         "url": "https://careers.garmin.com/jobs/19999?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "71ae6080848576250fdfa9ed": {
       "first_seen": "2026-10-01T23:31:23+00:00",
@@ -11871,7 +11871,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/sigmacomputing/jobs/8001295003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T02:16:35+00:00"
     },
     "7359715a6506450f1e4ea496": {
@@ -11898,7 +11898,7 @@
         "title": "2027 Software Engineer Intern",
         "url": "https://boards.greenhouse.io/andurilindustries/jobs/5148079007?gh_jid=5148079007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "73a63a734f15a63e6c167a74": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -11950,7 +11950,7 @@
         "title": "Software Development Intern",
         "url": "https://job-boards.greenhouse.io/testnisc/jobs/8174088"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "73fa7e146ee793060b9f4076": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -11977,7 +11977,7 @@
         "title": "Software Engineer Intern (Summer 2027)",
         "url": "https://boards.greenhouse.io/figma/jobs/6143238004?gh_jid=6143238004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "748ef9d022f5e9179b0b4b54": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -12117,7 +12117,7 @@
         "title": "Software Integration Engineer Intern - Battery Management Systems",
         "url": "https://www.tesla.com/careers/search/job/282241"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "75caf071b2b411adb9203297": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -12143,7 +12143,7 @@
         "title": "Software Developer Intern - Integration Tools",
         "url": "https://www.tesla.com/careers/search/job/284924"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-30T01:46:53+00:00"
     },
     "762648a4dec23774f9d70b62": {
@@ -12184,7 +12184,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:42+00:00",
         "message_id": 1003,
@@ -12203,7 +12203,7 @@
         "title": "Developer Intern - Provisioning",
         "url": "https://jobs.ashbyhq.com/1password/c5289ef1-e919-4672-85c5-ee3112f9ddb9"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:46:08+00:00"
     },
     "766aef1e9e75a46725f45d79": {
@@ -12267,7 +12267,7 @@
         "title": "Forward Deployed Software Engineer Intern",
         "url": "https://healthpeak.applytojob.com/apply/ss4v1Qi95q/Forward-Deployed-Software-Engineer-Internship"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T01:45:47+00:00"
     },
     "77a9157ae1c1de0ab951231c": {
@@ -12310,7 +12310,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T14:45:59+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T14:46:00+00:00",
         "message_id": 974,
@@ -12369,7 +12369,7 @@
         "title": "Winter 2027 Software Engineer Co-op",
         "url": "https://boards.greenhouse.io/andurilindustries/jobs/5236563007?gh_jid=5236563007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "78c9bd80d2e680764144c9e8": {
       "first_seen": "2026-09-23T22:45:41+00:00",
@@ -12421,7 +12421,7 @@
         "title": "Campus UI Software Engineer (Intern)",
         "url": "https://www.jumptrading.com/hr/job?gh_jid=8003019"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "7978bf98023de7c692451950": {
       "first_seen": "2026-10-29T23:15:41+00:00",
@@ -12436,7 +12436,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T23:15:41+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T23:15:43+00:00",
         "message_id": 986,
@@ -12469,7 +12469,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T14:01:02+00:00",
         "message_id": 952,
@@ -12490,7 +12490,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:45+00:00",
         "message_id": 1009,
@@ -12509,7 +12509,7 @@
         "title": "Software Development Intern",
         "url": "https://bankeasy.wd5.myworkdayjobs.com/bank-easy-job-openings/job/Sioux-Falls-SD-I-229/Software-Development-Intern_R-100829"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T15:46:24+00:00"
     },
     "7a3536767744c660a8ebba8c": {
@@ -12560,7 +12560,7 @@
         "title": "Software Engineer Intern - Application Software",
         "url": "https://careers.itw.com/global/en/job/JR10491"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T23:16:40+00:00"
     },
     "7a98bae97fdea7bada7755c1": {
@@ -12614,7 +12614,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T14:01:02+00:00",
         "message_id": 953,
@@ -12633,7 +12633,7 @@
         "title": "Software Engineer (Agent Platform) - Intern - 2026-2027",
         "url": "https://jobs.ashbyhq.com/netic/b0ea7aab-8eea-4d31-96f9-278364180ae7"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:35:21+00:00"
     },
     "7acfebf80f90a9b5cb636a54": {
@@ -12725,7 +12725,7 @@
         "title": "Software Developer Intern - Tactical System Prototyping and Deployment",
         "url": "https://careers.jhuapl.edu/jobs/59564?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "7b639f63c9d157f71409d1a1": {
       "first_seen": "2026-09-12T18:15:58+00:00",
@@ -12738,7 +12738,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://job-boards.greenhouse.io/klaviyocampus/jobs/7989365003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-12T18:15:58+00:00"
     },
     "7b816668914392065f4f8894": {
@@ -12800,7 +12800,7 @@
         "title": "Software Engineering Intern - Applications (Summer 2027)",
         "url": "https://jobs.ashbyhq.com/rivianvw.tech/7cc3dd48-631f-45ec-ae95-46c7cf05b160"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:31:11+00:00"
     },
     "7c33382b79359cc1e4472458": {
@@ -12866,7 +12866,7 @@
         "title": "Mobile Developer Intern - Summer Associate",
         "url": "https://fa-etbx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/nfcu/job/32368"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "7cf3964762a304cff50970c8": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -12879,7 +12879,7 @@
         "title": "Summer Intern 2027 - Software Developer",
         "url": "https://job-boards.greenhouse.io/fiveringsllc/jobs/5349707008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "7d1f0c1eb49211b7435baec1": {
       "first_seen": "2026-10-21T23:16:21+00:00",
@@ -12920,7 +12920,7 @@
         "title": "Software Engineer, Intern",
         "url": "https://www.ixl.com/company/jobs?gh_jid=8862214002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:31:20+00:00"
     },
     "7e1be7882542257948453fbb": {
@@ -12934,7 +12934,7 @@
         "title": "Software Engineer Intern",
         "url": "https://careers.publicisgroupe.com/jobs/172577?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "7e31d9a796a61a08f7b12a10": {
       "first_seen": "2026-09-11T17:43:32+00:00",
@@ -12947,7 +12947,7 @@
         "title": "Software Engineer Intern - Data Platforms",
         "url": "https://www.tesla.com/careers/search/job/283117"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T17:43:32+00:00"
     },
     "7e697c56fc8da1accef39110": {
@@ -13012,7 +13012,7 @@
         "title": "Mobile Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/notion/2b587e66-deac-421a-a824-9415ba78b5a7"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T23:09:54+00:00"
     },
     "7ef7fa11b583d8b7c63fe43b": {
@@ -13103,7 +13103,7 @@
         "title": "Software Engineer Intern - Relational Database",
         "url": "https://jobs.bytedance.com/en/position/7678449088065997109/detail"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "7fdb3cd79250b611aba8eb15": {
       "first_seen": "2026-09-15T17:38:23+00:00",
@@ -13116,7 +13116,7 @@
         "title": "Software Developer Intern",
         "url": "https://baird.wd1.myworkdayjobs.com/careers/job/WI-Milwaukee/Internship---Software-Developer--Year-Round-_R20261024-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "7fe5e9ed401b6978af60f7d6": {
@@ -13145,7 +13145,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T14:45:59+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T14:46:00+00:00",
         "message_id": 973,
@@ -13189,7 +13189,7 @@
         "title": "Software Development Intern",
         "url": "https://jobs.jobvite.com/tylertech/job/oKQJAfwD?nl=1&nl=1&fr=false"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-21T23:15:46+00:00"
     },
     "8055e3595beb684e327eb3c9": {
@@ -13203,7 +13203,7 @@
         "title": "Junior Software Development Engineer Intern - Jr. Developer Program",
         "url": "https://www.amazon.jobs/en/jobs/10586548"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T02:16:14+00:00"
     },
     "809ecc34a7e8663cda4957dd": {
@@ -13282,7 +13282,7 @@
         "title": "Software Engineer Intern",
         "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-Intern---Software-Engineer_R171666"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "81d93d6c1dc828928c79cd04": {
       "first_seen": "2026-09-25T22:45:44+00:00",
@@ -13333,7 +13333,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010048"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "825bd37d56d329f75d038003": {
@@ -13348,7 +13348,7 @@
         "title": "2027 Flight Software Engineer Intern",
         "url": "https://boards.greenhouse.io/andurilindustries/jobs/5239083007?gh_jid=5239083007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "825c92235288f6744c624d4b": {
       "first_seen": "2026-09-25T22:45:44+00:00",
@@ -13400,7 +13400,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T23:15:46+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T23:15:46+00:00",
         "message_id": 965,
@@ -13508,7 +13508,7 @@
         "title": "Software Engineering Intern",
         "url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Plantation-FL/XMLNAME-2027-Software-Engineering-Summer-Internship_R68125"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T23:20:58+00:00"
     },
     "840ea53cd5fda9daf26cfd86": {
@@ -13559,7 +13559,7 @@
         "title": "Software Integration Engineer Intern - Optimus",
         "url": "https://www.tesla.com/careers/search/job/282342"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "8494e6c73a07f3420d6dd35b": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -13621,7 +13621,7 @@
         "title": "Software Engineer Intern - IT Apps",
         "url": "https://www.tesla.com/careers/search/job/282774"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "8509d37ff1a689114fce2841": {
       "first_seen": "2026-10-13T16:01:48+00:00",
@@ -13851,7 +13851,7 @@
         "title": "Software Engineering Intern 2027 (Toronto)",
         "url": "https://www.pinterestcareers.com/jobs?gh_jid=8138039"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T17:16:31+00:00"
     },
     "86763d4702ba89f5290203af": {
@@ -13877,7 +13877,7 @@
         "title": "Software Engineer Intern",
         "url": "https://apply.careers.microsoft.com/careers/job/1970393556983221"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T23:20:58+00:00"
     },
     "86e002e7f231bea9c2cfb8be": {
@@ -13928,7 +13928,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/profluent/jobs/5441955008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T14:01:20+00:00"
     },
     "876a862e892425ed28f54997": {
@@ -14020,7 +14020,7 @@
         "title": "Software Engineering Intern - Connected Systems (January - August 2027)",
         "url": "https://jobs.ashbyhq.com/rivianvw.tech/13eeb795-a5dd-4b5a-9b98-808e5ec357c2"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "885151be167bfbcdd40ba377": {
       "first_seen": "2026-09-22T01:45:53+00:00",
@@ -14033,7 +14033,7 @@
         "title": "Software Engineering Intern",
         "url": "https://jobs.ashbyhq.com/cowboyspace/56d1d7e4-fa7e-4c25-aa8b-6828447fc64a"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T01:45:53+00:00"
     },
     "88658c3530630d794db5abb9": {
@@ -14047,7 +14047,7 @@
         "title": "Software Engineer Intern",
         "url": "https://www.pinterestcareers.com/jobs?gh_jid=7838577"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T17:16:31+00:00"
     },
     "8870a1f0117983e60797dbd7": {
@@ -14099,7 +14099,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ea.com/en_US/careers/JobDetail/Software-Engineer-Intern/216263"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-30T23:16:19+00:00"
     },
     "88f6e046b1485d94e088a34b": {
@@ -14113,7 +14113,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/perpay/jobs/4076988007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-21T00:15:51+00:00"
     },
     "8951224f258a3ec22128a9d8": {
@@ -14153,7 +14153,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T14:01:04+00:00",
         "message_id": 957,
@@ -14184,7 +14184,7 @@
         "title": "Software Engineer Intern/Co-op",
         "url": "https://job-boards.greenhouse.io/xai/jobs/5255111007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T22:46:17+00:00"
     },
     "8a030099bcf02d8f4cbfd0b9": {
@@ -14431,7 +14431,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://jj.wd5.myworkdayjobs.com/JJ/job/Halethorpe-Maryland-United-States-of-America/Heart-Recovery-Software-R-D-Co-Op_R-101393"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-23T23:15:43+00:00"
     },
     "8bae670606c631ea318746e7": {
@@ -14546,7 +14546,7 @@
         "title": "Software Engineering Intern Co-op",
         "url": "https://job-boards.greenhouse.io/xai/jobs/5252108007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T22:46:17+00:00"
     },
     "8d34d021893b1d3ffc4abde8": {
@@ -14574,7 +14574,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T14:01:02+00:00",
         "message_id": 971,
@@ -14732,7 +14732,7 @@
         "title": "Android Platform Software Engineer Intern - Summer 2027",
         "url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Plantation-FL/Android-Platform-Software-Engineering-Intern---Summer-2027_R68363"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "8edc80a8ce8906f4d0efccdc": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -14759,7 +14759,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T01:45:44+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T01:45:45+00:00",
         "message_id": 945,
@@ -14853,7 +14853,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/grow-therapy/92bfe88a-4c23-48c8-8f7b-4959ab6cd8d8"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T23:15:54+00:00"
     },
     "8fee9f6f15abf900d5e2fe4e": {
@@ -14894,7 +14894,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/Valon/b5a62c0c-823c-42dd-8cb5-e4b1455bcc64"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "9034aa6c5caf55e40a3b8115": {
       "first_seen": "2026-09-15T23:15:36+00:00",
@@ -14932,7 +14932,7 @@
         "title": "Android Software Engineer Intern",
         "url": "https://lifefitness.wd1.myworkdayjobs.com/searchLFN/job/Schaumburg-IL-60173/Android-Software-Intern_JR-025277"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-12T23:16:37+00:00"
     },
     "90b659d79de0b4598d4004c1": {
@@ -14972,7 +14972,7 @@
         "title": "Software Engineer Intern - Summer",
         "url": "https://careers.datadoghq.com/detail/8052118?gh_jid=8052118"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "919c5d61b23c966246e285eb": {
       "first_seen": "2026-09-24T23:09:54+00:00",
@@ -14985,7 +14985,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Plantation-FL/Software-Engineering-Intern---Summer-2027_R69136"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T23:09:54+00:00"
     },
     "91e08a8cfd44400592a13675": {
@@ -15027,7 +15027,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T15:16:09+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T15:16:11+00:00",
         "message_id": 932,
@@ -15059,7 +15059,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Greater-Chicago-Area/Software-Engineer-Intern---Summer-2027_R68679"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T23:14:35+00:00"
     },
     "925541ee59ac5e903513ebc5": {
@@ -15089,7 +15089,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T14:46:10+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T14:46:11+00:00",
         "message_id": 927,
@@ -15110,7 +15110,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T15:16:00+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T15:16:01+00:00",
         "message_id": 976,
@@ -15142,7 +15142,7 @@
         "title": "Software Engineer Intern - Digital Product: Software Engineering",
         "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern---Digital-Product--Software-Engineering_JR-202620546"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-21T23:15:46+00:00"
     },
     "92d5b73e93b6871aef336927": {
@@ -15169,7 +15169,7 @@
         "title": "Software Engineer Intern",
         "url": "https://directsupply.wd501.myworkdayjobs.com/direct-supply-careers/job/Milwaukee-WI/Software-Engineer-Intern_REQ-2026-2559"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T23:20:58+00:00"
     },
     "92f342bc96e4b4bb9facb4e5": {
@@ -15271,7 +15271,7 @@
         "title": "Software Engineer Intern",
         "url": "https://ebwh.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/91780"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T22:45:53+00:00"
     },
     "9404086e31d573783978a9b8": {
@@ -15285,7 +15285,7 @@
         "title": "Software Engineering Intern - Connected Systems (Summer 2027)",
         "url": "https://jobs.ashbyhq.com/rivianvw.tech/62e45b20-cbdc-4d16-9466-00bc158b7a7f"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:31:11+00:00"
     },
     "94214a0407ecc1951b5559af": {
@@ -15373,7 +15373,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://job-boards.greenhouse.io/sigmacomputing/jobs/7850795003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T02:16:35+00:00"
     },
     "950318848621246476f5501d": {
@@ -15412,7 +15412,7 @@
         "title": "Software Engineer Intern/Co-op",
         "url": "http://innovativesystems.applytojob.com/apply/nPMqeNSQOo/InternCoop-Summer-2027-Software-Engineering"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "9539e3774a951cdbd710fde6": {
       "first_seen": "2026-09-24T23:09:54+00:00",
@@ -15450,7 +15450,7 @@
         "title": "Software Engineer Intern - AV/AI Platform",
         "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/GM-Automation---Sunnyvale---GM-Automation---Sunnyvale/XMLNAME-2027-Summer-Intern---Software-Engineer--AV-AI-Platform_JR-202621696"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T23:16:17+00:00"
     },
     "95e28ef64c9cdd8ebe886b46": {
@@ -15497,7 +15497,7 @@
         "title": "Spring 2027 Software Engineering Intern",
         "url": "https://job-boards.greenhouse.io/thenuclearcompany/jobs/5383171008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "963d1c68c89f2313033073ef": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -15522,7 +15522,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/heygen/jobs/4540716007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T01:46:24+00:00"
     },
     "965888d3eb1f413026a89694": {
@@ -15648,7 +15648,7 @@
         "title": "Residential Energy Device Software Engineer Intern - Energy Engineering",
         "url": "https://www.tesla.com/careers/search/job/284275"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T01:45:53+00:00"
     },
     "977b0372da1255e131b15809": {
@@ -15697,7 +15697,7 @@
         "title": "2027 Summer Internship – Software Engineer",
         "url": "https://boards.greenhouse.io/point72/jobs/8885733002?gh_jid=8885733002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "981a48a612d816ac410f6f58": {
       "first_seen": "2026-09-17T22:45:36+00:00",
@@ -15737,7 +15737,7 @@
         "title": "Software Engineer",
         "url": "https://www.janestreet.com/join-jane-street/apply/8599644002?gh_jid=8599644002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "98b1a42dda97deca76368a93": {
       "first_seen": "2026-10-20T21:01:37+00:00",
@@ -15750,7 +15750,7 @@
         "title": "Mobile Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/skydio/8a237302-3fe8-4403-b32b-7690f333ba52"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-20T21:01:37+00:00"
     },
     "98db3480f091a9a0aafff1ce": {
@@ -15854,7 +15854,7 @@
         "title": "Software Engineering Intern",
         "url": "https://careers.westinghousenuclear.com/job/Warrendale-Summer-Intern-Software-Engineering-OR/1442826200?ats=successfactors"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:46:08+00:00"
     },
     "99d510afc0a4f1ac329c37f3": {
@@ -15868,7 +15868,7 @@
         "title": "Software Engineering Intern - Summer 2027 (Remote)",
         "url": "https://www.riotgames.com/en/work-with-us/job/8222014?gh_jid=8222014"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T16:01:52+00:00"
     },
     "9a0feb49fcaaee979d8a9897": {
@@ -15882,7 +15882,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/cssmerge/jobs/8888411002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T23:15:57+00:00"
     },
     "9a229419439522d043eab401": {
@@ -15896,7 +15896,7 @@
         "title": "Flight Software Intern",
         "url": "https://job-boards.greenhouse.io/rocketlab/jobs/7989724003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "9a3482c2e775e41b24c15e01": {
       "first_seen": "2026-09-24T01:16:03+00:00",
@@ -15909,7 +15909,7 @@
         "title": "Software Engineering Intern, iOS",
         "url": "https://jobs.ashbyhq.com/ramp/b66be397-240b-41a6-9b05-493299b270a9"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T01:16:03+00:00"
     },
     "9a3f4f2fc96a624ce541921d": {
@@ -15923,7 +15923,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010738"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T06:36:20+00:00"
     },
     "9a4db4f4d3a3ae3c4291e836": {
@@ -16013,7 +16013,7 @@
         "title": "Quantitative Developer Intern",
         "url": "https://boards.greenhouse.io/point72/jobs/7609197002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T22:46:22+00:00"
     },
     "9b8675f95ba8ace2948a3073": {
@@ -16102,7 +16102,7 @@
         "title": "Enovia PLM Developer Intern - Enovia PLM",
         "url": "https://careers.westinghousenuclear.com/job/Cranberry-Township-Summer-Intern-Enovia-PLM-NC/1426858600?ats=successfactors"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "9c3e78a9f352e892c2b00f39": {
       "first_seen": "2026-10-08T23:16:34+00:00",
@@ -16141,7 +16141,7 @@
         "title": "Software Development Intern",
         "url": "https://job-boards.greenhouse.io/testnisc/jobs/8174090"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "9c94d01e1ffb5f8f43b7a370": {
       "first_seen": "2026-09-18T21:16:14+00:00",
@@ -16168,7 +16168,7 @@
         "title": "Software Engineer Intern",
         "url": "https://apply.workable.com/raveaerospace/j/739753C003/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T14:00:39+00:00"
     },
     "9d04e9e41c3d3885b8403f4c": {
@@ -16219,7 +16219,7 @@
         "title": "IT Intern - Digital Platforms",
         "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5233862007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "9d5410b8bc383c6485c3ae95": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -16232,7 +16232,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/saronic/60afb634-5515-4347-824a-3816735541c2"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "9d64c2550b5b308024a3c1ec": {
       "first_seen": "2026-09-25T14:45:51+00:00",
@@ -16284,7 +16284,7 @@
         "title": "Software Engineering Intern - Summer '27",
         "url": "https://job-boards.greenhouse.io/vercel/jobs/6181759004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:01:27+00:00"
     },
     "9dbb1d5a3d9a10a64fe9aa75": {
@@ -16324,7 +16324,7 @@
         "title": "Software Engineer Intern",
         "url": "https://boards.greenhouse.io/embed/job_app?for=gemini&token=8214272&gh_jid=8214272"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-19T01:15:41+00:00"
     },
     "9e06b7743f1d717a8582a8c6": {
@@ -16390,7 +16390,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T22:46:04+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T22:46:05+00:00",
         "message_id": 915,
@@ -16448,7 +16448,7 @@
         "title": "Software Development Intern",
         "url": "https://ryan.wd1.myworkdayjobs.com/Students-Graduates/job/Plano/Summer-2027-Intern--Software-Development_R0020822"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T23:15:42+00:00"
     },
     "9ea11db3ccabbe182d4b1924": {
@@ -16597,7 +16597,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/brevium/jobs/4713683006"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T01:45:38+00:00"
     },
     "a1a728ad70a297e27afcea12": {
@@ -16738,7 +16738,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T01:45:44+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T01:45:47+00:00",
         "message_id": 949,
@@ -16770,7 +16770,7 @@
         "title": "Developer Intern - Credential Brokering",
         "url": "https://jobs.ashbyhq.com/1password/67bfbd8b-aba9-42b1-a8a8-833367888fba"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-23T14:01:07+00:00"
     },
     "a3fcfa3adf3668151ceb226d": {
@@ -16797,7 +16797,7 @@
         "title": "Developer Intern - Extension Excellence",
         "url": "https://jobs.ashbyhq.com/1password/7f1732a6-5317-4319-82b9-67c62e88d491"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:46:08+00:00"
     },
     "a41dd11bad8a2671d9b8d19b": {
@@ -16852,7 +16852,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T22:45:46+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T22:45:48+00:00",
         "message_id": 964,
@@ -16871,7 +16871,7 @@
         "title": "LINK 2027: Software Development Intensive Program",
         "url": "https://job-boards.greenhouse.io/fiveringsllc/jobs/5394515008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:16:23+00:00"
     },
     "a54fc471ba83bc8faa6a8106": {
@@ -16887,7 +16887,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T19:30:43+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T19:30:43+00:00",
         "message_id": 995,
@@ -16958,7 +16958,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T14:01:03+00:00",
         "message_id": 955,
@@ -17055,7 +17055,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T23:16:10+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T23:16:12+00:00",
         "message_id": 919,
@@ -17112,7 +17112,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/singlestore/jobs/8154399"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "a71ef95c82f51d8e442f1943": {
@@ -17186,7 +17186,7 @@
         "title": "Software Engineer Intern",
         "url": "https://danaher.wd1.myworkdayjobs.com/danaherjobs/job/Chaska-Minnesota-United-States/Software-Engineering-Intern_R1318747"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "a7d1e210da42af930fc42928": {
       "first_seen": "2026-09-30T18:01:29+00:00",
@@ -17212,7 +17212,7 @@
         "title": "Back-End Software Engineer Intern",
         "url": "https://award.co/position?gh_jid=4322220004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "a7e4edd197605f0adf2a8722": {
@@ -17226,7 +17226,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://boards.greenhouse.io/andurilindustries/jobs/5236563007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T22:45:41+00:00"
     },
     "a7e580869de7bb42ddc1c80f": {
@@ -17291,7 +17291,7 @@
         "title": "Developer Intern",
         "url": "https://jobs.lever.co/crestoperations/e012721c-e731-483d-a4e3-1a240c48bfbd/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "a80b0650720dc2a9802bcca9": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -17304,7 +17304,7 @@
         "title": "Intelligent Automation Developer Intern",
         "url": "https://aoins.wd5.myworkdayjobs.com/AutoOwners/job/Lansing-MI/Intelligent-Automation-Developer-Internship---Summer-2027_R_14474"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "a82d3a3565d94ec434b2473c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -17367,7 +17367,7 @@
         "title": "Software Integration Engineer Intern - AI Platforms",
         "url": "https://www.tesla.com/careers/search/job/277009"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T23:16:26+00:00"
     },
     "a92b6d6830ff0d6a620d5aa8": {
@@ -17448,7 +17448,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T23:15:53+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T23:15:54+00:00",
         "message_id": 999,
@@ -17531,7 +17531,7 @@
         "title": "Full Stack Software Engineer Intern - Summer 2027",
         "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4501054"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "aad11fe12b7a348e604118c2": {
@@ -17545,7 +17545,7 @@
         "title": "2027 Internship - Software Engineer",
         "url": "https://job-boards.greenhouse.io/virtu/jobs/8624410002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "ab02f76969922419ebe7b3ad": {
       "first_seen": "2026-09-10T23:27:37+00:00",
@@ -17571,7 +17571,7 @@
         "title": "Undergrad Software Engineering Intern (Grad Year: Spring 2028)",
         "url": "https://job-boards.greenhouse.io/twitch/jobs/8886748002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:16:06+00:00"
     },
     "ab51950ae0d038f38bdfa929": {
@@ -17664,7 +17664,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T23:15:41+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T23:15:44+00:00",
         "message_id": 987,
@@ -17736,7 +17736,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T14:00:55+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T14:00:57+00:00",
         "message_id": 993,
@@ -17755,7 +17755,7 @@
         "title": "Full Stack Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/gecko-robotics/01138338-ff3c-4982-8ba3-5401386bf082"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T14:45:38+00:00"
     },
     "aca0bae850b0472fee05d1fe": {
@@ -17782,7 +17782,7 @@
         "title": "2027 Reliability Engineer Intern",
         "url": "https://boards.greenhouse.io/andurilindustries/jobs/5257682007?gh_jid=5257682007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-06T00:16:20+00:00"
     },
     "ace3b2012d912642f136b8fd": {
@@ -17798,7 +17798,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T14:46:11+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T14:46:12+00:00",
         "message_id": 909,
@@ -17855,7 +17855,7 @@
         "title": "Software Engineer Intern - AI Tooling",
         "url": "https://www.tesla.com/careers/search/job/282291"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "ad5cece4a10d2751ea274c05": {
       "first_seen": "2026-09-15T17:38:23+00:00",
@@ -17906,7 +17906,7 @@
         "title": "Software Engineer Intern",
         "url": "https://careers.itw.com/global/en/job/JR10261"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-23T23:15:43+00:00"
     },
     "adcd8e2859ab9a0b10699b56": {
@@ -17933,7 +17933,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/solutions/jobs/4711210006"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-06T14:02:16+00:00"
     },
     "ae27dee8166563a4646c9c6d": {
@@ -17998,7 +17998,7 @@
         "title": "Software Engineer Intern - Metadata Enablement Team",
         "url": "https://jobs.smartrecruiters.com/WellmarkInc/744000152679699"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-30T14:46:25+00:00"
     },
     "aef973fb24e18a3114505696": {
@@ -18026,7 +18026,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T14:00:55+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T14:00:56+00:00",
         "message_id": 991,
@@ -18070,7 +18070,7 @@
         "title": "Software Engineer Intern",
         "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Maryland-Linthicum/XMLNAME-2027-Software-Engineer-Intern---Linthicum-Maryland_R10248910"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T23:16:26+00:00"
     },
     "af8c7845bc653cd49c508dc6": {
@@ -18132,7 +18132,7 @@
         "title": "Ground Software Engineer Intern - Summer 2027",
         "url": "https://lunaroutpost.bamboohr.com/careers/398"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "b07d9c42883699e499267486": {
@@ -18160,7 +18160,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T15:16:09+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T15:16:10+00:00",
         "message_id": 930,
@@ -18218,7 +18218,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T01:45:44+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T01:45:47+00:00",
         "message_id": 948,
@@ -18262,7 +18262,7 @@
         "title": "AI-Native Development Platform Engineer Intern",
         "url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Santa-Clara-CA/AI-Native-Development-Platform-Engineer-Intern--MS---Summer-2027_2603848-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T22:46:18+00:00"
     },
     "b1aa53a2d7f41d2f38665e18": {
@@ -18278,7 +18278,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:44+00:00",
         "message_id": 1007,
@@ -18309,7 +18309,7 @@
         "title": "Flight Software Intern",
         "url": "https://job-boards.greenhouse.io/rocketlab/jobs/7989722003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "b20827b3244961352b03c35e": {
       "first_seen": "2026-09-29T01:46:03+00:00",
@@ -18375,7 +18375,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T23:15:53+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T23:15:53+00:00",
         "message_id": 998,
@@ -18407,7 +18407,7 @@
         "title": "Software Engineer Intern",
         "url": "https://mckesson.wd3.myworkdayjobs.com/External_Careers/job/USA-CO-Longmont/Software-Engineer-Intern---Summer-2027_JR0152742"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "b26935917c5b4bf7bda025d8": {
       "first_seen": "2026-10-27T14:46:10+00:00",
@@ -18422,7 +18422,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T14:46:10+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T14:46:12+00:00",
         "message_id": 929,
@@ -18531,7 +18531,7 @@
         "title": "Software Engineering Intern",
         "url": "https://job-boards.greenhouse.io/wikimedia/jobs/8268853"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-15T22:45:50+00:00"
     },
     "b40c4be9f5102ab8484450e4": {
@@ -18557,7 +18557,7 @@
         "title": "Software Engineer Intern - Backend",
         "url": "https://jobs.ashbyhq.com/ramp/acf6b28d-767f-483f-8ff2-114620cd7e04"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T00:46:00+00:00"
     },
     "b4e5a10dcde2eafc88fa4194": {
@@ -18611,7 +18611,7 @@
         "title": "Software Engineer Intern - Android",
         "url": "https://jobs.ashbyhq.com/ramp/fcf118cc-521a-4a62-9d13-945e5b6e3cb8"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T01:45:38+00:00"
     },
     "b521889385473c3ff8e208cf": {
@@ -18751,7 +18751,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/arcboatcompany/jobs/5442881008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T23:16:17+00:00"
     },
     "b651b17b59e738b42a31df86": {
@@ -18810,7 +18810,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/viamrobotics/jobs/6185046004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "b676924d5dd0d2651a793558": {
       "first_seen": "2026-10-28T01:45:44+00:00",
@@ -18825,7 +18825,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T01:45:44+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T01:45:46+00:00",
         "message_id": 947,
@@ -18856,7 +18856,7 @@
         "title": "Mobile Software Engineering Intern 2027",
         "url": "https://job-boards.greenhouse.io/verkada/jobs/5219131007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "b698e0da578c4a722228377d": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -18933,7 +18933,7 @@
         "title": "Summer Internship Program - Systematic Trading Technology Software Engineer",
         "url": "https://wd3.myworkdaysite.com/recruiting/brevanhoward/BH_ExternalCareers/job/New-York/XMLNAME-2027-Summer-Internship-Program---Systematic-Trading-Technology-Software-Engineer--New-York_JR101597"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-10T23:27:37+00:00"
     },
     "b799cb9137e3edf83ddca646": {
@@ -18947,7 +18947,7 @@
         "title": "ServiceNow Developer Intern",
         "url": "https://hdnn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/114145"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "b7bb664028904185f68dd391": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -18996,7 +18996,7 @@
         "title": "Developer Intern - Vault Team",
         "url": "https://jobs.ashbyhq.com/1password/b2726ac7-dd0d-42f3-93a5-139e18c90779"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T15:47:11+00:00"
     },
     "b868dcc5f14f7665cd68eaa1": {
@@ -19035,7 +19035,7 @@
         "title": "Software Engineering Intern - C++ - Unix",
         "url": "https://kla.wd1.myworkdayjobs.com/UR/job/Milpitas-CA/Software-Engineering-Intern--C----Unix-_2641325"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-23T14:00:43+00:00"
     },
     "b8a519526cab16299785e908": {
@@ -19050,7 +19050,7 @@
         "title": "2027 Summer Intern, MS, Software Engineering, Behavior Test",
         "url": "https://careers.withwaymo.com/jobs?gh_jid=8174504"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "b8d307a09d76d44844879ccb": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -19139,7 +19139,7 @@
         "title": "Software Engineering Intern – Summer 2027",
         "url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5411920008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-17T23:45:54+00:00"
     },
     "b9b5b67d5a86dd82ebbf4032": {
@@ -19205,7 +19205,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T23:15:41+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T23:15:43+00:00",
         "message_id": 985,
@@ -19260,7 +19260,7 @@
         "title": "Software Engineering Intern - Summer 2027",
         "url": "https://twosigma.avature.net/careers/JobDetail/14016"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "bb5e749fa2bb1550b079163d": {
       "first_seen": "2026-09-25T20:30:56+00:00",
@@ -19286,7 +19286,7 @@
         "title": "Software Engineer Intern - Engineering Software",
         "url": "https://wd3.myworkdaysite.com/recruiting/magna/Magna/job/Southfield-Michigan-US/Intern---Engineering-Software_R00258617"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "bbcb727b689847f20aee455e": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -19299,7 +19299,7 @@
         "title": "Software Engineer Intern",
         "url": "https://greatamerica.wd12.myworkdayjobs.com/greatamericacareers/job/Cedar-Rapids-IA/Software-Engineer-Intern_JR1221"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "bc36f1358c19ee809e9682e2": {
       "first_seen": "2026-09-16T14:00:39+00:00",
@@ -19312,7 +19312,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/Antares/419ef2df-f0aa-4b68-994a-077e08a959e3"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T14:00:39+00:00"
     },
     "bccd6c7d507f7f045715f8b1": {
@@ -19377,7 +19377,7 @@
         "title": "Software Engineering Co-op",
         "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/158957"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T23:16:26+00:00"
     },
     "bd781ff72f852478c3ba4b62": {
@@ -19403,7 +19403,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Co-op---Software-Engineer_R8111"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-23T23:15:43+00:00"
     },
     "bd9351b01e41d5d8cf7e204c": {
@@ -19456,7 +19456,7 @@
         "title": "Computer Science and Software Engineering Intern",
         "url": "https://rb.wd5.myworkdayjobs.com/FRS/job/Chicago-IL/Summer-2027-Intern-Computer-Science-and-Software-Engineering_R-0000033637"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T22:46:20+00:00"
     },
     "bde30d974f125f334159a5a5": {
@@ -19509,7 +19509,7 @@
         "title": "Flight Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/reflect-orbital/d2ad1427-89aa-404d-8678-7b8e6dace5e2"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "be4e5b20e58e30073d8b93d3": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -19522,7 +19522,7 @@
         "title": "Software Developer Intern",
         "url": "https://jobs.smartrecruiters.com/Winsupply1/3743990015014717"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "be6f32b9770d920a4161f16b": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -19596,7 +19596,7 @@
         "title": "Business Intelligence and Infrastructure Analyst Intern",
         "url": "https://hp.wd5.myworkdayjobs.com/EXTEU-AC-CareerSite/job/Vancouver-Washington-United-States-of-America/Business-Intelligence-and-Infrastructure-Analysts--Intern_UNI4669"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "bf2c64099a96c7645968eae5": {
       "first_seen": "2026-09-15T22:45:41+00:00",
@@ -19634,7 +19634,7 @@
         "title": "Software Engineer Intern - Corporate Internship",
         "url": "https://dickssportinggoods.wd1.myworkdayjobs.com/DSG/job/Customer-Support-Center/Software-Engineering---Summer-2027-Corporate-Internship_202608792-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "bf799be84fc94eeef880f89a": {
       "first_seen": "2026-10-31T14:00:39+00:00",
@@ -19649,7 +19649,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:43+00:00",
         "message_id": 1006,
@@ -19668,7 +19668,7 @@
         "title": "Software Engineer Intern",
         "url": "https://redhat.wd5.myworkdayjobs.com/jobs/job/Raleigh/Software-Engineer-Intern_R-059038"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "bfe8cfe15d8682d4af3e9c4c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -19782,7 +19782,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T23:15:45+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T23:15:48+00:00",
         "message_id": 942,
@@ -19814,7 +19814,7 @@
         "title": "AI Business Process Developer Intern",
         "url": "https://hntb.wd5.myworkdayjobs.com/hntb_careers/job/Austin-TX/Intern---AI-Business-Process-Developer--Summer-2027-_R-31865-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-03T01:46:17+00:00"
     },
     "c11565b10674288b63ea8d1c": {
@@ -19840,7 +19840,7 @@
         "title": "Intern, Software Engineering",
         "url": "https://job-boards.greenhouse.io/braze/jobs/8301086"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:59:32+00:00"
     },
     "c127fc314f531a5658060754": {
@@ -19928,7 +19928,7 @@
         "title": "Strategic Student Program: Software Development Co-Op (EBS; Spring 2027)",
         "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/525814"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:01:27+00:00"
     },
     "c1f358505b5f179a774598de": {
@@ -19957,7 +19957,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T22:31:08+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T22:31:09+00:00",
         "message_id": 979,
@@ -20108,7 +20108,7 @@
         "title": "Software Engineer Intern",
         "url": "https://trimble.wd1.myworkdayjobs.com/TrimbleCareers/job/US---CO-Westminster/Software-Engineering-Intern_R57676"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "c3a0051d546dbe54670a8354": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -20134,7 +20134,7 @@
         "title": "Software Engineer Intern",
         "url": "https://stripe.com/jobs/search?gh_jid=8241260"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T01:46:20+00:00"
     },
     "c3b1b42919c1d25b1606c7d5": {
@@ -20185,7 +20185,7 @@
         "title": "Software Developer Intern - Full Stack",
         "url": "https://job-boards.greenhouse.io/tenet3/jobs/8878874002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-09T23:16:30+00:00"
     },
     "c4d195b664a7452a14c34145": {
@@ -20201,7 +20201,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-28T15:15:50+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-28T15:15:50+00:00",
         "message_id": 959,
@@ -20220,7 +20220,7 @@
         "title": "Software Developer Intern",
         "url": "https://icf.wd5.myworkdayjobs.com/icfexternal_career_site/job/Reston-VA/XMLNAME-2027-Summer-Intern--Software-Developer--Reston--VA-_R2603002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "c4ed1d6133e1e448b58b51ea": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -20259,7 +20259,7 @@
         "title": "Software Engineer Intern",
         "url": "https://ats.rippling.com/collieraerospace/jobs/b666dbfe-34e5-422f-8879-4d53c0ae1f51"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "c5187399b75272bee4ddc6a9": {
       "first_seen": "2026-09-10T23:27:37+00:00",
@@ -20335,7 +20335,7 @@
         "title": "Software Engineer Intern",
         "url": "https://assurant.wd1.myworkdayjobs.com/Assurant_Careers/job/Atlanta-GA/Summer-2027-Intern--Software-Engineering-Intern_R-115727-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T22:45:53+00:00"
     },
     "c5f9fcd822487526606080e1": {
@@ -20389,7 +20389,7 @@
         "title": "Software Development Engineer Intern",
         "url": "https://job-boards.greenhouse.io/idmeuniversityrecruiting/jobs/7980429003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "c629a64a34f8f645b5000678": {
       "first_seen": "2026-09-15T17:38:23+00:00",
@@ -20465,7 +20465,7 @@
         "title": "Supply Chain Application Developer Co-op",
         "url": "https://covestro.wd3.myworkdayjobs.com/cov_external/job/Pittsburgh-PA/Supply-Chain-Application-Developer-Co-Op_JR-2026-02346-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T22:45:53+00:00"
     },
     "c78efe79a047de7db311fc2e": {
@@ -20492,7 +20492,7 @@
         "title": "Automation Developer Intern",
         "url": "https://ats.rippling.com/apexanalytix-careers/jobs/40e4727d-e132-4de0-89ba-b4fdbd5860a7"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "c7d7dc0871683f5d47ba44d6": {
@@ -20533,7 +20533,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/stateaffairs/jobs/4437430009"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T23:16:40+00:00"
     },
     "c8e49d8c137da3ac74033876": {
@@ -20572,7 +20572,7 @@
         "title": "Backend Software Engineering Intern 2027",
         "url": "https://job-boards.greenhouse.io/verkada/jobs/5210813007"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "c8f220672249c9217b65bc7d": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -20597,7 +20597,7 @@
         "title": "Simulation Intern - Software Engineer - Autonomous Vehicle: Simulation",
         "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Sunnyvale-California-United-States-of-America/XMLNAME-2027-Summer-Intern---Software-Engineer--Autonomous-Vehicle--Simulation_JR-202621503"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T14:01:20+00:00"
     },
     "c955e8c3adcfefae1b77dd26": {
@@ -20638,7 +20638,7 @@
         "title": "Software Engineer – 2027 Internship Program (June Start)",
         "url": "https://jobs.ashbyhq.com/old-mission-capital/d003aaa4-a1e9-46b5-b271-eaccc15db9d6"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:01:27+00:00"
     },
     "c9aefe9027b8a32ad67f8956": {
@@ -20781,7 +20781,7 @@
         "title": "AI & Internal Tools Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/inversionspace/jobs/4745076005"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T23:16:23+00:00"
     },
     "caf312c051945297375830cd": {
@@ -20962,7 +20962,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://viavisolutions.wd1.myworkdayjobs.com/careers/job/Germantown-MD-USA/Software-Engineering-Co-Op_260005140-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "cc79c426cbbc36ae16bf74ab": {
@@ -21001,7 +21001,7 @@
         "title": "Strategic Student Program: Software Engineering Intern (LCS, Summer 2027)",
         "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/525455"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:01:27+00:00"
     },
     "ccecb3ce2e483fb8aa9e400c": {
@@ -21044,7 +21044,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T02:15:44+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T02:15:45+00:00",
         "message_id": 969,
@@ -21075,7 +21075,7 @@
         "title": "Software Engineer Intern",
         "url": "https://boards.greenhouse.io/embed/job_app?token=6865687002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-12T22:46:37+00:00"
     },
     "cd7ac3d9a9a1de41a7f5cca9": {
@@ -21128,7 +21128,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:40+00:00",
         "message_id": 1001,
@@ -21171,7 +21171,7 @@
         "title": "Software Engineer Intern",
         "url": "https://intel.wd1.myworkdayjobs.com/external/job/US-Oregon-Hillsboro/Software-Engineering---Intern--Bachelor-s_JR0286834"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "ced4d9142c9fc1ef5a36d62d": {
       "first_seen": "2026-10-29T15:16:00+00:00",
@@ -21186,7 +21186,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T15:16:00+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T15:16:01+00:00",
         "message_id": 975,
@@ -21256,7 +21256,7 @@
         "title": "Software Engineer Intern",
         "url": "https://swbc.wd1.myworkdayjobs.com/swbccareers/job/San-Antonio-TX/Software-Engineering-Intern_R0015482-2"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "cf7544d5fca31775bd4c650c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -21438,7 +21438,7 @@
         "title": "Software Development Intern",
         "url": "https://jobs.keysight.com/jobs/54671?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T22:46:20+00:00"
     },
     "d17f8b0e3b77ef612d3aafe2": {
@@ -21473,7 +21473,7 @@
         "title": "Software Development Intern",
         "url": "https://aspentech.wd5.myworkdayjobs.com/aspentech/job/Medina-Minnesota/Software-Development-Intern---Digital-Grid-Management---Summer-2027_R9456"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T23:15:37+00:00"
     },
     "d19421cd9afbae61a5fd48bd": {
@@ -21487,7 +21487,7 @@
         "title": "Software Engineer Intern",
         "url": "https://q2ebanking.wd5.myworkdayjobs.com/Q2/job/Austin-Texas/XMLNAME-2027-Summer-Internship---Software-Engineer_REQ-12794"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:45:37+00:00"
     },
     "d1c8556c404c4af2ef3d9cd3": {
@@ -21513,7 +21513,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://drivetime.wd1.myworkdayjobs.com/DriveTime/job/1720-W-Rio-Salado-Pkwy-Tempe-AZ-85281/Software-Engineer-Intern--Summer-2027-_R16294"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "d21d9fe70e71e3fbb46d22ec": {
       "baselined_at": "2026-10-22T03:01:27+00:00",
@@ -21540,7 +21540,7 @@
         "title": "Software Engineer Intern",
         "url": "https://q2ebanking.wd5.myworkdayjobs.com/Q2/job/Cary-North-Carolina/XMLNAME-2027-Summer-Internship---Software-Engineer_REQ-12798"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T17:16:18+00:00"
     },
     "d2234245d7db92cccf2b66d0": {
@@ -21683,7 +21683,7 @@
         "title": "Software Engineer Intern - Low Code",
         "url": "https://gfs.wd5.myworkdayjobs.com/usjobs-gen-gfs/job/Wyoming-Michigan/Software-Engineer-Intern--Low-Code-_R-57375"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-19T01:15:41+00:00"
     },
     "d3c3cf617a95320155c8fd2c": {
@@ -21722,7 +21722,7 @@
         "title": "Software Engineer Intern",
         "url": "https://udig.com/careers/job-listing?gh_jid=7999436003"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T15:46:13+00:00"
     },
     "d446cbedd5f96c3fca77ab0c": {
@@ -21750,7 +21750,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T23:16:10+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T23:16:11+00:00",
         "message_id": 918,
@@ -21795,7 +21795,7 @@
         "title": "Software Engineering Co-op",
         "url": "https://jobs.smartrecruiters.com/BoschGroup/744000156311682"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T14:46:25+00:00"
     },
     "d4f272831a2e18cfb3ba23bc": {
@@ -21821,7 +21821,7 @@
         "title": "Critical Infrastructure Analysis Intern",
         "url": "https://jobs.smartrecruiters.com/LLNL/3743990016165496"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-15T22:45:50+00:00"
     },
     "d536380a1740b4fceb1e95f9": {
@@ -21883,7 +21883,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.smartrecruiters.com/WellmarkInc/744000148915793"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T06:36:20+00:00"
     },
     "d5ba4f3eb8eb9c74c5ffbe8d": {
@@ -21922,7 +21922,7 @@
         "title": "AI Software Intern",
         "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---California---Santa-Clara/AI-Software-Intern--Summer-2027-_JR-2604029"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-21T23:16:21+00:00"
     },
     "d5c75628ec7389fb7d3bb633": {
@@ -21936,7 +21936,7 @@
         "title": "Software Developer Intern",
         "url": "https://hdnn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/114233"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-24T14:45:57+00:00"
     },
     "d5cfa9201eb83c0bcf90493a": {
@@ -22078,7 +22078,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/clockworksystems/jobs/6174230004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T23:15:37+00:00"
     },
     "d7079985d77556c676226c67": {
@@ -22094,7 +22094,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-30T22:45:40+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-30T22:45:40+00:00",
         "message_id": 996,
@@ -22113,7 +22113,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.lever.co/shopback-2/e5f5e276-e7f7-43e0-a224-5259d242fe98/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T14:01:20+00:00"
     },
     "d737522939a28fbbe22ce75f": {
@@ -22127,7 +22127,7 @@
         "title": "Software Engineer Co-op",
         "url": "https://apply.workable.com/mindex/j/84B10DB922/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-02T14:01:20+00:00"
     },
     "d76393b0a2b633116c5c7ca8": {
@@ -22154,7 +22154,7 @@
         "title": "Software Engineer Intern - Web Applications - Summer 2027",
         "url": "https://ats.rippling.com/collieraerospace/jobs/4981b0ba-5b6f-4ebe-95c0-9d1cda036b77"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "d79ff34a86b668ea068d9f40": {
       "first_seen": "2026-09-17T14:45:49+00:00",
@@ -22180,7 +22180,7 @@
         "title": "Software Engineer Intern",
         "url": "https://nordsonhcm.wd501.myworkdayjobs.com/nordsoncareers/job/USA---Rhode-Island---East-Providence/Intern--Software-Engineering-_REQ53006"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T23:31:23+00:00"
     },
     "d7dcec3236b6d75c19be54c5": {
@@ -22194,7 +22194,7 @@
         "title": "Software Developer Intern",
         "url": "https://americancentury.wd5.myworkdayjobs.com/AmericanCenturyInvestments/job/Kansas-City-Missouri/Software-Developer-Intern_R0005749-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T23:14:35+00:00"
     },
     "d7fa1caa56b62af8aecbbab7": {
@@ -22234,7 +22234,7 @@
         "title": "Forward Deployed Software Engineer, Internship - Warp Speed",
         "url": "https://jobs.lever.co/palantir/b3d81928-6c26-432f-8a0a-36602c2eefcb"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T21:46:08+00:00"
     },
     "d8d27008ed62e7a9d2bbcf69": {
@@ -22301,7 +22301,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T23:15:45+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T23:15:47+00:00",
         "message_id": 940,
@@ -22357,7 +22357,7 @@
         "title": "Software Developer Intern",
         "url": "https://gdit.wd5.myworkdayjobs.com/gdit_earlytalent/job/USA-NJ-Egg-Harbor-Township/GDIT-Summer-Internship-Program---Summer-2027-Software-Development-Internship--_RQ230643"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T23:16:23+00:00"
     },
     "da9afe40ead83ad4f2cd1a1e": {
@@ -22384,7 +22384,7 @@
         "title": "Software Engineer Intern Co-op",
         "url": "https://jobs.lever.co/solopulseco/1b36afea-e8eb-4cea-a6e9-0afc384d06ef/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-08T23:16:34+00:00"
     },
     "dade5c4bef4e817e558a5652": {
@@ -22399,7 +22399,7 @@
         "title": "Quantitative Developer Intern - Summer 2027",
         "url": "https://www.tower-research.com/open-positions?gh_jid=8044334"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "db1108e1f3fea3649627a66c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -22424,7 +22424,7 @@
         "title": "Software Engineer Intern - Backend Focused",
         "url": "https://ats.rippling.com/rippling/jobs/a07e4e46-3721-4934-b57b-0d58412e22ba"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T23:15:54+00:00"
     },
     "dbd97ad657bcaed68ab96527": {
@@ -22476,7 +22476,7 @@
         "title": "Software Analytics Co-op",
         "url": "https://kiongroup.wd3.myworkdayjobs.com/KION_SCS/job/Grand-Rapids-MI-United-States/Software-Analytics-Co-op_JR-0096723"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T23:14:07+00:00"
     },
     "dcdefd7a74f9f4b8e4819dbe": {
@@ -22490,7 +22490,7 @@
         "title": "Software Development Engineer Intern",
         "url": "https://expedia.wd108.myworkdayjobs.com/private/job/Washington---Seattle-Campus/Software-Development-Engineering-Intern---2027---Austin--San-Jose--Seattle_R-110311"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-05T22:46:18+00:00"
     },
     "dcea0868baf2a26e8b67f8c6": {
@@ -22556,7 +22556,7 @@
         "title": "Software Engineer 2 Intern",
         "url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal/job/USA-ISD-Office---DGTC-AR-BENTONVILLE-Home-Office/Summer-2027-Intern---Software-Engineer-II_R-2630029-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T06:36:20+00:00"
     },
     "de2393c3f0d8dd123d12e7c4": {
@@ -22570,7 +22570,7 @@
         "title": "Internship - Software Engineering - People Products - Summer 2027",
         "url": "https://www.tesla.com/careers/search/job/284004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-18T14:00:40+00:00"
     },
     "de4c4ef0455cc4cab6ef6d7e": {
@@ -22605,7 +22605,7 @@
         "title": "Software Engineer, Intern (Summer or Winter)",
         "url": "https://stripe.com/jobs/search?gh_jid=8128745"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "de78b391fbec1a40e3af68ea": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -22618,7 +22618,7 @@
         "title": "Software Engineer Intern - Code Hardening & Framework Resilience - Robotaxi",
         "url": "https://www.tesla.com/careers/search/job/282598"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "deabb6636c6586583350a69e": {
       "first_seen": "2026-09-29T23:16:26+00:00",
@@ -22695,7 +22695,7 @@
         "title": "Software Engineer Intern Co-op - Product Lifecycle Management",
         "url": "https://careers.rivian.com/jobs/33746?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-22T01:45:53+00:00"
     },
     "dfcc392f4ceb736e4a255b11": {
@@ -22773,7 +22773,7 @@
         "title": "Software Engineering Intern (Summer 2027)",
         "url": "https://job-boards.greenhouse.io/scaleai/jobs/4730845005"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T03:05:16+00:00"
     },
     "e0ea705d512160fffd13f5dd": {
@@ -22813,7 +22813,7 @@
         "title": "Software Engineer Intern",
         "url": "https://ryan.wd1.myworkdayjobs.com/RyanCareers/job/Plano/Summer-2027-Intern--Software-Engineering_R0020843-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-17T01:45:49+00:00"
     },
     "e1329ed54b484ac5a1432477": {
@@ -22840,7 +22840,7 @@
         "title": "Python Developer Intern",
         "url": "https://careers.medpace.com/jobs/13059?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-13T22:46:34+00:00"
     },
     "e17a5f4611894b2dcb7d9ac8": {
@@ -22854,7 +22854,7 @@
         "title": "Software Development Engineer Intern",
         "url": "https://careers.tranetechnologies.com/global/en/job/JR-15648"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "e1f2d1fe472d9aa28a52329b": {
@@ -22881,7 +22881,7 @@
         "title": "Software Engineer Intern - Technology Health Plan",
         "url": "https://jobs.smartrecruiters.com/WellmarkInc/744000156043218"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T23:15:42+00:00"
     },
     "e25a2fb06c32401fc87cc3e7": {
@@ -22895,7 +22895,7 @@
         "title": "Forward Deployed Engineer Intern - Software",
         "url": "https://jobs.ashbyhq.com/revel/34f97b81-c981-4c4b-9f4d-d471c33b46cc"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "e2d3b200d5649300561b89a2": {
       "first_seen": "2026-09-15T17:38:23+00:00",
@@ -22933,7 +22933,7 @@
         "title": "Software Product Management Intern",
         "url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010799"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T23:20:58+00:00"
     },
     "e3b18b7081cef9dfd6fb2b1e": {
@@ -22947,7 +22947,7 @@
         "title": "Software Engineer Intern",
         "url": "https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Chicago-IL/Software-Engineering-Intern---Summer-2027_R68388"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "e3bb0f5603801b0f43eabd28": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -22997,7 +22997,7 @@
         "title": "Software Engineering Intern, Product & Developer Productivity (Summer 2027)",
         "url": "https://job-boards.greenhouse.io/hpiq/jobs/6114890004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "e409c168a9f002a4481974f9": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -23175,7 +23175,7 @@
         "title": "Software Engineer Intern - Rig Technologies",
         "url": "https://egay.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_4001/job/44449"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "e5bc069da35cc14596b7eda6": {
@@ -23191,7 +23191,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-27T22:46:00+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-27T22:46:02+00:00",
         "message_id": 937,
@@ -23286,7 +23286,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/patreon/cefe07ab-ba4f-48cc-86b9-a88b1859a95c"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T23:16:23+00:00"
     },
     "e663b3407be3cc99e8a7fc09": {
@@ -23312,7 +23312,7 @@
         "title": "Software Engineer Intern - Cybersecurity",
         "url": "https://jobs.intuit.com/job/mountain-view/summer-2027-software-engineering-intern-cybersecurity/27595/100620927616"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "e6be15b18cb8001285b89822": {
@@ -23412,7 +23412,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/hadrian-automation/2b0423c6-947d-4226-8d23-90743bd5e63e"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "e87bf82e0834909094c42cb5": {
       "first_seen": "2026-10-05T14:46:20+00:00",
@@ -23425,7 +23425,7 @@
         "title": "Software Engineer Intern - Tools and Prototypes",
         "url": "https://quantumsignalai.applytojob.com/apply/MWrhQD8Hn9/Software-Engineering-Intern-Tools-And-Prototypes"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-05T14:46:20+00:00"
     },
     "e886582f42245c9228cb0d60": {
@@ -23439,7 +23439,7 @@
         "title": "Software Development Engineer Intern",
         "url": "https://ffive.wd5.myworkdayjobs.com/f5jobs/job/Seattle/Software-Development-Engineer-Intern--Seattle--WA-_RP1039073"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-06T23:16:41+00:00"
     },
     "e89c7d08144e213393972602": {
@@ -23479,7 +23479,7 @@
         "title": "Software Engineer Intern (Winter 2027)",
         "url": "https://jobs.ashbyhq.com/cohere/8c035d3d-081d-4c8a-914a-72f4efaad254"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-19T20:35:21+00:00"
     },
     "e8c75ef17056e46ce6227cf8": {
@@ -23518,7 +23518,7 @@
         "title": "Software Engineer Intern - Summer 2027",
         "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8171041"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T17:38:23+00:00"
     },
     "e9451be6fc9af7e3c806078e": {
@@ -23532,7 +23532,7 @@
         "title": "Software Engineer Intern",
         "url": "https://mckesson.wd3.myworkdayjobs.com/External_Careers/job/USA-GA-Atlanta/Software-Engineer-Intern---Summer-2027_JR0153235"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "e9470b70e0a4387ef2cee80c": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -23558,7 +23558,7 @@
         "title": "Software Engineering Intern",
         "url": "https://pacificlife.wd1.myworkdayjobs.com/PacificLifeCareers/job/Newport-Beach-CA-700/Summer-2027-Software-Engineering-Internship_R17826"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-25T23:14:35+00:00"
     },
     "e97219dcfc43be0531fd2eef": {
@@ -23641,7 +23641,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-29T14:01:01+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-29T14:01:01+00:00",
         "message_id": 970,
@@ -23689,7 +23689,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-26T23:16:10+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-26T23:16:11+00:00",
         "message_id": 917,
@@ -23721,7 +23721,7 @@
         "title": "Technology Intern - Software Engineering - Enterprise API Services Development Team",
         "url": "https://mtb.wd5.myworkdayjobs.com/Campus/job/Buffalo-NY/Technology-Intern---Software-Engineering--Enterprise-API-Services-Development-Team-_R90812"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:46:08+00:00"
     },
     "ea8f79d966fb302e4e33234b": {
@@ -23735,7 +23735,7 @@
         "title": "Engineer/SW Developer/Analyst Intern - Maritime Force Engagement Control",
         "url": "https://careers.jhuapl.edu/jobs/59598?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "eaab84093baa3724756a8880": {
       "first_seen": "2026-10-06T14:02:16+00:00",
@@ -23899,7 +23899,7 @@
         "title": "Software Engineer Intern",
         "url": "https://workday.wd5.myworkdayjobs.com/Workday_Early_Career/job/USA-CA-Pleasanton/Software-Development-Engineer-Intern_JR-0110810"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-10T01:46:30+00:00"
     },
     "ece906b2d978163dfcceabe6": {
@@ -24028,7 +24028,7 @@
         "title": "Software Engineer Intern - Agent Systems",
         "url": "https://jobs.ashbyhq.com/armadin/8ddb9c3a-3031-42d4-ad68-adcc865e32cf"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "edcf4d63b5f25f2a6ff43e00": {
       "first_seen": "2026-09-30T23:16:19+00:00",
@@ -24067,7 +24067,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/rilla/0e111ca4-3837-43d2-8507-6030a0dc32d9"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-15T23:15:36+00:00"
     },
     "ee9b9e4e971bce37e1dda2fb": {
@@ -24186,7 +24186,7 @@
         "title": "Software Engineer Intern",
         "url": "https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---Texas---Austin/Software-Engineering-Intern--Summer-2027-_JR-2604039"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-09T23:16:30+00:00"
     },
     "f06ddcea09c90357085303c1": {
@@ -24225,7 +24225,7 @@
         "title": "Software Engineer Intern",
         "url": "https://job-boards.greenhouse.io/atoms/jobs/8356071002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T23:15:57+00:00"
     },
     "f101058c284cca18343d0835": {
@@ -24290,7 +24290,7 @@
         "title": "Software Engineering Intern, 2027",
         "url": "https://jobs.ashbyhq.com/allen-control-systems/ed5c58a7-6a3c-474b-aa07-43ff2051cb5c"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "f1c796d076134fc5f103a41f": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -24303,7 +24303,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.lever.co/shieldai/8c850c75-081d-4d09-bebf-096379a93010/apply"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "f1f0a885af81da2bcfa13a83": {
       "first_seen": "2026-09-25T01:45:37+00:00",
@@ -24329,7 +24329,7 @@
         "title": "Simulation Software Engineering Intern - Summer 2027",
         "url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5418727008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-17T23:45:54+00:00"
     },
     "f24145697df2a58d12d013c7": {
@@ -24382,7 +24382,7 @@
         "title": "Software Engineer Intern - RFQ",
         "url": "https://jobs.ashbyhq.com/Talos-Trading/2c833180-484f-4657-80e3-f822cf1a0285"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "f2a423edd68faa1737ca13b2": {
       "first_seen": "2026-10-23T14:46:16+00:00",
@@ -24559,7 +24559,7 @@
         "title": "Software Engineer Intern",
         "url": "https://careers.garmin.com/jobs/20135?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-11T06:36:20+00:00"
     },
     "f4c430acf5cb45cef8fe3140": {
@@ -24599,7 +24599,7 @@
         "title": "Software Engineer Intern - Platform Engines",
         "url": "https://sailpoint.wd1.myworkdayjobs.com/SailPoint/job/Remote-United-Kingdom/Software-Engineer-Intern---Platform-Engines_R014164"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-07T22:46:41+00:00"
     },
     "f4e46153c8aa81513ed40de7": {
@@ -24652,7 +24652,7 @@
         "title": "Software Development Co-op - AI Assisted",
         "url": "https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/40535"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-19T01:15:41+00:00"
     },
     "f5c15d09a7292165e7312b16": {
@@ -24666,7 +24666,7 @@
         "title": "Software Engineer Intern - Device Team",
         "url": "https://job-boards.greenhouse.io/relaypro/jobs/8180836"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-16T22:45:36+00:00"
     },
     "f5e2b0d3730ed20e861cb3a4": {
@@ -24682,7 +24682,7 @@
       },
       "last_notification_provider": "telegram",
       "last_notified_at": "2026-10-31T14:00:39+00:00",
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notification_receipt": {
         "accepted_at": "2026-10-31T14:00:46+00:00",
         "message_id": 1010,
@@ -24701,7 +24701,7 @@
         "title": "Forward Deployed Software Engineer Intern",
         "url": "https://healthpeak.applytojob.com/apply/RTf9TfJE4h/Forward-Deployed-Software-Engineer-Internship"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-16T01:45:47+00:00"
     },
     "f62ce6026282a39f9126a8df": {
@@ -24791,7 +24791,7 @@
         "title": "Software Intern",
         "url": "https://ebgj.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/253299"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "f75e8b3689171936994b2ab8": {
       "first_seen": "2026-09-18T14:00:40+00:00",
@@ -24804,7 +24804,7 @@
         "title": "Software Engineer Intern - Energy Engineering",
         "url": "https://www.tesla.com/careers/search/job/283950"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-18T14:00:40+00:00"
     },
     "f76a9fda48929f6b66f19ad0": {
@@ -24881,7 +24881,7 @@
         "title": "Software Engineer Intern (2027) - Austin, TX",
         "url": "https://boards.greenhouse.io/cloudflare/jobs/8199958?gh_jid=8199958"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:01:27+00:00"
     },
     "f7f40b2bbafd4f02ea21bf9b": {
@@ -24895,7 +24895,7 @@
         "title": "Information Technology Software Development Intern",
         "url": "https://jobs.constellationenergy.com/jobs/138708?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-12T14:00:56+00:00"
     },
     "f8007296b2a461da78ffe31d": {
@@ -24909,7 +24909,7 @@
         "title": "Software Engineer Intern",
         "url": "https://snc.wd1.myworkdayjobs.com/snc_external_career_site/job/Folsom-CA/Software-Engineering-Intern--Summer-2027-_R0030761-1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "f8113e4e57b4b6e1e617965b": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -24960,7 +24960,7 @@
         "title": "Software Engineer Intern - Technology Healthcare Innovation",
         "url": "https://jobs.smartrecruiters.com/WellmarkInc/744000150732768"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-21T22:45:39+00:00"
     },
     "f8bfadf211c187836d05421c": {
@@ -24999,7 +24999,7 @@
         "title": "Undergrad Software Engineering Intern (Grad Year: Winter 2027)",
         "url": "https://job-boards.greenhouse.io/twitch/jobs/8886605002"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T22:16:06+00:00"
     },
     "f95ec8be3d0dd815d23eaa8e": {
@@ -25053,7 +25053,7 @@
         "title": "Software Engineer Intern, Cloud Services (Summer 2027)",
         "url": "https://job-boards.greenhouse.io/hpiq/jobs/6111955004"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "f9dea0d25c66e30b5afe4d39": {
       "first_seen": "2026-09-15T17:38:23+00:00",
@@ -25092,7 +25092,7 @@
         "title": "ADAS Software Engineer Intern - Adpt",
         "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern--ADAS-Software-Engineer--ADPT_JR-202621820"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-05T23:16:16+00:00"
     },
     "fa63e8af575d1a726edd843a": {
@@ -25144,7 +25144,7 @@
         "title": "Software Intern",
         "url": "https://careers.herzog.com/jobs/2931?icims=1"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "fa837dc8db1df36be32a0095": {
       "first_seen": "2026-10-01T23:31:23+00:00",
@@ -25157,7 +25157,7 @@
         "title": "Scientific Software Intern - Scientific Software and Compilation",
         "url": "https://job-boards.greenhouse.io/queracomputinginc/jobs/5435902008"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-01T23:31:23+00:00"
     },
     "fa8ad73f2f0e46d754406eba": {
@@ -25234,7 +25234,7 @@
         "title": "Software Engineer Intern",
         "url": "https://ryan.wd1.myworkdayjobs.com/Students-Graduates/job/Plano/Summer-2027-Intern--Software-Engineering_R0020843"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-17T01:45:49+00:00"
     },
     "fbb94924e9215165b35785ed": {
@@ -25272,7 +25272,7 @@
         "title": "Software Developer Intern",
         "url": "https://job-boards.greenhouse.io/drweng/jobs/7992936"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-22T03:01:27+00:00"
     },
     "fc4127b33aec451decbc3033": {
@@ -25312,7 +25312,7 @@
         "title": "Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/skydio/79fdda46-4ff5-42c7-b208-55f2084cdb8c"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-10-14T19:30:57+00:00"
     },
     "fce29770eabea3bd8da1d1ff": {
@@ -25413,7 +25413,7 @@
         "title": "Software Engineer Intern (Winter 2027)",
         "url": "https://jobs.ashbyhq.com/notion/e66c6658-9e65-4c58-8db2-844628b6e8f8"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "fd6e861fc66fc37f16a3759b": {
       "first_seen": "2026-09-10T20:01:13+00:00",
@@ -25477,7 +25477,7 @@
         "title": "Robot Software Engineer Intern",
         "url": "https://jobs.ashbyhq.com/rhoda-ai/9a57c8ff-dd2b-4547-a46a-44658a699ba5"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00",
+      "last_seen": "2026-10-31T17:15:41+00:00",
       "notified_at": "2026-09-29T14:01:23+00:00"
     },
     "fde585e8d02454abf95c750b": {
@@ -25622,7 +25622,7 @@
         "title": "Software Engineer Intern",
         "url": "https://dimensional.wd5.myworkdayjobs.com/dfa_careers/job/Austin/Internship-in-Technology---Software-Engineer_2026-9022"
       },
-      "last_seen": "2026-10-31T17:00:51+00:00"
+      "last_seen": "2026-10-31T17:15:41+00:00"
     },
     "ffcdd49f625d2cd8bd41daa1": {
       "first_seen": "2026-09-25T23:14:35+00:00",
